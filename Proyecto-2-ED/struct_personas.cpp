@@ -1,5 +1,5 @@
-#include "mainstruct.h"
-void MainStruct::loadNames(){
+#include "struct_personas.h"
+void ListaSimplePersonas::loadNames(){
     QFile file(":/data/names.txt");
 
     if(!file.exists()){
@@ -20,8 +20,8 @@ void MainStruct::loadNames(){
     file.close();
 }
 
-void MainStruct::printNames(){
-    unsigned int size =  sizeof (names)/sizeof (names[0]); // aparantely such a simple thing like getting the size of an array in c++ is a fucking imposible nightmare
+void ListaSimplePersonas::printNames(){
+    unsigned int size =  sizeof (names)/sizeof (names[0]);
     for(unsigned int i = 0; i<size;i++){
         qDebug() << i;
         qDebug() << names[i];
