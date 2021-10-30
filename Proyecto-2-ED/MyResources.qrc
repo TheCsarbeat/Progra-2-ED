@@ -3,5 +3,12 @@
         <file>data/names.txt</file>
         <file>data/last_names.txt</file>
         <file>images/picture.jpg</file>
+        <file>data/religions.txt</file>
+        <file>data/jobs.txt</file>
+        <file>data/africa.txt</file>
+        <file>data/america.txt</file>
+        <file>data/asia.txt</file>
+        <file>data/europa.txt</file>
+        <file>data/oceania.txt</file>
     </qresource>
 </RCC>

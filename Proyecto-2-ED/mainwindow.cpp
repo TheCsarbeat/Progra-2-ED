@@ -16,7 +16,12 @@ MainWindow::~MainWindow()
 
 void MainWindow::start(){
     mainstruct = new MainStruct();
-    mainstruct->loadNames();
-    mainstruct->printNames();
+    mainstruct->mundo->files->printNames();
+}
+
+
+void MainWindow::on_pushButton_clicked()
+{
+
 }
 

@@ -12,12 +12,12 @@ SOURCES += \
     main.cpp \
     mainstruct.cpp \
     mainwindow.cpp \
-    struct_personas.cpp
+    struct_mundo.cpp
 
 HEADERS += \
     mainstruct.h \
     mainwindow.h \
-    struct_personas.h
+    struct_mundo.h
 
 FORMS += \
     mainwindow.ui
