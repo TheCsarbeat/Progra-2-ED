@@ -1,24 +1,16 @@
 #ifndef MAINSTRUCT_H
 #define MAINSTRUCT_H
 
-#include "struct_personas.h"
+#include "struct_mundo.h"
 
-#include <QCoreApplication>
-#include <QString>
-#include <QFile>
-#include <QTextStream>
 struct MainStruct;
 
 struct MainStruct{
-    QString names[1000];
-    QString lastNames[1000];
-
+    Mundo * mundo;
     MainStruct(){
+        mundo = new Mundo();
     }
 
-    void loadNames();
-    void loadLastNames();
-    void printNames();
 };
 
 #endif // MAINSTRUCT_H
