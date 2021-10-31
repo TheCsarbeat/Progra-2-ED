@@ -1,29 +1,21 @@
 #include "struct_personas.h"
-void ListaSimplePersonas::loadNames(){
-    QFile file(":/data/names.txt");
 
-    if(!file.exists()){
-        qCritical() << "File not found";
-        return;
-    }
-    if(!file.open(QIODevice::ReadOnly)){
-        qCritical() << "Could not open file!";
-        qCritical() << file.errorString();
-        return;
-    }
-    QTextStream stream(&file);
-    int i = 0;
-    while(!stream.atEnd()){
-        names[i] = stream.readLine();
-        i++;
-    }
-    file.close();
+//------------------------- ARbol--------------------------------------
+void ArbolPersonas::insertar(int dato, NodoPersona* nodoListaPersona){
+     raiz = insertar(dato, raiz, nodoListaPersona);
+     cantElementos++;
 }
 
-void ListaSimplePersonas::printNames(){
-    unsigned int size =  sizeof (names)/sizeof (names[0]);
-    for(unsigned int i = 0; i<size;i++){
-        qDebug() << i;
-        qDebug() << names[i];
+//  INSERTA RECURSIVAMENTE
+NodoPersonaArbol* ArbolPersonas::insertar(int valor, NodoPersonaArbol* nodo, NodoPersona* nodoListaPersona){
+    if (nodo == NULL){
+        return new NodoPersonaArbol(nodoListaPersona);
+
+    }else if (nodo->nodoPersona->persona->id < valor){
+        nodo->hijoderecho = insertar(valor, nodo->hijoderecho, nodoListaPersona);
+
+    }else if (nodo->nodoPersona->persona->id >= valor){
+        nodo->hijoizquierdo = insertar(valor, nodo->hijoizquierdo, nodoListaPersona);
     }
+    return nodo;
 }
