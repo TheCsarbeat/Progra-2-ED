@@ -17,6 +17,12 @@ MainWindow::~MainWindow()
 void MainWindow::start(){
     mainstruct = new MainStruct();
     mainstruct->mundo->files->printNames();
+    Persona * person;
+    for(int i=0;i<10000;i++){
+        person = mainstruct->mundo->generar();
+        person->imprimir();
+    }
+
 }
 
 

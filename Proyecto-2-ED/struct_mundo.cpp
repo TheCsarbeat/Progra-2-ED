@@ -1,11 +1,41 @@
 #include "struct_mundo.h"
-
+//======================PAIS===============================
 void Pais::toString(){
     qDebug() << name;
     qDebug() << continente;
+}
+
+//======================PERSONA===============================
+void Persona::imprimir(){
+    qDebug() << id;
+    qDebug() << name;
+    qDebug() << apellido;
+    pais->toString();
+    qDebug() << creencia;
+    qDebug() << profesion;
+    qDebug() << email;
+    qDebug() << nacimiento;
     qDebug() << "\n";
 }
 
+//======================LISTA DOBLE=========================
+void ListaDoblePersonas::insertarAntes(NodoPersona * nodo, Persona * p){
+    NodoPersona * nuevo = new NodoPersona(p);
+    nuevo->siguiente = nodo;
+    nuevo->anterior = nodo->anterior;
+    nodo->anterior->siguiente = nuevo;
+    nodo->anterior = nuevo;
+}
+
+void ListaDoblePersonas::insertarDespues(NodoPersona *nodo, Persona *p){
+    NodoPersona * nuevo = new NodoPersona(p);
+    nuevo->anterior = nodo;
+    nuevo->siguiente = nodo->siguiente;
+    nodo->siguiente->anterior = nuevo;
+    nodo->siguiente = nuevo;
+}
+
+//======================FILES===============================
 void Files::loadNames(){
     QFile file(":/data/names.txt");
 
@@ -196,6 +226,20 @@ void Files::printNames(){
     for(unsigned int i = 0; i<size;i++){
         paises[i]->toString();
     }
+}
+
+//======================MUNDO===============================
+
+Persona * Mundo::generar(){
+    Persona * persona = new Persona();
+    persona->id = QRandomGenerator::global()->bounded(0,99999);
+    persona->name = files->names[QRandomGenerator::global()->bounded(0,999)];
+    persona->apellido = files->lastNames[QRandomGenerator::global()->bounded(0,500)];
+    persona->pais = files->paises[QRandomGenerator::global()->bounded(0,195)];
+    persona->creencia = files->religions[QRandomGenerator::global()->bounded(0,18)];
+    persona->profesion = files->jobs[QRandomGenerator::global()->bounded(0,79)];
+
+    return persona;
 }
 
 

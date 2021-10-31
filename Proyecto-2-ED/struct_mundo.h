@@ -6,6 +6,7 @@
 #include <QCoreApplication>
 #include <QFile>
 #include <QTextStream>
+#include <QRandomGenerator>
 
 struct ListaDoblePersonas;
 struct NodoPersona;
@@ -105,7 +106,7 @@ struct Persona{
     int id;
     QString name;
     QString apellido;
-    QString pais;
+    Pais * pais;
     QString creencia;
     QString profesion;
     QString email;
@@ -118,7 +119,7 @@ struct Persona{
         id = 0;
         name = "";
         apellido = "";
-        pais = "";
+        pais = NULL;
         creencia = "";
         profesion = "";
         email = "ytcesarjs@gmail.com";
@@ -129,6 +130,8 @@ struct Persona{
             buenasAcciones[i] = new BuenaAccion();
         }
     }
+
+    void imprimir();
 };
 
 struct NodoPersona{
@@ -155,8 +158,8 @@ struct ListaDoblePersonas{
     }
 
     bool isEmpty();
-    void insertarALInicio(NodoPersona * persona);
-    void insertarAlFinal(NodoPersona * persona);
+    void insertarAntes(NodoPersona * nodo, Persona * p);
+    void insertarDespues(NodoPersona *nodo, Persona *p);
     void imprimir();
     void imprimirReverse();
     NodoPersona * borrarALInicio();
@@ -173,6 +176,9 @@ struct Mundo{
         personas = new ListaDoblePersonas();
         files = new Files();
     }
+
+    Persona * generar();
+    void generarPersonas(int);
 };
 
 #endif // STRUCT_MUNDO_H
