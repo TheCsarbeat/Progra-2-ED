@@ -16,12 +16,11 @@ MainWindow::~MainWindow()
 
 void MainWindow::start(){
     mainstruct = new MainStruct();
-    mainstruct->mundo->files->printNames();
+   // mainstruct->mundo->files->printNames();
 }
 
 
-void MainWindow::on_pushButton_clicked()
-{
-
+void MainWindow::on_pushButton_clicked(){
+    mainstruct->mundo->crearHumanos(ui->txtCantHumanos->text().toInt());
 }
 
