@@ -16,18 +16,11 @@ MainWindow::~MainWindow()
 
 void MainWindow::start(){
     mainstruct = new MainStruct();
-    mainstruct->mundo->files->printNames();
-    Persona * person;
-    for(int i=0;i<10000;i++){
-        person = mainstruct->mundo->generar();
-        person->imprimir();
-    }
-
+   // mainstruct->mundo->files->printNames();
 }
 
 
-void MainWindow::on_pushButton_clicked()
-{
-
+void MainWindow::on_pushButton_clicked(){
+    mainstruct->mundo->crearHumanos(ui->txtCantHumanos->text().toInt());
 }
 
