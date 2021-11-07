@@ -30,56 +30,139 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLineEdit" name="txtCantHumanos">
+   <widget class="QStackedWidget" name="MainPanel">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>550</y>
-      <width>113</width>
-      <height>21</height>
+      <x>560</x>
+      <y>40</y>
+      <width>661</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>2</number>
+    </property>
+    <widget class="QWidget" name="page">
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>100</y>
+        <width>151</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>buscarmas cerca</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txtCantHumanos">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>150</y>
+        <width>113</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>1000</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>150</y>
+        <width>80</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Generar</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txtcerca">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>100</y>
+        <width>113</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>1000</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <widget class="QRadioButton" name="radioButton">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>220</y>
+        <width>82</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>RadioButton</string>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="toolButton">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>320</y>
+        <width>25</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_3"/>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>360</y>
+      <width>75</width>
+      <height>23</height>
      </rect>
     </property>
     <property name="text">
-     <string>1000</string>
+     <string>1</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="pushButton_4">
     <property name="geometry">
      <rect>
-      <x>270</x>
-      <y>550</y>
-      <width>80</width>
-      <height>21</height>
+      <x>70</x>
+      <y>440</y>
+      <width>75</width>
+      <height>23</height>
      </rect>
     </property>
     <property name="text">
-     <string>Generar</string>
+     <string>2</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="txtcerca">
+   <widget class="QPushButton" name="pushButton_5">
     <property name="geometry">
      <rect>
-      <x>440</x>
-      <y>380</y>
-      <width>113</width>
-      <height>21</height>
+      <x>70</x>
+      <y>490</y>
+      <width>75</width>
+      <height>23</height>
      </rect>
     </property>
     <property name="text">
-     <string>1000</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>590</x>
-      <y>380</y>
-      <width>151</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>buscarmas cerca</string>
+     <string>3</string>
     </property>
    </widget>
   </widget>

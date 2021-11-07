@@ -30,3 +30,15 @@ void MainWindow::on_pushButton_2_clicked(){
     qDebug()<<"El m[as cercano: "<<mainstruct->mundo->treePersonas->buscarMasCercano(ui->txtcerca->text().toInt())->persona->id;
 }
 
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    ui->MainPanel->setCurrentIndex(0);
+}
+
+
+void MainWindow::on_pushButton_4_clicked()
+{
+    ui->MainPanel->setCurrentIndex(1);
+}
+
