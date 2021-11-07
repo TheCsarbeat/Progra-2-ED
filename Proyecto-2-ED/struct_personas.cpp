@@ -41,13 +41,69 @@ bool ListaDoblePersonas::insertar(Persona * persona){
 
 }
 
+bool ListaDoblePersonas::insertar(Persona * persona, NodoPersona * masCernano){
+    NodoPersona *nuevo = new NodoPersona(persona);
+    bool flagTempNULL = true;
+    bool flagAnterior = false;
+    if (isEmpty()){
+        primerNodo = ultimoNodo = nuevo;
+
+    }else{
+        NodoPersona *temp = masCernano;
+        if(masCernano->persona->id < persona->id){
+            while (temp->persona->id < persona->id){
+                temp = temp->siguiente;
+                if(temp == NULL) break;
+            }
+        }else{
+            while (temp->persona->id > persona->id){
+                temp = temp->anterior;
+                if(temp == NULL){
+                    flagTempNULL= false;
+                    break;
+                }
+            }
+            flagAnterior = true;
+        }
+        if(temp == NULL){
+            if(flagTempNULL){
+                ultimoNodo->siguiente = nuevo;
+                nuevo->anterior = ultimoNodo;
+                ultimoNodo = nuevo;
+            }else{
+                primerNodo->anterior = nuevo;
+                nuevo->siguiente = primerNodo;
+                primerNodo = nuevo;
+            }
+        }else if(temp->persona->id == persona->id){
+            return false;
+        }else{
+            if(flagAnterior)temp=temp->siguiente;
+            nuevo->siguiente = temp;
+            nuevo->anterior = temp->anterior;
+            temp->anterior->siguiente = nuevo;
+            temp->anterior = nuevo;
+
+        }
+    }
+    largo++;
+    return true;
+
+}
+
 void ListaDoblePersonas::imprimir(){
     NodoPersona * temp = primerNodo;
+    int cont =0;
+    qDebug()<<"[";
     while (temp != NULL){
-        temp->persona->imprimir();
+        //temp->persona->imprimir();
+        //qDebug()<<"Posicion en lista: "<<cont;
+        qDebug()<<temp->persona->id<<", ";
+        cont++;
         temp = temp->siguiente;
     }
-    qDebug()<<"\nLargo: "<<largo;
+              qDebug()<<"]";
+   // qDebug()<<"\nLargo: "<<largo;
 }
 
 
@@ -96,7 +152,7 @@ void ArbolPersonas::vaciarArbol(NodoPersonaArbol* nodo){
 
 //BUSCAR EL MAS CERCANO
 NodoPersona* ArbolPersonas::buscarMasCercano(int datoID){
-    if (raiz != NULL)return NULL;
+    if (raiz == NULL)return NULL;
 
     /*if(raiz->nodoPersona->persona->id == dato)return raiz->nodoPersona;
 
@@ -106,7 +162,7 @@ NodoPersona* ArbolPersonas::buscarMasCercano(int datoID){
         return buscarMasCercano(dato,'i', abs(raiz->nodoPersona->persona->id - dato), raiz->hijoizquierdo)->nodoPersona;
     }*/
 
-    buscarMasCercano(raiz, datoID);
+    return buscarMasCercano(raiz, datoID)->nodoPersona;
 
 
 }
@@ -149,7 +205,7 @@ void ArbolPersonas::posOrden(NodoPersonaArbol* nodo){
 
 void ArbolPersonas::preOrden(NodoPersonaArbol* nodo){
    if (nodo != NULL)   {
-     qDebug() << nodo->nodoPersona->persona->creencia << "  ";
+     qDebug() << "Posici[on: "<<nodo->nodoPersona->persona->creencia << ", ID:"<<nodo->nodoPersona->persona->id;
      preOrden(nodo->hijoizquierdo);
      preOrden(nodo->hijoderecho);
    }

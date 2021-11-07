@@ -24,3 +24,9 @@ void MainWindow::on_pushButton_clicked(){
     mainstruct->mundo->crearHumanos(ui->txtCantHumanos->text().toInt());
 }
 
+
+void MainWindow::on_pushButton_2_clicked(){
+
+    qDebug()<<"El m[as cercano: "<<mainstruct->mundo->treePersonas->buscarMasCercano(ui->txtcerca->text().toInt())->persona->id;
+}
+

@@ -2,6 +2,7 @@
 void Mundo::crearHumanos(int dato){
     int contador = 0;
     while(contador!=dato){
+        bool respuesta;
         int id = QRandomGenerator::global()->bounded(99999);
         QString name = files->names[QRandomGenerator::global()->bounded(100)];
         QString apellido = files->lastNames[QRandomGenerator::global()->bounded(100)];
@@ -9,7 +10,15 @@ void Mundo::crearHumanos(int dato){
         QString creencia = QString::number(contador);
         QString profesion = files->jobs[QRandomGenerator::global()->bounded(100)];
         Persona *p = new Persona(id, name, apellido, pais, creencia, profesion);
-        bool respuesta = personas->insertar(p);
+
+        if(treePersonas->raiz ==NULL){
+            respuesta = personas->insertar(p);
+            qDebug()<<"Con raiz nula: "<<contador;
+
+        }else{
+            respuesta = personas->insertar(p, treePersonas->buscarMasCercano(p->id));
+            qDebug()<<"Con Arbol creado: "<<contador;
+        }
         if(respuesta)contador++;
         if(personas->largo%100==0){
             treePersonas->vaciarArbol();
@@ -18,11 +27,12 @@ void Mundo::crearHumanos(int dato){
     }
     //crearArbol();
 
-    //personas->imprimir();
-    treePersonas->preOrden(treePersonas->raiz);
+    personas->imprimir();
+    //treePersonas->preOrden(treePersonas->raiz);
     qDebug()<<"La altura del arbol es: "<<treePersonas->treeHeight(treePersonas->raiz);
     qDebug()<<"La cantidad de nodos del arbol es: "<<treePersonas->cantNodos(treePersonas->raiz);
     qDebug()<<"El tama;o de la lista: "<<personas->largo;
+
 }
 
 void Mundo::crearArbol(){

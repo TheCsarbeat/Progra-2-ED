@@ -119,6 +119,9 @@ struct ListaDoblePersonas{
 
     bool isEmpty();
     bool insertar(Persona * persona);
+    bool insertar(Persona * persona, NodoPersona * masCernano);
+
+
     void imprimir();
     void insertarALInicio(NodoPersona * persona);
     void insertarAlFinal(NodoPersona * persona);
