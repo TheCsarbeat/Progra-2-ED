@@ -12,7 +12,6 @@ bool ListaDoblePersonas::insertar(Persona * persona){
     }else{
         NodoPersona *temp = primerNodo;
         while (temp->persona->id < persona->id){
-            qDebug()<<temp->persona->id;
             temp = temp->siguiente;
             if(temp == NULL) break;
         }
@@ -131,14 +130,47 @@ NodoPersonaArbol* ArbolPersonas::buscarMasCercano(NodoPersonaArbol * raizNodo,in
 
 }
 
-
-void ArbolPersonas::posOrden(NodoPersonaArbol* nodo)
-{
-   if (nodo != NULL)
-   {
+void ArbolPersonas::imprimir(NodoPersonaArbol* nodo){
+   if (nodo != NULL) {
      posOrden(nodo->hijoizquierdo);
      posOrden(nodo->hijoderecho);
-     qDebug() << nodo->nodoPersona->persona->id << "  ";
+     qDebug() << nodo->nodoPersona->persona->creencia << "  ";
+   }
+}
+
+void ArbolPersonas::posOrden(NodoPersonaArbol* nodo){
+   if (nodo != NULL) {
+     posOrden(nodo->hijoizquierdo);
+     posOrden(nodo->hijoderecho);
+     qDebug() << nodo->nodoPersona->persona->creencia << "  ";
 
    }
 }
+
+void ArbolPersonas::preOrden(NodoPersonaArbol* nodo){
+   if (nodo != NULL)   {
+     qDebug() << nodo->nodoPersona->persona->creencia << "  ";
+     preOrden(nodo->hijoizquierdo);
+     preOrden(nodo->hijoderecho);
+   }
+}
+int max(int a, int b){
+    if(a>b)
+        return a;
+    else
+        return b;
+}
+int ArbolPersonas::treeHeight(NodoPersonaArbol* nodo){
+     if (nodo == NULL) // Árbol vacío, devuelve 0
+        return 0;
+     if (nodo->hijoizquierdo == NULL && nodo->hijoderecho == NULL) // La raíz del árbol devuelve 1
+        return 1;
+     return max (treeHeight (nodo-> hijoizquierdo), treeHeight (nodo-> hijoderecho)) + 1; // La altura del árbol = MAX (la altura del subárbol izquierdo, la altura del subárbol derecho) + 1;
+}
+
+int ArbolPersonas::cantNodos(NodoPersonaArbol* nodo){
+    if (nodo == NULL)
+        return 0;
+    return 1 + cantNodos(nodo->hijoizquierdo)+cantNodos(nodo->hijoderecho);
+}
+
