@@ -21,6 +21,18 @@ private slots:
 
     void on_pushButton_2_clicked();
 
+    void on_botonCielo_clicked();
+
+    void on_botonHumanos_clicked();
+
+    void on_botonInfierno_clicked();
+
+    void on_botonGanador_clicked();
+
+    void on_botonConsultas_clicked();
+
+    void on_botonConsultas2_clicked();
+
 private:
     Ui::MainWindow *ui;
     MainStruct * mainstruct;
