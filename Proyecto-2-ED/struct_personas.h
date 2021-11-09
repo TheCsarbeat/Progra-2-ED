@@ -119,6 +119,9 @@ struct ListaDoblePersonas{
 
     bool isEmpty();
     bool insertar(Persona * persona);
+    bool insertar(Persona * persona, NodoPersona * masCernano);
+
+
     void imprimir();
     void insertarALInicio(NodoPersona * persona);
     void insertarAlFinal(NodoPersona * persona);
@@ -155,7 +158,7 @@ struct ArbolPersonas{
         cantElementos =0;
     }
 
-    void insertar (int, NodoPersona*);
+    void insertar (int,NodoPersona*);
     NodoPersonaArbol * insertar (int, NodoPersonaArbol*, NodoPersona*);
 
     void vaciarArbol();
@@ -165,12 +168,15 @@ struct ArbolPersonas{
     NodoPersonaArbol * diferencia(NodoPersonaArbol*,NodoPersonaArbol*,int);
     NodoPersonaArbol * buscarMasCercano(NodoPersonaArbol *,int );
 
+    void imprimir(NodoPersonaArbol*);
     void posOrden(NodoPersonaArbol*);
     void imprimirUltimo(NodoPersonaArbol*);
 
     void inOrden(NodoPersonaArbol*);
     void inOrdenClientes(NodoPersonaArbol*);
     void preOrden(NodoPersonaArbol*);
+    int treeHeight(NodoPersonaArbol*);
+    int cantNodos(NodoPersonaArbol*);
 
     NodoPersonaArbol* buscar (int, NodoPersonaArbol*);
     int obtenerNumeroElementos(NodoPersonaArbol*);

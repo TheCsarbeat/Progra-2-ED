@@ -23,3 +23,45 @@ void MainWindow::on_pushButton_clicked(){
     mainstruct->mundo->crearHumanos(ui->txtCantHumanos->text().toInt());
 }
 
+
+void MainWindow::on_pushButton_2_clicked(){
+
+    qDebug()<<"El mas cercano: "<<mainstruct->mundo->treePersonas->buscarMasCercano(ui->txtcerca->text().toInt())->persona->id;
+}
+
+
+void MainWindow::on_botonHumanos_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
+
+
+void MainWindow::on_botonCielo_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+}
+
+
+void MainWindow::on_botonInfierno_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
+}
+
+
+void MainWindow::on_botonGanador_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(5);
+}
+
+
+void MainWindow::on_botonConsultas_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(3);
+}
+
+
+void MainWindow::on_botonConsultas2_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(4);
+}
+

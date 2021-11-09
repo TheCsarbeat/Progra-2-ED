@@ -12,13 +12,18 @@ struct Mundo;
 struct Mundo{
     ListaDoblePersonas * personas;
     Files * files;
-
+    ArbolPersonas * treePersonas;
     Mundo(){
         personas = new ListaDoblePersonas();
+        treePersonas = new ArbolPersonas();
         files = new Files();
     }
 
     void crearHumanos(int);
+    void crearArbol();
+    void crearArbol(NodoPersona* array[], int);
+
+
 };
 
 #endif // STRUCT_MUNDO_H
