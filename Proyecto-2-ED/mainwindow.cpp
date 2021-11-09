@@ -16,7 +16,6 @@ MainWindow::~MainWindow()
 
 void MainWindow::start(){
     mainstruct = new MainStruct();
-   // mainstruct->mundo->files->printNames();
 }
 
 

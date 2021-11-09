@@ -12,7 +12,6 @@ bool ListaDoblePersonas::insertar(Persona * persona){
     }else{
         NodoPersona *temp = primerNodo;
         while (temp->persona->id < persona->id){
-            qDebug()<<temp->persona->id;
             temp = temp->siguiente;
             if(temp == NULL) break;
         }
@@ -22,6 +21,9 @@ bool ListaDoblePersonas::insertar(Persona * persona){
             ultimoNodo = nuevo;
 
         }else if(temp->persona->id == persona->id){
+            qDebug()<<temp->persona->id;
+            delete(persona);
+            delete(nuevo);
             return false;
         }else{
             if(temp == primerNodo){
@@ -34,7 +36,6 @@ bool ListaDoblePersonas::insertar(Persona * persona){
                 temp->anterior->siguiente = nuevo;
                 temp->anterior = nuevo;
             }
-
         }
     }
     largo++;
@@ -48,7 +49,7 @@ void ListaDoblePersonas::imprimir(){
         temp->persona->imprimir();
         temp = temp->siguiente;
     }
-    qDebug()<<"\nLargo: "<<largo;
+    qDebug()<<"\n\nLargo: "<<largo;
 }
 
 
@@ -108,8 +109,6 @@ NodoPersona* ArbolPersonas::buscarMasCercano(int datoID){
     }*/
 
     buscarMasCercano(raiz, datoID);
-
-
 }
 
 NodoPersonaArbol* ArbolPersonas::diferencia(NodoPersonaArbol * nodo1, NodoPersonaArbol * nodo2, int dato){

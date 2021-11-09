@@ -12,7 +12,6 @@ void Mundo::crearHumanos(int dato){
         bool respuesta = personas->insertar(p);
         if(respuesta) contador++;
     }
-
     personas->imprimir();
 }
 
@@ -20,17 +19,5 @@ void Mundo::crearHumanos(int dato){
 
 
 //======================MUNDO===============================
-
-Persona * Mundo::generar(){
-    Persona * persona = new Persona();
-    persona->id = QRandomGenerator::global()->bounded(0,99999);
-    persona->name = files->names[QRandomGenerator::global()->bounded(0,999)];
-    persona->apellido = files->lastNames[QRandomGenerator::global()->bounded(0,500)];
-    persona->pais = files->paises[QRandomGenerator::global()->bounded(0,195)];
-    persona->creencia = files->religions[QRandomGenerator::global()->bounded(0,18)];
-    persona->profesion = files->jobs[QRandomGenerator::global()->bounded(0,79)];
-
-    return persona;
-}
 
 
