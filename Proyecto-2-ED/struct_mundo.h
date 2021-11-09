@@ -3,6 +3,7 @@
 
 #include "struct_personas.h"
 #include "struct_file.h"
+#include "struct_arbolfamilias.h"
 
 #include <QRandomGenerator>
 #include <QString>
@@ -13,16 +14,20 @@ struct Mundo{
     ListaDoblePersonas * personas;
     Files * files;
     ArbolPersonas * treePersonas;
+    ArbolFamilias * treeFamilias;
+    ListaSimpleArbolFamilias * listArbolFamilias;
+
     Mundo(){
         personas = new ListaDoblePersonas();
         treePersonas = new ArbolPersonas();
         files = new Files();
+        treeFamilias = new ArbolFamilias();
+        listArbolFamilias = new ListaSimpleArbolFamilias();
     }
 
     void crearHumanos(int);
     void crearArbol();
     void crearArbol(NodoPersona* array[], int);
-
 
 };
 

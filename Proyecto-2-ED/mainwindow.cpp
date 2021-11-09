@@ -16,6 +16,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::start(){
     mainstruct = new MainStruct();
+   // mainstruct->mundo->files->printNames();
 }
 
 
@@ -32,36 +33,36 @@ void MainWindow::on_pushButton_2_clicked(){
 
 void MainWindow::on_botonHumanos_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(0);
+    ui->mainPanel->setCurrentIndex(0);
 }
 
 
 void MainWindow::on_botonCielo_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(1);
+    ui->mainPanel->setCurrentIndex(1);
 }
 
 
 void MainWindow::on_botonInfierno_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(2);
+    ui->mainPanel->setCurrentIndex(2);
 }
 
 
 void MainWindow::on_botonGanador_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(5);
+    ui->mainPanel->setCurrentIndex(5);
 }
 
 
 void MainWindow::on_botonConsultas_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(3);
+    ui->mainPanel->setCurrentIndex(3);
 }
 
 
 void MainWindow::on_botonConsultas2_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(4);
+    ui->mainPanel->setCurrentIndex(4);
 }
 
