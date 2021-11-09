@@ -32,13 +32,13 @@ void MainWindow::on_pushButton_2_clicked(){
 
 
 void MainWindow::on_pushButton_3_clicked(){
-    ui->MainPanel->setCurrentIndex(0);
+    ui->stackedWidget->setCurrentIndex(0);
 }
 
 
 void MainWindow::on_pushButton_4_clicked()
 {
-    ui->MainPanel->setCurrentIndex(1);
+    ui->stackedWidget->setCurrentIndex(1);
 
 }
 
