@@ -66,15 +66,3 @@ void MainWindow::on_botonConsultas2_clicked()
     ui->stackedWidget->setCurrentIndex(4);
 }
 
-
-void MainWindow::on_pushButton_3_clicked()
-{
-    ui->MainPanel->setCurrentIndex(0);
-}
-
-
-void MainWindow::on_pushButton_4_clicked()
-{
-    ui->MainPanel->setCurrentIndex(1);
-}
-

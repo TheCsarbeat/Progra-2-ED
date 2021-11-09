@@ -94,16 +94,16 @@ bool ListaDoblePersonas::insertar(Persona * persona, NodoPersona * masCernano){
 void ListaDoblePersonas::imprimir(){
     NodoPersona * temp = primerNodo;
     int cont =0;
-    qDebug()<<"[";
     while (temp != NULL){
-        //temp->persona->imprimir();
-        //qDebug()<<"Posicion en lista: "<<cont;
-        qDebug()<<temp->persona->id<<", ";
+        temp->persona->imprimir();
+        qDebug()<<"\nPosicion en lista: "<<cont;
+        qDebug()<<"\n+++++++++++++++++++";
+        temp->persona->hijos->imprimir();
+        qDebug()<<"\n+++++++++++++++++++";
         cont++;
         temp = temp->siguiente;
     }
-              qDebug()<<"]";
-   // qDebug()<<"\nLargo: "<<largo;
+    qDebug()<<"\n\n***************\nLargo: "<<largo;
 }
 
 

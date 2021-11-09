@@ -7,6 +7,14 @@
 #include <QFile>
 #include <QTextStream>
 
+struct Pecado;
+struct BuenaAccion;
+struct Persona;
+struct NodoPersona;
+struct ListaDoblePersonas;
+struct NodoPersonaArbol;
+struct ArbolPersonas;
+
 //-------------------------------------------------------
 struct Pecado{
 
@@ -54,7 +62,8 @@ struct Persona{
     QDateTime nacimiento;
     Pecado * pecados[7];
     BuenaAccion * buenasAcciones[7];
-
+    Persona * padre;
+    ListaDoblePersonas *hijos;
     Persona(){
         id = 0;
         name = "";
@@ -69,6 +78,8 @@ struct Persona{
             pecados[i] = new Pecado();
             buenasAcciones[i] = new BuenaAccion();
         }
+        padre = NULL;
+        hijos = NULL;
     }
 
     Persona(int _id, QString _name, QString _apellido, QString _pais, QString _creencia, QString _profesion){
@@ -85,6 +96,8 @@ struct Persona{
             pecados[i] = new Pecado();
             buenasAcciones[i] = new BuenaAccion();
         }
+        padre = NULL;
+        hijos = NULL;
     }
 
     void imprimir(){
