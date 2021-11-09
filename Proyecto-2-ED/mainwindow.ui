@@ -1449,6 +1449,22 @@ border-style:solid;</string>
      <string>Consultas 2</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>620</y>
+      <width>231</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image:url(&quot;:/images/picture.jpg&quot;);</string>
+    </property>
+    <property name="text">
+     <string>image</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -1456,7 +1472,7 @@ border-style:solid;</string>
      <x>0</x>
      <y>0</y>
      <width>1900</width>
-     <height>25</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>
