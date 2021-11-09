@@ -129,7 +129,28 @@ release/qrc_MyResources.cpp: ../Proyecto-2-ED/MyResources.qrc \
 		../Proyecto-2-ED/data/america.txt \
 		../Proyecto-2-ED/data/names.txt \
 		../Proyecto-2-ED/data/asia.txt \
-		../Proyecto-2-ED/images/picture.jpg
+		../Proyecto-2-ED/images/demon1.png \
+		../Proyecto-2-ED/images/demon6.png \
+		../Proyecto-2-ED/images/demon4.png \
+		../Proyecto-2-ED/images/angel11.png \
+		../Proyecto-2-ED/images/angel10.png \
+		../Proyecto-2-ED/images/angel2.png \
+		../Proyecto-2-ED/images/angel\ .jpg \
+		../Proyecto-2-ED/images/picture.jpg \
+		../Proyecto-2-ED/images/angel6.png \
+		../Proyecto-2-ED/images/angel1.png \
+		../Proyecto-2-ED/images/demon3.png \
+		../Proyecto-2-ED/images/angel3.png \
+		../Proyecto-2-ED/images/demon2.png \
+		../Proyecto-2-ED/images/angel7.png \
+		../Proyecto-2-ED/images/angel9.png \
+		../Proyecto-2-ED/images/angel5.png \
+		../Proyecto-2-ED/images/demon7.png \
+		../Proyecto-2-ED/images/demon.png \
+		../Proyecto-2-ED/images/angel4.png \
+		../Proyecto-2-ED/images/diablo.jpg \
+		../Proyecto-2-ED/images/demon5.jpg \
+		../Proyecto-2-ED/images/angel8.png
 	C:\Qt\6.1.3\mingw81_64\bin\rcc.exe -name MyResources ..\Proyecto-2-ED\MyResources.qrc -o release\qrc_MyResources.cpp
 
 compiler_moc_predefs_make_all: release/moc_predefs.h
@@ -291,7 +312,7 @@ release/moc_mainwindow.cpp: ../Proyecto-2-ED/mainwindow.h \
 		../Proyecto-2-ED/struct_file.h \
 		release/moc_predefs.h \
 		C:/Qt/6.1.3/mingw81_64/bin/moc.exe
-	C:\Qt\6.1.3\mingw81_64\bin\moc.exe $(DEFINES) --include "D:/TEC/II SEMESTRE/Estructura de Datos/Tareas/Progras/Progra 2/Progra-2-ED/build-Proyecto-2-ED-Desktop_Qt_6_1_3_MinGW_64_bit-Debug/release/moc_predefs.h" -IC:/Qt/6.1.3/mingw81_64/mkspecs/win32-g++ -I"D:/TEC/II SEMESTRE/Estructura de Datos/Tareas/Progras/Progra 2/Progra-2-ED/Proyecto-2-ED" -IC:/Qt/6.1.3/mingw81_64/include -IC:/Qt/6.1.3/mingw81_64/include/QtWidgets -IC:/Qt/6.1.3/mingw81_64/include/QtGui -IC:/Qt/6.1.3/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\Proyecto-2-ED\mainwindow.h -o release\moc_mainwindow.cpp
+	C:\Qt\6.1.3\mingw81_64\bin\moc.exe $(DEFINES) --include "D:/Universidad/Segundo semestre/ED/ProyectoArboles/Progra-2-ED/build-Proyecto-2-ED-Desktop_Qt_6_1_3_MinGW_64_bit-Debug/release/moc_predefs.h" -IC:/Qt/6.1.3/mingw81_64/mkspecs/win32-g++ -I"D:/Universidad/Segundo semestre/ED/ProyectoArboles/Progra-2-ED/Proyecto-2-ED" -IC:/Qt/6.1.3/mingw81_64/include -IC:/Qt/6.1.3/mingw81_64/include/QtWidgets -IC:/Qt/6.1.3/mingw81_64/include/QtGui -IC:/Qt/6.1.3/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\Proyecto-2-ED\mainwindow.h -o release\moc_mainwindow.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -564,7 +585,9 @@ release/mainstruct.o: ../Proyecto-2-ED/mainstruct.cpp ../Proyecto-2-ED/mainstruc
 		C:/Qt/6.1.3/mingw81_64/include/QtCore/qfiledevice.h \
 		C:/Qt/6.1.3/mingw81_64/include/QtCore/qiodevice.h \
 		C:/Qt/6.1.3/mingw81_64/include/QtCore/QTextStream \
-		../Proyecto-2-ED/struct_file.h
+		../Proyecto-2-ED/struct_file.h \
+		C:/Qt/6.1.3/mingw81_64/include/QtCore/QRandomGenerator \
+		C:/Qt/6.1.3/mingw81_64/include/QtCore/qrandom.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\mainstruct.o ..\Proyecto-2-ED\mainstruct.cpp
 
 release/mainwindow.o: ../Proyecto-2-ED/mainwindow.cpp ../Proyecto-2-ED/mainwindow.h \
@@ -715,7 +738,36 @@ release/mainwindow.o: ../Proyecto-2-ED/mainwindow.cpp ../Proyecto-2-ED/mainwindo
 		C:/Qt/6.1.3/mingw81_64/include/QtCore/qfiledevice.h \
 		C:/Qt/6.1.3/mingw81_64/include/QtCore/QTextStream \
 		../Proyecto-2-ED/struct_file.h \
-		ui_mainwindow.h
+		ui_mainwindow.h \
+		C:/Qt/6.1.3/mingw81_64/include/QtCore/QVariant \
+		C:/Qt/6.1.3/mingw81_64/include/QtWidgets/QApplication \
+		C:/Qt/6.1.3/mingw81_64/include/QtWidgets/qapplication.h \
+		C:/Qt/6.1.3/mingw81_64/include/QtGui/qguiapplication.h \
+		C:/Qt/6.1.3/mingw81_64/include/QtGui/qinputmethod.h \
+		C:/Qt/6.1.3/mingw81_64/include/QtWidgets/QFrame \
+		C:/Qt/6.1.3/mingw81_64/include/QtWidgets/qframe.h \
+		C:/Qt/6.1.3/mingw81_64/include/QtWidgets/QLabel \
+		C:/Qt/6.1.3/mingw81_64/include/QtWidgets/qlabel.h \
+		C:/Qt/6.1.3/mingw81_64/include/QtGui/qpicture.h \
+		C:/Qt/6.1.3/mingw81_64/include/QtGui/qtextdocument.h \
+		C:/Qt/6.1.3/mingw81_64/include/QtWidgets/QLineEdit \
+		C:/Qt/6.1.3/mingw81_64/include/QtWidgets/qlineedit.h \
+		C:/Qt/6.1.3/mingw81_64/include/QtGui/qtextcursor.h \
+		C:/Qt/6.1.3/mingw81_64/include/QtGui/qtextformat.h \
+		C:/Qt/6.1.3/mingw81_64/include/QtGui/qpen.h \
+		C:/Qt/6.1.3/mingw81_64/include/QtGui/qtextoption.h \
+		C:/Qt/6.1.3/mingw81_64/include/QtWidgets/QMenuBar \
+		C:/Qt/6.1.3/mingw81_64/include/QtWidgets/qmenubar.h \
+		C:/Qt/6.1.3/mingw81_64/include/QtWidgets/qmenu.h \
+		C:/Qt/6.1.3/mingw81_64/include/QtGui/qaction.h \
+		C:/Qt/6.1.3/mingw81_64/include/QtWidgets/QPushButton \
+		C:/Qt/6.1.3/mingw81_64/include/QtWidgets/qpushbutton.h \
+		C:/Qt/6.1.3/mingw81_64/include/QtWidgets/qabstractbutton.h \
+		C:/Qt/6.1.3/mingw81_64/include/QtWidgets/QStackedWidget \
+		C:/Qt/6.1.3/mingw81_64/include/QtWidgets/qstackedwidget.h \
+		C:/Qt/6.1.3/mingw81_64/include/QtWidgets/QStatusBar \
+		C:/Qt/6.1.3/mingw81_64/include/QtWidgets/qstatusbar.h \
+		C:/Qt/6.1.3/mingw81_64/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\mainwindow.o ..\Proyecto-2-ED\mainwindow.cpp
 
 release/struct_file.o: ../Proyecto-2-ED/struct_file.cpp ../Proyecto-2-ED/struct_file.h \
@@ -902,7 +954,9 @@ release/struct_mundo.o: ../Proyecto-2-ED/struct_mundo.cpp ../Proyecto-2-ED/struc
 		C:/Qt/6.1.3/mingw81_64/include/QtCore/qfiledevice.h \
 		C:/Qt/6.1.3/mingw81_64/include/QtCore/qiodevice.h \
 		C:/Qt/6.1.3/mingw81_64/include/QtCore/QTextStream \
-		../Proyecto-2-ED/struct_file.h
+		../Proyecto-2-ED/struct_file.h \
+		C:/Qt/6.1.3/mingw81_64/include/QtCore/QRandomGenerator \
+		C:/Qt/6.1.3/mingw81_64/include/QtCore/qrandom.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\struct_mundo.o ..\Proyecto-2-ED\struct_mundo.cpp
 
 release/struct_personas.o: ../Proyecto-2-ED/struct_personas.cpp ../Proyecto-2-ED/struct_personas.h \
