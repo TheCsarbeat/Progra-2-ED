@@ -33,12 +33,10 @@ bool ListaDoblePersonas::insertar(Persona * persona){
                 temp->anterior->siguiente = nuevo;
                 temp->anterior = nuevo;
             }
-
         }
     }
     largo++;
     return true;
-
 }
 
 bool ListaDoblePersonas::insertar(Persona * persona, NodoPersona * masCernano){
@@ -47,7 +45,6 @@ bool ListaDoblePersonas::insertar(Persona * persona, NodoPersona * masCernano){
     bool flagAnterior = false;
     if (isEmpty()){
         primerNodo = ultimoNodo = nuevo;
-
     }else{
         NodoPersona *temp = masCernano;
         if(masCernano->persona->id < persona->id){
@@ -83,12 +80,10 @@ bool ListaDoblePersonas::insertar(Persona * persona, NodoPersona * masCernano){
             nuevo->anterior = temp->anterior;
             temp->anterior->siguiente = nuevo;
             temp->anterior = nuevo;
-
         }
     }
     largo++;
     return true;
-
 }
 
 void ListaDoblePersonas::imprimir(){
