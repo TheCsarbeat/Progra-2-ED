@@ -133,9 +133,28 @@ debug/qrc_MyResources.cpp: ../Proyecto-2-ED/MyResources.qrc \
 		../Proyecto-2-ED/data/america.txt \
 		../Proyecto-2-ED/data/names.txt \
 		../Proyecto-2-ED/data/asia.txt \
+		../Proyecto-2-ED/images/demon1.png \
+		../Proyecto-2-ED/images/demon6.png \
+		../Proyecto-2-ED/images/demon4.png \
+		../Proyecto-2-ED/images/angel11.png \
+		../Proyecto-2-ED/images/angel10.png \
+		../Proyecto-2-ED/images/angel2.png \
+		../Proyecto-2-ED/images/angel\ .jpg \
 		../Proyecto-2-ED/images/picture.jpg \
-		../Proyecto-2-ED/images/mia-khalifa-y-su-lucha-1_0_40_1080_672.jpg \
-		../Proyecto-2-ED/images/devil.png
+		../Proyecto-2-ED/images/angel6.png \
+		../Proyecto-2-ED/images/angel1.png \
+		../Proyecto-2-ED/images/demon3.png \
+		../Proyecto-2-ED/images/angel3.png \
+		../Proyecto-2-ED/images/demon2.png \
+		../Proyecto-2-ED/images/angel7.png \
+		../Proyecto-2-ED/images/angel9.png \
+		../Proyecto-2-ED/images/angel5.png \
+		../Proyecto-2-ED/images/demon7.png \
+		../Proyecto-2-ED/images/demon.png \
+		../Proyecto-2-ED/images/angel4.png \
+		../Proyecto-2-ED/images/diablo.jpg \
+		../Proyecto-2-ED/images/demon5.jpg \
+		../Proyecto-2-ED/images/angel8.png
 	C:\Qt\6.1.3\mingw81_64\bin\rcc.exe -name MyResources ..\Proyecto-2-ED\MyResources.qrc -o debug\qrc_MyResources.cpp
 
 compiler_moc_predefs_make_all: debug/moc_predefs.h

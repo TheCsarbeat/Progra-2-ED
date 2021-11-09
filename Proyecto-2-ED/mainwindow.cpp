@@ -16,6 +16,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::start(){
     mainstruct = new MainStruct();
+   // mainstruct->mundo->files->printNames();
 }
 
 
@@ -26,18 +27,42 @@ void MainWindow::on_pushButton_clicked(){
 
 void MainWindow::on_pushButton_2_clicked(){
 
-    qDebug()<<"El m[as cercano: "<<mainstruct->mundo->treePersonas->buscarMasCercano(ui->txtcerca->text().toInt())->persona->id;
+    qDebug()<<"El mas cercano: "<<mainstruct->mundo->treePersonas->buscarMasCercano(ui->txtcerca->text().toInt())->persona->id;
 }
 
 
-void MainWindow::on_pushButton_3_clicked(){
-    ui->stackedWidget->setCurrentIndex(0);
-}
-
-
-void MainWindow::on_pushButton_4_clicked()
+void MainWindow::on_botonHumanos_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(1);
+    ui->mainPanel->setCurrentIndex(0);
+}
 
+
+void MainWindow::on_botonCielo_clicked()
+{
+    ui->mainPanel->setCurrentIndex(1);
+}
+
+
+void MainWindow::on_botonInfierno_clicked()
+{
+    ui->mainPanel->setCurrentIndex(2);
+}
+
+
+void MainWindow::on_botonGanador_clicked()
+{
+    ui->mainPanel->setCurrentIndex(5);
+}
+
+
+void MainWindow::on_botonConsultas_clicked()
+{
+    ui->mainPanel->setCurrentIndex(3);
+}
+
+
+void MainWindow::on_botonConsultas2_clicked()
+{
+    ui->mainPanel->setCurrentIndex(4);
 }
 
