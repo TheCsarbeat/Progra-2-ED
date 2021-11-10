@@ -1,6 +1,8 @@
 #ifndef STRUCT_PERSONAS_H
 #define STRUCT_PERSONAS_H
 
+#include "struct_file.h"
+
 #include <QString>
 #include <QDateTime>
 #include <QCoreApplication>
@@ -54,7 +56,7 @@ struct Persona{
     int id;
     QString name;
     QString apellido;
-    QString pais;
+    Pais* pais;
     QString creencia;
     QString profesion;
     QString email;
@@ -68,7 +70,7 @@ struct Persona{
         id = 0;
         name = "";
         apellido = "";
-        pais = "";
+        pais = new Pais();
         creencia = "";
         profesion = "";
         email = "ytcesarjs@gmail.com";
@@ -82,7 +84,7 @@ struct Persona{
         hijos = NULL;
     }
 
-    Persona(int _id, QString _name, QString _apellido, QString _pais, QString _creencia, QString _profesion){
+    Persona(int _id, QString _name, QString _apellido, Pais* _pais, QString _creencia, QString _profesion){
         id = _id;
         name = _name;
         apellido = _apellido;

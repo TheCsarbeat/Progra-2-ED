@@ -6,7 +6,7 @@ void Mundo::crearHumanos(int dato){
         int id = QRandomGenerator::global()->bounded(99999);
         QString name = files->names[QRandomGenerator::global()->bounded(100)];
         QString apellido = files->lastNames[QRandomGenerator::global()->bounded(50)];
-        QString pais = files->lastNames[QRandomGenerator::global()->bounded(50)];
+        Pais *pais = files->paises[QRandomGenerator::global()->bounded(50)];
         QString creencia = QString::number(personas->largo);
         QString profesion = files->jobs[QRandomGenerator::global()->bounded(100)];
         Persona *p = new Persona(id, name, apellido, pais, creencia, profesion);
@@ -33,50 +33,28 @@ void Mundo::crearHumanos(int dato){
     }
     //crearArbol();
 
-    personas->imprimir();
+    //personas->imprimir();
     //treePersonas->preOrden(treePersonas->raiz);
     qDebug()<<"\nLa altura del arbol es: "<<treePersonas->treeHeight(treePersonas->raiz);
     qDebug()<<"La cantidad de nodos del arbol es: "<<treePersonas->cantNodos(treePersonas->raiz);
     qDebug()<<"El tama;o de la lista: "<<personas->largo;
 
     qDebug()<<"Arbol de familia: ";
-    //listArbolFamilias->imprimir();
-
-
-    // Prueba del arbol de la familias
-    /*NodoPersona *temp = personas->primerNodo;
-    for(int i = 1; i<=12; i++){
-       temp->persona->imprimir();
-       treeFamilias->insert(temp->persona);
-       temp = temp->siguiente;
-    }
-
-
-    qDebug()<<"\nLa altura del arbol Familias es: "<<treeFamilias->treeHeight(treeFamilias->raiz);
-
-    for(int i = 0; i<=treeFamilias->treeHeight(treeFamilias->raiz); i++){
-        qDebug()<<"\n----------";
-        treeFamilias->imprimirNivel(i);
-    }
-    treeFamilias->preOrder(treeFamilias->raiz);*/
-
+    listArbolFamilias->imprimir();
 }
 
 void Mundo::crearArbol(){
-    int treeSize =1;
-    int exponent = 0;
-    int largoPersonas = personas->largo;
-    while(treeSize <= personas->largo*0.01){
-        treeSize = treeSize *2;
-        exponent++;
-    }
+    int treeSize =1;   
+    while(treeSize <= personas->largo*0.01)
+        treeSize = treeSize *2;    
     treeSize--;
+
     NodoPersona *arrayPersonas[treeSize];
     int index= 0;
     int separationValue = personas->largo/treeSize;
-
-    NodoPersona *temp = personas->primerNodo;
     int i = 1;
+
+    NodoPersona *temp = personas->primerNodo;    
     while(temp != NULL && index < treeSize){
         if(i == separationValue){
             arrayPersonas[index] = temp;
@@ -87,13 +65,7 @@ void Mundo::crearArbol(){
         temp = temp->siguiente;
     }
 
-    //Imprimir el array
-    /*for(int i = 0; i<treeSize; i++){
-        arrayPersonas[i]->persona->imprimir();
-    }*/
-
     crearArbol(arrayPersonas, treeSize);
-
 }
 
 void Mundo::crearArbol(NodoPersona * array[], int size){
@@ -118,18 +90,6 @@ void Mundo::crearArbol(NodoPersona * array[], int size){
             }
             crearArbol(arrayPersonasIzquierdo,childrenSize);
             crearArbol(arrayPersonasDerecho,childrenSize);
-
-            /*qDebug()<<"\n\n\nArray derecho";
-            for(int i = 0; i<(size-1)/2; i++){
-                qDebug()<<"\n";
-                arrayPersonasDerecho[i]->persona->imprimir();
-            }
-
-            qDebug()<<"\nArray Izquierdo";
-            for(int i = 0; i<(size-1)/2; i++){
-                qDebug()<<"\n";
-                arrayPersonasIzquierdo[i]->persona->imprimir();
-            }*/
         }else{
             index = middle+1;
             treePersonas->insertar(array[index]->persona->id,array[index]);

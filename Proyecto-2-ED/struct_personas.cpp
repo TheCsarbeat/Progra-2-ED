@@ -1,5 +1,7 @@
 #include "struct_personas.h"
 
+
+
 bool ListaDoblePersonas::isEmpty(){
     return primerNodo == NULL;
 }
