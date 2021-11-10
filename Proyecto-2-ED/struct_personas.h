@@ -101,7 +101,7 @@ struct Persona{
     }
 
     void imprimir(){
-        qDebug()<<"\n-----------------\nID: "<<id<<"\nNombre: "<<name<<"\nApellido: "<<apellido<<"\nContador: "<<creencia;
+        qDebug()<<"\n-----------------\nID: "<<id<<"\nNombre: "<<name<<"\nApellido: "<<apellido<<"\nContador: "<<creencia;        
     }
 
 };
@@ -142,6 +142,7 @@ struct ListaDoblePersonas{
     void imprimirReverse();
     NodoPersona * borrarALInicio();
     NodoPersona * borrarALFinal();
+    void buscar(int);
     NodoPersona * buscar(NodoPersona * persona);
     void insertarEn(int index, NodoPersona * persona);
 };

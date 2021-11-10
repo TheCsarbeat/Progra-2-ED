@@ -28,13 +28,15 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QStackedWidget *stackedWidget;
+    QStackedWidget *mainPanel;
     QWidget *pageCrearHumano;
     QPushButton *pushButton_2;
     QLineEdit *txtcerca;
     QPushButton *pushButton;
     QLineEdit *txtCantHumanos;
     QLabel *label_4;
+    QLineEdit *txtCantHumanos_2;
+    QPushButton *pushButton_4;
     QWidget *pageCielo;
     QLabel *label_2;
     QPushButton *botonBAFamilias;
@@ -129,9 +131,9 @@ public:
         MainWindow->resize(1900, 1000);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        stackedWidget = new QStackedWidget(centralwidget);
-        stackedWidget->setObjectName(QString::fromUtf8("stackedWidget"));
-        stackedWidget->setGeometry(QRect(390, 10, 1580, 1000));
+        mainPanel = new QStackedWidget(centralwidget);
+        mainPanel->setObjectName(QString::fromUtf8("mainPanel"));
+        mainPanel->setGeometry(QRect(390, 10, 1580, 1000));
         pageCrearHumano = new QWidget();
         pageCrearHumano->setObjectName(QString::fromUtf8("pageCrearHumano"));
         pushButton_2 = new QPushButton(pageCrearHumano);
@@ -149,7 +151,13 @@ public:
         label_4 = new QLabel(pageCrearHumano);
         label_4->setObjectName(QString::fromUtf8("label_4"));
         label_4->setGeometry(QRect(180, 270, 161, 101));
-        stackedWidget->addWidget(pageCrearHumano);
+        txtCantHumanos_2 = new QLineEdit(pageCrearHumano);
+        txtCantHumanos_2->setObjectName(QString::fromUtf8("txtCantHumanos_2"));
+        txtCantHumanos_2->setGeometry(QRect(490, 210, 113, 21));
+        pushButton_4 = new QPushButton(pageCrearHumano);
+        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
+        pushButton_4->setGeometry(QRect(270, 200, 131, 41));
+        mainPanel->addWidget(pageCrearHumano);
         pageCielo = new QWidget();
         pageCielo->setObjectName(QString::fromUtf8("pageCielo"));
         label_2 = new QLabel(pageCielo);
@@ -298,7 +306,7 @@ public:
 " text-align: top ;\n"
 "border:1px;\n"
 "border-style:solid;"));
-        stackedWidget->addWidget(pageCielo);
+        mainPanel->addWidget(pageCielo);
         pageInfierno = new QWidget();
         pageInfierno->setObjectName(QString::fromUtf8("pageInfierno"));
         idPecados = new QLabel(pageInfierno);
@@ -429,7 +437,7 @@ public:
         label_3 = new QLabel(pageInfierno);
         label_3->setObjectName(QString::fromUtf8("label_3"));
         label_3->setGeometry(QRect(410, 10, 111, 16));
-        stackedWidget->addWidget(pageInfierno);
+        mainPanel->addWidget(pageInfierno);
         pageConsultas = new QWidget();
         pageConsultas->setObjectName(QString::fromUtf8("pageConsultas"));
         pushButton_16 = new QPushButton(pageConsultas);
@@ -460,7 +468,7 @@ public:
         scrollAreaWidgetContents_2->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_2"));
         scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 659, 299));
         scrollConsultaBueno->setWidget(scrollAreaWidgetContents_2);
-        stackedWidget->addWidget(pageConsultas);
+        mainPanel->addWidget(pageConsultas);
         pageConsultas2 = new QWidget();
         pageConsultas2->setObjectName(QString::fromUtf8("pageConsultas2"));
         labelApellidoPais = new QLabel(pageConsultas2);
@@ -483,7 +491,7 @@ public:
         label_6 = new QLabel(pageConsultas2);
         label_6->setObjectName(QString::fromUtf8("label_6"));
         label_6->setGeometry(QRect(280, 460, 351, 231));
-        stackedWidget->addWidget(pageConsultas2);
+        mainPanel->addWidget(pageConsultas2);
         pageGanador = new QWidget();
         pageGanador->setObjectName(QString::fromUtf8("pageGanador"));
         frameGanadorCielo = new QFrame(pageGanador);
@@ -538,7 +546,7 @@ public:
         infoInfierno = new QLabel(frameGanadorCielo_2);
         infoInfierno->setObjectName(QString::fromUtf8("infoInfierno"));
         infoInfierno->setGeometry(QRect(160, 10, 171, 16));
-        stackedWidget->addWidget(pageGanador);
+        mainPanel->addWidget(pageGanador);
         botonHumanos = new QPushButton(centralwidget);
         botonHumanos->setObjectName(QString::fromUtf8("botonHumanos"));
         botonHumanos->setGeometry(QRect(40, 80, 121, 25));
@@ -564,7 +572,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1900, 25));
+        menubar->setGeometry(QRect(0, 0, 1900, 21));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -572,7 +580,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(4);
+        mainPanel->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -584,8 +592,10 @@ public:
         pushButton_2->setText(QCoreApplication::translate("MainWindow", "Buscar humano m\303\241s cerca", nullptr));
         txtcerca->setText(QCoreApplication::translate("MainWindow", "1000", nullptr));
         pushButton->setText(QCoreApplication::translate("MainWindow", "Generar humanos", nullptr));
-        txtCantHumanos->setText(QCoreApplication::translate("MainWindow", "1000", nullptr));
+        txtCantHumanos->setText(QCoreApplication::translate("MainWindow", "10000", nullptr));
         label_4->setText(QCoreApplication::translate("MainWindow", "Aqu\303\255 se ve el texto.", nullptr));
+        txtCantHumanos_2->setText(QString());
+        pushButton_4->setText(QCoreApplication::translate("MainWindow", "buscar humano", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "Consultas cielo", nullptr));
         botonBAFamilias->setText(QCoreApplication::translate("MainWindow", "Buenas acciones por familia", nullptr));
         idBuenasAcciones->setText(QCoreApplication::translate("MainWindow", "Ingrese un ID:", nullptr));

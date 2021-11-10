@@ -43,7 +43,7 @@ struct ArbolFamilias{
     NodoArbolFamiliaALV* insert(NodoArbolFamiliaALV *r, Persona*);
 
     void asignarHijos(Persona *persona);
-    void asignarHijos(Persona *persona, NodoArbolFamiliaALV *t, int);
+    int asignarHijos(Persona *persona, NodoArbolFamiliaALV *t, int);
 
     void imprimirNivel(int nivel);
     NodoArbolFamiliaALV* nivelImprimir(NodoArbolFamiliaALV* , int , int );
