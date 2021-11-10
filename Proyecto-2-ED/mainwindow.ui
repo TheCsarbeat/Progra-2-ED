@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QStackedWidget" name="stackedWidget">
+   <widget class="QStackedWidget" name="mainPanel">
     <property name="geometry">
      <rect>
       <x>390</x>
@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="pageCrearHumano">
      <widget class="QPushButton" name="pushButton_2">
@@ -76,7 +76,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>1000</string>
+       <string>10000</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_4">
@@ -90,6 +90,32 @@
       </property>
       <property name="text">
        <string>Aquí se ve el texto.</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txtCantHumanos_2">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>210</y>
+        <width>113</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>200</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>buscar humano</string>
       </property>
      </widget>
     </widget>
@@ -1472,7 +1498,7 @@ border-style:solid;</string>
      <x>0</x>
      <y>0</y>
      <width>1900</width>
-     <height>20</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

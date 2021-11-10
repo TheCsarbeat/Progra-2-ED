@@ -33,6 +33,8 @@ private slots:
 
     void on_botonConsultas2_clicked();
 
+    void on_pushButton_4_clicked();
+
 private:
     Ui::MainWindow *ui;
     MainStruct * mainstruct;

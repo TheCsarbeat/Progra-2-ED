@@ -66,3 +66,9 @@ void MainWindow::on_botonConsultas2_clicked()
     ui->mainPanel->setCurrentIndex(4);
 }
 
+
+void MainWindow::on_pushButton_4_clicked(){
+    qDebug()<<"\n\n++++++++++++++++++++++++++++++++++++++\n";
+   mainstruct->mundo->personas->buscar(ui->txtCantHumanos_2->text().toInt());
+}
+

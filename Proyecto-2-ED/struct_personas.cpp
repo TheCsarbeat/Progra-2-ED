@@ -1,5 +1,7 @@
 #include "struct_personas.h"
 
+
+
 bool ListaDoblePersonas::isEmpty(){
     return primerNodo == NULL;
 }
@@ -47,7 +49,9 @@ bool ListaDoblePersonas::insertar(Persona * persona, NodoPersona * masCernano){
         primerNodo = ultimoNodo = nuevo;
     }else{
         NodoPersona *temp = masCernano;
-        if(masCernano->persona->id < persona->id){
+        if(masCernano->persona->id == persona->id){
+            return false;
+        }else if(masCernano->persona->id < persona->id){
             while (temp->persona->id < persona->id){
                 temp = temp->siguiente;
                 if(temp == NULL) break;
@@ -87,20 +91,49 @@ bool ListaDoblePersonas::insertar(Persona * persona, NodoPersona * masCernano){
 }
 
 void ListaDoblePersonas::imprimir(){
+
     NodoPersona * temp = primerNodo;
     int cont =0;
+    qDebug()<<"[";
     while (temp != NULL){
-        temp->persona->imprimir();
-        qDebug()<<"\nPosicion en lista: "<<cont;
-        qDebug()<<"\n+++++++++++++++++++";
-        temp->persona->hijos->imprimir();
-        qDebug()<<"\n+++++++++++++++++++";
+        //temp->persona->imprimir();
+        //qDebug()<<"Posicion en lista: "<<cont;
+        qDebug()<<temp->persona->id<<", ";
         cont++;
         temp = temp->siguiente;
     }
-    qDebug()<<"\n\n***************\nLargo: "<<largo;
+              qDebug()<<"]";
+   // qDebug()<<"\nLargo: "<<largo;
+
+    /*NodoPersona * temp = primerNodo;
+    int cont =0;
+    while (temp != NULL){
+        temp->persona->imprimir();
+        //qDebug()<<"\nPosicion en lista: "<<cont;
+        //qDebug()<<"\n+++++++++++++++++++";
+        //temp->persona->hijos->imprimir();
+        //qDebug()<<"\n+++++++++++++++++++";
+        cont++;
+        temp = temp->siguiente;
+    }
+    //qDebug()<<"\n\n***************\nLargo: "<<largo;*/
 }
 
+void ListaDoblePersonas::buscar(int dato){
+    NodoPersona * temp = primerNodo;
+    while(temp->siguiente!= NULL){
+        if(temp->persona->id == dato){
+            temp->persona->imprimir();
+            qDebug()<<"\nPAdre::: \n\n";
+            if(temp->persona->padre != NULL)
+                temp->persona->padre->imprimir();
+            qDebug()<<"\nHijos::: \n\n";
+            temp->persona->hijos->imprimir();
+            break;
+        }
+        temp = temp->siguiente;
+    }
+}
 
 
 

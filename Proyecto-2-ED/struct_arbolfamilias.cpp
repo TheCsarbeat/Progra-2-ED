@@ -75,8 +75,8 @@ NodoArbolFamiliaALV *ArbolFamilias::insert(Persona *persona){
 
 NodoArbolFamiliaALV *ArbolFamilias::insert(NodoArbolFamiliaALV *r, Persona *persona) {
    if (r == NULL) {
-      r = new NodoArbolFamiliaALV(persona);
       asignarHijos(persona);
+      r = new NodoArbolFamiliaALV(persona);      
       return r;
    } else if (persona->id< r->persona->id) {
       r->l = insert(r->l, persona);
@@ -90,27 +90,33 @@ NodoArbolFamiliaALV *ArbolFamilias::insert(NodoArbolFamiliaALV *r, Persona *pers
 
 void ArbolFamilias::asignarHijos(Persona *persona){
     int cont = QRandomGenerator::global()->bounded(3);
+    persona->name = persona->name + ", cant Hijos: "+QString::number(cont);
     asignarHijos(persona, raiz, cont);
 }
 
-void ArbolFamilias::asignarHijos(Persona *persona, NodoArbolFamiliaALV *t, int dato){
+int ArbolFamilias::asignarHijos(Persona *persona, NodoArbolFamiliaALV *t, int dato){
 
     if (t == NULL || dato ==0)
-       return;
-
+       return dato;
+    if(dato == 0){
+        return dato;
+    }
     if (t->persona->padre == NULL){
         t->persona->padre = persona;
         persona->hijos->insertar(t->persona);
+        dato--;
+        return dato;
     }
-   asignarHijos(persona,t->l, dato--);
-   asignarHijos(persona,t->r, dato--);
+   dato = asignarHijos(persona,t->l, dato);
+   if(dato != 0)
+        asignarHijos(persona,t->r, dato);
 }
 
 void ArbolFamilias::inOrder(NodoArbolFamiliaALV *t) {
    if (t == NULL)
       return;
   inOrder(t->l);
-  qDebug() << t->persona->id << " ";
+  t->persona->imprimir();
   inOrder(t->r);
 }
 void ArbolFamilias::preOrder(NodoArbolFamiliaALV *t) {
@@ -186,8 +192,9 @@ void ListaSimpleArbolFamilias::imprimir(){
     NodoFamiliaListaSimple * temp = primerNodo;
     int cont =0;
     while (temp != NULL){
-        temp->arbol->raiz->persona->imprimir();
-        qDebug()<<"\nPosicion en lista: "<<cont;
+        qDebug()<<"\n\n";
+        qDebug()<<"\nFamilia: "<<cont<<"\n";
+        temp->arbol->inOrder(temp->arbol->raiz);
         cont++;
         temp = temp->siguiente;
     }
