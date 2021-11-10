@@ -33,7 +33,9 @@ private slots:
 
     void on_botonConsultas2_clicked();
 
-    void on_pushButton_4_clicked();
+    void on_btnPecar_clicked();
+
+    void on_btnBuscarPersona_clicked();
 
 private:
     Ui::MainWindow *ui;

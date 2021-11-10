@@ -32,6 +32,8 @@ struct Pecado{
         name = _name;
     }
 
+    void imprimir();
+
 };
 
 
@@ -77,7 +79,7 @@ struct Persona{
         vivo = true;
         nacimiento = QDateTime::currentDateTime();
         for(int i = 0; i<7; i++){
-            pecados[i] = new Pecado();
+            pecados[i] = new Pecado(); //se debe asignar el nombre del pecado según la posición ya que por el momento está vacío, lo mismo con las buenas acciones
             buenasAcciones[i] = new BuenaAccion();
         }
         padre = NULL;
@@ -104,6 +106,12 @@ struct Persona{
 
     void imprimir(){
         qDebug()<<"\n-----------------\nID: "<<id<<"\nNombre: "<<name<<"\nApellido: "<<apellido<<"\nContador: "<<creencia;        
+    }
+
+    void imprimirPecados(){
+        for(unsigned int i=0;i<7;i++){
+            pecados[i]->imprimir();
+        }
     }
 
 };

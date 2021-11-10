@@ -99,8 +99,34 @@ void Mundo::crearArbol(NodoPersona * array[], int size){
     }
 }
 
+void Mundo::hacerPecar(){
+    NodoPersona * tmp = personas->primerNodo;
+    int random = 0;
+    while(tmp!=NULL){
+        for(unsigned int i=0;i<7;i++){
+            random = QRandomGenerator::global()->bounded(100);
+            tmp->persona->pecados[i]->cant += random;
+            tmp->persona->creencia += "|"+QString::number(random);
+            hacerHerencia(tmp->persona,random, i);
+        }
+        tmp = tmp->siguiente;
+    }
+}
 
-
+void Mundo::hacerHerencia(Persona * persona, int random, int position){
+    NodoPersona * hijo = persona->hijos->primerNodo;
+    while(hijo!=NULL){
+        hijo->persona->pecados[position]->cant += random*0.5;
+        hijo->persona->creencia += "|"+QString::number(random*0.5);
+        NodoPersona * nieto = hijo->persona->hijos->primerNodo;
+        while(nieto!=NULL){
+            nieto->persona->pecados[position]->cant += random*0.25;
+            nieto->persona->creencia += "|"+QString::number(random*0.25);
+            nieto = nieto->siguiente;
+        }
+        hijo = hijo->siguiente;
+    }
+}
 
 
 

@@ -28,6 +28,8 @@ struct Mundo{
     void crearHumanos(int);
     void crearArbol();
     void crearArbol(NodoPersona* array[], int);
+    void hacerPecar();
+    void hacerHerencia(Persona *,int, int);
 
 };
 
