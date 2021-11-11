@@ -31,5 +31,42 @@
         <file>images/angel9.png</file>
         <file>images/angel10.png</file>
         <file>images/angel11.png</file>
+        <file>images/plus.png</file>
+        <file>images/consulta.png</file>
+        <file>images/heaven.png</file>
+        <file>images/hell.png</file>
+        <file>images/trophy.png</file>
+        <file>images/world.png</file>
+        <file>images/human.png</file>
+        <file>images/continents/america.png</file>
+        <file>images/continents/america1.png</file>
+        <file>images/continents/asia.png</file>
+        <file>images/continents/asia1.png</file>
+        <file>images/continents/australia.png</file>
+        <file>images/continents/australia1.png</file>
+        <file>images/continents/europa.png</file>
+        <file>images/continents/europa1.png</file>
+        <file>images/continents/africa.png</file>
+        <file>images/continents/africa1.png</file>
+        <file>images/continents/africa2.png</file>
+        <file>images/continents/africa3.png</file>
+        <file>images/continents/africa4.png</file>
+        <file>images/continents/africa5.png</file>
+        <file>images/continents/america2.png</file>
+        <file>images/continents/america3.png</file>
+        <file>images/continents/america4.png</file>
+        <file>images/continents/america5.png</file>
+        <file>images/continents/asia2.png</file>
+        <file>images/continents/asia3.png</file>
+        <file>images/continents/asia4.png</file>
+        <file>images/continents/asia5.png</file>
+        <file>images/continents/australia2.png</file>
+        <file>images/continents/australia3.png</file>
+        <file>images/continents/australia4.png</file>
+        <file>images/continents/australia5.png</file>
+        <file>images/continents/europa2.png</file>
+        <file>images/continents/europa3.png</file>
+        <file>images/continents/europa4.png</file>
+        <file>images/continents/europa5.png</file>
     </qresource>
 </RCC>
