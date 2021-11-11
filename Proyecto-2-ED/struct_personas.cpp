@@ -271,3 +271,25 @@ int ArbolPersonas::cantNodos(NodoPersonaArbol* nodo){
     return 1 + cantNodos(nodo->hijoizquierdo)+cantNodos(nodo->hijoderecho);
 }
 
+QString* ArbolPersonas::toStringHojas(){
+    QString *ferks = new QString();
+    *ferks = "";
+    toStringHojas(raiz, ferks);
+    qDebug()<<*ferks;
+    return ferks;
+}
+
+void ArbolPersonas::toStringHojas(NodoPersonaArbol* nodo, QString*dato){
+    if(nodo != NULL){
+        toStringHojas(nodo->hijoizquierdo, dato);
+        toStringHojas(nodo->hijoderecho, dato);
+        if(nodo->hijoderecho == NULL && nodo->hijoizquierdo == NULL){
+            *dato += QString::number( nodo->nodoPersona->persona->id)+" ";
+        }
+
+    }
+
+
+}
+
+

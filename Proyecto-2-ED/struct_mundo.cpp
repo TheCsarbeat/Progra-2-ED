@@ -1,5 +1,5 @@
 #include "struct_mundo.h"
-void Mundo::crearHumanos(int dato){
+void Mundo::crearHumanos(int dato, QLabel * lb){
     int contador = 0;
     while(contador!=dato){
         bool respuesta;
@@ -29,18 +29,23 @@ void Mundo::crearHumanos(int dato){
             listArbolFamilias->insertarALInicio(p);
         }
 
-
     }
     //crearArbol();
 
     //personas->imprimir();
     //treePersonas->preOrden(treePersonas->raiz);
-    qDebug()<<"\nLa altura del arbol es: "<<treePersonas->treeHeight(treePersonas->raiz);
-    qDebug()<<"La cantidad de nodos del arbol es: "<<treePersonas->cantNodos(treePersonas->raiz);
-    qDebug()<<"El tama;o de la lista: "<<personas->largo;
 
+    QString daato;
+    QString datosTree = +"Datos Arbol"
+            "\nLa cantidad de niveles del árbol es: " +QString::number(treePersonas->treeHeight(treePersonas->raiz))
+            +"\nLa cantidad de Humanos del arbol es: " +QString::number(treePersonas->cantNodos(treePersonas->raiz))
+            +"\n\nDatos de lista: "
+            +"\nEl tamaño de la lista: " +QString::number(personas->largo);
+    datosTree += *treePersonas->toStringHojas();
+
+    lb->setText(datosTree);
     qDebug()<<"Arbol de familia: ";
-    listArbolFamilias->imprimir();
+    //listArbolFamilias->imprimir();
 }
 
 void Mundo::crearArbol(){

@@ -138,7 +138,7 @@ void ArbolFamilias::imprimirNivel(int nivel){
     nivelImprimir(raiz, nivel, 0);
 }
 
-NodoArbolFamiliaALV* ArbolFamilias::nivelImprimir(NodoArbolFamiliaALV*nodo , int nivel, int nivelActual){
+void ArbolFamilias::nivelImprimir(NodoArbolFamiliaALV*nodo , int nivel, int nivelActual){
     if (nodo != NULL)   {
         //cout<<"|"<<nivel<<", "<<nivelActual<<"|";
         if( nivel == nivelActual){
@@ -157,6 +157,7 @@ int ArbolFamilias::treeHeight(NodoArbolFamiliaALV* nodo){
         return 1;
      return qMax (treeHeight (nodo-> l), treeHeight (nodo-> r)) + 1; // La altura del árbol = MAX (la altura del subárbol izquierdo, la altura del subárbol derecho) + 1;
 }
+
 
 
 //*************************************************Lista de familiar************************

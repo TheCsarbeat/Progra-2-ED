@@ -8,7 +8,7 @@
 #include <QCoreApplication>
 #include <QFile>
 #include <QTextStream>
-
+#include <QLabel>
 struct Pecado;
 struct BuenaAccion;
 struct Persona;
@@ -209,6 +209,9 @@ struct ArbolPersonas{
     void preOrden(NodoPersonaArbol*);
     int treeHeight(NodoPersonaArbol*);
     int cantNodos(NodoPersonaArbol*);
+
+    QString* toStringHojas();
+    void toStringHojas(NodoPersonaArbol*, QString*);
 
     NodoPersonaArbol* buscar (int, NodoPersonaArbol*);
     int obtenerNumeroElementos(NodoPersonaArbol*);

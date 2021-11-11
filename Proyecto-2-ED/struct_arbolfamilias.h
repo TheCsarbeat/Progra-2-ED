@@ -46,8 +46,10 @@ struct ArbolFamilias{
     int asignarHijos(Persona *persona, NodoArbolFamiliaALV *t, int);
 
     void imprimirNivel(int nivel);
-    NodoArbolFamiliaALV* nivelImprimir(NodoArbolFamiliaALV* , int , int );
+    void nivelImprimir(NodoArbolFamiliaALV* , int , int);
     int treeHeight(NodoArbolFamiliaALV* nodo);
+
+
 
     void show(NodoArbolFamiliaALV *p, int l);
 

@@ -8,6 +8,7 @@
 
 #include <memory>
 #include "../../Proyecto-2-ED/mainwindow.h"
+#include <QtGui/qtextcursor.h>
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
@@ -22,34 +23,37 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    const uint offsetsAndSize[22];
-    char stringdata0[230];
+    const uint offsetsAndSize[26];
+    char stringdata0[261];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(offsetof(qt_meta_stringdata_MainWindow_t, stringdata0) + ofs), len 
 static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_MainWindow = {
     {
 QT_MOC_LITERAL(0, 10), // "MainWindow"
-QT_MOC_LITERAL(11, 21), // "on_pushButton_clicked"
-QT_MOC_LITERAL(33, 0), // ""
-QT_MOC_LITERAL(34, 23), // "on_pushButton_2_clicked"
-QT_MOC_LITERAL(58, 21), // "on_botonCielo_clicked"
-QT_MOC_LITERAL(80, 23), // "on_botonHumanos_clicked"
-QT_MOC_LITERAL(104, 24), // "on_botonInfierno_clicked"
-QT_MOC_LITERAL(129, 23), // "on_botonGanador_clicked"
-QT_MOC_LITERAL(153, 25), // "on_botonConsultas_clicked"
-QT_MOC_LITERAL(179, 26), // "on_botonConsultas2_clicked"
-QT_MOC_LITERAL(206, 23) // "on_pushButton_4_clicked"
+QT_MOC_LITERAL(11, 26), // "on_btnCrearHumanos_clicked"
+QT_MOC_LITERAL(38, 0), // ""
+QT_MOC_LITERAL(39, 23), // "on_pushButton_2_clicked"
+QT_MOC_LITERAL(63, 21), // "on_botonCielo_clicked"
+QT_MOC_LITERAL(85, 23), // "on_botonHumanos_clicked"
+QT_MOC_LITERAL(109, 24), // "on_botonInfierno_clicked"
+QT_MOC_LITERAL(134, 23), // "on_botonGanador_clicked"
+QT_MOC_LITERAL(158, 25), // "on_botonConsultas_clicked"
+QT_MOC_LITERAL(184, 26), // "on_botonConsultas2_clicked"
+QT_MOC_LITERAL(211, 23), // "on_pushButton_4_clicked"
+QT_MOC_LITERAL(235, 12), // "cambiarColor"
+QT_MOC_LITERAL(248, 12) // "QPushButton*"
 
     },
-    "MainWindow\0on_pushButton_clicked\0\0"
-    "on_pushButton_2_clicked\0on_botonCielo_clicked\0"
+    "MainWindow\0on_btnCrearHumanos_clicked\0"
+    "\0on_pushButton_2_clicked\0on_botonCielo_clicked\0"
     "on_botonHumanos_clicked\0"
     "on_botonInfierno_clicked\0"
     "on_botonGanador_clicked\0"
     "on_botonConsultas_clicked\0"
     "on_botonConsultas2_clicked\0"
-    "on_pushButton_4_clicked"
+    "on_pushButton_4_clicked\0cambiarColor\0"
+    "QPushButton*"
 };
 #undef QT_MOC_LITERAL
 
@@ -59,7 +63,7 @@ static const uint qt_meta_data_MainWindow[] = {
        9,       // revision
        0,       // classname
        0,    0, // classinfo
-       9,   14, // methods
+      10,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -67,15 +71,16 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   68,    2, 0x08,    0 /* Private */,
-       3,    0,   69,    2, 0x08,    1 /* Private */,
-       4,    0,   70,    2, 0x08,    2 /* Private */,
-       5,    0,   71,    2, 0x08,    3 /* Private */,
-       6,    0,   72,    2, 0x08,    4 /* Private */,
-       7,    0,   73,    2, 0x08,    5 /* Private */,
-       8,    0,   74,    2, 0x08,    6 /* Private */,
-       9,    0,   75,    2, 0x08,    7 /* Private */,
-      10,    0,   76,    2, 0x08,    8 /* Private */,
+       1,    0,   74,    2, 0x08,    0 /* Private */,
+       3,    0,   75,    2, 0x08,    1 /* Private */,
+       4,    0,   76,    2, 0x08,    2 /* Private */,
+       5,    0,   77,    2, 0x08,    3 /* Private */,
+       6,    0,   78,    2, 0x08,    4 /* Private */,
+       7,    0,   79,    2, 0x08,    5 /* Private */,
+       8,    0,   80,    2, 0x08,    6 /* Private */,
+       9,    0,   81,    2, 0x08,    7 /* Private */,
+      10,    0,   82,    2, 0x08,    8 /* Private */,
+      11,    1,   83,    2, 0x08,    9 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -87,6 +92,7 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, 0x80000000 | 12,    2,
 
        0        // eod
 };
@@ -97,7 +103,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         auto *_t = static_cast<MainWindow *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->on_pushButton_clicked(); break;
+        case 0: _t->on_btnCrearHumanos_clicked(); break;
         case 1: _t->on_pushButton_2_clicked(); break;
         case 2: _t->on_botonCielo_clicked(); break;
         case 3: _t->on_botonHumanos_clicked(); break;
@@ -106,10 +112,21 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 6: _t->on_botonConsultas_clicked(); break;
         case 7: _t->on_botonConsultas2_clicked(); break;
         case 8: _t->on_pushButton_4_clicked(); break;
+        case 9: _t->cambiarColor((*reinterpret_cast< QPushButton*(*)>(_a[1]))); break;
         default: ;
         }
+    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        switch (_id) {
+        default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
+        case 9:
+            switch (*reinterpret_cast<int*>(_a[1])) {
+            default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
+            case 0:
+                *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType::fromType< QPushButton* >(); break;
+            }
+            break;
+        }
     }
-    (void)_a;
 }
 
 const QMetaObject MainWindow::staticMetaObject = { {
@@ -120,7 +137,7 @@ const QMetaObject MainWindow::staticMetaObject = { {
     nullptr,
 qt_incomplete_metaTypeArray<qt_meta_stringdata_MainWindow_t
 
-, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
+, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QPushButton *, std::false_type>
 
 
 >,
@@ -147,13 +164,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 9)
+        if (_id < 10)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 9;
+        _id -= 10;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 9)
-            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 9;
+        if (_id < 10)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 10;
     }
     return _id;
 }

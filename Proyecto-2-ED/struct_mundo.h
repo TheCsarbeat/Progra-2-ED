@@ -7,6 +7,7 @@
 
 #include <QRandomGenerator>
 #include <QString>
+#include <QLabel>
 
 struct Mundo;
 
@@ -25,7 +26,7 @@ struct Mundo{
         listArbolFamilias = new ListaSimpleArbolFamilias();
     }
 
-    void crearHumanos(int);
+    void crearHumanos(int, QLabel *);
     void crearArbol();
     void crearArbol(NodoPersona* array[], int);
     void hacerPecar();
