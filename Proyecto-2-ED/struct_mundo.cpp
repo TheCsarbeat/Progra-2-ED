@@ -108,7 +108,6 @@ void Mundo::hacerPecar(){
             tmp->persona->pecados[i]->cant += random;
             hacerHerencia(tmp->persona,random, i);
             tmp->persona->buenasAcciones[i]->cant += QRandomGenerator::global()->bounded(100);
-            //tmp->persona->creencia += "|"+QString::number(random);
         }
         tmp = tmp->siguiente;
     }
