@@ -7,8 +7,8 @@ struct MainStruct;
 
 struct MainStruct{
     Mundo * mundo;
-    MainStruct(){
-        mundo = new Mundo();
+    MainStruct(QLabel * lbBuenasAccionesMapa[],QLabel * lbPecadosMapa[]){
+        mundo = new Mundo(lbBuenasAccionesMapa, lbPecadosMapa);
     }
 
 };

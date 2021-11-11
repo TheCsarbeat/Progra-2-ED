@@ -105,7 +105,7 @@ void Files::loadAmerica(){
     }
     QTextStream stream(&file);
     while(!stream.atEnd()){
-        paises[index] = new Pais(stream.readLine(),"America");
+        paises[index] = new Pais(stream.readLine(),"america");
         index++;
     }
     file.close();
@@ -125,7 +125,7 @@ void Files::loadAfrica(){
     }
     QTextStream stream(&file);
     while(!stream.atEnd()){
-        paises[index] = new Pais(stream.readLine(),"Africa");
+        paises[index] = new Pais(stream.readLine(),"africa");
         index++;
     }
     file.close();
@@ -145,7 +145,7 @@ void Files::loadEuropa(){
     }
     QTextStream stream(&file);
     while(!stream.atEnd()){
-        paises[index] = new Pais(stream.readLine(),"Europa");
+        paises[index] = new Pais(stream.readLine(),"europa");
         index++;
     }
     file.close();
@@ -165,7 +165,7 @@ void Files::loadAsia(){
     }
     QTextStream stream(&file);
     while(!stream.atEnd()){
-        paises[index] = new Pais(stream.readLine(),"Asia");
+        paises[index] = new Pais(stream.readLine(),"asia");
         index++;
     }
     file.close();
@@ -185,7 +185,7 @@ void Files::loadOceania(){
     }
     QTextStream stream(&file);
     while(!stream.atEnd()){
-        paises[index] = new Pais(stream.readLine(),"Oceania");
+        paises[index] = new Pais(stream.readLine(),"oceania");
         index++;
     }
     file.close();
@@ -196,4 +196,13 @@ void Files::printNames(){
     for(unsigned int i = 0; i<size;i++){
         paises[i]->toString();
     }
+}
+
+void Files::writeFile(QString fileName, QString data){
+        QFile file(fileName);
+        if (file.open(QIODevice::ReadWrite)) {
+            QTextStream stream(&file);
+            stream << data << "\n";
+        }
+
 }

@@ -28,24 +28,30 @@ void Mundo::crearHumanos(int dato, QLabel * lb){
         }else{
             listArbolFamilias->insertarALInicio(p);
         }
-
     }
-    //crearArbol();
+}
 
-    //personas->imprimir();
-    //treePersonas->preOrden(treePersonas->raiz);
-
-    QString daato;
-    QString datosTree = +"Datos Arbol"
+void Mundo::guarDatosWorld(){
+    QString datosWorld = +"Datos Arbol"
             "\nLa cantidad de niveles del árbol es: " +QString::number(treePersonas->treeHeight(treePersonas->raiz))
             +"\nLa cantidad de Humanos del arbol es: " +QString::number(treePersonas->cantNodos(treePersonas->raiz))
             +"\n\nDatos de lista: "
-            +"\nEl tamaño de la lista: " +QString::number(personas->largo);
-    datosTree += *treePersonas->toStringHojas();
+            +"\nEl tamaño de la lista: " +QString::number(personas->largo)
+            +"\n\n";
+    datosWorld += *treePersonas->toStringHojas();
+    files->writeFile("datosWorld.txt", datosWorld);
+}
 
-    lb->setText(datosTree);
-    qDebug()<<"Arbol de familia: ";
-    //listArbolFamilias->imprimir();
+void Mundo::buscarHuman(int dato, QLabel * lb){
+
+    NodoPersona* buscado= treePersonas->buscarMasCercano(dato);
+    buscado = personas->buscar(dato, buscado);
+    if(buscado!= NULL){
+        lb->setText(buscado->persona->toString()+buscado->persona->hijos->toStringIDHijos());
+    }else{
+        lb->setText("buscado->persona->toString()");
+    }
+
 }
 
 void Mundo::crearArbol(){
@@ -131,3 +137,72 @@ void Mundo::hacerHerencia(Persona * persona, int random, int position){
     }
 }
 
+
+//---------------------- Consultas del Cielo
+void Mundo::continentsMasBuenasAcciones(){
+    NodoPersona * tmp = personas->primerNodo;
+    int buenasAcionesPersona = 0;
+    while(tmp!=NULL){
+        buenasAcionesPersona = 0;
+        for(unsigned int i=0;i<7;i++){
+            buenasAcionesPersona += tmp->persona->buenasAcciones[i]->cant;
+        }
+
+        if(tmp->persona->pais->continente == arrayBuenasAccionesMapa->arrayContinents[0]->name)
+            arrayBuenasAccionesMapa->arrayContinents[0]->cant += buenasAcionesPersona;
+
+        else if(tmp->persona->pais->continente == arrayBuenasAccionesMapa->arrayContinents[1]->name)
+            arrayBuenasAccionesMapa->arrayContinents[1]->cant += buenasAcionesPersona;
+
+        else if(tmp->persona->pais->continente == arrayBuenasAccionesMapa->arrayContinents[2]->name)
+            arrayBuenasAccionesMapa->arrayContinents[2]->cant += buenasAcionesPersona;
+
+        else if(tmp->persona->pais->continente == arrayBuenasAccionesMapa->arrayContinents[3]->name)
+            arrayBuenasAccionesMapa->arrayContinents[3]->cant += buenasAcionesPersona;
+
+        else if(tmp->persona->pais->continente == arrayBuenasAccionesMapa->arrayContinents[4]->name)
+            arrayBuenasAccionesMapa->arrayContinents[4]->cant += buenasAcionesPersona;
+        else{
+
+        }
+        tmp = tmp->siguiente;
+    }
+    arrayBuenasAccionesMapa->bubbleSort();
+    qDebug()<<"\nBuenas Acciones\n";
+    arrayBuenasAccionesMapa->imprimir();
+    arrayBuenasAccionesMapa->showMap(0);
+}
+
+void Mundo::continentsMasPecados(){
+    NodoPersona * tmp = personas->primerNodo;
+    int pecadosPersona = 0;
+    while(tmp!=NULL){
+        pecadosPersona = 0;
+        for(unsigned int i=0;i<7;i++){
+            pecadosPersona += tmp->persona->pecados[i]->cant;
+        }
+
+        if(tmp->persona->pais->continente == arrayPecadosMapa->arrayContinents[0]->name)
+            arrayPecadosMapa->arrayContinents[0]->cant += pecadosPersona;
+
+        else if(tmp->persona->pais->continente == arrayPecadosMapa->arrayContinents[1]->name)
+            arrayPecadosMapa->arrayContinents[1]->cant += pecadosPersona;
+
+        else if(tmp->persona->pais->continente == arrayPecadosMapa->arrayContinents[2]->name)
+            arrayPecadosMapa->arrayContinents[2]->cant += pecadosPersona;
+
+        else if(tmp->persona->pais->continente == arrayPecadosMapa->arrayContinents[3]->name)
+            arrayPecadosMapa->arrayContinents[3]->cant += pecadosPersona;
+
+        else if(tmp->persona->pais->continente == arrayPecadosMapa->arrayContinents[4]->name)
+            arrayPecadosMapa->arrayContinents[4]->cant += pecadosPersona;
+        else{
+
+        }
+        tmp = tmp->siguiente;
+    }
+    arrayPecadosMapa->bubbleSort();
+    qDebug()<<"\n Pecados\n";
+    arrayPecadosMapa->imprimir();
+    arrayPecadosMapa->showMap(1);
+}

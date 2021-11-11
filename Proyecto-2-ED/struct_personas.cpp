@@ -50,17 +50,17 @@ bool ListaDoblePersonas::insertar(Persona * persona){
     return true;
 }
 
-bool ListaDoblePersonas::insertar(Persona * persona, NodoPersona * masCernano){
+bool ListaDoblePersonas::insertar(Persona * persona, NodoPersona * masCercano){
     NodoPersona *nuevo = new NodoPersona(persona);
     bool flagTempNULL = true;
     bool flagAnterior = false;
     if (isEmpty()){
         primerNodo = ultimoNodo = nuevo;
     }else{
-        NodoPersona *temp = masCernano;
-        if(masCernano->persona->id == persona->id){
+        NodoPersona *temp = masCercano;
+        if(masCercano->persona->id == persona->id){
             return false;
-        }else if(masCernano->persona->id < persona->id){
+        }else if(masCercano->persona->id < persona->id){
             while (temp->persona->id < persona->id){
                 temp = temp->siguiente;
                 if(temp == NULL) break;
@@ -111,21 +111,7 @@ void ListaDoblePersonas::imprimir(){
         cont++;
         temp = temp->siguiente;
     }
-              qDebug()<<"]";
-   // qDebug()<<"\nLargo: "<<largo;
-
-    /*NodoPersona * temp = primerNodo;
-    int cont =0;
-    while (temp != NULL){
-        temp->persona->imprimir();
-        //qDebug()<<"\nPosicion en lista: "<<cont;
-        //qDebug()<<"\n+++++++++++++++++++";
-        //temp->persona->hijos->imprimir();
-        //qDebug()<<"\n+++++++++++++++++++";
-        cont++;
-        temp = temp->siguiente;
-    }
-    //qDebug()<<"\n\n***************\nLargo: "<<largo;*/
+    qDebug()<<"]";
 }
 
 void ListaDoblePersonas::buscar(int dato){
@@ -148,6 +134,38 @@ void ListaDoblePersonas::buscar(int dato){
     }
 }
 
+NodoPersona* ListaDoblePersonas::buscar(int id, NodoPersona * masCercano){
+    bool flagTempNULL = true;
+    bool flagAnterior = false;
+    if (isEmpty()){
+        return NULL;
+    }else{
+        NodoPersona *temp = masCercano;
+        if(masCercano->persona->id == id){
+            return masCercano;
+        }else if(masCercano->persona->id < id){
+            while (temp->persona->id < id){
+                temp = temp->siguiente;
+                if(temp == NULL) break;
+            }
+        }else{
+            while (temp->persona->id > id){
+                temp = temp->anterior;
+                if(temp == NULL){
+                    flagTempNULL= false;
+                    break;
+                }
+            }
+            flagAnterior = true;
+        }
+        if(temp == NULL){
+            return NULL;
+        }else if(temp->persona->id == id){
+            return temp;
+        }
+        return NULL;
+    }
+}
 
 
 
@@ -272,11 +290,10 @@ int ArbolPersonas::cantNodos(NodoPersonaArbol* nodo){
 }
 
 QString* ArbolPersonas::toStringHojas(){
-    QString *ferks = new QString();
-    *ferks = "";
-    toStringHojas(raiz, ferks);
-    qDebug()<<*ferks;
-    return ferks;
+    QString *datoHojas = new QString();
+    *datoHojas = "";
+    toStringHojas(raiz, datoHojas);
+    return datoHojas;
 }
 
 void ArbolPersonas::toStringHojas(NodoPersonaArbol* nodo, QString*dato){
@@ -284,7 +301,8 @@ void ArbolPersonas::toStringHojas(NodoPersonaArbol* nodo, QString*dato){
         toStringHojas(nodo->hijoizquierdo, dato);
         toStringHojas(nodo->hijoderecho, dato);
         if(nodo->hijoderecho == NULL && nodo->hijoizquierdo == NULL){
-            *dato += QString::number( nodo->nodoPersona->persona->id)+" ";
+            *dato += nodo->nodoPersona->persona->toString();
+            *dato += nodo->nodoPersona->persona->hijos->toStringIDHijos();
         }
 
     }
