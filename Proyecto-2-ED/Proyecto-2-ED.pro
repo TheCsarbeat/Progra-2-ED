@@ -14,6 +14,7 @@ SOURCES += \
     mainwindow.cpp \
     struct_arbolfamilias.cpp \
     struct_file.cpp \
+    struct_infierno.cpp \
     struct_mundo.cpp \
     struct_personas.cpp
 
@@ -22,6 +23,7 @@ HEADERS += \
     mainwindow.h \
     struct_arbolfamilias.h \
     struct_file.h \
+    struct_infierno.h \
     struct_mundo.h \
     struct_personas.h
 
