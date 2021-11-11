@@ -1,6 +1,15 @@
 #include "struct_personas.h"
 
+//Pecados
+void Pecado::imprimir(){
+    //qDebug()<<"\n"<<name;
+    qDebug()<<"\nCantidad: "<<cant;
+}
 
+void BuenaAccion::imprimir(){
+    //qDebug()<<"\n"<<name;
+    qDebug()<<"\nCantidad: "<<cant;
+}
 
 bool ListaDoblePersonas::isEmpty(){
     return primerNodo == NULL;
@@ -10,7 +19,6 @@ bool ListaDoblePersonas::insertar(Persona * persona){
     NodoPersona *nuevo = new NodoPersona(persona);
     if (isEmpty()){
         primerNodo = ultimoNodo = nuevo;
-
     }else{
         NodoPersona *temp = primerNodo;
         while (temp->persona->id < persona->id){
@@ -23,6 +31,7 @@ bool ListaDoblePersonas::insertar(Persona * persona){
             ultimoNodo = nuevo;
 
         }else if(temp->persona->id == persona->id){
+            delete(nuevo);
             return false;
         }else{
             if(temp == primerNodo){
@@ -35,12 +44,10 @@ bool ListaDoblePersonas::insertar(Persona * persona){
                 temp->anterior->siguiente = nuevo;
                 temp->anterior = nuevo;
             }
-
         }
     }
     largo++;
     return true;
-
 }
 
 bool ListaDoblePersonas::insertar(Persona * persona, NodoPersona * masCernano){
@@ -86,12 +93,10 @@ bool ListaDoblePersonas::insertar(Persona * persona, NodoPersona * masCernano){
             nuevo->anterior = temp->anterior;
             temp->anterior->siguiente = nuevo;
             temp->anterior = nuevo;
-
         }
     }
     largo++;
     return true;
-
 }
 
 void ListaDoblePersonas::imprimir(){
@@ -128,11 +133,15 @@ void ListaDoblePersonas::buscar(int dato){
     while(temp->siguiente!= NULL){
         if(temp->persona->id == dato){
             temp->persona->imprimir();
-            qDebug()<<"\nPAdre::: \n\n";
+            qDebug()<<"\nPadre::: \n\n";
             if(temp->persona->padre != NULL)
                 temp->persona->padre->imprimir();
             qDebug()<<"\nHijos::: \n\n";
             temp->persona->hijos->imprimir();
+            qDebug()<<"\nPecados::";
+            temp->persona->imprimirPecados();
+            qDebug()<<"\nBuenas Acciones::";
+            temp->persona->imprimirBuenasAcciones();
             break;
         }
         temp = temp->siguiente;

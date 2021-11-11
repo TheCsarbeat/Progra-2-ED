@@ -212,6 +212,17 @@ background-color: rgb(60, 185, 75);</string>
       </property>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
+     <widget class="QPushButton" name="btnPecar">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>200</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Hacer pecar</string>
       </property>
       <widget class="QLabel" name="label_9">
        <property name="geometry">
@@ -324,6 +335,27 @@ background-color: rgb(60, 185, 75);</string>
       </property>
       <property name="widgetResizable">
        <bool>true</bool>
+     <widget class="QPushButton" name="btnBuscarPersona">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>90</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Buscar</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txtBuscar">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>100</y>
+        <width>113</width>
+        <height>21</height>
+       </rect>
       </property>
       <widget class="QWidget" name="scrollAreaWidgetContents_4">
        <property name="geometry">
@@ -1989,6 +2021,22 @@ font: 12pt &quot;Open Sans&quot;;</string>
      </property>
     </widget>
    </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>620</y>
+      <width>231</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image:url(&quot;:/images/picture.jpg&quot;);</string>
+    </property>
+    <property name="text">
+     <string>image</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -1996,7 +2044,7 @@ font: 12pt &quot;Open Sans&quot;;</string>
      <x>0</x>
      <y>0</y>
      <width>1900</width>
-     <height>21</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>

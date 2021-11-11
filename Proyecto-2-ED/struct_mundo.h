@@ -29,6 +29,8 @@ struct Mundo{
     void crearHumanos(int, QLabel *);
     void crearArbol();
     void crearArbol(NodoPersona* array[], int);
+    void hacerPecar();
+    void hacerHerencia(Persona *,int, int);
 
 };
 
