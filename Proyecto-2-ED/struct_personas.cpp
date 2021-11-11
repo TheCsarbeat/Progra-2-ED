@@ -2,7 +2,12 @@
 
 //Pecados
 void Pecado::imprimir(){
-    qDebug()<<"\n"<<name;
+    //qDebug()<<"\n"<<name;
+    qDebug()<<"\nCantidad: "<<cant;
+}
+
+void BuenaAccion::imprimir(){
+    //qDebug()<<"\n"<<name;
     qDebug()<<"\nCantidad: "<<cant;
 }
 
@@ -135,6 +140,8 @@ void ListaDoblePersonas::buscar(int dato){
             temp->persona->hijos->imprimir();
             qDebug()<<"\nPecados::";
             temp->persona->imprimirPecados();
+            qDebug()<<"\nBuenas Acciones::";
+            temp->persona->imprimirBuenasAcciones();
             break;
         }
         temp = temp->siguiente;

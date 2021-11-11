@@ -52,6 +52,8 @@ struct BuenaAccion{
         name = _name;
     }
 
+    void imprimir();
+
 };
 
 struct Persona{
@@ -111,6 +113,12 @@ struct Persona{
     void imprimirPecados(){
         for(unsigned int i=0;i<7;i++){
             pecados[i]->imprimir();
+        }
+    }
+
+    void imprimirBuenasAcciones(){
+        for(unsigned int i=0;i<7;i++){
+            buenasAcciones[i]->imprimir();
         }
     }
 
