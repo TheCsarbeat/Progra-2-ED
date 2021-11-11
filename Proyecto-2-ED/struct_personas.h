@@ -98,9 +98,14 @@ struct Persona{
         email = "erksmartinez2014@gmail.com";
         vivo = true;
         nacimiento = QDateTime::currentDateTime();
+        QString arrayNamePecado[7] = {"Lujuria","Gula","Avaricia","Pereza","Ira","Envidia","Soberbia"};
+        QString arrayNameBuenas[7] = {"Castidad","Ayuno","Donación","Diligencia","Calma","Solidaridad","Humildad"};
         for(int i = 0; i<7; i++){
             pecados[i] = new Pecado();
+            pecados[i]->name = arrayNamePecado[i];
+
             buenasAcciones[i] = new BuenaAccion();
+            buenasAcciones[i]->name = arrayNameBuenas[i];
         }
         padre = NULL;
         hijos = NULL;

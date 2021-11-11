@@ -162,14 +162,36 @@ debug/qrc_MyResources.cpp: ../Proyecto-2-ED/MyResources.qrc \
 		../Proyecto-2-ED/images/consulta.png \
 		../Proyecto-2-ED/images/demon5.jpg \
 		../Proyecto-2-ED/images/angel8.png \
+		../Proyecto-2-ED/images/continents/africa5.png \
+		../Proyecto-2-ED/images/continents/america5.png \
+		../Proyecto-2-ED/images/continents/america3.png \
+		../Proyecto-2-ED/images/continents/australia2.png \
+		../Proyecto-2-ED/images/continents/america4.png \
+		../Proyecto-2-ED/images/continents/asia2.png \
+		../Proyecto-2-ED/images/continents/asia5.png \
+		../Proyecto-2-ED/images/continents/europa1.png \
+		../Proyecto-2-ED/images/continents/africa2.png \
+		../Proyecto-2-ED/images/continents/australia4.png \
+		../Proyecto-2-ED/images/continents/asia4.png \
+		../Proyecto-2-ED/images/continents/europa2.png \
+		../Proyecto-2-ED/images/continents/asia3.png \
+		../Proyecto-2-ED/images/continents/australia5.png \
+		../Proyecto-2-ED/images/continents/america1.png \
+		../Proyecto-2-ED/images/continents/europa3.png \
 		../Proyecto-2-ED/images/continents/australia.png \
+		../Proyecto-2-ED/images/continents/africa1.png \
+		../Proyecto-2-ED/images/continents/america.png \
+		../Proyecto-2-ED/images/continents/europa4.png \
+		../Proyecto-2-ED/images/continents/africa4.png \
+		../Proyecto-2-ED/images/continents/america2.png \
 		../Proyecto-2-ED/images/continents/asia.png \
 		../Proyecto-2-ED/images/continents/asia1.png \
-		../Proyecto-2-ED/images/continents/europa1.png \
+		../Proyecto-2-ED/images/continents/africa.png \
 		../Proyecto-2-ED/images/continents/australia1.png \
 		../Proyecto-2-ED/images/continents/europa.png \
-		../Proyecto-2-ED/images/continents/america.png \
-		../Proyecto-2-ED/images/continents/america1.png
+		../Proyecto-2-ED/images/continents/australia3.png \
+		../Proyecto-2-ED/images/continents/africa3.png \
+		../Proyecto-2-ED/images/continents/europa5.png
 	C:\Qt\6.1.3\mingw81_64\bin\rcc.exe -name MyResources ..\Proyecto-2-ED\MyResources.qrc -o debug\qrc_MyResources.cpp
 
 compiler_moc_predefs_make_all: debug/moc_predefs.h

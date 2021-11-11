@@ -42,14 +42,17 @@ public:
     QFrame *frame_13;
     QLabel *label_9;
     QLabel *label_10;
-    QLineEdit *txtCantHumanos_3;
+    QLineEdit *txtBuscar;
     QLabel *label_11;
-    QPushButton *pushButton_4;
+    QPushButton *btnBuscarPersona;
     QScrollArea *scrollDatosWorld;
     QWidget *scrollAreaWidgetContents_4;
     QLabel *lbDatosWorld;
+    QFrame *frame_15;
+    QLabel *label_21;
+    QLabel *label_22;
+    QPushButton *btnPecar;
     QWidget *pageCielo;
-    QLabel *label_2;
     QPushButton *botonBAFamilias;
     QLineEdit *txtIdBuenasAcciones;
     QLabel *idBuenasAcciones;
@@ -78,6 +81,8 @@ public:
     QLabel *label_15;
     QLabel *label_16;
     QLabel *label_17;
+    QLabel *label_18;
+    QLabel *label_19;
     QWidget *page_4;
     QWidget *pageInfierno;
     QLabel *idPecados;
@@ -167,16 +172,16 @@ public:
         pageCrearHumano->setStyleSheet(QString::fromUtf8("background-color:white;"));
         pushButton_2 = new QPushButton(pageCrearHumano);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(1030, 300, 161, 51));
+        pushButton_2->setGeometry(QRect(1260, 30, 161, 51));
         txtcerca = new QLineEdit(pageCrearHumano);
         txtcerca->setObjectName(QString::fromUtf8("txtcerca"));
-        txtcerca->setGeometry(QRect(890, 330, 113, 21));
+        txtcerca->setGeometry(QRect(1350, 50, 113, 21));
         txtCantHumanos_2 = new QLineEdit(pageCrearHumano);
         txtCantHumanos_2->setObjectName(QString::fromUtf8("txtCantHumanos_2"));
-        txtCantHumanos_2->setGeometry(QRect(1080, 390, 113, 21));
+        txtCantHumanos_2->setGeometry(QRect(1290, 80, 113, 21));
         frame_12 = new QFrame(pageCrearHumano);
         frame_12->setObjectName(QString::fromUtf8("frame_12"));
-        frame_12->setGeometry(QRect(80, 30, 541, 241));
+        frame_12->setGeometry(QRect(60, 30, 541, 241));
         frame_12->setStyleSheet(QString::fromUtf8("background-color:rgb(250,250,250);"));
         frame_12->setFrameShape(QFrame::StyledPanel);
         frame_12->setFrameShadow(QFrame::Raised);
@@ -235,20 +240,20 @@ public:
         label_10->setStyleSheet(QString::fromUtf8("color: white;\n"
 "background-color:rgb(60, 185, 75);\n"
 ""));
-        txtCantHumanos_3 = new QLineEdit(frame_13);
-        txtCantHumanos_3->setObjectName(QString::fromUtf8("txtCantHumanos_3"));
-        txtCantHumanos_3->setGeometry(QRect(175, 70, 171, 21));
-        txtCantHumanos_3->setStyleSheet(QString::fromUtf8("border-width: 1px;\n"
+        txtBuscar = new QLineEdit(frame_13);
+        txtBuscar->setObjectName(QString::fromUtf8("txtBuscar"));
+        txtBuscar->setGeometry(QRect(175, 70, 171, 21));
+        txtBuscar->setStyleSheet(QString::fromUtf8("border-width: 1px;\n"
 "border-style: solid;\n"
 "border-color: rgb(60, 185, 75);"));
         label_11 = new QLabel(frame_13);
         label_11->setObjectName(QString::fromUtf8("label_11"));
         label_11->setGeometry(QRect(400, 40, 111, 111));
         label_11->setStyleSheet(QString::fromUtf8("image:url(\":/images/human.png\");"));
-        pushButton_4 = new QPushButton(frame_13);
-        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
-        pushButton_4->setGeometry(QRect(10, 150, 351, 61));
-        pushButton_4->setStyleSheet(QString::fromUtf8("color: white;\n"
+        btnBuscarPersona = new QPushButton(frame_13);
+        btnBuscarPersona->setObjectName(QString::fromUtf8("btnBuscarPersona"));
+        btnBuscarPersona->setGeometry(QRect(10, 150, 351, 61));
+        btnBuscarPersona->setStyleSheet(QString::fromUtf8("color: white;\n"
 "padding: 10px;\n"
 "border:0px;\n"
 "font: 12pt \"Open Sans\";\n"
@@ -265,12 +270,34 @@ public:
         lbDatosWorld->setGeometry(QRect(0, 0, 541, 441));
         lbDatosWorld->setStyleSheet(QString::fromUtf8("font: 12pt \"Open Sans\";"));
         scrollDatosWorld->setWidget(scrollAreaWidgetContents_4);
+        frame_15 = new QFrame(pageCrearHumano);
+        frame_15->setObjectName(QString::fromUtf8("frame_15"));
+        frame_15->setGeometry(QRect(660, 310, 541, 181));
+        frame_15->setStyleSheet(QString::fromUtf8("background-color:rgb(250,250,250);"));
+        frame_15->setFrameShape(QFrame::StyledPanel);
+        frame_15->setFrameShadow(QFrame::Raised);
+        label_21 = new QLabel(frame_15);
+        label_21->setObjectName(QString::fromUtf8("label_21"));
+        label_21->setGeometry(QRect(0, 0, 541, 31));
+        label_21->setFont(font1);
+        label_21->setStyleSheet(QString::fromUtf8("color: white;\n"
+"background-color:rgb(60, 185, 75);\n"
+""));
+        label_22 = new QLabel(frame_15);
+        label_22->setObjectName(QString::fromUtf8("label_22"));
+        label_22->setGeometry(QRect(400, 40, 111, 111));
+        label_22->setStyleSheet(QString::fromUtf8("image:url(\":/images/human.png\");"));
+        btnPecar = new QPushButton(frame_15);
+        btnPecar->setObjectName(QString::fromUtf8("btnPecar"));
+        btnPecar->setGeometry(QRect(20, 100, 351, 61));
+        btnPecar->setStyleSheet(QString::fromUtf8("color: white;\n"
+"padding: 10px;\n"
+"border:0px;\n"
+"font: 12pt \"Open Sans\";\n"
+"background-color: rgb(60, 185, 75);"));
         mainPanel->addWidget(pageCrearHumano);
         pageCielo = new QWidget();
         pageCielo->setObjectName(QString::fromUtf8("pageCielo"));
-        label_2 = new QLabel(pageCielo);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(370, 10, 141, 16));
         botonBAFamilias = new QPushButton(pageCielo);
         botonBAFamilias->setObjectName(QString::fromUtf8("botonBAFamilias"));
         botonBAFamilias->setGeometry(QRect(50, 140, 191, 25));
@@ -453,29 +480,37 @@ public:
 "border-color: rgb(64, 150, 180);"));
         label_12 = new QLabel(pageCielo);
         label_12->setObjectName(QString::fromUtf8("label_12"));
-        label_12->setGeometry(QRect(600, 60, 91, 31));
+        label_12->setGeometry(QRect(560, 40, 91, 31));
         label_12->setFont(font);
         label_14 = new QLabel(pageCielo);
         label_14->setObjectName(QString::fromUtf8("label_14"));
-        label_14->setGeometry(QRect(790, 110, 111, 111));
+        label_14->setGeometry(QRect(50, 10, 111, 111));
         label_14->setStyleSheet(QString::fromUtf8("image:url(\":/images/world.png\");"));
         panelConsultasCieloBuenasAcciones = new QStackedWidget(pageCielo);
         panelConsultasCieloBuenasAcciones->setObjectName(QString::fromUtf8("panelConsultasCieloBuenasAcciones"));
-        panelConsultasCieloBuenasAcciones->setGeometry(QRect(850, 270, 771, 491));
+        panelConsultasCieloBuenasAcciones->setGeometry(QRect(820, 270, 851, 621));
         page_3 = new QWidget();
         page_3->setObjectName(QString::fromUtf8("page_3"));
         label_15 = new QLabel(page_3);
         label_15->setObjectName(QString::fromUtf8("label_15"));
-        label_15->setGeometry(QRect(0, 60, 221, 321));
+        label_15->setGeometry(QRect(20, 30, 221, 321));
         label_15->setStyleSheet(QString::fromUtf8("image:url(\":/images/continents/america.png\");"));
         label_16 = new QLabel(page_3);
         label_16->setObjectName(QString::fromUtf8("label_16"));
-        label_16->setGeometry(QRect(430, 30, 221, 321));
+        label_16->setGeometry(QRect(530, 10, 141, 181));
         label_16->setStyleSheet(QString::fromUtf8("image:url(\":/images/continents/asia.png\");"));
         label_17 = new QLabel(page_3);
         label_17->setObjectName(QString::fromUtf8("label_17"));
-        label_17->setGeometry(QRect(220, 50, 221, 321));
+        label_17->setGeometry(QRect(310, 0, 151, 211));
         label_17->setStyleSheet(QString::fromUtf8("image:url(\":/images/continents/europa.png\");"));
+        label_18 = new QLabel(page_3);
+        label_18->setObjectName(QString::fromUtf8("label_18"));
+        label_18->setGeometry(QRect(310, 230, 151, 211));
+        label_18->setStyleSheet(QString::fromUtf8("image:url(\":/images/continents/africa.png\");"));
+        label_19 = new QLabel(page_3);
+        label_19->setObjectName(QString::fromUtf8("label_19"));
+        label_19->setGeometry(QRect(540, 210, 151, 211));
+        label_19->setStyleSheet(QString::fromUtf8("image:url(\":/images/continents/australia.png\");"));
         panelConsultasCieloBuenasAcciones->addWidget(page_3);
         page_4 = new QWidget();
         page_4->setObjectName(QString::fromUtf8("page_4"));
@@ -815,6 +850,7 @@ public:
         retranslateUi(MainWindow);
 
         mainPanel->setCurrentIndex(1);
+        panelConsultasCieloBuenasAcciones->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -833,11 +869,13 @@ public:
         label_8->setText(QString());
         label_9->setText(QCoreApplication::translate("MainWindow", "Buscar humano", nullptr));
         label_10->setText(QCoreApplication::translate("MainWindow", "B\303\272squeda de Humanos", nullptr));
-        txtCantHumanos_3->setText(QString());
+        txtBuscar->setText(QString());
         label_11->setText(QString());
-        pushButton_4->setText(QCoreApplication::translate("MainWindow", "buscar humano", nullptr));
+        btnBuscarPersona->setText(QCoreApplication::translate("MainWindow", "buscar humano", nullptr));
         lbDatosWorld->setText(QCoreApplication::translate("MainWindow", "Aqu\303\255 se ve el texto.", nullptr));
-        label_2->setText(QCoreApplication::translate("MainWindow", "Consultas cielo", nullptr));
+        label_21->setText(QCoreApplication::translate("MainWindow", "Hacer Pecar y Buenas Acciones", nullptr));
+        label_22->setText(QString());
+        btnPecar->setText(QCoreApplication::translate("MainWindow", "Pecados y Buenas Acciones", nullptr));
         botonBAFamilias->setText(QCoreApplication::translate("MainWindow", "Buenas acciones por familia", nullptr));
         idBuenasAcciones->setText(QCoreApplication::translate("MainWindow", "Ingrese un ID:", nullptr));
         labelAngeles->setText(QCoreApplication::translate("MainWindow", "\303\201ngeles", nullptr));
@@ -861,6 +899,8 @@ public:
         label_15->setText(QString());
         label_16->setText(QString());
         label_17->setText(QString());
+        label_18->setText(QString());
+        label_19->setText(QString());
         idPecados->setText(QCoreApplication::translate("MainWindow", "Ingrese un ID: ", nullptr));
         pushButton_3->setText(QCoreApplication::translate("MainWindow", "Pecados de una familia", nullptr));
         botonTopPecados->setText(QCoreApplication::translate("MainWindow", "Top 10 pa\303\255ses m\303\241s pecados", nullptr));

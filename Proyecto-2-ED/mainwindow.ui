@@ -39,8 +39,8 @@
      <widget class="QPushButton" name="pushButton_2">
       <property name="geometry">
        <rect>
-        <x>1030</x>
-        <y>300</y>
+        <x>1260</x>
+        <y>30</y>
         <width>161</width>
         <height>51</height>
        </rect>
@@ -52,8 +52,8 @@
      <widget class="QLineEdit" name="txtcerca">
       <property name="geometry">
        <rect>
-        <x>890</x>
-        <y>330</y>
+        <x>1350</x>
+        <y>50</y>
         <width>113</width>
         <height>21</height>
        </rect>
@@ -65,8 +65,8 @@
      <widget class="QLineEdit" name="txtCantHumanos_2">
       <property name="geometry">
        <rect>
-        <x>1080</x>
-        <y>390</y>
+        <x>1290</x>
+        <y>80</y>
         <width>113</width>
         <height>21</height>
        </rect>
@@ -78,7 +78,7 @@
      <widget class="QFrame" name="frame_12">
       <property name="geometry">
        <rect>
-        <x>80</x>
+        <x>60</x>
         <y>30</y>
         <width>541</width>
         <height>241</height>
@@ -258,7 +258,7 @@ background-color:rgb(60, 185, 75);
         <string>Búsqueda de Humanos</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="txtCantHumanos_3">
+      <widget class="QLineEdit" name="txtBuscar">
        <property name="geometry">
         <rect>
          <x>175</x>
@@ -292,7 +292,7 @@ border-color: rgb(60, 185, 75);</string>
         <string/>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_4">
+      <widget class="QPushButton" name="btnBuscarPersona">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -352,21 +352,89 @@ background-color: rgb(60, 185, 75);</string>
        </widget>
       </widget>
      </widget>
-    </widget>
-    <widget class="QWidget" name="pageCielo">
-     <widget class="QLabel" name="label_2">
+     <widget class="QFrame" name="frame_15">
       <property name="geometry">
        <rect>
-        <x>370</x>
-        <y>10</y>
-        <width>141</width>
-        <height>16</height>
+        <x>660</x>
+        <y>310</y>
+        <width>541</width>
+        <height>181</height>
        </rect>
       </property>
-      <property name="text">
-       <string>Consultas cielo</string>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(250,250,250);</string>
       </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="label_21">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>541</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Doppio One</family>
+         <pointsize>16</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: white;
+background-color:rgb(60, 185, 75);
+</string>
+       </property>
+       <property name="text">
+        <string>Hacer Pecar y Buenas Acciones</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_22">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>40</y>
+         <width>111</width>
+         <height>111</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image:url(&quot;:/images/human.png&quot;);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnPecar">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>100</y>
+         <width>351</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: white;
+padding: 10px;
+border:0px;
+font: 12pt &quot;Open Sans&quot;;
+background-color: rgb(60, 185, 75);</string>
+       </property>
+       <property name="text">
+        <string>Pecados y Buenas Acciones</string>
+       </property>
+      </widget>
      </widget>
+    </widget>
+    <widget class="QWidget" name="pageCielo">
      <widget class="QPushButton" name="botonBAFamilias">
       <property name="geometry">
        <rect>
@@ -866,8 +934,8 @@ border-color: rgb(64, 150, 180);</string>
      <widget class="QLabel" name="label_12">
       <property name="geometry">
        <rect>
-        <x>600</x>
-        <y>60</y>
+        <x>560</x>
+        <y>40</y>
         <width>91</width>
         <height>31</height>
        </rect>
@@ -885,8 +953,8 @@ border-color: rgb(64, 150, 180);</string>
      <widget class="QLabel" name="label_14">
       <property name="geometry">
        <rect>
-        <x>790</x>
-        <y>110</y>
+        <x>50</x>
+        <y>10</y>
         <width>111</width>
         <height>111</height>
        </rect>
@@ -901,18 +969,21 @@ border-color: rgb(64, 150, 180);</string>
      <widget class="QStackedWidget" name="panelConsultasCieloBuenasAcciones">
       <property name="geometry">
        <rect>
-        <x>850</x>
+        <x>820</x>
         <y>270</y>
-        <width>771</width>
-        <height>491</height>
+        <width>851</width>
+        <height>621</height>
        </rect>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
       </property>
       <widget class="QWidget" name="page_3">
        <widget class="QLabel" name="label_15">
         <property name="geometry">
          <rect>
-          <x>0</x>
-          <y>60</y>
+          <x>20</x>
+          <y>30</y>
           <width>221</width>
           <height>321</height>
          </rect>
@@ -927,10 +998,10 @@ border-color: rgb(64, 150, 180);</string>
        <widget class="QLabel" name="label_16">
         <property name="geometry">
          <rect>
-          <x>430</x>
-          <y>30</y>
-          <width>221</width>
-          <height>321</height>
+          <x>530</x>
+          <y>10</y>
+          <width>141</width>
+          <height>181</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -943,14 +1014,46 @@ border-color: rgb(64, 150, 180);</string>
        <widget class="QLabel" name="label_17">
         <property name="geometry">
          <rect>
-          <x>220</x>
-          <y>50</y>
-          <width>221</width>
-          <height>321</height>
+          <x>310</x>
+          <y>0</y>
+          <width>151</width>
+          <height>211</height>
          </rect>
         </property>
         <property name="styleSheet">
          <string notr="true">image:url(&quot;:/images/continents/europa.png&quot;);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_18">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>230</y>
+          <width>151</width>
+          <height>211</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">image:url(&quot;:/images/continents/africa.png&quot;);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_19">
+        <property name="geometry">
+         <rect>
+          <x>540</x>
+          <y>210</y>
+          <width>151</width>
+          <height>211</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">image:url(&quot;:/images/continents/australia.png&quot;);</string>
         </property>
         <property name="text">
          <string/>

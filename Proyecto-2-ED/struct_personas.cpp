@@ -2,12 +2,12 @@
 
 //Pecados
 void Pecado::imprimir(){
-    //qDebug()<<"\n"<<name;
+    qDebug()<<"\n"<<name;
     qDebug()<<"\nCantidad: "<<cant;
 }
 
 void BuenaAccion::imprimir(){
-    //qDebug()<<"\n"<<name;
+    qDebug()<<"\n"<<name;
     qDebug()<<"\nCantidad: "<<cant;
 }
 
