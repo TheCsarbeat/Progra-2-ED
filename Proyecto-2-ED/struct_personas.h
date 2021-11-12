@@ -70,6 +70,7 @@ struct Persona{
     BuenaAccion * buenasAcciones[7];
     Persona * padre;
     ListaDoblePersonas *hijos;
+    int pecadosdPersona;
     Persona(){
         id = 0;
         name = "";
@@ -80,6 +81,7 @@ struct Persona{
         email = "ytcesarjs@gmail.com";
         vivo = true;
         nacimiento = QDateTime::currentDateTime();
+        pecadosdPersona = 0;
         for(int i = 0; i<7; i++){
             pecados[i] = new Pecado(); //se debe asignar el nombre del pecado según la posición ya que por el momento está vacío, lo mismo con las buenas acciones
             buenasAcciones[i] = new BuenaAccion();
@@ -127,6 +129,32 @@ struct Persona{
         }
     }
 
+    QString toString(){
+        QString datos = "\nID: "+QString::number(id)
+                         +"\nNombre: "+name
+                         +"\nPaís: "+ pais->name
+                         +"\nCreencia: "+creencia
+                         +"\nJob: "+creencia
+                         +"\n\nPECADOS: ";
+        for(unsigned int i=0;i<7;i++){
+            if(i== 1 || i== 4)
+                datos+="\n\tNombre: "+pecados[i]->name+", \t\tValor: "+QString::number(pecados[i]->cant);
+            else
+                datos+="\n\tNombre: "+pecados[i]->name+", \tValor: "+QString::number(pecados[i]->cant);
+        }
+
+        datos+="\n\nBUENAS ACCIONES";
+        for(unsigned int i=0;i<7;i++){
+            if(i== 1 || i== 4)
+                datos+="\n\tNombre: "+buenasAcciones[i]->name+", \t\tValor: "+QString::number(buenasAcciones[i]->cant);
+            else
+                datos+="\n\tNombre: "+buenasAcciones[i]->name+", \tValor: "+QString::number(buenasAcciones[i]->cant);
+        }
+        datos+="\n\nHIJOS";
+
+        return datos;
+    }
+
 };
 
 struct NodoPersona{
@@ -156,6 +184,8 @@ struct ListaDoblePersonas{
     bool isEmpty();
     bool insertar(Persona * persona);
     bool insertar(Persona * persona, NodoPersona * masCernano);
+    void buscar(int);
+    NodoPersona * buscar(int id,NodoPersona * masCercano);
 
 
     void imprimir();
@@ -165,9 +195,24 @@ struct ListaDoblePersonas{
     void imprimirReverse();
     NodoPersona * borrarALInicio();
     NodoPersona * borrarALFinal();
-    void buscar(int);
-    NodoPersona * buscar(NodoPersona * persona);
+
+
     void insertarEn(int index, NodoPersona * persona);
+
+    void toString();
+
+
+
+    QString toStringIDHijos(){
+        QString dato;
+        NodoPersona * temp = primerNodo;
+        while (temp != NULL){
+            dato += "\n\t"+QString::number(temp->persona->id);
+            temp = temp->siguiente;
+        }
+        dato+="\n------------------------------------------------------------------\n";
+        return dato;
+    }
 };
 
 

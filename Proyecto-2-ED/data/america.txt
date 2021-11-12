@@ -8,28 +8,3 @@ Brasil
 Canadá
 Chile
 Colombia
-Costa Rica
-Cuba
-Dominica
-República Dominicana
-Ecuador
-El Salvador
-Granada
-Guatemala
-Guyana
-Haití
-Honduras
-Jamaica
-México
-Nicaragua
-Panamá
-Paraguay
-Perú
-San Cristóbal y Nieves
-Santa Lucía
-San Vicente y las Granadinas
-Surinam
-Trinidad y Tobago
-Uruguay
-Estados Unidos
-Venezuela

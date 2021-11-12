@@ -42,8 +42,6 @@
         <file>images/continents/america1.png</file>
         <file>images/continents/asia.png</file>
         <file>images/continents/asia1.png</file>
-        <file>images/continents/australia.png</file>
-        <file>images/continents/australia1.png</file>
         <file>images/continents/europa.png</file>
         <file>images/continents/europa1.png</file>
         <file>images/continents/africa.png</file>
@@ -60,13 +58,43 @@
         <file>images/continents/asia3.png</file>
         <file>images/continents/asia4.png</file>
         <file>images/continents/asia5.png</file>
-        <file>images/continents/australia2.png</file>
-        <file>images/continents/australia3.png</file>
-        <file>images/continents/australia4.png</file>
-        <file>images/continents/australia5.png</file>
         <file>images/continents/europa2.png</file>
         <file>images/continents/europa3.png</file>
         <file>images/continents/europa4.png</file>
         <file>images/continents/europa5.png</file>
+        <file>images/floppy-disk.png</file>
+        <file>images/confesion.png</file>
+        <file>images/cristiandad.png</file>
+        <file>images/continents/oceania4.png</file>
+        <file>images/continents/oceania5.png</file>
+        <file>images/continents/oceania.png</file>
+        <file>images/continents/oceania1.png</file>
+        <file>images/continents/oceania2.png</file>
+        <file>images/continents/oceania3.png</file>
+        <file>images/continents/africaR1.png</file>
+        <file>images/continents/africaR2.png</file>
+        <file>images/continents/africaR3.png</file>
+        <file>images/continents/africaR4.png</file>
+        <file>images/continents/africaR5.png</file>
+        <file>images/continents/americaR1.png</file>
+        <file>images/continents/americaR2.png</file>
+        <file>images/continents/americaR3.png</file>
+        <file>images/continents/americaR4.png</file>
+        <file>images/continents/americaR5.png</file>
+        <file>images/continents/asiaR1.png</file>
+        <file>images/continents/asiaR2.png</file>
+        <file>images/continents/asiaR3.png</file>
+        <file>images/continents/asiaR4.png</file>
+        <file>images/continents/asiaR5.png</file>
+        <file>images/continents/europaR1.png</file>
+        <file>images/continents/europaR2.png</file>
+        <file>images/continents/europaR3.png</file>
+        <file>images/continents/europaR4.png</file>
+        <file>images/continents/europaR5.png</file>
+        <file>images/continents/oceaniaR1.png</file>
+        <file>images/continents/oceaniaR2.png</file>
+        <file>images/continents/oceaniaR3.png</file>
+        <file>images/continents/oceaniaR4.png</file>
+        <file>images/continents/oceaniaR5.png</file>
     </qresource>
 </RCC>

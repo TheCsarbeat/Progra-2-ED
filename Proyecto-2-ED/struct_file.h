@@ -5,6 +5,7 @@
 #include <QDateTime>
 #include <QFile>
 #include <QTextStream>
+#include <QRandomGenerator>
 
 struct Pais;
 struct Files;
@@ -46,6 +47,7 @@ struct Files{
         loadEuropa();
         loadAsia();
         loadOceania();
+        //shuffleCountries();
     }
 
     void loadNames();
@@ -58,7 +60,22 @@ struct Files{
     void loadAsia();
     void loadOceania();
 
+    void shuffleCountries(){
+        Pais *temp;
+        int randomIndex = 0;
+        for(int i=0; i< 45; i++){
+            randomIndex = QRandomGenerator::global()->bounded(45);
+            *temp = *paises[i];
+            *paises[i] = *paises[randomIndex];
+            *paises[randomIndex] = *temp;
+        }
+        for(int i=0; i< 49; i++){
+            qDebug()<<"Pais: "<<paises[i]->continente<<", Positiion: "<<i;
+        }
+    }
     void printNames();
+
+    void writeFile(QString fileName, QString data);
 };
 
 #endif // STRUCT_FILE_H

@@ -13,7 +13,10 @@ QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow
 {
+
+
     Q_OBJECT
+    QMessageBox msg;
     QString colorHovered = "background-color:rgb(66, 154, 134);";
     QString colorBackground = "background-color:rgb(2, 49, 70);";
 
@@ -43,6 +46,12 @@ private slots:
     void on_btnBuscarPersona_clicked();
 
     void cambiarColor(QPushButton *);
+    void on_btnGuardarDatosWorld_clicked();
+
+    void on_btnMapaContinentesBuenasAcciones_clicked();
+
+    void on_btnMapaPecados_clicked();
+
 private:
     Ui::MainWindow *ui;
     MainStruct * mainstruct;
