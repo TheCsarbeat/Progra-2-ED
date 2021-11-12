@@ -109,6 +109,7 @@ void Files::loadAmerica(){
         index++;
     }
     file.close();
+    //qDebug()<<"Cantidadde paises de america: "<<index;
 }
 
 void Files::loadAfrica(){
@@ -189,7 +190,7 @@ void Files::loadOceania(){
         index++;
     }
     file.close();
-    qDebug()<<"CAnt de paises: "<<index;
+    //qDebug()<<"Cant de paises: "<<index;
 
 }
 

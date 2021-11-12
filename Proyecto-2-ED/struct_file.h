@@ -47,7 +47,7 @@ struct Files{
         loadEuropa();
         loadAsia();
         loadOceania();
-        //shuffleCountries();
+        shuffleCountries();
     }
 
     void loadNames();
@@ -61,16 +61,16 @@ struct Files{
     void loadOceania();
 
     void shuffleCountries(){
-        Pais *temp;
+        Pais temp;
         int randomIndex = 0;
-        for(int i=0; i< 45; i++){
-            randomIndex = QRandomGenerator::global()->bounded(45);
-            *temp = *paises[i];
+        for(int i=0; i< index; i++){
+            randomIndex = QRandomGenerator::global()->bounded(index-1);
+            temp = *paises[i];
             *paises[i] = *paises[randomIndex];
-            *paises[randomIndex] = *temp;
+            *paises[randomIndex] = temp;
         }
-        for(int i=0; i< 49; i++){
-            qDebug()<<"Pais: "<<paises[i]->continente<<", Positiion: "<<i;
+        for(int i=0; i< index; i++){
+            qDebug()<<paises[i]->continente<<", ";
         }
     }
     void printNames();
