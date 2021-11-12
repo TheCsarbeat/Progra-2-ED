@@ -189,6 +189,8 @@ void Files::loadOceania(){
         index++;
     }
     file.close();
+    qDebug()<<"CAnt de paises: "<<index;
+
 }
 
 void Files::printNames(){

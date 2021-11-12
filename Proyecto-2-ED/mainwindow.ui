@@ -30,7 +30,7 @@
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="pageCrearHumano">
      <property name="styleSheet">
@@ -400,7 +400,7 @@ background-color: rgb(60, 185, 75);</string>
         <x>70</x>
         <y>520</y>
         <width>541</width>
-        <height>221</height>
+        <height>441</height>
        </rect>
       </property>
       <property name="widgetResizable">
@@ -412,7 +412,7 @@ background-color: rgb(60, 185, 75);</string>
          <x>0</x>
          <y>0</y>
          <width>539</width>
-         <height>219</height>
+         <height>439</height>
         </rect>
        </property>
        <widget class="QLabel" name="lbHumanFound">
@@ -421,7 +421,7 @@ background-color: rgb(60, 185, 75);</string>
           <x>0</x>
           <y>0</y>
           <width>531</width>
-          <height>191</height>
+          <height>421</height>
          </rect>
         </property>
         <property name="styleSheet">

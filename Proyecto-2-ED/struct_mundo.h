@@ -36,7 +36,7 @@ struct ArrayContinent{
     }
     void imprimir(){
         for(int i = 0; i<5; i++) {
-            qDebug()<<"Continente: "<<arrayContinents[i]->name<<" Cantidad: "<<arrayContinents[i]->cant;
+            qDebug()<<"Continente: "<<arrayContinents[i]->name<<"\t\t Cantidad: "<<arrayContinents[i]->cant;
         }
     }
     void showMap(int i){

@@ -306,14 +306,14 @@ public:
 "background-color: rgb(60, 185, 75);"));
         scrollArea = new QScrollArea(pageCrearHumano);
         scrollArea->setObjectName(QString::fromUtf8("scrollArea"));
-        scrollArea->setGeometry(QRect(70, 520, 541, 221));
+        scrollArea->setGeometry(QRect(70, 520, 541, 441));
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents_4 = new QWidget();
         scrollAreaWidgetContents_4->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_4"));
-        scrollAreaWidgetContents_4->setGeometry(QRect(0, 0, 539, 219));
+        scrollAreaWidgetContents_4->setGeometry(QRect(0, 0, 539, 439));
         lbHumanFound = new QLabel(scrollAreaWidgetContents_4);
         lbHumanFound->setObjectName(QString::fromUtf8("lbHumanFound"));
-        lbHumanFound->setGeometry(QRect(0, 0, 531, 191));
+        lbHumanFound->setGeometry(QRect(0, 0, 531, 421));
         lbHumanFound->setStyleSheet(QString::fromUtf8("font: 12pt \"Open Sans\";"));
         scrollArea->setWidget(scrollAreaWidgetContents_4);
         frame_16 = new QFrame(pageCrearHumano);
@@ -994,7 +994,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        mainPanel->setCurrentIndex(2);
+        mainPanel->setCurrentIndex(0);
         panelConsultasCieloBuenasAcciones->setCurrentIndex(0);
         panelConsultasCieloBuenasAcciones_2->setCurrentIndex(0);
 

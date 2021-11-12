@@ -8,7 +8,7 @@ void Mundo::crearHumanos(int dato, QLabel * lb){
         QString apellido = files->lastNames[QRandomGenerator::global()->bounded(50)];
         Pais *pais = files->paises[QRandomGenerator::global()->bounded(50)];
         QString creencia = QString::number(personas->largo);
-        QString profesion = files->jobs[QRandomGenerator::global()->bounded(100)];
+        QString profesion = files->jobs[QRandomGenerator::global()->bounded(80)];
         Persona *p = new Persona(id, name, apellido, pais, creencia, profesion);
         p->hijos = new ListaDoblePersonas();
 
@@ -29,6 +29,7 @@ void Mundo::crearHumanos(int dato, QLabel * lb){
             listArbolFamilias->insertarALInicio(p);
         }
     }
+    qDebug()<<personas->primerNodo->persona->id;
 }
 
 void Mundo::guarDatosWorld(){
@@ -113,15 +114,36 @@ void Mundo::crearArbol(NodoPersona * array[], int size){
 void Mundo::hacerPecar(){
     NodoPersona * tmp = personas->primerNodo;
     int random = 0;
+    int africa = 0, america = 0, asia = 0, europa= 0, oceania = 0;
+
     while(tmp!=NULL){
+
         for(unsigned int i=0;i<7;i++){
             random = QRandomGenerator::global()->bounded(100);
             tmp->persona->pecados[i]->cant += random;
-            hacerHerencia(tmp->persona,random, i);
+            //hacerHerencia(tmp->persona,random, i);
             tmp->persona->buenasAcciones[i]->cant += QRandomGenerator::global()->bounded(100);
+            if(tmp->persona->pais->continente == "africa"){
+                africa += random;
+            }else if(tmp->persona->pais->continente == "africa"){
+                africa += random;
+            }else if(tmp->persona->pais->continente == "america"){
+                america += random;
+            }else if(tmp->persona->pais->continente == "asia"){
+                asia += random;
+            }else if(tmp->persona->pais->continente == "europa"){
+                europa += random;
+            }else if(tmp->persona->pais->continente == "oceania"){
+                oceania += random;
+            }
         }
         tmp = tmp->siguiente;
     }
+    qDebug()<<"\n\nLos pecados de africa: "<<africa;
+    qDebug()<<"Los pecados de America: "<<america;
+    qDebug()<<"Los pecados de oceania: "<<oceania;
+    qDebug()<<"Los pecados de Asia: "<<asia;
+    qDebug()<<"Los pecados de Europa: "<<europa;
 }
 
 void Mundo::hacerHerencia(Persona * persona, int random, int position){
@@ -142,10 +164,17 @@ void Mundo::hacerHerencia(Persona * persona, int random, int position){
 void Mundo::continentsMasBuenasAcciones(){
     NodoPersona * tmp = personas->primerNodo;
     int buenasAcionesPersona = 0;
+    for(unsigned int i=0;i<5;i++){
+        arrayBuenasAccionesMapa->arrayContinents[i]->cant = 0;
+    }
+
     while(tmp!=NULL){
         buenasAcionesPersona = 0;
         for(unsigned int i=0;i<7;i++){
             buenasAcionesPersona += tmp->persona->buenasAcciones[i]->cant;
+        }
+        if (tmp == personas->primerNodo){
+            qDebug()<<"Buenas acciones persona: "<<buenasAcionesPersona;
         }
 
         if(tmp->persona->pais->continente == arrayBuenasAccionesMapa->arrayContinents[0]->name)
@@ -176,10 +205,22 @@ void Mundo::continentsMasBuenasAcciones(){
 void Mundo::continentsMasPecados(){
     NodoPersona * tmp = personas->primerNodo;
     int pecadosPersona = 0;
+    int africa = 0;
+    for(unsigned int i=0;i<5;i++){
+        arrayPecadosMapa->arrayContinents[i]->cant = 0;
+    }
     while(tmp!=NULL){
         pecadosPersona = 0;
         for(unsigned int i=0;i<7;i++){
             pecadosPersona += tmp->persona->pecados[i]->cant;
+        }
+
+        if (tmp == personas->primerNodo){
+            qDebug()<<"Pecados persona: "<<pecadosPersona;
+        }
+
+        if(tmp->persona->pais->continente == "africa"){
+            africa += pecadosPersona;
         }
 
         if(tmp->persona->pais->continente == arrayPecadosMapa->arrayContinents[0]->name)
@@ -201,6 +242,7 @@ void Mundo::continentsMasPecados(){
         }
         tmp = tmp->siguiente;
     }
+    qDebug()<<"Los pecados de africa desde el contador de pecados de Maynor: "<<africa;
     arrayPecadosMapa->bubbleSort();
     qDebug()<<"\n Pecados\n";
     arrayPecadosMapa->imprimir();

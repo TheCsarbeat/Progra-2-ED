@@ -1,1750 +1,1813 @@
 Datos Arbol
-La cantidad de niveles del árbol es: 9
-La cantidad de Humanos del arbol es: 511
+La cantidad de niveles del árbol es: 7
+La cantidad de Humanos del arbol es: 127
 
 Datos de lista: 
-El tamaño de la lista: 50000
+El tamaño de la lista: 10000
 
 
-ID: 177
-Nombre: Jorge, cant Hijos: 0
-País: Uganda
-Creencia: 30661
-Job: 30661
+ID: 709
+Nombre: Hui, cant Hijos: 0
+País: Catar
+Creencia: 8521
+Job: 8521
 
 PECADOS: 
-	Nombre: Lujuria, 	Valor: 99
-	Nombre: Gula, 		Valor: 108
-	Nombre: Avaricia, 	Valor: 158
-	Nombre: Pereza, 	Valor: 83
-	Nombre: Ira, 		Valor: 85
-	Nombre: Envidia, 	Valor: 169
-	Nombre: Soberbia, 	Valor: 136
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
 
 BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 14
-	Nombre: Ayuno, 		Valor: 107
-	Nombre: Donación, 	Valor: 47
-	Nombre: Diligencia, 	Valor: 55
-	Nombre: Calma, 		Valor: 78
-	Nombre: Solidaridad, 	Valor: 54
-	Nombre: Humildad, 	Valor: 87
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
 
 HIJOS
 ------------------------------------------------------------------
 
-ID: 577
-Nombre: Ibrahim, cant Hijos: 2
-País: Perú
-Creencia: 29023
-Job: 29023
+ID: 2146
+Nombre: Jorge, cant Hijos: 1
+País: Bosnia y Herzegovina
+Creencia: 8878
+Job: 8878
 
 PECADOS: 
-	Nombre: Lujuria, 	Valor: 300
-	Nombre: Gula, 		Valor: 307
-	Nombre: Avaricia, 	Valor: 487
-	Nombre: Pereza, 	Valor: 378
-	Nombre: Ira, 		Valor: 416
-	Nombre: Envidia, 	Valor: 529
-	Nombre: Soberbia, 	Valor: 422
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
 
 BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 470
-	Nombre: Ayuno, 		Valor: 269
-	Nombre: Donación, 	Valor: 432
-	Nombre: Diligencia, 	Valor: 458
-	Nombre: Calma, 		Valor: 374
-	Nombre: Solidaridad, 	Valor: 417
-	Nombre: Humildad, 	Valor: 520
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
 
 HIJOS
-	62186
-	74814
+	13184
 ------------------------------------------------------------------
 
-ID: 971
-Nombre: David
-País: Mauritania
-Creencia: 1431
-Job: 1431
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 760
-	Nombre: Gula, 		Valor: 944
-	Nombre: Avaricia, 	Valor: 794
-	Nombre: Pereza, 	Valor: 814
-	Nombre: Ira, 		Valor: 992
-	Nombre: Envidia, 	Valor: 860
-	Nombre: Soberbia, 	Valor: 896
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 486
-	Nombre: Ayuno, 		Valor: 451
-	Nombre: Donación, 	Valor: 440
-	Nombre: Diligencia, 	Valor: 585
-	Nombre: Calma, 		Valor: 350
-	Nombre: Solidaridad, 	Valor: 530
-	Nombre: Humildad, 	Valor: 348
-
-HIJOS
-------------------------------------------------------------------
-
-ID: 1333
-Nombre: Ahmad, cant Hijos: 2
-País: Moldavia
-Creencia: 26592
-Job: 26592
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 579
-	Nombre: Gula, 		Valor: 387
-	Nombre: Avaricia, 	Valor: 351
-	Nombre: Pereza, 	Valor: 489
-	Nombre: Ira, 		Valor: 292
-	Nombre: Envidia, 	Valor: 360
-	Nombre: Soberbia, 	Valor: 386
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 392
-	Nombre: Ayuno, 		Valor: 371
-	Nombre: Donación, 	Valor: 262
-	Nombre: Diligencia, 	Valor: 436
-	Nombre: Calma, 		Valor: 247
-	Nombre: Solidaridad, 	Valor: 424
-	Nombre: Humildad, 	Valor: 327
-
-HIJOS
-	205
-------------------------------------------------------------------
-
-ID: 1715
-Nombre: Lin, cant Hijos: 2
-País: Uganda
-Creencia: 35820
-Job: 35820
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 109
-	Nombre: Gula, 		Valor: 118
-	Nombre: Avaricia, 	Valor: 89
-	Nombre: Pereza, 	Valor: 95
-	Nombre: Ira, 		Valor: 39
-	Nombre: Envidia, 	Valor: 96
-	Nombre: Soberbia, 	Valor: 102
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 169
-	Nombre: Ayuno, 		Valor: 105
-	Nombre: Donación, 	Valor: 165
-	Nombre: Diligencia, 	Valor: 89
-	Nombre: Calma, 		Valor: 6
-	Nombre: Solidaridad, 	Valor: 79
-	Nombre: Humildad, 	Valor: 142
-
-HIJOS
-	40960
-------------------------------------------------------------------
-
-ID: 2126
-Nombre: Ram, cant Hijos: 1
-País: Colombia
-Creencia: 44886
-Job: 44886
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 163
-	Nombre: Gula, 		Valor: 114
-	Nombre: Avaricia, 	Valor: 73
-	Nombre: Pereza, 	Valor: 181
-	Nombre: Ira, 		Valor: 87
-	Nombre: Envidia, 	Valor: 118
-	Nombre: Soberbia, 	Valor: 114
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 77
-	Nombre: Ayuno, 		Valor: 159
-	Nombre: Donación, 	Valor: 93
-	Nombre: Diligencia, 	Valor: 58
-	Nombre: Calma, 		Valor: 188
-	Nombre: Solidaridad, 	Valor: 101
-	Nombre: Humildad, 	Valor: 104
-
-HIJOS
-	60624
-------------------------------------------------------------------
-
-ID: 2525
-Nombre: Sunita, cant Hijos: 1
-País: Malasia
-Creencia: 37923
-Job: 37923
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 130
-	Nombre: Gula, 		Valor: 203
-	Nombre: Avaricia, 	Valor: 105
-	Nombre: Pereza, 	Valor: 121
-	Nombre: Ira, 		Valor: 160
-	Nombre: Envidia, 	Valor: 119
-	Nombre: Soberbia, 	Valor: 234
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 136
-	Nombre: Ayuno, 		Valor: 69
-	Nombre: Donación, 	Valor: 108
-	Nombre: Diligencia, 	Valor: 76
-	Nombre: Calma, 		Valor: 120
-	Nombre: Solidaridad, 	Valor: 59
-	Nombre: Humildad, 	Valor: 93
-
-HIJOS
-	25270
-------------------------------------------------------------------
-
-ID: 2907
-Nombre: Vladimir, cant Hijos: 0
-País: Mauritania
-Creencia: 40261
-Job: 40261
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 160
-	Nombre: Gula, 		Valor: 152
-	Nombre: Avaricia, 	Valor: 234
-	Nombre: Pereza, 	Valor: 227
-	Nombre: Ira, 		Valor: 171
-	Nombre: Envidia, 	Valor: 136
-	Nombre: Soberbia, 	Valor: 167
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 28
-	Nombre: Ayuno, 		Valor: 76
-	Nombre: Donación, 	Valor: 95
-	Nombre: Diligencia, 	Valor: 142
-	Nombre: Calma, 		Valor: 38
-	Nombre: Solidaridad, 	Valor: 154
-	Nombre: Humildad, 	Valor: 134
-
-HIJOS
-------------------------------------------------------------------
-
-ID: 3311
-Nombre: Elena, cant Hijos: 2
-País: Namibia
-Creencia: 37226
-Job: 37226
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 142
-	Nombre: Gula, 		Valor: 80
-	Nombre: Avaricia, 	Valor: 284
-	Nombre: Pereza, 	Valor: 112
-	Nombre: Ira, 		Valor: 132
-	Nombre: Envidia, 	Valor: 86
-	Nombre: Soberbia, 	Valor: 161
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 150
-	Nombre: Ayuno, 		Valor: 161
-	Nombre: Donación, 	Valor: 164
-	Nombre: Diligencia, 	Valor: 46
-	Nombre: Calma, 		Valor: 194
-	Nombre: Solidaridad, 	Valor: 123
-	Nombre: Humildad, 	Valor: 55
-
-HIJOS
-	29345
-	47904
-------------------------------------------------------------------
-
-ID: 3670
-Nombre: Christine, cant Hijos: 2
-País: Irán
-Creencia: 9769
-Job: 9769
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 774
-	Nombre: Gula, 		Valor: 768
-	Nombre: Avaricia, 	Valor: 663
-	Nombre: Pereza, 	Valor: 665
-	Nombre: Ira, 		Valor: 720
-	Nombre: Envidia, 	Valor: 708
-	Nombre: Soberbia, 	Valor: 830
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 408
-	Nombre: Ayuno, 		Valor: 399
-	Nombre: Donación, 	Valor: 307
-	Nombre: Diligencia, 	Valor: 294
-	Nombre: Calma, 		Valor: 495
-	Nombre: Solidaridad, 	Valor: 362
-	Nombre: Humildad, 	Valor: 576
-
-HIJOS
-	17564
-	91971
-------------------------------------------------------------------
-
-ID: 4051
-Nombre: Sergey, cant Hijos: 0
-País: Eslovaquia
-Creencia: 8615
-Job: 8615
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 772
-	Nombre: Gula, 		Valor: 746
-	Nombre: Avaricia, 	Valor: 706
-	Nombre: Pereza, 	Valor: 789
-	Nombre: Ira, 		Valor: 774
-	Nombre: Envidia, 	Valor: 716
-	Nombre: Soberbia, 	Valor: 771
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 388
-	Nombre: Ayuno, 		Valor: 402
-	Nombre: Donación, 	Valor: 507
-	Nombre: Diligencia, 	Valor: 286
-	Nombre: Calma, 		Valor: 352
-	Nombre: Solidaridad, 	Valor: 554
-	Nombre: Humildad, 	Valor: 488
-
-HIJOS
-------------------------------------------------------------------
-
-ID: 4440
-Nombre: Wei, cant Hijos: 0
-País: Papúa Nueva Guinea
-Creencia: 25983
-Job: 25983
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 726
-	Nombre: Gula, 		Valor: 617
-	Nombre: Avaricia, 	Valor: 532
-	Nombre: Pereza, 	Valor: 712
-	Nombre: Ira, 		Valor: 574
-	Nombre: Envidia, 	Valor: 459
-	Nombre: Soberbia, 	Valor: 629
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 363
-	Nombre: Ayuno, 		Valor: 464
-	Nombre: Donación, 	Valor: 410
-	Nombre: Diligencia, 	Valor: 365
-	Nombre: Calma, 		Valor: 381
-	Nombre: Solidaridad, 	Valor: 606
-	Nombre: Humildad, 	Valor: 325
-
-HIJOS
-------------------------------------------------------------------
-
-ID: 4845
-Nombre: Aleksandr, cant Hijos: 0
-País: Burundi
-Creencia: 15242
-Job: 15242
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 592
-	Nombre: Gula, 		Valor: 454
-	Nombre: Avaricia, 	Valor: 803
-	Nombre: Pereza, 	Valor: 705
-	Nombre: Ira, 		Valor: 651
-	Nombre: Envidia, 	Valor: 727
-	Nombre: Soberbia, 	Valor: 628
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 357
-	Nombre: Ayuno, 		Valor: 405
-	Nombre: Donación, 	Valor: 319
-	Nombre: Diligencia, 	Valor: 530
-	Nombre: Calma, 		Valor: 255
-	Nombre: Solidaridad, 	Valor: 288
-	Nombre: Humildad, 	Valor: 519
-
-HIJOS
-------------------------------------------------------------------
-
-ID: 5233
-Nombre: Hong, cant Hijos: 1
-País: Eslovaquia
-Creencia: 6857
-Job: 6857
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 727
-	Nombre: Gula, 		Valor: 830
-	Nombre: Avaricia, 	Valor: 628
-	Nombre: Pereza, 	Valor: 783
-	Nombre: Ira, 		Valor: 754
-	Nombre: Envidia, 	Valor: 798
-	Nombre: Soberbia, 	Valor: 544
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 429
-	Nombre: Ayuno, 		Valor: 498
-	Nombre: Donación, 	Valor: 465
-	Nombre: Diligencia, 	Valor: 439
-	Nombre: Calma, 		Valor: 484
-	Nombre: Solidaridad, 	Valor: 385
-	Nombre: Humildad, 	Valor: 582
-
-HIJOS
-	2282
-------------------------------------------------------------------
-
-ID: 5623
-Nombre: Ying, cant Hijos: 2
-País: Fiyi
-Creencia: 8619
-Job: 8619
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 772
-	Nombre: Gula, 		Valor: 875
-	Nombre: Avaricia, 	Valor: 805
-	Nombre: Pereza, 	Valor: 653
-	Nombre: Ira, 		Valor: 923
-	Nombre: Envidia, 	Valor: 896
-	Nombre: Soberbia, 	Valor: 866
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 386
-	Nombre: Ayuno, 		Valor: 462
-	Nombre: Donación, 	Valor: 514
-	Nombre: Diligencia, 	Valor: 414
-	Nombre: Calma, 		Valor: 329
-	Nombre: Solidaridad, 	Valor: 439
-	Nombre: Humildad, 	Valor: 382
-
-HIJOS
-	25295
-------------------------------------------------------------------
-
-ID: 6010
-Nombre: Robert, cant Hijos: 1
-País: Bahamas
-Creencia: 33839
-Job: 33839
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 232
-	Nombre: Gula, 		Valor: 225
-	Nombre: Avaricia, 	Valor: 199
-	Nombre: Pereza, 	Valor: 227
-	Nombre: Ira, 		Valor: 238
-	Nombre: Envidia, 	Valor: 209
-	Nombre: Soberbia, 	Valor: 153
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 80
-	Nombre: Ayuno, 		Valor: 134
-	Nombre: Donación, 	Valor: 79
-	Nombre: Diligencia, 	Valor: 114
-	Nombre: Calma, 		Valor: 158
-	Nombre: Solidaridad, 	Valor: 114
-	Nombre: Humildad, 	Valor: 129
-
-HIJOS
-	76901
-------------------------------------------------------------------
-
-ID: 6417
-Nombre: Ali, cant Hijos: 2
-País: Papúa Nueva Guinea
-Creencia: 19569
-Job: 19569
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 648
-	Nombre: Gula, 		Valor: 678
-	Nombre: Avaricia, 	Valor: 567
-	Nombre: Pereza, 	Valor: 662
-	Nombre: Ira, 		Valor: 704
-	Nombre: Envidia, 	Valor: 924
-	Nombre: Soberbia, 	Valor: 729
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 451
-	Nombre: Ayuno, 		Valor: 394
-	Nombre: Donación, 	Valor: 379
-	Nombre: Diligencia, 	Valor: 492
-	Nombre: Calma, 		Valor: 397
-	Nombre: Solidaridad, 	Valor: 424
-	Nombre: Humildad, 	Valor: 568
-
-HIJOS
-	46458
-------------------------------------------------------------------
-
-ID: 6797
+ID: 3547
 Nombre: Elena, cant Hijos: 0
-País: Perú
-Creencia: 8439
-Job: 8439
+País: Bélgica
+Creencia: 2991
+Job: 2991
 
 PECADOS: 
-	Nombre: Lujuria, 	Valor: 555
-	Nombre: Gula, 		Valor: 613
-	Nombre: Avaricia, 	Valor: 517
-	Nombre: Pereza, 	Valor: 488
-	Nombre: Ira, 		Valor: 518
-	Nombre: Envidia, 	Valor: 441
-	Nombre: Soberbia, 	Valor: 630
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
 
 BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 445
-	Nombre: Ayuno, 		Valor: 532
-	Nombre: Donación, 	Valor: 297
-	Nombre: Diligencia, 	Valor: 315
-	Nombre: Calma, 		Valor: 479
-	Nombre: Solidaridad, 	Valor: 356
-	Nombre: Humildad, 	Valor: 517
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
 
 HIJOS
 ------------------------------------------------------------------
 
-ID: 7201
-Nombre: Tatyana, cant Hijos: 1
-País: Nauru
-Creencia: 39625
-Job: 39625
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 111
-	Nombre: Gula, 		Valor: 162
-	Nombre: Avaricia, 	Valor: 205
-	Nombre: Pereza, 	Valor: 194
-	Nombre: Ira, 		Valor: 187
-	Nombre: Envidia, 	Valor: 139
-	Nombre: Soberbia, 	Valor: 108
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 56
-	Nombre: Ayuno, 		Valor: 116
-	Nombre: Donación, 	Valor: 84
-	Nombre: Diligencia, 	Valor: 162
-	Nombre: Calma, 		Valor: 48
-	Nombre: Solidaridad, 	Valor: 67
-	Nombre: Humildad, 	Valor: 55
-
-HIJOS
-	25027
-------------------------------------------------------------------
-
-ID: 7583
-Nombre: Ana, cant Hijos: 1
-País: Burundi
-Creencia: 22349
-Job: 22349
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 689
-	Nombre: Gula, 		Valor: 638
-	Nombre: Avaricia, 	Valor: 582
-	Nombre: Pereza, 	Valor: 546
-	Nombre: Ira, 		Valor: 550
-	Nombre: Envidia, 	Valor: 684
-	Nombre: Soberbia, 	Valor: 635
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 335
-	Nombre: Ayuno, 		Valor: 344
-	Nombre: Donación, 	Valor: 455
-	Nombre: Diligencia, 	Valor: 405
-	Nombre: Calma, 		Valor: 386
-	Nombre: Solidaridad, 	Valor: 436
-	Nombre: Humildad, 	Valor: 485
-
-HIJOS
-	23285
-------------------------------------------------------------------
-
-ID: 7966
-Nombre: Anna, cant Hijos: 2
+ID: 5147
+Nombre: Jose, cant Hijos: 2
 País: Australia
-Creencia: 25544
-Job: 25544
+Creencia: 1923
+Job: 1923
 
 PECADOS: 
-	Nombre: Lujuria, 	Valor: 534
-	Nombre: Gula, 		Valor: 400
-	Nombre: Avaricia, 	Valor: 239
-	Nombre: Pereza, 	Valor: 289
-	Nombre: Ira, 		Valor: 138
-	Nombre: Envidia, 	Valor: 325
-	Nombre: Soberbia, 	Valor: 347
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
 
 BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 427
-	Nombre: Ayuno, 		Valor: 416
-	Nombre: Donación, 	Valor: 525
-	Nombre: Diligencia, 	Valor: 329
-	Nombre: Calma, 		Valor: 310
-	Nombre: Solidaridad, 	Valor: 268
-	Nombre: Humildad, 	Valor: 503
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
 
 HIJOS
-	12713
-	31935
+	77306
+	98552
 ------------------------------------------------------------------
 
-ID: 8332
-Nombre: Linda, cant Hijos: 1
-País: Polonia
-Creencia: 7423
-Job: 7423
+ID: 6456
+Nombre: Ahmed, cant Hijos: 0
+País: Australia
+Creencia: 5717
+Job: 5717
 
 PECADOS: 
-	Nombre: Lujuria, 	Valor: 568
-	Nombre: Gula, 		Valor: 632
-	Nombre: Avaricia, 	Valor: 753
-	Nombre: Pereza, 	Valor: 742
-	Nombre: Ira, 		Valor: 683
-	Nombre: Envidia, 	Valor: 856
-	Nombre: Soberbia, 	Valor: 774
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
 
 BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 413
-	Nombre: Ayuno, 		Valor: 470
-	Nombre: Donación, 	Valor: 375
-	Nombre: Diligencia, 	Valor: 581
-	Nombre: Calma, 		Valor: 510
-	Nombre: Solidaridad, 	Valor: 326
-	Nombre: Humildad, 	Valor: 316
-
-HIJOS
-	66285
-------------------------------------------------------------------
-
-ID: 8717
-Nombre: Sarah, cant Hijos: 2
-País: Perú
-Creencia: 15188
-Job: 15188
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 739
-	Nombre: Gula, 		Valor: 699
-	Nombre: Avaricia, 	Valor: 677
-	Nombre: Pereza, 	Valor: 673
-	Nombre: Ira, 		Valor: 663
-	Nombre: Envidia, 	Valor: 789
-	Nombre: Soberbia, 	Valor: 700
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 400
-	Nombre: Ayuno, 		Valor: 425
-	Nombre: Donación, 	Valor: 433
-	Nombre: Diligencia, 	Valor: 398
-	Nombre: Calma, 		Valor: 523
-	Nombre: Solidaridad, 	Valor: 348
-	Nombre: Humildad, 	Valor: 543
-
-HIJOS
-	14623
-	37427
-------------------------------------------------------------------
-
-ID: 9116
-Nombre: Patricia, cant Hijos: 1
-País: Venezuela
-Creencia: 8499
-Job: 8499
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 655
-	Nombre: Gula, 		Valor: 858
-	Nombre: Avaricia, 	Valor: 492
-	Nombre: Pereza, 	Valor: 703
-	Nombre: Ira, 		Valor: 579
-	Nombre: Envidia, 	Valor: 600
-	Nombre: Soberbia, 	Valor: 864
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 422
-	Nombre: Ayuno, 		Valor: 422
-	Nombre: Donación, 	Valor: 539
-	Nombre: Diligencia, 	Valor: 458
-	Nombre: Calma, 		Valor: 390
-	Nombre: Solidaridad, 	Valor: 560
-	Nombre: Humildad, 	Valor: 474
-
-HIJOS
-	60886
-------------------------------------------------------------------
-
-ID: 9493
-Nombre: Mohamed, cant Hijos: 0
-País: Comoras
-Creencia: 12440
-Job: 12440
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 691
-	Nombre: Gula, 		Valor: 597
-	Nombre: Avaricia, 	Valor: 596
-	Nombre: Pereza, 	Valor: 670
-	Nombre: Ira, 		Valor: 731
-	Nombre: Envidia, 	Valor: 768
-	Nombre: Soberbia, 	Valor: 722
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 412
-	Nombre: Ayuno, 		Valor: 255
-	Nombre: Donación, 	Valor: 376
-	Nombre: Diligencia, 	Valor: 425
-	Nombre: Calma, 		Valor: 515
-	Nombre: Solidaridad, 	Valor: 415
-	Nombre: Humildad, 	Valor: 351
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
 
 HIJOS
 ------------------------------------------------------------------
 
-ID: 9904
-Nombre: Marie, cant Hijos: 2
-País: Irlanda
-Creencia: 23467
-Job: 23467
+ID: 8131
+Nombre: Bin, cant Hijos: 1
+País: Australia
+Creencia: 6933
+Job: 6933
 
 PECADOS: 
-	Nombre: Lujuria, 	Valor: 623
-	Nombre: Gula, 		Valor: 568
-	Nombre: Avaricia, 	Valor: 598
-	Nombre: Pereza, 	Valor: 569
-	Nombre: Ira, 		Valor: 562
-	Nombre: Envidia, 	Valor: 856
-	Nombre: Soberbia, 	Valor: 723
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
 
 BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 414
-	Nombre: Ayuno, 		Valor: 349
-	Nombre: Donación, 	Valor: 379
-	Nombre: Diligencia, 	Valor: 568
-	Nombre: Calma, 		Valor: 433
-	Nombre: Solidaridad, 	Valor: 444
-	Nombre: Humildad, 	Valor: 367
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
 
 HIJOS
-	46860
-	60327
+	82149
 ------------------------------------------------------------------
 
-ID: 10310
-Nombre: Yong, cant Hijos: 2
-País: Namibia
-Creencia: 13666
-Job: 13666
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 478
-	Nombre: Gula, 		Valor: 590
-	Nombre: Avaricia, 	Valor: 446
-	Nombre: Pereza, 	Valor: 368
-	Nombre: Ira, 		Valor: 474
-	Nombre: Envidia, 	Valor: 457
-	Nombre: Soberbia, 	Valor: 469
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 419
-	Nombre: Ayuno, 		Valor: 481
-	Nombre: Donación, 	Valor: 399
-	Nombre: Diligencia, 	Valor: 517
-	Nombre: Calma, 		Valor: 325
-	Nombre: Solidaridad, 	Valor: 306
-	Nombre: Humildad, 	Valor: 410
-
-HIJOS
-	11652
-	49260
-------------------------------------------------------------------
-
-ID: 10711
-Nombre: Francisco, cant Hijos: 1
-País: Polonia
-Creencia: 40217
-Job: 40217
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 134
-	Nombre: Gula, 		Valor: 56
-	Nombre: Avaricia, 	Valor: 70
-	Nombre: Pereza, 	Valor: 133
-	Nombre: Ira, 		Valor: 84
-	Nombre: Envidia, 	Valor: 100
-	Nombre: Soberbia, 	Valor: 49
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 169
-	Nombre: Ayuno, 		Valor: 154
-	Nombre: Donación, 	Valor: 33
-	Nombre: Diligencia, 	Valor: 122
-	Nombre: Calma, 		Valor: 110
-	Nombre: Solidaridad, 	Valor: 108
-	Nombre: Humildad, 	Valor: 32
-
-HIJOS
-	14927
-------------------------------------------------------------------
-
-ID: 11094
-Nombre: Barbara, cant Hijos: 1
-País: Guatemala
-Creencia: 42069
-Job: 42069
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 204
-	Nombre: Gula, 		Valor: 303
-	Nombre: Avaricia, 	Valor: 156
-	Nombre: Pereza, 	Valor: 214
-	Nombre: Ira, 		Valor: 156
-	Nombre: Envidia, 	Valor: 217
-	Nombre: Soberbia, 	Valor: 163
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 83
-	Nombre: Ayuno, 		Valor: 166
-	Nombre: Donación, 	Valor: 65
-	Nombre: Diligencia, 	Valor: 101
-	Nombre: Calma, 		Valor: 176
-	Nombre: Solidaridad, 	Valor: 70
-	Nombre: Humildad, 	Valor: 148
-
-HIJOS
-	45216
-------------------------------------------------------------------
-
-ID: 11433
-Nombre: Natalya
-País: Malasia
-Creencia: 1875
-Job: 1875
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 747
-	Nombre: Gula, 		Valor: 966
-	Nombre: Avaricia, 	Valor: 641
-	Nombre: Pereza, 	Valor: 831
-	Nombre: Ira, 		Valor: 861
-	Nombre: Envidia, 	Valor: 679
-	Nombre: Soberbia, 	Valor: 971
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 417
-	Nombre: Ayuno, 		Valor: 350
-	Nombre: Donación, 	Valor: 505
-	Nombre: Diligencia, 	Valor: 364
-	Nombre: Calma, 		Valor: 445
-	Nombre: Solidaridad, 	Valor: 578
-	Nombre: Humildad, 	Valor: 341
-
-HIJOS
-------------------------------------------------------------------
-
-ID: 11817
-Nombre: Christine, cant Hijos: 1
-País: Perú
-Creencia: 16435
-Job: 16435
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 768
-	Nombre: Gula, 		Valor: 803
-	Nombre: Avaricia, 	Valor: 626
-	Nombre: Pereza, 	Valor: 586
-	Nombre: Ira, 		Valor: 834
-	Nombre: Envidia, 	Valor: 621
-	Nombre: Soberbia, 	Valor: 702
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 308
-	Nombre: Ayuno, 		Valor: 333
-	Nombre: Donación, 	Valor: 341
-	Nombre: Diligencia, 	Valor: 333
-	Nombre: Calma, 		Valor: 425
-	Nombre: Solidaridad, 	Valor: 371
-	Nombre: Humildad, 	Valor: 285
-
-HIJOS
-	59426
-------------------------------------------------------------------
-
-ID: 12188
-Nombre: Pedro, cant Hijos: 2
-País: Venezuela
-Creencia: 25813
-Job: 25813
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 398
-	Nombre: Gula, 		Valor: 462
-	Nombre: Avaricia, 	Valor: 517
-	Nombre: Pereza, 	Valor: 592
-	Nombre: Ira, 		Valor: 605
-	Nombre: Envidia, 	Valor: 477
-	Nombre: Soberbia, 	Valor: 620
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 254
-	Nombre: Ayuno, 		Valor: 381
-	Nombre: Donación, 	Valor: 185
-	Nombre: Diligencia, 	Valor: 355
-	Nombre: Calma, 		Valor: 378
-	Nombre: Solidaridad, 	Valor: 401
-	Nombre: Humildad, 	Valor: 431
-
-HIJOS
-	6765
-	36803
-------------------------------------------------------------------
-
-ID: 12542
-Nombre: Li, cant Hijos: 2
-País: Fiyi
-Creencia: 43783
-Job: 43783
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 126
-	Nombre: Gula, 		Valor: 114
-	Nombre: Avaricia, 	Valor: 186
-	Nombre: Pereza, 	Valor: 187
-	Nombre: Ira, 		Valor: 212
-	Nombre: Envidia, 	Valor: 118
-	Nombre: Soberbia, 	Valor: 243
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 124
-	Nombre: Ayuno, 		Valor: 27
-	Nombre: Donación, 	Valor: 88
-	Nombre: Diligencia, 	Valor: 87
-	Nombre: Calma, 		Valor: 66
-	Nombre: Solidaridad, 	Valor: 140
-	Nombre: Humildad, 	Valor: 59
-
-HIJOS
-	29734
-	45595
-------------------------------------------------------------------
-
-ID: 12927
-Nombre: Hassan, cant Hijos: 0
-País: Bahamas
-Creencia: 40703
-Job: 40703
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 120
-	Nombre: Gula, 		Valor: 148
-	Nombre: Avaricia, 	Valor: 81
-	Nombre: Pereza, 	Valor: 193
-	Nombre: Ira, 		Valor: 132
-	Nombre: Envidia, 	Valor: 107
-	Nombre: Soberbia, 	Valor: 134
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 36
-	Nombre: Ayuno, 		Valor: 50
-	Nombre: Donación, 	Valor: 125
-	Nombre: Diligencia, 	Valor: 35
-	Nombre: Calma, 		Valor: 73
-	Nombre: Solidaridad, 	Valor: 84
-	Nombre: Humildad, 	Valor: 130
-
-HIJOS
-------------------------------------------------------------------
-
-ID: 13324
-Nombre: Francisco, cant Hijos: 1
-País: Dominica
-Creencia: 41893
-Job: 41893
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 245
-	Nombre: Gula, 		Valor: 184
-	Nombre: Avaricia, 	Valor: 214
-	Nombre: Pereza, 	Valor: 212
-	Nombre: Ira, 		Valor: 188
-	Nombre: Envidia, 	Valor: 144
-	Nombre: Soberbia, 	Valor: 131
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 138
-	Nombre: Ayuno, 		Valor: 66
-	Nombre: Donación, 	Valor: 142
-	Nombre: Diligencia, 	Valor: 68
-	Nombre: Calma, 		Valor: 117
-	Nombre: Solidaridad, 	Valor: 105
-	Nombre: Humildad, 	Valor: 105
-
-HIJOS
-	94175
-------------------------------------------------------------------
-
-ID: 13714
-Nombre: Siti, cant Hijos: 1
-País: Guatemala
-Creencia: 12157
-Job: 12157
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 435
-	Nombre: Gula, 		Valor: 388
-	Nombre: Avaricia, 	Valor: 373
-	Nombre: Pereza, 	Valor: 458
-	Nombre: Ira, 		Valor: 423
-	Nombre: Envidia, 	Valor: 335
-	Nombre: Soberbia, 	Valor: 605
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 459
-	Nombre: Ayuno, 		Valor: 359
-	Nombre: Donación, 	Valor: 234
-	Nombre: Diligencia, 	Valor: 384
-	Nombre: Calma, 		Valor: 527
-	Nombre: Solidaridad, 	Valor: 376
-	Nombre: Humildad, 	Valor: 345
-
-HIJOS
-	7089
-------------------------------------------------------------------
-
-ID: 14124
-Nombre: Ana, cant Hijos: 2
-País: Bahamas
-Creencia: 36865
-Job: 36865
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 141
-	Nombre: Gula, 		Valor: 188
-	Nombre: Avaricia, 	Valor: 156
-	Nombre: Pereza, 	Valor: 189
-	Nombre: Ira, 		Valor: 77
-	Nombre: Envidia, 	Valor: 228
-	Nombre: Soberbia, 	Valor: 115
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 68
-	Nombre: Ayuno, 		Valor: 98
-	Nombre: Donación, 	Valor: 47
-	Nombre: Diligencia, 	Valor: 75
-	Nombre: Calma, 		Valor: 88
-	Nombre: Solidaridad, 	Valor: 14
-	Nombre: Humildad, 	Valor: 19
-
-HIJOS
-	34649
-	63289
-------------------------------------------------------------------
-
-ID: 14497
-Nombre: Ali, cant Hijos: 1
-País: Venezuela
-Creencia: 17778
-Job: 17778
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 420
-	Nombre: Gula, 		Valor: 688
-	Nombre: Avaricia, 	Valor: 633
-	Nombre: Pereza, 	Valor: 614
-	Nombre: Ira, 		Valor: 523
-	Nombre: Envidia, 	Valor: 683
-	Nombre: Soberbia, 	Valor: 576
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 264
-	Nombre: Ayuno, 		Valor: 460
-	Nombre: Donación, 	Valor: 300
-	Nombre: Diligencia, 	Valor: 427
-	Nombre: Calma, 		Valor: 471
-	Nombre: Solidaridad, 	Valor: 258
-	Nombre: Humildad, 	Valor: 325
-
-HIJOS
-	11160
-------------------------------------------------------------------
-
-ID: 14860
-Nombre: Mark, cant Hijos: 0
-País: Burundi
-Creencia: 42112
-Job: 42112
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 91
-	Nombre: Gula, 		Valor: 116
-	Nombre: Avaricia, 	Valor: 136
-	Nombre: Pereza, 	Valor: 69
-	Nombre: Ira, 		Valor: 145
-	Nombre: Envidia, 	Valor: 50
-	Nombre: Soberbia, 	Valor: 151
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 68
-	Nombre: Ayuno, 		Valor: 39
-	Nombre: Donación, 	Valor: 95
-	Nombre: Diligencia, 	Valor: 39
-	Nombre: Calma, 		Valor: 128
-	Nombre: Solidaridad, 	Valor: 96
-	Nombre: Humildad, 	Valor: 90
-
-HIJOS
-------------------------------------------------------------------
-
-ID: 15257
-Nombre: Carlos, cant Hijos: 0
-País: Perú
-Creencia: 42227
-Job: 42227
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 97
-	Nombre: Gula, 		Valor: 181
-	Nombre: Avaricia, 	Valor: 72
-	Nombre: Pereza, 	Valor: 98
-	Nombre: Ira, 		Valor: 164
-	Nombre: Envidia, 	Valor: 76
-	Nombre: Soberbia, 	Valor: 124
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 110
-	Nombre: Ayuno, 		Valor: 53
-	Nombre: Donación, 	Valor: 171
-	Nombre: Diligencia, 	Valor: 69
-	Nombre: Calma, 		Valor: 99
-	Nombre: Solidaridad, 	Valor: 148
-	Nombre: Humildad, 	Valor: 53
-
-HIJOS
-------------------------------------------------------------------
-
-ID: 15657
-Nombre: Mohamed, cant Hijos: 1
-País: Estonia
-Creencia: 11623
-Job: 11623
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 766
-	Nombre: Gula, 		Valor: 729
-	Nombre: Avaricia, 	Valor: 732
-	Nombre: Pereza, 	Valor: 627
-	Nombre: Ira, 		Valor: 671
-	Nombre: Envidia, 	Valor: 740
-	Nombre: Soberbia, 	Valor: 842
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 512
-	Nombre: Ayuno, 		Valor: 353
-	Nombre: Donación, 	Valor: 321
-	Nombre: Diligencia, 	Valor: 440
-	Nombre: Calma, 		Valor: 445
-	Nombre: Solidaridad, 	Valor: 434
-	Nombre: Humildad, 	Valor: 365
-
-HIJOS
-	828
-------------------------------------------------------------------
-
-ID: 16077
-Nombre: Angela, cant Hijos: 2
-País: Namibia
-Creencia: 8296
-Job: 8296
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 782
-	Nombre: Gula, 		Valor: 742
-	Nombre: Avaricia, 	Valor: 882
-	Nombre: Pereza, 	Valor: 906
-	Nombre: Ira, 		Valor: 806
-	Nombre: Envidia, 	Valor: 850
-	Nombre: Soberbia, 	Valor: 705
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 527
-	Nombre: Ayuno, 		Valor: 488
-	Nombre: Donación, 	Valor: 342
-	Nombre: Diligencia, 	Valor: 417
-	Nombre: Calma, 		Valor: 368
-	Nombre: Solidaridad, 	Valor: 359
-	Nombre: Humildad, 	Valor: 730
-
-HIJOS
-	21173
-	39718
-------------------------------------------------------------------
-
-ID: 16462
-Nombre: Martin, cant Hijos: 1
-País: República Democrática del Congo
-Creencia: 31664
-Job: 31664
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 148
-	Nombre: Gula, 		Valor: 122
-	Nombre: Avaricia, 	Valor: 173
-	Nombre: Pereza, 	Valor: 196
-	Nombre: Ira, 		Valor: 122
-	Nombre: Envidia, 	Valor: 106
-	Nombre: Soberbia, 	Valor: 192
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 136
-	Nombre: Ayuno, 		Valor: 144
-	Nombre: Donación, 	Valor: 35
-	Nombre: Diligencia, 	Valor: 71
-	Nombre: Calma, 		Valor: 112
-	Nombre: Solidaridad, 	Valor: 100
-	Nombre: Humildad, 	Valor: 138
-
-HIJOS
-	45035
-------------------------------------------------------------------
-
-ID: 16827
-Nombre: Luis, cant Hijos: 2
-País: Islas Marshall
-Creencia: 29062
-Job: 29062
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 568
-	Nombre: Gula, 		Valor: 414
-	Nombre: Avaricia, 	Valor: 426
-	Nombre: Pereza, 	Valor: 525
-	Nombre: Ira, 		Valor: 343
-	Nombre: Envidia, 	Valor: 392
-	Nombre: Soberbia, 	Valor: 396
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 426
-	Nombre: Ayuno, 		Valor: 496
-	Nombre: Donación, 	Valor: 492
-	Nombre: Diligencia, 	Valor: 491
-	Nombre: Calma, 		Valor: 317
-	Nombre: Solidaridad, 	Valor: 526
-	Nombre: Humildad, 	Valor: 430
-
-HIJOS
-	26716
-	82323
-------------------------------------------------------------------
-
-ID: 17192
-Nombre: Andrea, cant Hijos: 2
-País: Papúa Nueva Guinea
-Creencia: 5398
-Job: 5398
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 731
-	Nombre: Gula, 		Valor: 778
-	Nombre: Avaricia, 	Valor: 760
-	Nombre: Pereza, 	Valor: 937
-	Nombre: Ira, 		Valor: 810
-	Nombre: Envidia, 	Valor: 669
-	Nombre: Soberbia, 	Valor: 792
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 462
-	Nombre: Ayuno, 		Valor: 399
-	Nombre: Donación, 	Valor: 427
-	Nombre: Diligencia, 	Valor: 405
-	Nombre: Calma, 		Valor: 273
-	Nombre: Solidaridad, 	Valor: 448
-	Nombre: Humildad, 	Valor: 460
-
-HIJOS
-	12495
-	95678
-------------------------------------------------------------------
-
-ID: 17539
-Nombre: Nushi, cant Hijos: 2
-País: Guatemala
-Creencia: 49638
-Job: 49638
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 66
-	Nombre: Gula, 		Valor: 73
-	Nombre: Avaricia, 	Valor: 116
-	Nombre: Pereza, 	Valor: 118
-	Nombre: Ira, 		Valor: 142
-	Nombre: Envidia, 	Valor: 100
-	Nombre: Soberbia, 	Valor: 166
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 84
-	Nombre: Ayuno, 		Valor: 148
-	Nombre: Donación, 	Valor: 95
-	Nombre: Diligencia, 	Valor: 118
-	Nombre: Calma, 		Valor: 145
-	Nombre: Solidaridad, 	Valor: 174
-	Nombre: Humildad, 	Valor: 91
-
-HIJOS
-	91845
-	94882
-------------------------------------------------------------------
-
-ID: 17923
-Nombre: Yan, cant Hijos: 1
-País: Eslovaquia
-Creencia: 8046
-Job: 8046
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 666
-	Nombre: Gula, 		Valor: 831
-	Nombre: Avaricia, 	Valor: 716
-	Nombre: Pereza, 	Valor: 746
-	Nombre: Ira, 		Valor: 658
-	Nombre: Envidia, 	Valor: 883
-	Nombre: Soberbia, 	Valor: 602
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 411
-	Nombre: Ayuno, 		Valor: 405
-	Nombre: Donación, 	Valor: 415
-	Nombre: Diligencia, 	Valor: 417
-	Nombre: Calma, 		Valor: 322
-	Nombre: Solidaridad, 	Valor: 551
-	Nombre: Humildad, 	Valor: 474
-
-HIJOS
-	39575
-------------------------------------------------------------------
-
-ID: 18326
-Nombre: Pedro, cant Hijos: 1
-País: Armenia
-Creencia: 35422
-Job: 35422
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 149
-	Nombre: Gula, 		Valor: 81
-	Nombre: Avaricia, 	Valor: 160
-	Nombre: Pereza, 	Valor: 130
-	Nombre: Ira, 		Valor: 134
-	Nombre: Envidia, 	Valor: 56
-	Nombre: Soberbia, 	Valor: 14
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 110
-	Nombre: Ayuno, 		Valor: 114
-	Nombre: Donación, 	Valor: 142
-	Nombre: Diligencia, 	Valor: 46
-	Nombre: Calma, 		Valor: 123
-	Nombre: Solidaridad, 	Valor: 53
-	Nombre: Humildad, 	Valor: 100
-
-HIJOS
-	76634
-------------------------------------------------------------------
-
-ID: 18690
-Nombre: Vladimir
-País: Nueva Zelanda
-Creencia: 2371
-Job: 2371
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 715
-	Nombre: Gula, 		Valor: 796
-	Nombre: Avaricia, 	Valor: 987
-	Nombre: Pereza, 	Valor: 839
-	Nombre: Ira, 		Valor: 904
-	Nombre: Envidia, 	Valor: 767
-	Nombre: Soberbia, 	Valor: 682
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 488
-	Nombre: Ayuno, 		Valor: 369
-	Nombre: Donación, 	Valor: 502
-	Nombre: Diligencia, 	Valor: 387
-	Nombre: Calma, 		Valor: 237
-	Nombre: Solidaridad, 	Valor: 452
-	Nombre: Humildad, 	Valor: 393
-
-HIJOS
-------------------------------------------------------------------
-
-ID: 19083
-Nombre: Yong, cant Hijos: 0
-País: Perú
-Creencia: 24702
-Job: 24702
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 513
-	Nombre: Gula, 		Valor: 518
-	Nombre: Avaricia, 	Valor: 430
-	Nombre: Pereza, 	Valor: 571
-	Nombre: Ira, 		Valor: 550
-	Nombre: Envidia, 	Valor: 701
-	Nombre: Soberbia, 	Valor: 533
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 149
-	Nombre: Ayuno, 		Valor: 398
-	Nombre: Donación, 	Valor: 280
-	Nombre: Diligencia, 	Valor: 263
-	Nombre: Calma, 		Valor: 470
-	Nombre: Solidaridad, 	Valor: 220
-	Nombre: Humildad, 	Valor: 530
-
-HIJOS
-------------------------------------------------------------------
-
-ID: 19463
+ID: 9650
 Nombre: Samuel, cant Hijos: 0
-País: Moldavia
-Creencia: 43097
-Job: 43097
+País: Comoras
+Creencia: 7857
+Job: 7857
 
 PECADOS: 
-	Nombre: Lujuria, 	Valor: 169
-	Nombre: Gula, 		Valor: 165
-	Nombre: Avaricia, 	Valor: 55
-	Nombre: Pereza, 	Valor: 198
-	Nombre: Ira, 		Valor: 143
-	Nombre: Envidia, 	Valor: 173
-	Nombre: Soberbia, 	Valor: 175
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
 
 BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 60
-	Nombre: Ayuno, 		Valor: 123
-	Nombre: Donación, 	Valor: 81
-	Nombre: Diligencia, 	Valor: 58
-	Nombre: Calma, 		Valor: 77
-	Nombre: Solidaridad, 	Valor: 41
-	Nombre: Humildad, 	Valor: 176
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
 
 HIJOS
 ------------------------------------------------------------------
 
-ID: 19821
-Nombre: Mohamed, cant Hijos: 1
-País: Uganda
-Creencia: 21365
-Job: 21365
+ID: 11158
+Nombre: Paul, cant Hijos: 0
+País: Tonga
+Creencia: 3758
+Job: 3758
 
 PECADOS: 
-	Nombre: Lujuria, 	Valor: 613
-	Nombre: Gula, 		Valor: 673
-	Nombre: Avaricia, 	Valor: 532
-	Nombre: Pereza, 	Valor: 637
-	Nombre: Ira, 		Valor: 637
-	Nombre: Envidia, 	Valor: 825
-	Nombre: Soberbia, 	Valor: 694
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
 
 BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 292
-	Nombre: Ayuno, 		Valor: 393
-	Nombre: Donación, 	Valor: 341
-	Nombre: Diligencia, 	Valor: 379
-	Nombre: Calma, 		Valor: 414
-	Nombre: Solidaridad, 	Valor: 322
-	Nombre: Humildad, 	Valor: 305
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
 
 HIJOS
-	13207
 ------------------------------------------------------------------
 
-ID: 20225
-Nombre: Joao, cant Hijos: 2
-País: Camerún
-Creencia: 28732
-Job: 28732
+ID: 12840
+Nombre: Xin, cant Hijos: 1
+País: Islas Marshall
+Creencia: 2927
+Job: 2927
 
 PECADOS: 
-	Nombre: Lujuria, 	Valor: 474
-	Nombre: Gula, 		Valor: 515
-	Nombre: Avaricia, 	Valor: 612
-	Nombre: Pereza, 	Valor: 435
-	Nombre: Ira, 		Valor: 377
-	Nombre: Envidia, 	Valor: 304
-	Nombre: Soberbia, 	Valor: 392
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
 
 BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 421
-	Nombre: Ayuno, 		Valor: 388
-	Nombre: Donación, 	Valor: 284
-	Nombre: Diligencia, 	Valor: 410
-	Nombre: Calma, 		Valor: 555
-	Nombre: Solidaridad, 	Valor: 333
-	Nombre: Humildad, 	Valor: 368
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
 
 HIJOS
-	59922
-	71653
+	20287
 ------------------------------------------------------------------
 
-ID: 20647
-Nombre: Ling, cant Hijos: 1
-País: Kuwait
-Creencia: 31255
-Job: 31255
+ID: 14300
+Nombre: Ram
+País: Catar
+Creencia: 591
+Job: 591
 
 PECADOS: 
-	Nombre: Lujuria, 	Valor: 155
-	Nombre: Gula, 		Valor: 137
-	Nombre: Avaricia, 	Valor: 147
-	Nombre: Pereza, 	Valor: 144
-	Nombre: Ira, 		Valor: 186
-	Nombre: Envidia, 	Valor: 154
-	Nombre: Soberbia, 	Valor: 131
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
 
 BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 144
-	Nombre: Ayuno, 		Valor: 114
-	Nombre: Donación, 	Valor: 44
-	Nombre: Diligencia, 	Valor: 43
-	Nombre: Calma, 		Valor: 40
-	Nombre: Solidaridad, 	Valor: 141
-	Nombre: Humildad, 	Valor: 103
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
 
 HIJOS
-	15005
 ------------------------------------------------------------------
 
-ID: 21006
+ID: 15862
+Nombre: Patrick, cant Hijos: 0
+País: Bosnia y Herzegovina
+Creencia: 3518
+Job: 3518
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+------------------------------------------------------------------
+
+ID: 17228
+Nombre: Sarah
+País: Comoras
+Creencia: 1326
+Job: 1326
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+------------------------------------------------------------------
+
+ID: 18914
+Nombre: Nushi, cant Hijos: 0
+País: Comoras
+Creencia: 2275
+Job: 2275
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+------------------------------------------------------------------
+
+ID: 20480
+Nombre: Martin
+País: Comoras
+Creencia: 2
+Job: 2
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+------------------------------------------------------------------
+
+ID: 22284
+Nombre: Francisco, cant Hijos: 1
+País: Vanuatu
+Creencia: 927
+Job: 927
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+	80501
+------------------------------------------------------------------
+
+ID: 24069
+Nombre: Antonio, cant Hijos: 2
+País: Tonga
+Creencia: 4881
+Job: 4881
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+	40461
+------------------------------------------------------------------
+
+ID: 25741
+Nombre: Yan, cant Hijos: 1
+País: Comoras
+Creencia: 9660
+Job: 9660
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+	19313
+------------------------------------------------------------------
+
+ID: 27484
+Nombre: Barbara, cant Hijos: 0
+País: Bután
+Creencia: 2391
+Job: 2391
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+------------------------------------------------------------------
+
+ID: 28969
+Nombre: Andrea
+País: Vanuatu
+Creencia: 2711
+Job: 2711
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+------------------------------------------------------------------
+
+ID: 30616
+Nombre: Miguel, cant Hijos: 0
+País: Bosnia y Herzegovina
+Creencia: 5574
+Job: 5574
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+------------------------------------------------------------------
+
+ID: 32033
+Nombre: Siti, cant Hijos: 0
+País: Bután
+Creencia: 7681
+Job: 7681
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+------------------------------------------------------------------
+
+ID: 33542
+Nombre: Ping, cant Hijos: 2
+País: Tonga
+Creencia: 602
+Job: 602
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+	41724
+------------------------------------------------------------------
+
+ID: 35177
+Nombre: Li, cant Hijos: 0
+País: Comoras
+Creencia: 4533
+Job: 4533
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+------------------------------------------------------------------
+
+ID: 36704
+Nombre: Charles, cant Hijos: 0
+País: Comoras
+Creencia: 6723
+Job: 6723
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+------------------------------------------------------------------
+
+ID: 38130
+Nombre: Mario, cant Hijos: 1
+País: Australia
+Creencia: 6148
+Job: 6148
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+	87155
+------------------------------------------------------------------
+
+ID: 39632
+Nombre: Mohammad, cant Hijos: 0
+País: Armenia
+Creencia: 5137
+Job: 5137
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+------------------------------------------------------------------
+
+ID: 40934
+Nombre: Fatima, cant Hijos: 0
+País: Bután
+Creencia: 203
+Job: 203
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+------------------------------------------------------------------
+
+ID: 42259
+Nombre: Martha, cant Hijos: 2
+País: Catar
+Creencia: 8205
+Job: 8205
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+	28886
+	99114
+------------------------------------------------------------------
+
+ID: 43932
+Nombre: Jean
+País: Comoras
+Creencia: 364
+Job: 364
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+------------------------------------------------------------------
+
+ID: 45518
+Nombre: Ling, cant Hijos: 0
+País: Bután
+Creencia: 7076
+Job: 7076
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+------------------------------------------------------------------
+
+ID: 47011
+Nombre: Ghulam
+País: Comoras
+Creencia: 3538
+Job: 3538
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+------------------------------------------------------------------
+
+ID: 48740
+Nombre: Peng, cant Hijos: 0
+País: Camboya
+Creencia: 3391
+Job: 3391
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+------------------------------------------------------------------
+
+ID: 50223
+Nombre: Jean, cant Hijos: 2
+País: Australia
+Creencia: 6696
+Job: 6696
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+	43661
+	51963
+------------------------------------------------------------------
+
+ID: 51773
+Nombre: Anita, cant Hijos: 1
+País: Camboya
+Creencia: 7405
+Job: 7405
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+	75006
+------------------------------------------------------------------
+
+ID: 53162
+Nombre: Tatyana, cant Hijos: 2
+País: Alemania
+Creencia: 6548
+Job: 6548
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+	69082
+------------------------------------------------------------------
+
+ID: 54898
+Nombre: Siti, cant Hijos: 1
+País: Catar
+Creencia: 4341
+Job: 4341
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+	1826
+------------------------------------------------------------------
+
+ID: 56575
+Nombre: Rosa, cant Hijos: 0
+País: Comoras
+Creencia: 9099
+Job: 9099
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+------------------------------------------------------------------
+
+ID: 58008
+Nombre: Emmanuel, cant Hijos: 2
+País: Comoras
+Creencia: 6600
+Job: 6600
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+	32540
+	74251
+------------------------------------------------------------------
+
+ID: 59538
+Nombre: Abdul, cant Hijos: 0
+País: Bosnia y Herzegovina
+Creencia: 6765
+Job: 6765
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+------------------------------------------------------------------
+
+ID: 61249
+Nombre: Mohammed
+País: Angola
+Creencia: 2922
+Job: 2922
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+------------------------------------------------------------------
+
+ID: 62878
+Nombre: Olga, cant Hijos: 0
+País: Armenia
+Creencia: 1524
+Job: 1524
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+------------------------------------------------------------------
+
+ID: 64570
+Nombre: Hassan, cant Hijos: 1
+País: Comoras
+Creencia: 6946
+Job: 6946
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+	63403
+------------------------------------------------------------------
+
+ID: 66180
+Nombre: Ram, cant Hijos: 1
+País: Tonga
+Creencia: 5827
+Job: 5827
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+	58768
+------------------------------------------------------------------
+
+ID: 67588
+Nombre: Marina, cant Hijos: 0
+País: Comoras
+Creencia: 8242
+Job: 8242
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+------------------------------------------------------------------
+
+ID: 69191
+Nombre: Paul, cant Hijos: 0
+País: Catar
+Creencia: 1897
+Job: 1897
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+------------------------------------------------------------------
+
+ID: 70595
+Nombre: Jose, cant Hijos: 0
+País: Armenia
+Creencia: 9196
+Job: 9196
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+------------------------------------------------------------------
+
+ID: 72189
+Nombre: Rosa, cant Hijos: 2
+País: Catar
+Creencia: 6650
+Job: 6650
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+	59772
+	74574
+------------------------------------------------------------------
+
+ID: 73685
+Nombre: George, cant Hijos: 2
+País: Comoras
+Creencia: 7823
+Job: 7823
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+	21384
+	90892
+------------------------------------------------------------------
+
+ID: 75167
+Nombre: Yong, cant Hijos: 2
+País: Bután
+Creencia: 1987
+Job: 1987
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+	40941
+------------------------------------------------------------------
+
+ID: 76477
+Nombre: Linda, cant Hijos: 2
+País: Comoras
+Creencia: 817
+Job: 817
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+	29858
+------------------------------------------------------------------
+
+ID: 78230
+Nombre: Svetlana, cant Hijos: 1
+País: Angola
+Creencia: 2877
+Job: 2877
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+	31433
+------------------------------------------------------------------
+
+ID: 79926
+Nombre: Ping
+País: Islas Marshall
+Creencia: 7289
+Job: 7289
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+------------------------------------------------------------------
+
+ID: 81501
+Nombre: Robert, cant Hijos: 2
+País: Australia
+Creencia: 1782
+Job: 1782
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+	11577
+------------------------------------------------------------------
+
+ID: 83065
+Nombre: Paul
+País: Comoras
+Creencia: 445
+Job: 445
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+------------------------------------------------------------------
+
+ID: 84461
+Nombre: Jean, cant Hijos: 0
+País: Angola
+Creencia: 7029
+Job: 7029
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+------------------------------------------------------------------
+
+ID: 86128
+Nombre: Luis, cant Hijos: 0
+País: Colombia
+Creencia: 6208
+Job: 6208
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+------------------------------------------------------------------
+
+ID: 87609
+Nombre: Manuel
+País: Vanuatu
+Creencia: 447
+Job: 447
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+------------------------------------------------------------------
+
+ID: 89125
+Nombre: Richard, cant Hijos: 0
+País: Bután
+Creencia: 9255
+Job: 9255
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+------------------------------------------------------------------
+
+ID: 90737
+Nombre: Abdul, cant Hijos: 0
+País: Australia
+Creencia: 9728
+Job: 9728
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+------------------------------------------------------------------
+
+ID: 92196
+Nombre: Anita, cant Hijos: 0
+País: Bosnia y Herzegovina
+Creencia: 5537
+Job: 5537
+
+PECADOS: 
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
+
+HIJOS
+------------------------------------------------------------------
+
+ID: 93929
 Nombre: Qing, cant Hijos: 2
-País: Eslovaquia
-Creencia: 29219
-Job: 29219
+País: Comoras
+Creencia: 8243
+Job: 8243
 
 PECADOS: 
-	Nombre: Lujuria, 	Valor: 502
-	Nombre: Gula, 		Valor: 635
-	Nombre: Avaricia, 	Valor: 603
-	Nombre: Pereza, 	Valor: 616
-	Nombre: Ira, 		Valor: 257
-	Nombre: Envidia, 	Valor: 592
-	Nombre: Soberbia, 	Valor: 409
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
 
 BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 409
-	Nombre: Ayuno, 		Valor: 221
-	Nombre: Donación, 	Valor: 331
-	Nombre: Diligencia, 	Valor: 380
-	Nombre: Calma, 		Valor: 555
-	Nombre: Solidaridad, 	Valor: 231
-	Nombre: Humildad, 	Valor: 481
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
 
 HIJOS
-	27682
-	76188
+	36286
 ------------------------------------------------------------------
 
-ID: 21380
-Nombre: Min, cant Hijos: 0
-País: Botsuana
-Creencia: 15593
-Job: 15593
+ID: 95562
+Nombre: Manuel, cant Hijos: 2
+País: Australia
+Creencia: 6466
+Job: 6466
 
 PECADOS: 
-	Nombre: Lujuria, 	Valor: 475
-	Nombre: Gula, 		Valor: 619
-	Nombre: Avaricia, 	Valor: 368
-	Nombre: Pereza, 	Valor: 558
-	Nombre: Ira, 		Valor: 535
-	Nombre: Envidia, 	Valor: 351
-	Nombre: Soberbia, 	Valor: 577
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
 
 BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 215
-	Nombre: Ayuno, 		Valor: 344
-	Nombre: Donación, 	Valor: 365
-	Nombre: Diligencia, 	Valor: 431
-	Nombre: Calma, 		Valor: 327
-	Nombre: Solidaridad, 	Valor: 340
-	Nombre: Humildad, 	Valor: 373
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
 
 HIJOS
+	4160
+	46424
 ------------------------------------------------------------------
 
-ID: 21789
-Nombre: Hong, cant Hijos: 1
-País: Nauru
-Creencia: 33832
-Job: 33832
+ID: 97232
+Nombre: Manuel, cant Hijos: 0
+País: Armenia
+Creencia: 1233
+Job: 1233
 
 PECADOS: 
-	Nombre: Lujuria, 	Valor: 150
-	Nombre: Gula, 		Valor: 135
-	Nombre: Avaricia, 	Valor: 147
-	Nombre: Pereza, 	Valor: 139
-	Nombre: Ira, 		Valor: 135
-	Nombre: Envidia, 	Valor: 225
-	Nombre: Soberbia, 	Valor: 174
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
 
 BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 117
-	Nombre: Ayuno, 		Valor: 82
-	Nombre: Donación, 	Valor: 84
-	Nombre: Diligencia, 	Valor: 83
-	Nombre: Calma, 		Valor: 119
-	Nombre: Solidaridad, 	Valor: 104
-	Nombre: Humildad, 	Valor: 86
-
-HIJOS
-	66413
-------------------------------------------------------------------
-
-ID: 22168
-Nombre: Christine, cant Hijos: 2
-País: Malasia
-Creencia: 33856
-Job: 33856
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 137
-	Nombre: Gula, 		Valor: 156
-	Nombre: Avaricia, 	Valor: 191
-	Nombre: Pereza, 	Valor: 232
-	Nombre: Ira, 		Valor: 187
-	Nombre: Envidia, 	Valor: 166
-	Nombre: Soberbia, 	Valor: 144
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 171
-	Nombre: Ayuno, 		Valor: 163
-	Nombre: Donación, 	Valor: 114
-	Nombre: Diligencia, 	Valor: 66
-	Nombre: Calma, 		Valor: 39
-	Nombre: Solidaridad, 	Valor: 68
-	Nombre: Humildad, 	Valor: 109
-
-HIJOS
-	10818
-------------------------------------------------------------------
-
-ID: 22531
-Nombre: Daniel, cant Hijos: 2
-País: Namibia
-Creencia: 38699
-Job: 38699
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 45
-	Nombre: Gula, 		Valor: 104
-	Nombre: Avaricia, 	Valor: 77
-	Nombre: Pereza, 	Valor: 46
-	Nombre: Ira, 		Valor: 123
-	Nombre: Envidia, 	Valor: 94
-	Nombre: Soberbia, 	Valor: 122
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 96
-	Nombre: Ayuno, 		Valor: 145
-	Nombre: Donación, 	Valor: 94
-	Nombre: Diligencia, 	Valor: 180
-	Nombre: Calma, 		Valor: 145
-	Nombre: Solidaridad, 	Valor: 80
-	Nombre: Humildad, 	Valor: 151
-
-HIJOS
-	33183
-	99415
-------------------------------------------------------------------
-
-ID: 22933
-Nombre: Ying, cant Hijos: 0
-País: Perú
-Creencia: 7366
-Job: 7366
-
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 925
-	Nombre: Gula, 		Valor: 933
-	Nombre: Avaricia, 	Valor: 945
-	Nombre: Pereza, 	Valor: 767
-	Nombre: Ira, 		Valor: 854
-	Nombre: Envidia, 	Valor: 731
-	Nombre: Soberbia, 	Valor: 713
-
-BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 651
-	Nombre: Ayuno, 		Valor: 474
-	Nombre: Donación, 	Valor: 605
-	Nombre: Diligencia, 	Valor: 528
-	Nombre: Calma, 		Valor: 385
-	Nombre: Solidaridad, 	Valor: 282
-	Nombre: Humildad, 	Valor: 359
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
 
 HIJOS
 ------------------------------------------------------------------
 
-ID: 23299
-Nombre: Michael, cant Hijos: 2
-País: Uruguay
-Creencia: 27617
-Job: 27617
+ID: 98791
+Nombre: Natalya, cant Hijos: 1
+País: Australia
+Creencia: 5237
+Job: 5237
 
 PECADOS: 
-	Nombre: Lujuria, 	Valor: 369
-	Nombre: Gula, 		Valor: 545
-	Nombre: Avaricia, 	Valor: 492
-	Nombre: Pereza, 	Valor: 470
-	Nombre: Ira, 		Valor: 528
-	Nombre: Envidia, 	Valor: 343
-	Nombre: Soberbia, 	Valor: 404
+	Nombre: Lujuria, 	Valor: 0
+	Nombre: Gula, 		Valor: 0
+	Nombre: Avaricia, 	Valor: 0
+	Nombre: Pereza, 	Valor: 0
+	Nombre: Ira, 		Valor: 0
+	Nombre: Envidia, 	Valor: 0
+	Nombre: Soberbia, 	Valor: 0
 
 BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 403
-	Nombre: Ayuno, 		Valor: 378
-	Nombre: Donación, 	Valor: 342
-	Nombre: Diligencia, 	Valor: 335
-	Nombre: Calma, 		Valor: 356
-	Nombre: Solidaridad, 	Valor: 478
-	Nombre: Humildad, 	Valor: 464
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
 
 HIJOS
-	65352
-	78221
+	29169
 ------------------------------------------------------------------
 
-ID: 23707
-Nombre: Luis, cant Hijos: 1
-País: Uruguay
-Creencia: 4672
-Job: 4672
+bre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
 
-PECADOS: 
-	Nombre: Lujuria, 	Valor: 951
-	Nombre: Gula, 		Valor: 610
-	Nombre: Avaricia, 	Valor: 770
-	Nombre: Pereza, 	Valor: 653
-	Nombre: Ira, 		Valor: 1027
-	Nombre: Envidia, 	Valor: 637
-	Nombre: Soberbia, 	Valor: 767
+HIJOS
+------------------------------------------------------------------
+
+ia, 	Valor: 33
+	Nombre: Soberbia, 	Valor: 13
 
 BUENAS ACCIONES
-	Nombre: Castidad, 	Valor: 443
-	Nombre: Ayuno, 		Valor: 508
-	Nombre: Donación, 	Valor: 387
-	Nombre: Diligencia, 	Valor: 376
-	Nombre: Calma, 		Valor: 481
-	Nombre: Solidaridad, 	Valor: 467
-	Nombre: Humildad, 	Valor: 338
+	Nombre: Castidad, 	Valor: 0
+	Nombre: Ayuno, 		Valor: 0
+	Nombre: Donación, 	Valor: 0
+	Nombre: Diligencia, 	Valor: 0
+	Nombre: Calma, 		Valor: 0
+	Nombre: Solidaridad, 	Valor: 0
+	Nombre: Humildad, 	Valor: 0
 
 HIJOS
-	76776
 ------------------------------------------------------------------
 
-ID: 24126
-Nombre: Muhammad, cant Hijos: 2
+91
+	Nombre: Avaricia, 	Valor: 50
+	Nombre: Pereza, 	Valor: 31
+	Nombre: Ira, 		Valor: 69
+	Nombre: Envidia, 	Valor: 21
+	Nombre: Soberbia, 	Valor: 6
+
+BUENAS ACCIONES
+	Nombre: Castidad, 	Valor: 1
+	Nombre: Ayuno, 		Valor: 58
+	Nombre: Donación, 	Valor: 21
+	Nombre: Diligencia, 	Valor: 90
+	Nombre: Calma, 		Valor: 26
+	Nombre: Solidaridad, 	Valor: 22
+	Nombre: Humildad, 	Valor: 31
+
+HIJOS
+------------------------------------------------------------------
+
+ijos: 2
 País: Camerún
 Creencia: 35531
 Job: 35531
