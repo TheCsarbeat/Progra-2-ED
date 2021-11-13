@@ -14,7 +14,7 @@ struct NodoArbolFamiliaALV{
     NodoArbolFamiliaALV *r;
 
     NodoArbolFamiliaALV(){
-        persona = new Persona;
+        persona = new Persona();
         l = r = NULL;
     }
     NodoArbolFamiliaALV(Persona * _persona){
@@ -49,14 +49,16 @@ struct ArbolFamilias{
     void nivelImprimir(NodoArbolFamiliaALV* , int , int);
     int treeHeight(NodoArbolFamiliaALV* nodo);
 
-
-
     void show(NodoArbolFamiliaALV *p, int l);
 
     void inOrder(NodoArbolFamiliaALV *t);
     void preOrder(NodoArbolFamiliaALV *t);
     void postOrder(NodoArbolFamiliaALV *t);
 
+    void getNodesInList(NodoArbolFamiliaALV *, ListaDoblePersonas *);
+    ListaDoblePersonas * getNodesInList();
+    int getTotalPecado(int);
+    int getTotalPecadoAux(NodoArbolFamiliaALV*,int);
 };
 
 struct NodoFamiliaListaSimple{
@@ -92,6 +94,7 @@ struct ListaSimpleArbolFamilias{
     void imprimir();
     void insertarALInicio(Persona *);
     NodoFamiliaListaSimple * buscar(Persona * );
+    NodoFamiliaListaSimple * buscar(int);
 };
 
 

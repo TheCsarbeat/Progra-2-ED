@@ -28,6 +28,8 @@ void MainWindow::start(){
 //--------------------WORLD PAGE BUTTONS--------------------
 void MainWindow::on_btnCrearHumanos_clicked(){
     mainstruct->mundo->crearHumanos(ui->txtCantHumanos->text().toInt(), ui->lbHumanFound);
+    mainstruct->mundo->infierno->limpiarDemonios();
+    mainstruct->mundo->infierno->crearHeapsDemonios(mainstruct->mundo->listArbolFamilias);
     msg.setText("Se han creado: "+QString::number(ui->txtCantHumanos->text().toInt())+" humanos");
     msg.exec();
 }
@@ -38,6 +40,8 @@ void MainWindow::on_btnBuscarPersona_clicked(){
 }
 void MainWindow::on_btnPecar_clicked(){
     mainstruct->mundo->hacerPecar();
+    mainstruct->mundo->infierno->limpiarDemonios();
+    mainstruct->mundo->infierno->crearHeapsDemonios(mainstruct->mundo->listArbolFamilias);
     msg.setText("Los humanos han pecado y hecho buenas acciones");
     msg.exec();
 }
@@ -165,5 +169,19 @@ void MainWindow::on_btnTop10Infierno_clicked(){
 void MainWindow::on_btnTop5Infierno_clicked(){
     mainstruct->mundo->top5Infierno(ui->lbtop5infierno);
     ui->panelConsultasInfiernoPecados->setCurrentIndex(2);
+}
+
+
+void MainWindow::on_btn_prueba_clicked()
+{
+    qDebug()<<"\n\n";
+    mainstruct->mundo->infierno->imprimirDemonio(ui->txtBuscarFamilia->text().toInt());
+
+}
+
+
+void MainWindow::on_btnImprimirDemons_clicked()
+{
+    //mainstruct->mundo->infierno->imprimirDemonio();
 }
 

@@ -4,6 +4,7 @@
 #include "struct_personas.h"
 #include "struct_file.h"
 #include "struct_arbolfamilias.h"
+#include "struct_infierno.h"
 
 #include <QMessageBox>
 #include <QRandomGenerator>
@@ -148,6 +149,7 @@ struct Mundo{
     ArrayContinent *arrayPecadosMapa;
     ArrayPaises *arrayBuenasAcciones;
     ArrayPaises *arrayPecados;
+    Infierno * infierno;
 
     Mundo(QLabel * lbBuenasAccionesMapa[],QLabel * lbPecadosMapa[]){
         personas = new ListaDoblePersonas();
@@ -160,13 +162,14 @@ struct Mundo{
         arrayBuenasAcciones = new ArrayPaises(files);
         arrayPecados = new ArrayPaises(files);
 
+        infierno = new Infierno();
     }
 
     void crearHumanos(int, QLabel *);
     void crearArbol();
     void crearArbol(NodoPersona* array[], int);
     void hacerPecar();
-    void hacerHerencia(Persona *,int, int);
+    void hacerHerencia(Persona *,int, int, int);
 
     void guarDatosWorld();
     void buscarHuman(int , QLabel* );
