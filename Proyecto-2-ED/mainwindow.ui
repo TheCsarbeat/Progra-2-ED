@@ -514,6 +514,19 @@ background-color: rgb(60, 185, 75);</string>
        </property>
       </widget>
      </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>520</y>
+        <width>261</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="pageCielo">
      <widget class="QPushButton" name="botonBAFamilias">

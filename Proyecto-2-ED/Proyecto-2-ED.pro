@@ -1,6 +1,9 @@
-QT       += core gui
+QT       += core gui network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+TARGET = smtp
+TEMPLATE = app
+
 
 CONFIG += c++11
 
@@ -12,6 +15,7 @@ SOURCES += \
     main.cpp \
     mainstruct.cpp \
     mainwindow.cpp \
+    smtp.cpp \
     struct_arbolfamilias.cpp \
     struct_file.cpp \
     struct_mundo.cpp \
@@ -20,6 +24,7 @@ SOURCES += \
 HEADERS += \
     mainstruct.h \
     mainwindow.h \
+    smtp.h \
     struct_arbolfamilias.h \
     struct_file.h \
     struct_mundo.h \

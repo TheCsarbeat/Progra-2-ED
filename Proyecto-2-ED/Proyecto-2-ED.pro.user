@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 5.0.1, 2021-11-11T18:52:32. -->
+<!-- Written by QtCreator 5.0.1, 2021-11-12T10:42:39. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -131,7 +131,9 @@
     <value type="int" key="ProjectExplorer.BuildConfiguration.BuildStepListCount">2</value>
     <value type="bool" key="ProjectExplorer.BuildConfiguration.ClearSystemEnvironment">false</value>
     <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.CustomParsers"/>
-    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges"/>
+    <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges">
+     <value type="QString">Path=C:\Qt\Tools\mingw810_64\bin;C:\Qt\6.1.3\mingw81_64\bin;C:\Qt\Tools\mingw810_64\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Calibre2\;C:\Users\erksm\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\erksm\AppData\Local\Programs\Python\Python39\;C:\Users\erksm\AppData\Local\Microsoft\WindowsApps;C:\Users\erksm\AppData\Local\GitHubDesktop\bin;C:\Users\erksm\.dotnet\tools;C:\Users\erksm\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\erksm\AppData\Local\atom\bin;&quot;;C:\Program Files\Git\cmd&quot;;C:\Program Files\OpenSSL-Win64\bin;C:\Users\erksm\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\erksm\AppData\Local\Programs\Python\Python39\;C:\Users\erksm\AppData\Local\Microsoft\WindowsApps;C:\Users\erksm\AppData\Local\GitHubDesktop\bin;C:\Users\erksm\.dotnet\tools;C:\Users\erksm\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\erksm\AppData\Local\atom\bin;C:\Qt\Tools\OpenSSL\Win_x64\bin</value>
+    </valuelist>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Debug</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4BuildConfiguration</value>
     <value type="int" key="Qt4ProjectManager.Qt4BuildConfiguration.BuildConfiguration">2</value>

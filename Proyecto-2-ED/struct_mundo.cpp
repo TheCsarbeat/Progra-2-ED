@@ -12,12 +12,12 @@ void Mundo::crearHumanos(int dato, QLabel * lb){
         Persona *p = new Persona(id, name, apellido, pais, creencia, profesion);
         p->hijos = new ListaDoblePersonas();
 
-        respuesta = personas->insertar(p);
-        /*if(treePersonas->raiz ==NULL){
+        
+        if(treePersonas->raiz ==NULL){
             respuesta = personas->insertar(p);
         }else{
             respuesta = personas->insertar(p, treePersonas->buscarMasCercano(p->id));
-        }*/
+        }
         if(respuesta)contador++;
         if(personas->largo%300==0){
             treePersonas->vaciarArbol();
@@ -30,7 +30,8 @@ void Mundo::crearHumanos(int dato, QLabel * lb){
             listArbolFamilias->insertarALInicio(p);
         }
     }
-    qDebug()<<personas->primerNodo->persona->id;
+    personas->imprimir();
+    //qDebug()<<personas->primerNodo->persona->id;
 }
 
 void Mundo::guarDatosWorld(){
@@ -115,17 +116,17 @@ void Mundo::crearArbol(NodoPersona * array[], int size){
 void Mundo::hacerPecar(){
     NodoPersona * tmp = personas->primerNodo;
     int random = 0;
-    int africa = 0, america = 0, asia = 0, europa= 0, oceania = 0;
+    //int africa = 0, america = 0, asia = 0, europa= 0, oceania = 0;
 
     while(tmp!=NULL){
 
         for(unsigned int i=0;i<7;i++){
             random = QRandomGenerator::global()->bounded(100);
             tmp->persona->pecados[i]->cant += random;
-            //hacerHerencia(tmp->persona,random, i);
+            hacerHerencia(tmp->persona,random, i);
             tmp->persona->buenasAcciones[i]->cant += QRandomGenerator::global()->bounded(100);
 
-            if(tmp->persona->pais->continente == "africa"){
+            /*if(tmp->persona->pais->continente == "africa"){
                 africa += random;
             }else if(tmp->persona->pais->continente == "africa"){
                 africa += random;
@@ -137,15 +138,15 @@ void Mundo::hacerPecar(){
                 europa += random;
             }else if(tmp->persona->pais->continente == "oceania"){
                 oceania += random;
-            }
+            }*/
         }
         tmp = tmp->siguiente;
     }
-    qDebug()<<"\n\nLos pecados de africa: "<<africa;
+    /*qDebug()<<"\n\nLos pecados de africa: "<<africa;
     qDebug()<<"\nLos pecados de America: "<<america;
     qDebug()<<"Los pecados de oceania: "<<oceania;
     qDebug()<<"Los pecados de Asia: "<<asia;
-    qDebug()<<"Los pecados de Europa: "<<europa;
+    qDebug()<<"Los pecados de Europa: "<<europa;*/
 }
 
 void Mundo::hacerHerencia(Persona * persona, int random, int position){
@@ -195,9 +196,10 @@ void Mundo::continentsMasBuenasAcciones(){
         }
         tmp = tmp->siguiente;
     }
+
     arrayBuenasAccionesMapa->bubbleSort();
     qDebug()<<"\nBuenas Acciones\n";
-    arrayBuenasAccionesMapa->imprimir();
+    //arrayBuenasAccionesMapa->imprimir();
     arrayBuenasAccionesMapa->showMap(0);
 }
 
@@ -214,6 +216,7 @@ void Mundo::continentsMasPecados(){
             pecadosPersona += tmp->persona->pecados[i]->cant;
         }
 
+
         if(tmp->persona->pais->continente == arrayPecadosMapa->arrayContinents[0]->name)
             arrayPecadosMapa->arrayContinents[0]->cant += pecadosPersona;
 
@@ -227,14 +230,11 @@ void Mundo::continentsMasPecados(){
             arrayPecadosMapa->arrayContinents[3]->cant += pecadosPersona;
 
         else if(tmp->persona->pais->continente == arrayPecadosMapa->arrayContinents[4]->name)
-            arrayPecadosMapa->arrayContinents[4]->cant += pecadosPersona;
-        else{
-
-        }
+            arrayPecadosMapa->arrayContinents[4]->cant += pecadosPersona;        
         tmp = tmp->siguiente;
     }
     arrayPecadosMapa->bubbleSort();
     qDebug()<<"\n Pecados\n";
-    arrayPecadosMapa->imprimir();
+    //arrayPecadosMapa->imprimir();
     arrayPecadosMapa->showMap(1);
 }

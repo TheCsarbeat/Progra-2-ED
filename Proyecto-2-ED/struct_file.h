@@ -69,9 +69,9 @@ struct Files{
             *paises[i] = *paises[randomIndex];
             *paises[randomIndex] = temp;
         }
-        for(int i=0; i< index; i++){
+        /*for(int i=0; i< index; i++){
             qDebug()<<paises[i]->continente<<", ";
-        }
+        }*/
     }
     void printNames();
 

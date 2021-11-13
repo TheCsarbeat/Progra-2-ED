@@ -118,3 +118,31 @@ void MainWindow::on_btnMapaPecados_clicked(){
     mainstruct->mundo->continentsMasPecados();
 }
 
+
+void MainWindow::on_pushButton_clicked(){
+    files.clear();
+
+    /*QFileDialog dialog(this);
+    dialog.setDirectory(QDir::homePath());
+    dialog.setFileMode(QFileDialog::ExistingFiles);
+
+    if (dialog.exec())
+        files = dialog.selectedFiles();*/
+    files.append("datosWorld.txt");
+    QString fileListString;
+    foreach(QString file, files){
+        fileListString.append( "\"" + QFileInfo(file).fileName() + "\" " );
+        qDebug()<<file;
+    }
+
+    //ui->file->setText( fileListString );
+
+    Smtp* smtp = new Smtp("laroxeta2018@gmail.com", "l4roseta32", "smtp.gmail.com", 465);
+    connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
+
+    if(!files.isEmpty())
+        smtp->sendMail("laroxeta2018@gmail.com", "cesarjjxd@gmail.com" , "ui->subject->text()","ui->msg->toPlainText()", files );
+    else
+        smtp->sendMail("laroxeta2018@gmail.com", "cesarjjxd@gmail.com" , "ui->subject->text()","ui->msg->toPlainText()");
+}
+
