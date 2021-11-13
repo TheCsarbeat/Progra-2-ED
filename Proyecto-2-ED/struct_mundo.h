@@ -165,7 +165,7 @@ struct Mundo{
         infierno = new Infierno();
     }
 
-    void crearHumanos(int, QLabel *);
+    void crearHumanos(int);
     void crearArbol();
     void crearArbol(NodoPersona* array[], int);
     void hacerPecar();

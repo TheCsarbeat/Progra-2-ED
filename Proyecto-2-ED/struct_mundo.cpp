@@ -1,7 +1,8 @@
 #include "struct_mundo.h"
-void Mundo::crearHumanos(int dato, QLabel * lb){
+void Mundo::crearHumanos(int dato){
     int contador = 0;
-    while(contador!=dato){
+
+    while(contador!=dato && personas->largo<99999){
         bool respuesta;
         int id = QRandomGenerator::global()->bounded(100000);
         QString name = files->names[QRandomGenerator::global()->bounded(101)];
@@ -24,10 +25,11 @@ void Mundo::crearHumanos(int dato, QLabel * lb){
             crearArbol();
         }
         NodoFamiliaListaSimple *buscado = listArbolFamilias->buscar(p);
-        if( buscado!= NULL && respuesta){
-            buscado->arbol->insert(p);
-        }else{
-            listArbolFamilias->insertarALInicio(p);
+        if(respuesta){
+            if( buscado!= NULL)
+                buscado->arbol->insert(p);
+            else
+                listArbolFamilias->insertarALInicio(p);
         }
     }
     //personas->imprimir();

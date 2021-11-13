@@ -78,7 +78,7 @@ NodoArbolFamiliaALV *ArbolFamilias::insert(NodoArbolFamiliaALV *r, Persona *pers
       asignarHijos(persona);
       r = new NodoArbolFamiliaALV(persona);      
       return r;
-   } else if (persona->id< r->persona->id) {
+   } else if (persona->id < r->persona->id) {
       r->l = insert(r->l, persona);
       r = balance(r);
    } else if (persona->id >= r->persona->id) {

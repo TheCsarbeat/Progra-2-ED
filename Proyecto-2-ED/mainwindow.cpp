@@ -27,7 +27,7 @@ void MainWindow::start(){
 
 //--------------------WORLD PAGE BUTTONS--------------------
 void MainWindow::on_btnCrearHumanos_clicked(){
-    mainstruct->mundo->crearHumanos(ui->txtCantHumanos->text().toInt(), ui->lbHumanFound);
+    mainstruct->mundo->crearHumanos(ui->txtCantHumanos->text().toInt());
     mainstruct->mundo->infierno->limpiarDemonios();
     mainstruct->mundo->infierno->crearHeapsDemonios(mainstruct->mundo->listArbolFamilias);
     msg.setText("Se han creado: "+QString::number(ui->txtCantHumanos->text().toInt())+" humanos");
@@ -175,7 +175,7 @@ void MainWindow::on_btnTop5Infierno_clicked(){
 void MainWindow::on_btn_prueba_clicked()
 {
     qDebug()<<"\n\n";
-    mainstruct->mundo->infierno->imprimirDemonio(ui->txtBuscarFamilia->text().toInt());
+    //mainstruct->mundo->infierno->imprimirDemonio(ui->txtBuscarFamilia->text().toInt());
 
 }
 
@@ -183,5 +183,13 @@ void MainWindow::on_btn_prueba_clicked()
 void MainWindow::on_btnImprimirDemons_clicked()
 {
     //mainstruct->mundo->infierno->imprimirDemonio();
+}
+
+
+void MainWindow::on_pushButton_4_clicked()
+{
+
+
+    mainstruct->mundo->infierno->imprimirDemonio(ui->lineEdit_2->text().toInt());
 }
 

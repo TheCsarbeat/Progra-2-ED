@@ -140,6 +140,8 @@ public:
     QPushButton *btnMapaPecados;
     QPushButton *btnTop10Infierno;
     QPushButton *btnTop5Infierno;
+    QPushButton *pushButton_4;
+    QLineEdit *lineEdit_2;
     QWidget *pageConsultas;
     QPushButton *pushButton_16;
     QPushButton *pushButton_17;
@@ -204,13 +206,13 @@ public:
         pageCrearHumano->setStyleSheet(QString::fromUtf8("background-color:white;"));
         pushButton_2 = new QPushButton(pageCrearHumano);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(1260, 30, 161, 51));
+        pushButton_2->setGeometry(QRect(1260, 40, 161, 51));
         txtcerca = new QLineEdit(pageCrearHumano);
         txtcerca->setObjectName(QString::fromUtf8("txtcerca"));
-        txtcerca->setGeometry(QRect(1350, 50, 113, 21));
+        txtcerca->setGeometry(QRect(1430, 50, 113, 21));
         txtCantHumanos_2 = new QLineEdit(pageCrearHumano);
         txtCantHumanos_2->setObjectName(QString::fromUtf8("txtCantHumanos_2"));
-        txtCantHumanos_2->setGeometry(QRect(1290, 80, 113, 21));
+        txtCantHumanos_2->setGeometry(QRect(1290, 110, 113, 21));
         frame_12 = new QFrame(pageCrearHumano);
         frame_12->setObjectName(QString::fromUtf8("frame_12"));
         frame_12->setGeometry(QRect(60, 30, 541, 241));
@@ -867,6 +869,12 @@ public:
 "border:0px;\n"
 "font: 12pt \"Open Sans\";\n"
 "background-color: rgb(198, 46, 48);"));
+        pushButton_4 = new QPushButton(pageInfierno);
+        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
+        pushButton_4->setGeometry(QRect(170, 870, 75, 23));
+        lineEdit_2 = new QLineEdit(pageInfierno);
+        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
+        lineEdit_2->setGeometry(QRect(450, 860, 113, 20));
         mainPanel->addWidget(pageInfierno);
         pageConsultas = new QWidget();
         pageConsultas->setObjectName(QString::fromUtf8("pageConsultas"));
@@ -1070,7 +1078,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        mainPanel->setCurrentIndex(1);
+        mainPanel->setCurrentIndex(0);
         panelConsultasCieloBuenasAcciones->setCurrentIndex(1);
         panelConsultasInfiernoPecados->setCurrentIndex(1);
 
@@ -1086,7 +1094,7 @@ public:
         txtCantHumanos_2->setText(QString());
         label_5->setText(QCoreApplication::translate("MainWindow", "Cantidad:", nullptr));
         label_7->setText(QCoreApplication::translate("MainWindow", "Creaci\303\263n de Humanos ", nullptr));
-        txtCantHumanos->setText(QCoreApplication::translate("MainWindow", "10000", nullptr));
+        txtCantHumanos->setText(QCoreApplication::translate("MainWindow", "1000", nullptr));
         btnCrearHumanos->setText(QCoreApplication::translate("MainWindow", "Generar humanos", nullptr));
         label_8->setText(QString());
         label_9->setText(QCoreApplication::translate("MainWindow", "Buscar humano", nullptr));
@@ -1167,6 +1175,7 @@ public:
         btnMapaPecados->setText(QCoreApplication::translate("MainWindow", "Mapa de Continentes", nullptr));
         btnTop10Infierno->setText(QCoreApplication::translate("MainWindow", "Top 10 pa\303\255ses pecados", nullptr));
         btnTop5Infierno->setText(QCoreApplication::translate("MainWindow", "Top 5 pa\303\255ses \"Malos\"", nullptr));
+        pushButton_4->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
         pushButton_16->setText(QCoreApplication::translate("MainWindow", "Cielo (Salvaci\303\263n)", nullptr));
         pushButton_17->setText(QCoreApplication::translate("MainWindow", "Infierno (Condenaci\303\263n)", nullptr));
         labelListadoBuenos->setText(QCoreApplication::translate("MainWindow", "Listado de humano m\303\241s bueno al menos bueno:", nullptr));
