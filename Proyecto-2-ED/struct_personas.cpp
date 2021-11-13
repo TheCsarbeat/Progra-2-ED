@@ -107,7 +107,8 @@ void ListaDoblePersonas::imprimir(){
     while (temp != NULL){
         //temp->persona->imprimir();
         //qDebug()<<"Posicion en lista: "<<cont;
-        qDebug()<<QString::number(temp->persona->id)<<", ";
+        //qDebug()<<QString::number(temp->persona->id)<<", ";
+        qDebug()<<temp->persona->pais->name<<","<<temp->persona->id;
         cont++;
         temp = temp->siguiente;
     }

@@ -30,7 +30,7 @@
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="pageCrearHumano">
      <property name="styleSheet">
@@ -964,7 +964,7 @@ background-color: rgb(64, 150, 180);</string>
         <string>Mapa de Continentes</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="botonTopBA">
+      <widget class="QPushButton" name="btnTop10Cielo">
        <property name="geometry">
         <rect>
          <x>100</x>
@@ -985,7 +985,7 @@ background-color: rgb(64, 150, 180);</string>
         <string>Top 10 países buenas acciones</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="botonPaisMenosMalos">
+      <widget class="QPushButton" name="btnTop5Cielo">
        <property name="geometry">
         <rect>
          <x>430</x>
@@ -1075,7 +1075,7 @@ border-color: rgb(64, 150, 180);</string>
       <property name="currentIndex">
        <number>1</number>
       </property>
-      <widget class="QWidget" name="page_3">
+      <widget class="QWidget" name="pageMapaBuenasAcciones">
        <widget class="QFrame" name="frame">
         <property name="geometry">
          <rect>
@@ -1177,7 +1177,7 @@ border-color: rgb(64, 150, 180);</string>
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>831</width>
+          <width>791</width>
           <height>31</height>
          </rect>
         </property>
@@ -1203,33 +1203,101 @@ background-color:rgb(64, 150, 180);
         </property>
        </widget>
       </widget>
-      <widget class="QWidget" name="page_4">
+      <widget class="QWidget" name="pageTop10Cielo">
        <widget class="QLabel" name="lbtop10cielo">
         <property name="geometry">
          <rect>
           <x>40</x>
-          <y>40</y>
+          <y>60</y>
           <width>701</width>
+          <height>441</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">text-align: center ;
+font: 14pt &quot;Open Sans&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Text</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_18">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>791</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Doppio One</family>
+          <pointsize>16</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: white;
+background-color:rgb(64, 150, 180);
+ text-align: center ;
+</string>
+        </property>
+        <property name="text">
+         <string>Top 10 Paises Más buenos</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="pageTop5Cielo">
+       <widget class="QLabel" name="lbtop5Cielo">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>40</y>
+          <width>711</width>
           <height>461</height>
          </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">text-align: center ;
+font: 14pt &quot;Open Sans&quot;;</string>
         </property>
         <property name="text">
          <string/>
         </property>
        </widget>
-      </widget>
-      <widget class="QWidget" name="page_7">
-       <widget class="QLabel" name="lbtop5Cielo">
+       <widget class="QLabel" name="label_19">
         <property name="geometry">
          <rect>
-          <x>50</x>
-          <y>40</y>
-          <width>691</width>
-          <height>461</height>
+          <x>0</x>
+          <y>0</y>
+          <width>791</width>
+          <height>31</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <family>Doppio One</family>
+          <pointsize>16</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: white;
+background-color:rgb(64, 150, 180);
+ text-align: center ;
+</string>
+        </property>
         <property name="text">
-         <string/>
+         <string>Top 5 Paises Menos buenos</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
         </property>
        </widget>
       </widget>
@@ -1681,7 +1749,7 @@ background-color:rgb(64, 150, 180);
        <string>Consultas infierno</string>
       </property>
      </widget>
-     <widget class="QStackedWidget" name="panelConsultasCieloBuenasAcciones_2">
+     <widget class="QStackedWidget" name="panelConsultasInfiernoPecados">
       <property name="geometry">
        <rect>
         <x>830</x>
@@ -1694,9 +1762,9 @@ background-color:rgb(64, 150, 180);
        <string notr="true">background-color:rgb(250,250,250);</string>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>1</number>
       </property>
-      <widget class="QWidget" name="page_5">
+      <widget class="QWidget" name="pageMapaInfierno">
        <widget class="QFrame" name="frame_2">
         <property name="geometry">
          <rect>
@@ -1817,14 +1885,14 @@ background-color: rgb(32, 30, 30);
 </string>
         </property>
         <property name="text">
-         <string>Continentes Con más buenas Acciones</string>
+         <string>Continentes Con Más Pecados</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
       </widget>
-      <widget class="QWidget" name="page_6">
+      <widget class="QWidget" name="pageTop10Infierno">
        <widget class="QLabel" name="lbtop10Infierno">
         <property name="geometry">
          <rect>
@@ -1834,12 +1902,46 @@ background-color: rgb(32, 30, 30);
           <height>461</height>
          </rect>
         </property>
+        <property name="styleSheet">
+         <string notr="true">text-align: center ;
+font: 14pt &quot;Open Sans&quot;;</string>
+        </property>
         <property name="text">
-         <string/>
+         <string>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. </string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_20">
+        <property name="geometry">
+         <rect>
+          <x>-10</x>
+          <y>0</y>
+          <width>801</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Doppio One</family>
+          <pointsize>16</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(198, 46, 48);
+background-color: rgb(32, 30, 30);
+ text-align: center ;
+</string>
+        </property>
+        <property name="text">
+         <string>10 Países Más pecadores</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
         </property>
        </widget>
       </widget>
-      <widget class="QWidget" name="page_8">
+      <widget class="QWidget" name="pageTop5Infierno">
        <widget class="QLabel" name="lbtop5infierno">
         <property name="geometry">
          <rect>
@@ -1849,8 +1951,42 @@ background-color: rgb(32, 30, 30);
           <height>461</height>
          </rect>
         </property>
+        <property name="styleSheet">
+         <string notr="true">text-align: center ;
+font: 14pt &quot;Open Sans&quot;;</string>
+        </property>
         <property name="text">
          <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_25">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>801</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Doppio One</family>
+          <pointsize>16</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(198, 46, 48);
+background-color: rgb(32, 30, 30);
+ text-align: center ;
+</string>
+        </property>
+        <property name="text">
+         <string>5 Países Menos pecadores</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
         </property>
        </widget>
       </widget>
@@ -1920,7 +2056,7 @@ background-color: rgb(198, 46, 48);</string>
         <string>Mapa de Continentes</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="botonTopBA_2">
+      <widget class="QPushButton" name="btnTop10Infierno">
        <property name="geometry">
         <rect>
          <x>100</x>
@@ -1941,7 +2077,7 @@ background-color: rgb(198, 46, 48);</string>
         <string>Top 10 países pecados</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="botonPaisMenosMalos_3">
+      <widget class="QPushButton" name="btnTop5Infierno">
        <property name="geometry">
         <rect>
          <x>430</x>
@@ -2553,7 +2689,7 @@ font: 12pt &quot;Open Sans&quot;;</string>
      <x>0</x>
      <y>0</y>
      <width>1900</width>
-     <height>25</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

@@ -3,12 +3,12 @@ void Mundo::crearHumanos(int dato, QLabel * lb){
     int contador = 0;
     while(contador!=dato){
         bool respuesta;
-        int id = QRandomGenerator::global()->bounded(99999);
-        QString name = files->names[QRandomGenerator::global()->bounded(100)];
-        QString apellido = files->lastNames[QRandomGenerator::global()->bounded(50)];
-        Pais *pais = files->paises[QRandomGenerator::global()->bounded(69)];
+        int id = QRandomGenerator::global()->bounded(100000);
+        QString name = files->names[QRandomGenerator::global()->bounded(101)];
+        QString apellido = files->lastNames[QRandomGenerator::global()->bounded(51)];
+        Pais *pais = files->paises[QRandomGenerator::global()->bounded(files->index)];
         QString creencia = QString::number(personas->largo);
-        QString profesion = files->jobs[QRandomGenerator::global()->bounded(79)];
+        QString profesion = files->jobs[QRandomGenerator::global()->bounded(80)];
         Persona *p = new Persona(id, name, apellido, pais, creencia, profesion);
         p->hijos = new ListaDoblePersonas();
 
@@ -30,7 +30,7 @@ void Mundo::crearHumanos(int dato, QLabel * lb){
             listArbolFamilias->insertarALInicio(p);
         }
     }
-    personas->imprimir();
+    //personas->imprimir();
     //qDebug()<<personas->primerNodo->persona->id;
 }
 
@@ -239,7 +239,7 @@ void Mundo::continentsMasPecados(){
     arrayPecadosMapa->showMap(1);
 }
 
-void Mundo::top10Cielo(){
+void Mundo::top10Cielo(QLabel *lb){
     NodoPersona * tmp = personas->primerNodo;
     int buenasAccionesP = 0;
     for( int i=0; i<files->index; i++){
@@ -249,21 +249,21 @@ void Mundo::top10Cielo(){
 
     while(tmp!=NULL){
         buenasAccionesP = 0;
-        for(unsigned int i=0;i<7;i++){
+        for(unsigned int i=0;i<7;i++)
             buenasAccionesP += tmp->persona->buenasAcciones[i]->cant;
-        }
-         for (int i = 0; i < files->index; i ++){
-             if(tmp->persona->pais->name == arrayBuenasAcciones->arrayPaises[i]->nombre)
+
+        for (int i = 0; i < files->index; i ++){
+            if(tmp->persona->pais->name == arrayBuenasAcciones->arrayPaises[i]->nombre)
                  arrayBuenasAcciones->arrayPaises[i]->cantidad += buenasAccionesP;
-             tmp = tmp->siguiente;
-         }
+        }
+        tmp = tmp->siguiente;
     }
     arrayBuenasAcciones->bubbleSortMayorMenor(files);
-    arrayBuenasAcciones->imprimir();
+    lb->setText(arrayBuenasAcciones->toStringMayores());
 
 }
 
-void Mundo::top5Cielo(){
+void Mundo::top5Cielo(QLabel * lb){
     NodoPersona * tmp = personas->primerNodo;
     int buenasAccionesP = 0;
     for( int i=0; i<files->index; i++){
@@ -273,21 +273,21 @@ void Mundo::top5Cielo(){
 
     while(tmp!=NULL){
         buenasAccionesP = 0;
-        for(unsigned int i=0;i<7;i++){
+        for(unsigned int i=0;i<7;i++)
             buenasAccionesP += tmp->persona->buenasAcciones[i]->cant;
+
+        for (int i = 0; i < files->index; i ++){
+         if(tmp->persona->pais->name == arrayBuenasAcciones->arrayPaises[i]->nombre)
+             arrayBuenasAcciones->arrayPaises[i]->cantidad += buenasAccionesP;
         }
-         for (int i = 0; i < files->index; i ++){
-             if(tmp->persona->pais->name == arrayBuenasAcciones->arrayPaises[i]->nombre)
-                 arrayBuenasAcciones->arrayPaises[i]->cantidad += buenasAccionesP;
-             tmp = tmp->siguiente;
-         }
+        tmp = tmp->siguiente;
     }
     arrayBuenasAcciones->bubbleSortMenorMayor(files);
-    arrayBuenasAcciones->imprimir2();
+    lb->setText(arrayBuenasAcciones->toStringMenores());
 
 }
 
-void Mundo::top10Infierno(){
+void Mundo::top10Infierno(QLabel *lb){
     NodoPersona * tmp = personas->primerNodo;
     int pecadosP = 0;
 
@@ -297,21 +297,21 @@ void Mundo::top10Infierno(){
 
     while(tmp!=NULL){
         pecadosP = 0;
-        for(unsigned int i=0;i<7;i++){
+        for(unsigned int i=0;i<7;i++)
             pecadosP += tmp->persona->pecados[i]->cant;
-        }
+
          for (int i = 0; i < files->index; i ++){
              if(tmp->persona->pais->name == arrayPecados->arrayPaises[i]->nombre)
                  arrayPecados->arrayPaises[i]->cantidad += pecadosP;
-             tmp = tmp->siguiente;
          }
+         tmp = tmp->siguiente;
     }
     arrayPecados->bubbleSortMayorMenor(files);
-    arrayPecados->imprimir();
+    lb->setText(arrayPecados->toStringMayores());
 
 }
 
-void Mundo::top5Infierno(){
+void Mundo::top5Infierno(QLabel *lb){
     NodoPersona * tmp = personas->primerNodo;
     int pecadosP = 0;
     for( int i=0; i<files->index; i++){
@@ -321,16 +321,15 @@ void Mundo::top5Infierno(){
 
     while(tmp!=NULL){
         pecadosP = 0;
-        for(unsigned int i=0;i<7;i++){
+        for(unsigned int i=0;i<7;i++)
             pecadosP += tmp->persona->pecados[i]->cant;
-        }
+
          for (int i = 0; i < files->index; i ++){
              if(tmp->persona->pais->name == arrayPecados->arrayPaises[i]->nombre)
                  arrayPecados->arrayPaises[i]->cantidad += pecadosP;
-             tmp = tmp->siguiente;
          }
+         tmp = tmp->siguiente;
     }
     arrayPecados->bubbleSortMenorMayor(files);
-    arrayPecados->imprimir2();
-
+    lb->setText(arrayPecados->toStringMenores());
 }

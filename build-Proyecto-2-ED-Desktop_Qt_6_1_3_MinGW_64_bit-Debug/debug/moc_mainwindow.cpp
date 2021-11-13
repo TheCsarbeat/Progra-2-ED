@@ -23,8 +23,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    const uint offsetsAndSize[36];
-    char stringdata0[409];
+    const uint offsetsAndSize[44];
+    char stringdata0[513];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(offsetof(qt_meta_stringdata_MainWindow_t, stringdata0) + ofs), len 
@@ -47,7 +47,11 @@ QT_MOC_LITERAL(272, 12), // "QPushButton*"
 QT_MOC_LITERAL(285, 31), // "on_btnGuardarDatosWorld_clicked"
 QT_MOC_LITERAL(317, 43), // "on_btnMapaContinentesBuenasAc..."
 QT_MOC_LITERAL(361, 25), // "on_btnMapaPecados_clicked"
-QT_MOC_LITERAL(387, 21) // "on_pushButton_clicked"
+QT_MOC_LITERAL(387, 21), // "on_pushButton_clicked"
+QT_MOC_LITERAL(409, 24), // "on_btnTop10Cielo_clicked"
+QT_MOC_LITERAL(434, 23), // "on_btnTop5Cielo_clicked"
+QT_MOC_LITERAL(458, 27), // "on_btnTop10Infierno_clicked"
+QT_MOC_LITERAL(486, 26) // "on_btnTop5Infierno_clicked"
 
     },
     "MainWindow\0on_btnCrearHumanos_clicked\0"
@@ -62,7 +66,10 @@ QT_MOC_LITERAL(387, 21) // "on_pushButton_clicked"
     "on_btnGuardarDatosWorld_clicked\0"
     "on_btnMapaContinentesBuenasAcciones_clicked\0"
     "on_btnMapaPecados_clicked\0"
-    "on_pushButton_clicked"
+    "on_pushButton_clicked\0on_btnTop10Cielo_clicked\0"
+    "on_btnTop5Cielo_clicked\0"
+    "on_btnTop10Infierno_clicked\0"
+    "on_btnTop5Infierno_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -72,7 +79,7 @@ static const uint qt_meta_data_MainWindow[] = {
        9,       // revision
        0,       // classname
        0,    0, // classinfo
-      15,   14, // methods
+      19,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -80,21 +87,25 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,  104,    2, 0x08,    0 /* Private */,
-       3,    0,  105,    2, 0x08,    1 /* Private */,
-       4,    0,  106,    2, 0x08,    2 /* Private */,
-       5,    0,  107,    2, 0x08,    3 /* Private */,
-       6,    0,  108,    2, 0x08,    4 /* Private */,
-       7,    0,  109,    2, 0x08,    5 /* Private */,
-       8,    0,  110,    2, 0x08,    6 /* Private */,
-       9,    0,  111,    2, 0x08,    7 /* Private */,
-      10,    0,  112,    2, 0x08,    8 /* Private */,
-      11,    0,  113,    2, 0x08,    9 /* Private */,
-      12,    1,  114,    2, 0x08,   10 /* Private */,
-      14,    0,  117,    2, 0x08,   12 /* Private */,
-      15,    0,  118,    2, 0x08,   13 /* Private */,
-      16,    0,  119,    2, 0x08,   14 /* Private */,
-      17,    0,  120,    2, 0x08,   15 /* Private */,
+       1,    0,  128,    2, 0x08,    0 /* Private */,
+       3,    0,  129,    2, 0x08,    1 /* Private */,
+       4,    0,  130,    2, 0x08,    2 /* Private */,
+       5,    0,  131,    2, 0x08,    3 /* Private */,
+       6,    0,  132,    2, 0x08,    4 /* Private */,
+       7,    0,  133,    2, 0x08,    5 /* Private */,
+       8,    0,  134,    2, 0x08,    6 /* Private */,
+       9,    0,  135,    2, 0x08,    7 /* Private */,
+      10,    0,  136,    2, 0x08,    8 /* Private */,
+      11,    0,  137,    2, 0x08,    9 /* Private */,
+      12,    1,  138,    2, 0x08,   10 /* Private */,
+      14,    0,  141,    2, 0x08,   12 /* Private */,
+      15,    0,  142,    2, 0x08,   13 /* Private */,
+      16,    0,  143,    2, 0x08,   14 /* Private */,
+      17,    0,  144,    2, 0x08,   15 /* Private */,
+      18,    0,  145,    2, 0x08,   16 /* Private */,
+      19,    0,  146,    2, 0x08,   17 /* Private */,
+      20,    0,  147,    2, 0x08,   18 /* Private */,
+      21,    0,  148,    2, 0x08,   19 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -108,6 +119,10 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void, 0x80000000 | 13,    2,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -137,6 +152,10 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 12: _t->on_btnMapaContinentesBuenasAcciones_clicked(); break;
         case 13: _t->on_btnMapaPecados_clicked(); break;
         case 14: _t->on_pushButton_clicked(); break;
+        case 15: _t->on_btnTop10Cielo_clicked(); break;
+        case 16: _t->on_btnTop5Cielo_clicked(); break;
+        case 17: _t->on_btnTop10Infierno_clicked(); break;
+        case 18: _t->on_btnTop5Infierno_clicked(); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
@@ -161,7 +180,7 @@ const QMetaObject MainWindow::staticMetaObject = { {
     nullptr,
 qt_incomplete_metaTypeArray<qt_meta_stringdata_MainWindow_t
 
-, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QPushButton *, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
+, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<QPushButton *, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
 
 
 >,
@@ -188,13 +207,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 15)
+        if (_id < 19)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 15;
+        _id -= 19;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 15)
+        if (_id < 19)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 15;
+        _id -= 19;
     }
     return _id;
 }

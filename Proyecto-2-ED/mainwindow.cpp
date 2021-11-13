@@ -106,11 +106,13 @@ void MainWindow::on_botonConsultas2_clicked(){
 //---------------------------------- Cielo ----------------
 void MainWindow::on_btnMapaContinentesBuenasAcciones_clicked(){
     mainstruct->mundo->continentsMasBuenasAcciones();
+    ui->panelConsultasCieloBuenasAcciones->setCurrentIndex(0);
 }
 
 
 void MainWindow::on_btnMapaPecados_clicked(){
     mainstruct->mundo->continentsMasPecados();
+    ui->panelConsultasInfiernoPecados->setCurrentIndex(0);
 }
 
 
@@ -139,17 +141,29 @@ void MainWindow::on_pushButton_clicked(){
         smtp->sendMail("laroxeta2018@gmail.com", "cesarjjxd@gmail.com" , "ui->subject->text()","ui->msg->toPlainText()", files );
     else
         smtp->sendMail("laroxeta2018@gmail.com", "cesarjjxd@gmail.com" , "ui->subject->text()","ui->msg->toPlainText()");
-void MainWindow::on_botonTopBA_2_clicked()
-{
-    qDebug()<<"\n\n Top 10 infierno";
-    mainstruct->mundo->top10Infierno();
-    qDebug()<<"\n\n top 10 cielo";
-    mainstruct->mundo->top10Cielo();
-    qDebug()<<"\n\n  top 5 cielo";
-    mainstruct->mundo->top5Cielo();
-    qDebug()<<"\n\n  top 5 infierno";
-    mainstruct->mundo->top5Infierno();
+}
 
 
+void MainWindow::on_btnTop10Cielo_clicked(){
+    mainstruct->mundo->top10Cielo(ui->lbtop10cielo);
+    ui->panelConsultasCieloBuenasAcciones->setCurrentIndex(1);
+}
+
+
+void MainWindow::on_btnTop5Cielo_clicked(){
+    mainstruct->mundo->top5Cielo(ui->lbtop5Cielo);
+    ui->panelConsultasCieloBuenasAcciones->setCurrentIndex(2);
+}
+
+
+void MainWindow::on_btnTop10Infierno_clicked(){
+     mainstruct->mundo->top10Infierno(ui->lbtop10Infierno);
+     ui->panelConsultasInfiernoPecados->setCurrentIndex(1);
+}
+
+
+void MainWindow::on_btnTop5Infierno_clicked(){
+    mainstruct->mundo->top5Infierno(ui->lbtop5infierno);
+    ui->panelConsultasInfiernoPecados->setCurrentIndex(2);
 }
 
