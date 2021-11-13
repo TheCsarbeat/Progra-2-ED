@@ -56,6 +56,7 @@ private slots:
     void on_btnMapaPecados_clicked();
 
     void on_pushButton_clicked();
+    void on_botonTopBA_2_clicked();
 
 private:
     Ui::MainWindow *ui;

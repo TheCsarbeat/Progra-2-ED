@@ -20,8 +20,8 @@
    <widget class="QStackedWidget" name="mainPanel">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>0</y>
+      <x>230</x>
+      <y>10</y>
       <width>1671</width>
       <height>1000</height>
      </rect>
@@ -30,7 +30,7 @@
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="pageCrearHumano">
      <property name="styleSheet">
@@ -1073,7 +1073,7 @@ border-color: rgb(64, 150, 180);</string>
        <string notr="true">background-color:rgb(250,250,250);</string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="page_3">
        <widget class="QFrame" name="frame">
@@ -1203,7 +1203,36 @@ background-color:rgb(64, 150, 180);
         </property>
        </widget>
       </widget>
-      <widget class="QWidget" name="page_4"/>
+      <widget class="QWidget" name="page_4">
+       <widget class="QLabel" name="lbtop10cielo">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>40</y>
+          <width>701</width>
+          <height>461</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_7">
+       <widget class="QLabel" name="lbtop5Cielo">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>40</y>
+          <width>691</width>
+          <height>461</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </widget>
      </widget>
     </widget>
     <widget class="QWidget" name="pageInfierno">
@@ -1665,7 +1694,7 @@ background-color:rgb(64, 150, 180);
        <string notr="true">background-color:rgb(250,250,250);</string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="page_5">
        <widget class="QFrame" name="frame_2">
@@ -1795,7 +1824,36 @@ background-color: rgb(32, 30, 30);
         </property>
        </widget>
       </widget>
-      <widget class="QWidget" name="page_6"/>
+      <widget class="QWidget" name="page_6">
+       <widget class="QLabel" name="lbtop10Infierno">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>40</y>
+          <width>691</width>
+          <height>461</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_8">
+       <widget class="QLabel" name="lbtop5infierno">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>40</y>
+          <width>691</width>
+          <height>461</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </widget>
      </widget>
      <widget class="QFrame" name="frame_17">
       <property name="geometry">
@@ -1838,7 +1896,7 @@ background-color: rgb(32, 30, 30);
 </string>
        </property>
        <property name="text">
-        <string>Consultas del Cielo</string>
+        <string>Consultas del Infierno</string>
        </property>
       </widget>
       <widget class="QPushButton" name="btnMapaPecados">
@@ -1880,7 +1938,7 @@ font: 12pt &quot;Open Sans&quot;;
 background-color: rgb(198, 46, 48);</string>
        </property>
        <property name="text">
-        <string>Top 10 países buenas acciones</string>
+        <string>Top 10 países pecados</string>
        </property>
       </widget>
       <widget class="QPushButton" name="botonPaisMenosMalos_3">
@@ -1901,7 +1959,7 @@ font: 12pt &quot;Open Sans&quot;;
 background-color: rgb(198, 46, 48);</string>
        </property>
        <property name="text">
-        <string>Top 5 países &quot;Buenos&quot;</string>
+        <string>Top 5 países &quot;Malos&quot;</string>
        </property>
       </widget>
      </widget>
@@ -2495,7 +2553,7 @@ font: 12pt &quot;Open Sans&quot;;</string>
      <x>0</x>
      <y>0</y>
      <width>1900</width>
-     <height>21</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>

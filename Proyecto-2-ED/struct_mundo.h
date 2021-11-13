@@ -23,6 +23,17 @@ struct ContinentData{
         lb = new QLabel();
     }
 };
+struct ArrayPaises;
+struct PaisesData{
+    QString nombre;
+    int cantidad;
+    QLabel *lb;
+    PaisesData(){
+        nombre = "";
+        cantidad = 0;
+        lb = new QLabel;
+    }
+};
 
 struct ArrayContinent{
     QString names[5] = {"america", "africa", "europa","oceania", "asia"};
@@ -63,6 +74,59 @@ struct ArrayContinent{
 
 };
 
+struct ArrayPaises{
+    PaisesData *arrayPaises[196];
+
+    ArrayPaises(QLabel *lb, Files * file){
+        int cantidad = file->index;
+        for (int i=0; i<cantidad; i++){
+            arrayPaises[i] = new PaisesData();
+            arrayPaises[i]->nombre = file->paises[i]->name;
+             arrayPaises[i]->lb = lb;
+        }
+    }
+    void imprimir(){
+
+        for(int i = 0; i<10; i++) {
+            qDebug()<<i+1<<" # "<<arrayPaises[i]->nombre<<"\t\t Cantidad: "<<arrayPaises[i]->cantidad;
+
+        }
+    }
+
+    void imprimir2(){
+
+        for(int i = 0; i<5; i++) {
+            qDebug()<<i+1<<" # "<<arrayPaises[i]->nombre<<"\t\t Cantidad: "<<arrayPaises[i]->cantidad;
+        }
+    }
+
+    void bubbleSortMayorMenor(Files * file){
+        PaisesData *temp = new PaisesData();
+        for(int i = 0; i<file->index; i++) {
+           for(int j = i+1; j<file->index; j++)           {
+              if(arrayPaises[j]->cantidad > arrayPaises[i]->cantidad) {
+                 *temp = *arrayPaises[i];
+                 *arrayPaises[i] = *arrayPaises[j];
+                 *arrayPaises[j] = *temp;
+              }
+           }
+        }
+    }
+
+    void bubbleSortMenorMayor(Files * file){
+        PaisesData *temp = new PaisesData();
+        for(int i = 0; i<file->index; i++) {
+           for(int j = i+1; j<file->index; j++)           {
+              if(arrayPaises[j]->cantidad < arrayPaises[i]->cantidad) {
+                 *temp = *arrayPaises[i];
+                 *arrayPaises[i] = *arrayPaises[j];
+                 *arrayPaises[j] = *temp;
+              }
+           }
+        }
+    }
+};
+
 struct Mundo{
     ListaDoblePersonas * personas;
     Files * files;
@@ -71,6 +135,8 @@ struct Mundo{
     ListaSimpleArbolFamilias * listArbolFamilias;
     ArrayContinent *arrayBuenasAccionesMapa;
     ArrayContinent *arrayPecadosMapa;
+    ArrayPaises *arrayBuenasAcciones;
+    ArrayPaises *arrayPecados;
 
     Mundo(QLabel * lbBuenasAccionesMapa[],QLabel * lbPecadosMapa[]){
         personas = new ListaDoblePersonas();
@@ -80,6 +146,9 @@ struct Mundo{
         listArbolFamilias = new ListaSimpleArbolFamilias();
         arrayBuenasAccionesMapa = new ArrayContinent(lbBuenasAccionesMapa);
         arrayPecadosMapa = new ArrayContinent(lbPecadosMapa);
+        arrayBuenasAcciones = new ArrayPaises(new QLabel, files);
+        arrayPecados = new ArrayPaises(new QLabel, files);
+
     }
 
     void crearHumanos(int, QLabel *);
@@ -94,6 +163,10 @@ struct Mundo{
     void continentsMasBuenasAcciones();
     void continentsMasPecados();
 
+    void top10Cielo();
+    void top5Cielo();
+    void top10Infierno();
+    void top5Infierno();
 };
 
 #endif // STRUCT_MUNDO_H

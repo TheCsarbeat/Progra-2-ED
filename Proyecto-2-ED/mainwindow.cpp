@@ -103,11 +103,6 @@ void MainWindow::on_botonConsultas2_clicked(){
 }
 
 
-
-
-
-
-
 //---------------------------------- Cielo ----------------
 void MainWindow::on_btnMapaContinentesBuenasAcciones_clicked(){
     mainstruct->mundo->continentsMasBuenasAcciones();
@@ -144,5 +139,17 @@ void MainWindow::on_pushButton_clicked(){
         smtp->sendMail("laroxeta2018@gmail.com", "cesarjjxd@gmail.com" , "ui->subject->text()","ui->msg->toPlainText()", files );
     else
         smtp->sendMail("laroxeta2018@gmail.com", "cesarjjxd@gmail.com" , "ui->subject->text()","ui->msg->toPlainText()");
+void MainWindow::on_botonTopBA_2_clicked()
+{
+    qDebug()<<"\n\n Top 10 infierno";
+    mainstruct->mundo->top10Infierno();
+    qDebug()<<"\n\n top 10 cielo";
+    mainstruct->mundo->top10Cielo();
+    qDebug()<<"\n\n  top 5 cielo";
+    mainstruct->mundo->top5Cielo();
+    qDebug()<<"\n\n  top 5 infierno";
+    mainstruct->mundo->top5Infierno();
+
+
 }
 

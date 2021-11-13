@@ -238,3 +238,99 @@ void Mundo::continentsMasPecados(){
     //arrayPecadosMapa->imprimir();
     arrayPecadosMapa->showMap(1);
 }
+
+void Mundo::top10Cielo(){
+    NodoPersona * tmp = personas->primerNodo;
+    int buenasAccionesP = 0;
+    for( int i=0; i<files->index; i++){
+        arrayBuenasAcciones->arrayPaises[i]->cantidad = 0;
+
+    }
+
+    while(tmp!=NULL){
+        buenasAccionesP = 0;
+        for(unsigned int i=0;i<7;i++){
+            buenasAccionesP += tmp->persona->buenasAcciones[i]->cant;
+        }
+         for (int i = 0; i < files->index; i ++){
+             if(tmp->persona->pais->name == arrayBuenasAcciones->arrayPaises[i]->nombre)
+                 arrayBuenasAcciones->arrayPaises[i]->cantidad += buenasAccionesP;
+             tmp = tmp->siguiente;
+         }
+    }
+    arrayBuenasAcciones->bubbleSortMayorMenor(files);
+    arrayBuenasAcciones->imprimir();
+
+}
+
+void Mundo::top5Cielo(){
+    NodoPersona * tmp = personas->primerNodo;
+    int buenasAccionesP = 0;
+    for( int i=0; i<files->index; i++){
+        arrayBuenasAcciones->arrayPaises[i]->cantidad = 0;
+
+    }
+
+    while(tmp!=NULL){
+        buenasAccionesP = 0;
+        for(unsigned int i=0;i<7;i++){
+            buenasAccionesP += tmp->persona->buenasAcciones[i]->cant;
+        }
+         for (int i = 0; i < files->index; i ++){
+             if(tmp->persona->pais->name == arrayBuenasAcciones->arrayPaises[i]->nombre)
+                 arrayBuenasAcciones->arrayPaises[i]->cantidad += buenasAccionesP;
+             tmp = tmp->siguiente;
+         }
+    }
+    arrayBuenasAcciones->bubbleSortMenorMayor(files);
+    arrayBuenasAcciones->imprimir2();
+
+}
+
+void Mundo::top10Infierno(){
+    NodoPersona * tmp = personas->primerNodo;
+    int pecadosP = 0;
+
+    for( int i=0; i<files->index; i++){
+        arrayPecados->arrayPaises[i]->cantidad = 0;
+    }
+
+    while(tmp!=NULL){
+        pecadosP = 0;
+        for(unsigned int i=0;i<7;i++){
+            pecadosP += tmp->persona->pecados[i]->cant;
+        }
+         for (int i = 0; i < files->index; i ++){
+             if(tmp->persona->pais->name == arrayPecados->arrayPaises[i]->nombre)
+                 arrayPecados->arrayPaises[i]->cantidad += pecadosP;
+             tmp = tmp->siguiente;
+         }
+    }
+    arrayPecados->bubbleSortMayorMenor(files);
+    arrayPecados->imprimir();
+
+}
+
+void Mundo::top5Infierno(){
+    NodoPersona * tmp = personas->primerNodo;
+    int pecadosP = 0;
+    for( int i=0; i<files->index; i++){
+        arrayPecados->arrayPaises[i]->cantidad = 0;
+
+    }
+
+    while(tmp!=NULL){
+        pecadosP = 0;
+        for(unsigned int i=0;i<7;i++){
+            pecadosP += tmp->persona->pecados[i]->cant;
+        }
+         for (int i = 0; i < files->index; i ++){
+             if(tmp->persona->pais->name == arrayPecados->arrayPaises[i]->nombre)
+                 arrayPecados->arrayPaises[i]->cantidad += pecadosP;
+             tmp = tmp->siguiente;
+         }
+    }
+    arrayPecados->bubbleSortMenorMayor(files);
+    arrayPecados->imprimir2();
+
+}
