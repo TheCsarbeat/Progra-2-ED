@@ -17,7 +17,7 @@ struct HeapFamilia{
     int capacidad;
     int pecado;
     int cant;
-    QVector<Persona *> array;
+    QVector<Persona> array;
 
     HeapFamilia(){
         capacidad = 0;
@@ -30,7 +30,7 @@ struct HeapFamilia{
         cant = 0;
     }
 
-    void swap(Persona *, Persona *);
+    void swap(int, int);
 
     int parent(int i) {
         return (i - 1) / 2;
@@ -47,7 +47,7 @@ struct HeapFamilia{
     }
 
     void heapifyUp(int i);
-    void insertar(Persona *);
+    void insertar(Persona);
     void imprimir();
 };
 

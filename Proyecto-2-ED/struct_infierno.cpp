@@ -2,25 +2,25 @@
 
 //==================================HEAPFAMILIAS===================================
 
-void HeapFamilia::swap(Persona * a1, Persona * a2){
-    Persona temp = *a1;
-    *a1 = *a2;
-    *a2 = temp;
+void HeapFamilia::swap(int a1, int a2){
+    Persona temp = array[a1];
+    array[a1] = array[a2];
+    array[a2] = temp;
 }
 //sigue cambiar que el heap ordene a las personas por el pecado que es
 void HeapFamilia::heapifyUp(int i){
     // check if the node at index `i` and its parent violate the heap property
     int parent1 = parent(i);
-    if (i >= 0 && parent(i) >= 0 && array[parent(i)]->pecados[pecado]->cant < array[i]->pecados[pecado]->cant){
+    if (i >= 0 && parent(i) >= 0 && array[parent(i)].pecados[pecado]->cant < array[i].pecados[pecado]->cant){
         // swap the two if heap property is violated
-        swap(array[i],array[parent(i)]);
+        swap(i,parent(i));
         // call heapify-up on the parent
         heapifyUp(parent(i));
     }
 
 }
 
-void HeapFamilia::insertar(Persona * nuevo){
+void HeapFamilia::insertar(Persona nuevo){
     array.push_back(nuevo);
     cant++;
     int i = cant - 1;
@@ -29,8 +29,8 @@ void HeapFamilia::insertar(Persona * nuevo){
 
 void HeapFamilia::imprimir(){
     for(int i=0;i<cant;i++){
-        array[i]->imprimir();
-        array[i]->pecados[pecado]->imprimir();
+        array[i].imprimir();
+        array[i].pecados[pecado]->imprimir();
         qDebug()<<"\n"<<cant;
     }
 }
@@ -82,7 +82,7 @@ void Demonio::crearHeap(ListaSimpleArbolFamilias * listaArboles){
         lista = tmp->arbol->getNodesInList();
         p = lista->primerNodo;
         while(p!=NULL){
-            listaHeaps->primerNodo->heap->insertar(p->persona);
+            listaHeaps->primerNodo->heap->insertar(*(p->persona));
             p = p->siguiente;
         }
         tmp = tmp->siguiente;

@@ -23,7 +23,7 @@ void Mundo::crearHumanos(int dato, QLabel * lb){
             crearArbol();
         }
         NodoFamiliaListaSimple *buscado = listArbolFamilias->buscar(p);
-        if( buscado!= NULL){
+        if( buscado!= NULL && respuesta){
             buscado->arbol->insert(p);
         }else{
             listArbolFamilias->insertarALInicio(p);
