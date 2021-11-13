@@ -25,6 +25,9 @@ void MainWindow::start(){
 
 void MainWindow::on_btnCrearHumanos_clicked(){
     mainstruct->mundo->crearHumanos(ui->txtCantHumanos->text().toInt(), ui->lbDatosWorld);
+    mainstruct->mundo->listArbolFamilias->imprimir();
+    mainstruct->mundo->infierno->limpiarDemonios();
+    mainstruct->mundo->infierno->crearHeapsDemonios(mainstruct->mundo->listArbolFamilias);
 }
 
 
@@ -84,11 +87,27 @@ void MainWindow::on_botonConsultas2_clicked(){
 void MainWindow::on_btnPecar_clicked()
 {
     mainstruct->mundo->hacerPecar();
+    mainstruct->mundo->infierno->limpiarDemonios();
+    mainstruct->mundo->infierno->crearHeapsDemonios(mainstruct->mundo->listArbolFamilias);
 }
 
 
 void MainWindow::on_btnBuscarPersona_clicked()
 {
     mainstruct->mundo->personas->buscar(ui->txtBuscar->text().toInt());
+}
+
+
+void MainWindow::on_btn_prueba_clicked()
+{
+    qDebug()<<"\n\n";
+    mainstruct->mundo->infierno->imprimirDemonio(ui->txtBuscarFamilia->text().toInt());
+
+}
+
+
+void MainWindow::on_btnImprimirDemons_clicked()
+{
+    //mainstruct->mundo->infierno->imprimirDemonio();
 }
 

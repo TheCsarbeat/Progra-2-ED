@@ -30,7 +30,7 @@
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="pageCrearHumano">
      <property name="styleSheet">
@@ -40,7 +40,7 @@
       <property name="geometry">
        <rect>
         <x>1260</x>
-        <y>30</y>
+        <y>40</y>
         <width>161</width>
         <height>51</height>
        </rect>
@@ -52,7 +52,7 @@
      <widget class="QLineEdit" name="txtcerca">
       <property name="geometry">
        <rect>
-        <x>1350</x>
+        <x>1430</x>
         <y>50</y>
         <width>113</width>
         <height>21</height>
@@ -66,7 +66,7 @@
       <property name="geometry">
        <rect>
         <x>1290</x>
-        <y>80</y>
+        <y>110</y>
         <width>113</width>
         <height>21</height>
        </rect>
@@ -153,7 +153,7 @@ border-style: solid;
 border-color: rgb(60, 185, 75);</string>
        </property>
        <property name="text">
-        <string>10000</string>
+        <string>1000</string>
        </property>
       </widget>
       <widget class="QPushButton" name="btnCrearHumanos">
@@ -1509,6 +1509,42 @@ border-color: rgb(64, 150, 180);</string>
        <string>Consultas infierno</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="btn_prueba">
+      <property name="geometry">
+       <rect>
+        <x>950</x>
+        <y>100</y>
+        <width>201</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>sacar pecados de familia de un arbol</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txtBuscarFamilia">
+      <property name="geometry">
+       <rect>
+        <x>1000</x>
+        <y>180</y>
+        <width>113</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnImprimirDemons">
+      <property name="geometry">
+       <rect>
+        <x>1000</x>
+        <y>270</y>
+        <width>111</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>imprimir heaps</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="pageConsultas">
      <widget class="QPushButton" name="pushButton_16">
@@ -2099,7 +2135,7 @@ font: 12pt &quot;Open Sans&quot;;</string>
      <x>0</x>
      <y>0</y>
      <width>1900</width>
-     <height>21</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>

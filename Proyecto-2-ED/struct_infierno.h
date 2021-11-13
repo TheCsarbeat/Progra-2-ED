@@ -3,44 +3,100 @@
 
 #include <QString>
 #include <QCoreApplication>
+#include <QVector>
 
 #include "struct_arbolfamilias.h"
 
 struct Infierno;
 struct Demonio;
 struct HeapFamilias;
+struct NodoListaSimpleHeaps;
+struct ListaSimpleHeaps;
 
-struct HeapFamilias{
-    ArbolFamilias * heapFamilias;
+struct HeapFamilia{
     int capacidad;
-    int size;
+    int pecado;
+    int cant;
+    QVector<Persona *> array;
 
-    HeapFamilias(){
-        size = 0;
+    HeapFamilia(){
         capacidad = 0;
-        heapFamilias = new ArbolFamilias[capacidad];
+        pecado = -1;
+        cant = 0;
     }
-    HeapFamilias(int _capacidad){
-        size = 0;
-        capacidad = _capacidad;
-        heapFamilias = new ArbolFamilias[capacidad];
+    HeapFamilia(int _pecado){
+        capacidad = 0;
+        pecado = _pecado;
+        cant = 0;
     }
 
+    void swap(Persona *, Persona *);
+
+    int parent(int i) {
+        return (i - 1) / 2;
+    }
+
+    // return left child of `A[i]`
+    int left(int i) {
+        return (2*i + 1);
+    }
+
+    // return right child of `A[i]`
+    int right(int i) {
+        return (2*i + 2);
+    }
+
+    void heapifyUp(int i);
+    void insertar(Persona *);
+    void imprimir();
+};
+
+struct NodoListaSimpleHeaps{
+    HeapFamilia * heap;
+    NodoListaSimpleHeaps * siguiente;
+
+    NodoListaSimpleHeaps(){
+        heap = new HeapFamilia();
+        siguiente = NULL;
+    }
+    NodoListaSimpleHeaps(HeapFamilia * _heap){
+        heap = _heap;
+        siguiente = NULL;
+    }
+};
+
+struct ListaSimpleHeaps{
+    NodoListaSimpleHeaps * primerNodo;
+    NodoListaSimpleHeaps * ultimoNodo;
+    int largo;
+
+    ListaSimpleHeaps(){
+        primerNodo = ultimoNodo = NULL;
+        largo = 0;
+    }
+    bool isEmpy();
+    void imprimir();
+    void insertarAlInicio(HeapFamilia *);
+    void deleteAllNodes();
 };
 
 struct Demonio{
     QString name;
-    QString pecado;
-    HeapFamilias * heap;
+    int pecado;
+    ListaSimpleHeaps * listaHeaps;
     Demonio(){
         name = "";
-        pecado = "";
-        heap = new HeapFamilias();
+        pecado = -1;
+        listaHeaps = new ListaSimpleHeaps();
     }
-    Demonio(QString _name,QString _pecado){
+    Demonio(QString _name,int _pecado){
         name = _name;
         pecado = _pecado;
+        listaHeaps = new ListaSimpleHeaps();
     }
+
+    void crearHeap(ListaSimpleArbolFamilias *);
+    void limpiarListaHeaps();
 };
 
 struct Infierno{
@@ -48,11 +104,16 @@ struct Infierno{
 
     Infierno(){
         QString names[7] = {"Asmodeo","Belfegor","Mammón","Abadón","Satán","Belcebú","Lucifer"};
-        QString pecados[7] = {"Lujuria","Gula","Avaricia","Pereza","Ira","Envidia","Soberbia"};
+        int pecados[7] = {0,1,2,3,4,5,6};
         for(unsigned int i=0;i<7;i++){
             demonios[i]= new Demonio(names[i],pecados[i]);
         }
+
     }
+
+    void imprimirDemonio(int);
+    void crearHeapsDemonios(ListaSimpleArbolFamilias *);
+    void limpiarDemonios();
 };
 
 #endif // STRUCT_INFIERNO_H

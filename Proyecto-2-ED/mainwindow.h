@@ -43,6 +43,10 @@ private slots:
     void on_btnBuscarPersona_clicked();
 
     void cambiarColor(QPushButton *);
+    void on_btn_prueba_clicked();
+
+    void on_btnImprimirDemons_clicked();
+
 private:
     Ui::MainWindow *ui;
     MainStruct * mainstruct;
