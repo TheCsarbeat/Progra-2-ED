@@ -146,13 +146,13 @@ void MainWindow::on_pushButton_clicked(){
 
     //ui->file->setText( fileListString );
 
-    Smtp* smtp = new Smtp("laroxeta2018@gmail.com", "l4roseta32", "smtp.gmail.com", 465);
+    Smtp* smtp = new Smtp("ferkssoporte@gmail.com", "DistributividaD...", "smtp.gmail.com", 465);
     connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
 
     if(!files.isEmpty())
-        smtp->sendMail("laroxeta2018@gmail.com", "cesarjjxd@gmail.com" , "ui->subject->text()","ui->msg->toPlainText()", files );
+        smtp->sendMail("ferkssoporte@gmail.com", "cesarjjxd@gmail.com" , "ui->subject->text()","ui->msg->toPlainText()", files );
     else
-        smtp->sendMail("laroxeta2018@gmail.com", "cesarjjxd@gmail.com" , "ui->subject->text()","ui->msg->toPlainText()");
+        smtp->sendMail("ferkssoporte@gmail.com", "cesarjjxd@gmail.com" , "ui->subject->text()","ui->msg->toPlainText()");
 }
 
 
@@ -185,5 +185,15 @@ void MainWindow::on_pushButton_4_clicked()
 
 
     mainstruct->mundo->infierno->imprimirDemonio(ui->lineEdit_2->text().toInt());
+}
+
+
+void MainWindow::on_btnBAFamilias_clicked()
+{
+    int id = ui->txtIdBuenasAcciones->text().toUInt();
+
+    mainstruct->mundo->buscarBAFamilias(id, ui->lbFamiliaBA);
+
+
 }
 
