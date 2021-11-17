@@ -34,10 +34,18 @@ struct Files{
     QString religions[19];
     QString jobs[80];
     Pais * paises[196];
+    int indexName;
+    int indexLasName;
+    int indexReligions;
+    int indexJobs;
     int index;
 
     Files(){
         index = 0;
+        indexName  =0 ;
+        indexLasName =0 ;
+        indexReligions= 0;
+        indexJobs =0;
         loadNames();
         loadLastNames();
         loadReligions();

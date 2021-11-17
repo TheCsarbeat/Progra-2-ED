@@ -47,14 +47,22 @@ void MainWindow::on_btnPecar_clicked(){
 }
 
 void MainWindow::on_btnGuardarDatosWorld_clicked(){
-    mainstruct->mundo->guarDatosWorld();
+    //mainstruct->mundo->guarDatosWorld();
+
     msg.setText("Se han guardado los datos");
     msg.exec();
 }
 
 void MainWindow::on_pushButton_2_clicked(){
 
-    qDebug()<<"El mas cercano: "<<mainstruct->mundo->treePersonas->buscarMasCercano(ui->txtcerca->text().toInt())->persona->id;
+    //qDebug()<<"El mas cercano: "<<mainstruct->mundo->treePersonas->buscarMasCercano(ui->txtcerca->text().toInt())->persona->id;
+    mainstruct->mundo->arbolAngeles->nivel ++;
+    int nivel = mainstruct->mundo->arbolAngeles->nivel;
+    int cantArboles  = qPow(3, nivel);
+    for(int i = 0; i < cantArboles; i++)
+        mainstruct->mundo->arbolAngeles->insertar(new Angel("FERKS "+QString::number(i+1), nivel, i+1, new Persona));
+    qDebug()<<"\n\n";
+    mainstruct->mundo->arbolAngeles->imprimirNivel(nivel);
 }
 
 //--------------------SIDE BUTTONS--------------------
@@ -169,20 +177,6 @@ void MainWindow::on_btnTop10Infierno_clicked(){
 void MainWindow::on_btnTop5Infierno_clicked(){
     mainstruct->mundo->top5Infierno(ui->lbtop5infierno);
     ui->panelConsultasInfiernoPecados->setCurrentIndex(2);
-}
-
-
-void MainWindow::on_btn_prueba_clicked()
-{
-    qDebug()<<"\n\n";
-    //mainstruct->mundo->infierno->imprimirDemonio(ui->txtBuscarFamilia->text().toInt());
-
-}
-
-
-void MainWindow::on_btnImprimirDemons_clicked()
-{
-    //mainstruct->mundo->infierno->imprimirDemonio();
 }
 
 

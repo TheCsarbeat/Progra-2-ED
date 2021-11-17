@@ -17,6 +17,7 @@ SOURCES += \
     mainwindow.cpp \
     smtp.cpp \
     struct_arbolfamilias.cpp \
+    struct_cielo.cpp \
     struct_file.cpp \
     struct_infierno.cpp \
     struct_mundo.cpp \
@@ -27,6 +28,7 @@ HEADERS += \
     mainwindow.h \
     smtp.h \
     struct_arbolfamilias.h \
+    struct_cielo.h \
     struct_file.h \
     struct_infierno.h \
     struct_mundo.h \

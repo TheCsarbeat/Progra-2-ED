@@ -8,8 +8,9 @@ void Mundo::crearHumanos(int dato){
         QString name = files->names[QRandomGenerator::global()->bounded(101)];
         QString apellido = files->lastNames[QRandomGenerator::global()->bounded(51)];
         Pais *pais = files->paises[QRandomGenerator::global()->bounded(files->index)];
-        QString creencia = QString::number(personas->largo);
-        QString profesion = files->jobs[QRandomGenerator::global()->bounded(80)];
+        //QString creencia = QString::number(personas->largo);
+        QString creencia = files->religions[QRandomGenerator::global()->bounded(files->indexReligions)];
+        QString profesion = files->jobs[QRandomGenerator::global()->bounded(files->indexJobs)];
         Persona *p = new Persona(id, name, apellido, pais, creencia, profesion);
         p->hijos = new ListaDoblePersonas();
 
@@ -26,13 +27,17 @@ void Mundo::crearHumanos(int dato){
         }
         NodoFamiliaListaSimple *buscado = listArbolFamilias->buscar(p);
         if(respuesta){
+            cielo->insertar(p);
             if( buscado!= NULL)
                 buscado->arbol->insert(p);
             else
                 listArbolFamilias->insertarALInicio(p);
         }
     }
-    //personas->imprimir();
+    cielo->imprimir();
+    files->writeFile("worldLista.txt", personas->toString());
+    files->writeFile("familiasMundoInOrden.txt", listArbolFamilias->toString());
+    files->writeFile("cieloInOrden.txt", cielo->toString());
     //qDebug()<<personas->primerNodo->persona->id;
 }
 
@@ -54,7 +59,7 @@ void Mundo::buscarHuman(int dato, QLabel * lb){
     if(buscado!= NULL){
         lb->setText(buscado->persona->toString()+buscado->persona->hijos->toStringIDHijos());
     }else{
-        lb->setText("buscado->persona->toString()");
+        lb->setText("No se ha encontrado ningún humano");
     }
 
 }
@@ -130,11 +135,6 @@ void Mundo::hacerPecar(){
         }
         tmp = tmp->siguiente;
     }
-    /*qDebug()<<"\n\nLos pecados de africa: "<<africa;
-    qDebug()<<"\nLos pecados de America: "<<america;
-    qDebug()<<"Los pecados de oceania: "<<oceania;
-    qDebug()<<"Los pecados de Asia: "<<asia;
-    qDebug()<<"Los pecados de Europa: "<<europa;*/
 }
 
 void Mundo::hacerHerencia(Persona * persona, int randomP, int randomBA, int position){
@@ -188,8 +188,6 @@ void Mundo::continentsMasBuenasAcciones(){
     }
 
     arrayBuenasAccionesMapa->bubbleSort();
-    qDebug()<<"\nBuenas Acciones\n";
-    //arrayBuenasAccionesMapa->imprimir();
     arrayBuenasAccionesMapa->showMap(0);
 }
 
@@ -224,8 +222,6 @@ void Mundo::continentsMasPecados(){
         tmp = tmp->siguiente;
     }
     arrayPecadosMapa->bubbleSort();
-    qDebug()<<"\n Pecados\n";
-    //arrayPecadosMapa->imprimir();
     arrayPecadosMapa->showMap(1);
 }
 

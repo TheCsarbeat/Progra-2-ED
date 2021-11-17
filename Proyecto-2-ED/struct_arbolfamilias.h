@@ -42,6 +42,9 @@ struct ArbolFamilias{
     NodoArbolFamiliaALV* insert(Persona*);
     NodoArbolFamiliaALV* insert(NodoArbolFamiliaALV *r, Persona*);
 
+    NodoArbolFamiliaALV* insertSinHijos(Persona*);
+    NodoArbolFamiliaALV* insertSinHijos(NodoArbolFamiliaALV *r, Persona*);
+
     void asignarHijos(Persona *persona);
     int asignarHijos(Persona *persona, NodoArbolFamiliaALV *t, int);
 
@@ -59,6 +62,9 @@ struct ArbolFamilias{
     ListaDoblePersonas * getNodesInList();
     int getTotalPecado(int);
     int getTotalPecadoAux(NodoArbolFamiliaALV*,int);
+
+    QString* toStringInOrden();
+    void toStringInOrden(NodoArbolFamiliaALV*, QString*);
 };
 
 struct NodoFamiliaListaSimple{
@@ -92,6 +98,20 @@ struct ListaSimpleArbolFamilias{
     }
     bool isEmpy();
     void imprimir();
+
+    QString toString(){
+        QString dato = "";
+        NodoFamiliaListaSimple * temp = primerNodo;
+        int cont =0;
+        while (temp != NULL){
+            dato += "\n\n\nFamilia: "+QString::number(cont)+"\n";
+            dato += *temp->arbol->toStringInOrden();
+            cont++;
+            temp = temp->siguiente;
+        }
+        dato += "\n\nLargo: "+QString::number(largo);
+        return dato;
+    }
     void insertarALInicio(Persona *);
     NodoFamiliaListaSimple * buscar(Persona * );
     NodoFamiliaListaSimple * buscar(int);

@@ -64,9 +64,6 @@ private slots:
     void on_btnTop10Infierno_clicked();
 
     void on_btnTop5Infierno_clicked();
-    void on_btn_prueba_clicked();
-
-    void on_btnImprimirDemons_clicked();
 
     void on_pushButton_4_clicked();
 
