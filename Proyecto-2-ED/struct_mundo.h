@@ -185,6 +185,8 @@ struct Mundo{
     void top5Cielo(QLabel *);
     void top10Infierno(QLabel *);
     void top5Infierno(QLabel *);
+
+    void buscarBAFamilias(int,QLabel *);
 };
 
 #endif // STRUCT_MUNDO_H

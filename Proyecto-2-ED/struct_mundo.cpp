@@ -34,10 +34,10 @@ void Mundo::crearHumanos(int dato){
                 listArbolFamilias->insertarALInicio(p);
         }
     }
-    cielo->imprimir();
-    files->writeFile("worldLista.txt", personas->toString());
+    //cielo->imprimir();
+    //files->writeFile("worldLista.txt", personas->toString());
     files->writeFile("familiasMundoInOrden.txt", listArbolFamilias->toString());
-    files->writeFile("cieloInOrden.txt", cielo->toString());
+    //files->writeFile("cieloInOrden.txt", cielo->toString());
     //qDebug()<<personas->primerNodo->persona->id;
 }
 
@@ -61,7 +61,6 @@ void Mundo::buscarHuman(int dato, QLabel * lb){
     }else{
         lb->setText("No se ha encontrado ningún humano");
     }
-
 }
 
 void Mundo::crearArbol(){
@@ -318,4 +317,17 @@ void Mundo::top5Infierno(QLabel *lb){
     }
     arrayPecados->bubbleSortMenorMayor(files);
     lb->setText(arrayPecados->toStringMenores());
+}
+
+void Mundo::buscarBAFamilias(int id, QLabel *lb){
+    NodoPersona* buscado= treePersonas->buscarMasCercano(id);
+    buscado = personas->buscar(id, buscado);
+    if(buscado!= NULL){
+        NodoFamiliaListaSimple *nodoBuscado = listArbolFamilias->buscar(buscado->persona);
+        lb->setText(*nodoBuscado->arbol->toStringInOrdenBA());
+    }else{
+        lb->setText("No existe");
+    }
+
+
 }

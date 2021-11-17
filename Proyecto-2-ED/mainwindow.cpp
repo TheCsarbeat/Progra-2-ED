@@ -150,9 +150,9 @@ void MainWindow::on_pushButton_clicked(){
     connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
 
     if(!files.isEmpty())
-        smtp->sendMail("ferkssoporte@gmail.com", "murillomf2001@gmail.com" , "prueba","ui->msg->toPlainText()", files );
+        smtp->sendMail("ferkssoporte@gmail.com", "cesarjjxd@gmail.com" , "ui->subject->text()","ui->msg->toPlainText()", files );
     else
-        smtp->sendMail("ferkssoporte@gmail.com", "murillomf2001@gmail.com" , "prueba","ui->msg->toPlainText()");
+        smtp->sendMail("ferkssoporte@gmail.com", "cesarjjxd@gmail.com" , "ui->subject->text()","ui->msg->toPlainText()");
 }
 
 
@@ -185,5 +185,15 @@ void MainWindow::on_pushButton_4_clicked()
 
 
     mainstruct->mundo->infierno->imprimirDemonio(ui->lineEdit_2->text().toInt());
+}
+
+
+void MainWindow::on_btnBAFamilias_clicked()
+{
+    int id = ui->txtIdBuenasAcciones->text().toUInt();
+
+    mainstruct->mundo->buscarBAFamilias(id, ui->lbFamiliaBA);
+
+
 }
 

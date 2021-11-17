@@ -65,6 +65,9 @@ struct ArbolFamilias{
 
     QString* toStringInOrden();
     void toStringInOrden(NodoArbolFamiliaALV*, QString*);
+
+    QString* toStringInOrdenBA();
+    void toStringInOrdenBA(NodoArbolFamiliaALV*, QString*);
 };
 
 struct NodoFamiliaListaSimple{
@@ -114,6 +117,8 @@ struct ListaSimpleArbolFamilias{
     }
     void insertarALInicio(Persona *);
     NodoFamiliaListaSimple * buscar(Persona * );
+
+    //no funciona
     NodoFamiliaListaSimple * buscar(int);
 };
 
