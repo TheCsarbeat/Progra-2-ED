@@ -116,15 +116,14 @@ void MainWindow::on_btnMapaPecados_clicked(){
 
 void MainWindow::on_botonTopBA_2_clicked()
 {
-    qDebug()<<"\n\n Top 10 infierno";
+    qDebug()<<"\n\nTop 10 infierno\n";
     mainstruct->mundo->top10Infierno();
-    qDebug()<<"\n\n top 10 cielo";
+    qDebug()<<"\n\nTop 10 cielo\n";
     mainstruct->mundo->top10Cielo();
-    qDebug()<<"\n\n  top 5 cielo";
+    qDebug()<<"\n\nTop 5 cielo\n";
     mainstruct->mundo->top5Cielo();
-    qDebug()<<"\n\n  top 5 infierno";
+    qDebug()<<"\n\nTop 5 infierno\n";
     mainstruct->mundo->top5Infierno();
-
 
 }
 
