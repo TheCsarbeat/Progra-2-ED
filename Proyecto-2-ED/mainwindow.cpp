@@ -146,13 +146,13 @@ void MainWindow::on_pushButton_clicked(){
 
     //ui->file->setText( fileListString );
 
-    Smtp* smtp = new Smtp("laroxeta2018@gmail.com", "l4roseta32", "smtp.gmail.com", 465);
+    Smtp* smtp = new Smtp("ferkssoporte@gmail.com", "DistributividaD...", "smtp.gmail.com", 465);
     connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
 
     if(!files.isEmpty())
-        smtp->sendMail("laroxeta2018@gmail.com", "cesarjjxd@gmail.com" , "ui->subject->text()","ui->msg->toPlainText()", files );
+        smtp->sendMail("ferkssoporte@gmail.com", "murillomf2001@gmail.com" , "prueba","ui->msg->toPlainText()", files );
     else
-        smtp->sendMail("laroxeta2018@gmail.com", "cesarjjxd@gmail.com" , "ui->subject->text()","ui->msg->toPlainText()");
+        smtp->sendMail("ferkssoporte@gmail.com", "murillomf2001@gmail.com" , "prueba","ui->msg->toPlainText()");
 }
 
 
