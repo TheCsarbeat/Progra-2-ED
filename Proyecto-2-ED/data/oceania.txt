@@ -8,3 +8,7 @@ Nauru
 Nueva Zelanda
 Palaos
 Papúa Nueva Guinea
+Samoa
+Tonga
+Tuvalu
+Vanuatu

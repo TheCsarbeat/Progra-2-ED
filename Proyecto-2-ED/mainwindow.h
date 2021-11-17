@@ -6,6 +6,9 @@
 #include "mainstruct.h"
 #include <QPushButton>
 #include <QVBoxLayout>
+#include <QtWidgets/QMessageBox>
+#include <QFileDialog>
+#include "smtp.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -52,11 +55,22 @@ private slots:
 
     void on_btnMapaPecados_clicked();
 
-    void on_botonTopBA_2_clicked();
+    void on_pushButton_clicked();
+
+    void on_btnTop10Cielo_clicked();
+
+    void on_btnTop5Cielo_clicked();
+
+    void on_btnTop10Infierno_clicked();
+
+    void on_btnTop5Infierno_clicked();
+
+    void on_pushButton_4_clicked();
 
 private:
     Ui::MainWindow *ui;
     MainStruct * mainstruct;
+    QStringList files;
 
 
     void start();

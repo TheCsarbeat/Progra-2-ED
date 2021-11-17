@@ -78,11 +78,32 @@ NodoArbolFamiliaALV *ArbolFamilias::insert(NodoArbolFamiliaALV *r, Persona *pers
       asignarHijos(persona);
       r = new NodoArbolFamiliaALV(persona);      
       return r;
-   } else if (persona->id< r->persona->id) {
+   } else if (persona->id < r->persona->id) {
       r->l = insert(r->l, persona);
       r = balance(r);
    } else if (persona->id >= r->persona->id) {
       r->r = insert(r->r, persona);
+      r = balance(r);
+   } return r;
+}
+
+NodoArbolFamiliaALV *ArbolFamilias::insertSinHijos(Persona *persona){
+    if(isEmpty())
+        raiz= new NodoArbolFamiliaALV(persona);
+    else
+        raiz= insertSinHijos(raiz, persona);
+
+}
+
+NodoArbolFamiliaALV *ArbolFamilias::insertSinHijos(NodoArbolFamiliaALV *r, Persona *persona) {
+   if (r == NULL) {
+      r = new NodoArbolFamiliaALV(persona);
+      return r;
+   } else if (persona->id < r->persona->id) {
+      r->l = insertSinHijos(r->l, persona);
+      r = balance(r);
+   } else if (persona->id >= r->persona->id) {
+      r->r = insertSinHijos(r->r, persona);
       r = balance(r);
    } return r;
 }
@@ -132,6 +153,21 @@ void ArbolFamilias::postOrder(NodoArbolFamiliaALV *t) {
   postOrder(t ->l);
   postOrder(t ->r);
   qDebug() << t->persona->id << " ";
+}
+
+QString * ArbolFamilias::toStringInOrden(){
+    QString *dato = new QString();
+    *dato = "";
+    toStringInOrden(raiz, dato);
+    return dato;
+}
+
+void ArbolFamilias::toStringInOrden(NodoArbolFamiliaALV* t, QString* dato){
+    if (t == NULL)
+       return;
+   toStringInOrden(t->l,dato);
+   *dato += t->persona->toString()+t->persona->hijos->toStringIDHijos();
+   toStringInOrden(t->r,dato);
 }
 
 void ArbolFamilias::imprimirNivel(int nivel){
@@ -189,6 +225,20 @@ NodoFamiliaListaSimple* ListaSimpleArbolFamilias::buscar(Persona * persona){
     return NULL;
 }
 
+NodoFamiliaListaSimple* ListaSimpleArbolFamilias::buscar(int index){
+    if(!isEmpy()){
+        NodoFamiliaListaSimple *temp = primerNodo;
+        int cont = 0;
+        while(temp->siguiente != NULL){
+            if(cont == index)
+                return temp;
+            cont++;
+            temp = temp->siguiente;
+        }
+    }
+    return NULL;
+}
+
 void ListaSimpleArbolFamilias::imprimir(){
     NodoFamiliaListaSimple * temp = primerNodo;
     int cont =0;
@@ -202,5 +252,38 @@ void ListaSimpleArbolFamilias::imprimir(){
     qDebug()<<"\n\n***************\nLargo: "<<largo;
 }
 
+int ArbolFamilias::getTotalPecado(int pecado){
+    if(!isEmpty()){
+        return getTotalPecadoAux(raiz,pecado);
+    }else{
+        return 0;
+    }
+}
 
+int ArbolFamilias::getTotalPecadoAux(NodoArbolFamiliaALV * raiz, int pecado){
+    if(raiz == NULL){
+        return 0;
+    }else{
+        return raiz->persona->pecados[pecado]->cant + getTotalPecadoAux(raiz->l, pecado) + getTotalPecadoAux(raiz->r, pecado);
+    }
+}
+
+ListaDoblePersonas * ArbolFamilias::getNodesInList(){
+    NodoArbolFamiliaALV * t = raiz;
+    if(t != NULL){
+        ListaDoblePersonas * lista = new ListaDoblePersonas();
+        getNodesInList(t,lista);
+        return lista;
+    }else{
+        return NULL;
+    }
+}
+
+void ArbolFamilias::getNodesInList(NodoArbolFamiliaALV *t, ListaDoblePersonas * lista){
+    if(t!=NULL){
+        getNodesInList(t->l,lista);
+        lista->insertar(t->persona);
+        getNodesInList(t->r,lista);
+    }
+}
 

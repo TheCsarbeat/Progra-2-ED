@@ -14,7 +14,7 @@ struct NodoArbolFamiliaALV{
     NodoArbolFamiliaALV *r;
 
     NodoArbolFamiliaALV(){
-        persona = new Persona;
+        persona = new Persona();
         l = r = NULL;
     }
     NodoArbolFamiliaALV(Persona * _persona){
@@ -42,6 +42,9 @@ struct ArbolFamilias{
     NodoArbolFamiliaALV* insert(Persona*);
     NodoArbolFamiliaALV* insert(NodoArbolFamiliaALV *r, Persona*);
 
+    NodoArbolFamiliaALV* insertSinHijos(Persona*);
+    NodoArbolFamiliaALV* insertSinHijos(NodoArbolFamiliaALV *r, Persona*);
+
     void asignarHijos(Persona *persona);
     int asignarHijos(Persona *persona, NodoArbolFamiliaALV *t, int);
 
@@ -49,14 +52,19 @@ struct ArbolFamilias{
     void nivelImprimir(NodoArbolFamiliaALV* , int , int);
     int treeHeight(NodoArbolFamiliaALV* nodo);
 
-
-
     void show(NodoArbolFamiliaALV *p, int l);
 
     void inOrder(NodoArbolFamiliaALV *t);
     void preOrder(NodoArbolFamiliaALV *t);
     void postOrder(NodoArbolFamiliaALV *t);
 
+    void getNodesInList(NodoArbolFamiliaALV *, ListaDoblePersonas *);
+    ListaDoblePersonas * getNodesInList();
+    int getTotalPecado(int);
+    int getTotalPecadoAux(NodoArbolFamiliaALV*,int);
+
+    QString* toStringInOrden();
+    void toStringInOrden(NodoArbolFamiliaALV*, QString*);
 };
 
 struct NodoFamiliaListaSimple{
@@ -90,8 +98,23 @@ struct ListaSimpleArbolFamilias{
     }
     bool isEmpy();
     void imprimir();
+
+    QString toString(){
+        QString dato = "";
+        NodoFamiliaListaSimple * temp = primerNodo;
+        int cont =0;
+        while (temp != NULL){
+            dato += "\n\n\nFamilia: "+QString::number(cont)+"\n";
+            dato += *temp->arbol->toStringInOrden();
+            cont++;
+            temp = temp->siguiente;
+        }
+        dato += "\n\nLargo: "+QString::number(largo);
+        return dato;
+    }
     void insertarALInicio(Persona *);
     NodoFamiliaListaSimple * buscar(Persona * );
+    NodoFamiliaListaSimple * buscar(int);
 };
 
 

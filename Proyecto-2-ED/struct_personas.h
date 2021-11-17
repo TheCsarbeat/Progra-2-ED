@@ -71,6 +71,7 @@ struct Persona{
     Persona * padre;
     ListaDoblePersonas *hijos;
     int pecadosdPersona;
+
     Persona(){
         id = 0;
         name = "";
@@ -132,10 +133,13 @@ struct Persona{
     QString toString(){
         QString datos = "\nID: "+QString::number(id)
                          +"\nNombre: "+name
+                         +"\nApellido: "+apellido
                          +"\nPaís: "+ pais->name
                          +"\nCreencia: "+creencia
-                         +"\nJob: "+creencia
-                         +"\n\nPECADOS: ";
+                         +"\nJob: "+profesion;
+        if(padre != NULL)
+            datos += "\nPADRE: \n\tID: "+QString::number(padre->id)+"\n\tNombre: "+padre->name;
+        datos +="\n\nPECADOS: ";
         for(unsigned int i=0;i<7;i++){
             if(i== 1 || i== 4)
                 datos+="\n\tNombre: "+pecados[i]->name+", \t\tValor: "+QString::number(pecados[i]->cant);
@@ -199,7 +203,16 @@ struct ListaDoblePersonas{
 
     void insertarEn(int index, NodoPersona * persona);
 
-    void toString();
+    QString toString(){
+        QString dato;
+        NodoPersona * temp = primerNodo;
+        while (temp != NULL){
+            dato += "\n"+temp->persona->toString()+temp->persona->hijos->toStringIDHijos();
+            temp = temp->siguiente;
+        }
+        dato+="\n------------------------------------------------------------------\n";
+        return dato;
+    }
 
 
 
