@@ -30,7 +30,7 @@
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="pageCrearHumano">
      <property name="styleSheet">
@@ -1399,24 +1399,24 @@ background-color:rgb(64, 150, 180);
      </widget>
     </widget>
     <widget class="QWidget" name="pageInfierno">
-     <widget class="QPushButton" name="pushButton_4">
+     <widget class="QPushButton" name="btnImprimir">
       <property name="geometry">
        <rect>
-        <x>170</x>
-        <y>870</y>
+        <x>50</x>
+        <y>902</y>
         <width>75</width>
-        <height>23</height>
+        <height>31</height>
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string>imprimir</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="lineEdit_2">
       <property name="geometry">
        <rect>
         <x>150</x>
-        <y>900</y>
+        <y>910</y>
         <width>113</width>
         <height>20</height>
        </rect>
@@ -2327,6 +2327,19 @@ font: 12pt &quot;Open Sans&quot;;</string>
        <string/>
       </property>
      </widget>
+     <widget class="QPushButton" name="btnMatarTodos">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>890</y>
+        <width>80</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>matar a todos</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="pageConsultas">
      <widget class="QPushButton" name="pushButton_16">
@@ -2650,20 +2663,25 @@ background-color: rgb(255, 205, 2);</string>
         <string>Pais</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="txtApellidosConsulta2_2">
-       <property name="geometry">
-        <rect>
-         <x>310</x>
-         <y>100</y>
-         <width>181</width>
-         <height>24</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QComboBox" name="comboBox">
+      <widget class="QComboBox" name="cboLastNameConsulta">
        <property name="geometry">
         <rect>
          <x>40</x>
+         <y>90</y>
+         <width>251</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-width: 1px;
+border-style: solid;
+</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="cboCountryConsulta">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
          <y>90</y>
          <width>251</width>
          <height>22</height>
@@ -3079,7 +3097,7 @@ font: 12pt &quot;Open Sans&quot;;</string>
      <x>0</x>
      <y>0</y>
      <width>1900</width>
-     <height>21</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>

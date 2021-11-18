@@ -124,15 +124,16 @@ void Mundo::hacerPecar(){
     int randomP = 0;
     int randomBA = 0;
     while(tmp!=NULL){
-
-        for(unsigned int i=0;i<7;i++){
-            randomP = QRandomGenerator::global()->bounded(100);
-            randomBA = QRandomGenerator::global()->bounded(100);
-            tmp->persona->pecados[i]->cant += randomP;
-            tmp->persona->pecadosPersona += randomP;
-            tmp->persona->buenasAcciones[i]->cant += randomBA;
-            tmp->persona->buenasAccionesPersona += randomBA;
-            hacerHerencia(tmp->persona, randomP, randomBA, i);
+        if(tmp->persona->estado==0){
+            for(unsigned int i=0;i<7;i++){
+                randomP = QRandomGenerator::global()->bounded(100);
+                randomBA = QRandomGenerator::global()->bounded(100);
+                tmp->persona->pecados[i]->cant += randomP;
+                tmp->persona->pecadosPersona += randomP;
+                tmp->persona->buenasAcciones[i]->cant += randomBA;
+                tmp->persona->buenasAccionesPersona += randomBA;
+                hacerHerencia(tmp->persona, randomP, randomBA, i);
+            }
         }
         tmp = tmp->siguiente;
     }
@@ -210,8 +211,6 @@ void Mundo::continentsMasPecados(){
         for(unsigned int i=0;i<7;i++){
             pecadosPersona += tmp->persona->pecados[i]->cant;
         }
-
-
         if(tmp->persona->pais->continente == arrayPecadosMapa->arrayContinents[0]->name)
             arrayPecadosMapa->arrayContinents[0]->cant += pecadosPersona;
 
@@ -237,7 +236,6 @@ void Mundo::top10Cielo(QLabel *lb,QLabel *lb2){
     int buenasAccionesP = 0;
     for( int i=0; i<files->index; i++){
         arrayBuenasAcciones->arrayPaises[i]->cantidad = 0;
-
     }
 
     while(tmp!=NULL){
@@ -262,9 +260,7 @@ void Mundo::top5Cielo(QLabel * lb,QLabel *lb2){
     int buenasAccionesP = 0;
     for( int i=0; i<files->index; i++){
         arrayBuenasAcciones->arrayPaises[i]->cantidad = 0;
-
     }
-
     while(tmp!=NULL){
         buenasAccionesP = 0;
         for(unsigned int i=0;i<7;i++)
@@ -312,7 +308,6 @@ void Mundo::top5Infierno(QLabel *lb, QLabel *lb2){
     int pecadosP = 0;
     for( int i=0; i<files->index; i++){
         arrayPecados->arrayPaises[i]->cantidad = 0;
-
     }
 
     while(tmp!=NULL){

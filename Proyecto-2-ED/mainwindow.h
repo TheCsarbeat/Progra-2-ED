@@ -65,11 +65,13 @@ private slots:
 
     void on_btnTop5Infierno_clicked();
 
-    void on_pushButton_4_clicked();
-
     void on_btnBAFamilias_clicked();
 
     void on_btnPecadosFamilia_clicked();
+
+    void on_btnMatarTodos_clicked();
+
+    void on_btnImprimir_clicked();
 
 private:
     Ui::MainWindow *ui;

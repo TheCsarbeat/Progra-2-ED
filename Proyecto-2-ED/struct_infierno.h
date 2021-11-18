@@ -12,12 +12,26 @@ struct Demonio;
 struct HeapFamilias;
 struct NodoListaSimpleHeaps;
 struct ListaSimpleHeaps;
+struct NodoHeap;
+
+struct NodoHeap{
+    Persona * persona;
+
+    NodoHeap(){
+        persona = NULL;
+    }
+    NodoHeap(Persona * _persona){
+        persona = _persona;
+    }
+};
 
 struct HeapFamilia{
     int capacidad;
-    int pecado;
     int cant;
-    QVector<Persona> array;
+    int pecado;
+    QString apellido;
+    QString pais;
+    QVector<NodoHeap*> array;
 
     HeapFamilia(){
         capacidad = 0;
@@ -30,7 +44,7 @@ struct HeapFamilia{
         cant = 0;
     }
 
-    void swap(int, int);
+    void swap(NodoHeap *, NodoHeap *);
 
     int parent(int i) {
         return (i - 1) / 2;
@@ -47,7 +61,7 @@ struct HeapFamilia{
     }
 
     void heapifyUp(int i);
-    void insertar(Persona);
+    void insertar(Persona *);
     void imprimir();
 };
 
@@ -97,10 +111,13 @@ struct Demonio{
 
     void crearHeap(ListaSimpleArbolFamilias *);
     void limpiarListaHeaps();
+    void buscarMasPecadores(ListaDoblePersonas *, QVector<NodoHeap*>);
+    void agregarAHeaps(QVector<Persona*>);
 };
 
 struct Infierno{
     Demonio * demonios[7];
+    QVector<NodoHeap*> arrayPersonasInfierno;
 
     Infierno(){
         QString names[7] = {"Asmodeo","Belfegor","Mammón","Abadón","Satán","Belcebú","Lucifer"};
@@ -114,6 +131,8 @@ struct Infierno{
     void imprimirDemonio(int);
     void crearHeapsDemonios(ListaSimpleArbolFamilias *);
     void limpiarDemonios();
+    void matarMasPecadores(ListaDoblePersonas *);
+    void llenarArray(ListaDoblePersonas *);
 };
 
 #endif // STRUCT_INFIERNO_H

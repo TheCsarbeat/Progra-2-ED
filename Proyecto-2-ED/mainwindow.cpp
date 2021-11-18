@@ -15,6 +15,7 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::start(){
+    
     QLabel *arrayLabelsBuenasAcciones[5] = {ui->lbAmericaHeaven, ui->lbAfricaHeaven, ui->lbEuropaHeaven, ui->lbAustraliaHeaven, ui->lbAsiaHeaven };
     QLabel *arrayLabelsPecados[5] = {ui->lbAmericaHell, ui->lbAfricaHell, ui->lbEuropaHell, ui->lbAustraliaHell, ui->lbAsiaHell };
     QComboBox * arrayCBO[2] = {ui->cboLastNameConsulta, ui->cboCountryConsulta};
@@ -38,8 +39,6 @@ void MainWindow::start(){
 //--------------------WORLD PAGE BUTTONS--------------------
 void MainWindow::on_btnCrearHumanos_clicked(){
     mainstruct->mundo->crearHumanos(ui->txtCantHumanos->text().toInt());
-    mainstruct->mundo->infierno->limpiarDemonios();
-    mainstruct->mundo->infierno->crearHeapsDemonios(mainstruct->mundo->listArbolFamilias);
     msg.setText("Se han creado: "+QString::number(ui->txtCantHumanos->text().toInt())+" humanos");
     msg.exec();
 }
@@ -50,8 +49,6 @@ void MainWindow::on_btnBuscarPersona_clicked(){
 }
 void MainWindow::on_btnPecar_clicked(){
     mainstruct->mundo->hacerPecar();
-    mainstruct->mundo->infierno->limpiarDemonios();
-    mainstruct->mundo->infierno->crearHeapsDemonios(mainstruct->mundo->listArbolFamilias);
     msg.setText("Los humanos han pecado y hecho buenas acciones");
     msg.exec();
 }
@@ -189,17 +186,9 @@ void MainWindow::on_btnTop5Infierno_clicked(){
     ui->panelConsultasInfiernoPecados->setCurrentIndex(2);
 }
 
-
-void MainWindow::on_pushButton_4_clicked(){
-
-    mainstruct->mundo->infierno->imprimirDemonio(ui->lineEdit_2->text().toInt());
-}
-
-
 void MainWindow::on_btnBAFamilias_clicked()
 {
     int id = ui->txtIdBuenasAcciones->text().toUInt();
-
     mainstruct->mundo->buscarBAFamilias(id, ui->lbFamiliaBA);
     ui->panelConsultasCieloBuenasAcciones->setCurrentIndex(3);
 
@@ -208,9 +197,19 @@ void MainWindow::on_btnBAFamilias_clicked()
 void MainWindow::on_btnPecadosFamilia_clicked()
 {
     int id = ui->txtPecados->text().toUInt();
-
     mainstruct->mundo->buscarPecadosFamilias(id, ui->lbPecadosFamilias);
-
     ui->panelConsultasInfiernoPecados->setCurrentIndex(3);
+}
+
+
+void MainWindow::on_btnMatarTodos_clicked()
+{
+    mainstruct->mundo->infierno->matarMasPecadores(mainstruct->mundo->personas);
+}
+
+
+void MainWindow::on_btnImprimir_clicked()
+{
+    mainstruct->mundo->infierno->imprimirDemonio(ui->lineEdit_2->text().toInt());
 }
 
