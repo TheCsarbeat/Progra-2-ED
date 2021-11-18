@@ -34,10 +34,14 @@ void Mundo::crearHumanos(int dato){
                 listArbolFamilias->insertarALInicio(p);
         }
     }
+<<<<<<< HEAD
     //cielo->imprimir();
     //files->writeFile("worldLista.txt", personas->toString());
     files->writeFile("familiasMundoInOrden.txt", listArbolFamilias->toString());
     //files->writeFile("cieloInOrden.txt", cielo->toString());
+=======
+    personas->imprimir();
+>>>>>>> pinoli
     //qDebug()<<personas->primerNodo->persona->id;
 }
 
@@ -210,8 +214,6 @@ void Mundo::continentsMasPecados(){
         for(unsigned int i=0;i<7;i++){
             pecadosPersona += tmp->persona->pecados[i]->cant;
         }
-
-
         if(tmp->persona->pais->continente == arrayPecadosMapa->arrayContinents[0]->name)
             arrayPecadosMapa->arrayContinents[0]->cant += pecadosPersona;
 

@@ -37,8 +37,8 @@ void MainWindow::start(){
 //--------------------WORLD PAGE BUTTONS--------------------
 void MainWindow::on_btnCrearHumanos_clicked(){
     mainstruct->mundo->crearHumanos(ui->txtCantHumanos->text().toInt());
-    mainstruct->mundo->infierno->limpiarDemonios();
-    mainstruct->mundo->infierno->crearHeapsDemonios(mainstruct->mundo->listArbolFamilias);
+    //mainstruct->mundo->infierno->limpiarDemonios();
+    //mainstruct->mundo->infierno->crearHeapsDemonios(mainstruct->mundo->listArbolFamilias);
     msg.setText("Se han creado: "+QString::number(ui->txtCantHumanos->text().toInt())+" humanos");
     msg.exec();
 }
@@ -49,8 +49,8 @@ void MainWindow::on_btnBuscarPersona_clicked(){
 }
 void MainWindow::on_btnPecar_clicked(){
     mainstruct->mundo->hacerPecar();
-    mainstruct->mundo->infierno->limpiarDemonios();
-    mainstruct->mundo->infierno->crearHeapsDemonios(mainstruct->mundo->listArbolFamilias);
+    //mainstruct->mundo->infierno->limpiarDemonios();
+    //mainstruct->mundo->infierno->crearHeapsDemonios(mainstruct->mundo->listArbolFamilias);
     msg.setText("Los humanos han pecado y hecho buenas acciones");
     msg.exec();
 }
@@ -159,9 +159,15 @@ void MainWindow::on_pushButton_clicked(){
     connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
 
     if(!files.isEmpty())
+<<<<<<< HEAD
         smtp->sendMail("ferkssoporte@gmail.com", "cesarjjxd@gmail.com" , "ui->subject->text()","ui->msg->toPlainText()", files );
     else
         smtp->sendMail("ferkssoporte@gmail.com", "cesarjjxd@gmail.com" , "ui->subject->text()","ui->msg->toPlainText()");
+=======
+        smtp->sendMail("ferkssoporte@gmail.com", "cesarjjxd@gmail.com" , "Prueba de logs","Este es el documento, disfrute", files );
+    else
+        smtp->sendMail("ferkssoporte@gmail.com", "cesarjjxd@gmail.com" , "Prueba de logs","Este es el documento, disfrute");
+>>>>>>> pinoli
 }
 
 
@@ -188,6 +194,7 @@ void MainWindow::on_btnTop5Infierno_clicked(){
     ui->panelConsultasInfiernoPecados->setCurrentIndex(2);
 }
 
+<<<<<<< HEAD
 
 void MainWindow::on_pushButton_4_clicked(){
 
@@ -211,5 +218,11 @@ void MainWindow::on_btnPecadosFamilia_clicked()
     mainstruct->mundo->buscarPecadosFamilias(id, ui->lbPecadosFamilias);
 
     ui->panelConsultasInfiernoPecados->setCurrentIndex(3);
+=======
+void MainWindow::on_pushButton_4_clicked()
+{
+    mainstruct->mundo->infierno->demonios[0]->buscarMasPecadores(mainstruct->mundo->personas);
+    mainstruct->mundo->infierno->imprimirDemonio(ui->lineEdit_2->text().toInt());
+>>>>>>> pinoli
 }
 
