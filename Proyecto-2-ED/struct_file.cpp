@@ -45,9 +45,11 @@ void Files::loadLastNames(){
     int i = 0;
     while(!stream.atEnd()){
         lastNames[i] = stream.readLine();
+        arrayCBO[0]->addItem(lastNames[i]);
         i++;
     }
     indexLasName = i;
+
     file.close();
 }
 
@@ -110,6 +112,7 @@ void Files::loadAmerica(){
     QTextStream stream(&file);
     while(!stream.atEnd()){
         paises[index] = new Pais(stream.readLine(),"america");
+
         index++;
     }
     file.close();

@@ -9,7 +9,7 @@ struct MainStruct;
 struct MainStruct{
     Mundo * mundo;
     MainStruct(QLabel * lbBuenasAccionesMapa[],QLabel * lbPecadosMapa[], QComboBox * cbo[]){
-        mundo = new Mundo(lbBuenasAccionesMapa, lbPecadosMapa);
+        mundo = new Mundo(lbBuenasAccionesMapa, lbPecadosMapa, cbo);
     }
 
 };

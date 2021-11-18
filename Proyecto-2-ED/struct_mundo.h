@@ -171,10 +171,10 @@ struct Mundo{
     CieloHash *cielo;
     ArbolAngelesCielo *arbolAngeles;
 
-    Mundo(QLabel * lbBuenasAccionesMapa[],QLabel * lbPecadosMapa[]){
+    Mundo(QLabel * lbBuenasAccionesMapa[],QLabel * lbPecadosMapa[], QComboBox * cbo[]){
         personas = new ListaDoblePersonas();
         treePersonas = new ArbolPersonas();
-        files = new Files();
+        files = new Files(cbo);
         treeFamilias = new ArbolFamilias();
         listArbolFamilias = new ListaSimpleArbolFamilias();
         arrayBuenasAccionesMapa = new ArrayContinent(lbBuenasAccionesMapa);
@@ -205,6 +205,8 @@ struct Mundo{
 
     void buscarBAFamilias(int,QLabel *);
     void buscarPecadosFamilias(int,QLabel *);
+
+    void consutlaHumanStateFamily(QString lastName, QString country,QLabel *lb);
 };
 
 #endif // STRUCT_MUNDO_H
