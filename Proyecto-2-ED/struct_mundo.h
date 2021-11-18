@@ -98,8 +98,17 @@ struct ArrayPaises{
         for(int i = 0; i<10; i++) {
             respuesta += "Cantidad: "+QString::number(arrayPaises[i]->cantidad)+"\n";
         }
-        return respuesta;
+            return respuesta;
     }
+
+    QString toStringMayoresCantidad(){
+        QString respuesta= "";
+        for(int i = 0; i<10; i++) {
+            respuesta += "\t\t Cantidad: "+QString::number(arrayPaises[i]->cantidad)+"\n";
+        }
+            return respuesta;
+    }
+
 
     QString toStringMenores(){
         QString respuesta= "";
@@ -114,8 +123,17 @@ struct ArrayPaises{
         for(int i = 0; i<5; i++) {
             respuesta += "Cantidad: "+QString::number(arrayPaises[i]->cantidad)+"\n";
         }
-        return respuesta;
+            return respuesta;
+     }
+
+    QString toStringMenoresCantidad(){
+        QString respuesta= "";
+        for(int i = 0; i<5; i++) {
+            respuesta += "\t\t Cantidad: "+QString::number(arrayPaises[i]->cantidad)+"\n";
+        }
+            return respuesta;
     }
+
     void imprimir(){
         for(int i = 0; i<10; i++) {
             qDebug()<<i+1<<" # "<<arrayPaises[i]->nombre<<"\t\t\t\t\tCantidad: "<<arrayPaises[i]->cantidad;
@@ -200,9 +218,10 @@ struct Mundo{
     void top10Cielo(QLabel *,QLabel *);
     void top5Cielo(QLabel *, QLabel *);
     void top10Infierno(QLabel *, QLabel *);
-    void top5Infierno(QLabel *);
+    void top5Infierno(QLabel *, QLabel *);
 
     void buscarBAFamilias(int,QLabel *);
+    void buscarPecadosFamilias(int,QLabel *);
 };
 
 #endif // STRUCT_MUNDO_H

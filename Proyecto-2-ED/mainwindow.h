@@ -69,6 +69,8 @@ private slots:
 
     void on_btnBAFamilias_clicked();
 
+    void on_btnPecadosFamilia_clicked();
+
 private:
     Ui::MainWindow *ui;
     MainStruct * mainstruct;
