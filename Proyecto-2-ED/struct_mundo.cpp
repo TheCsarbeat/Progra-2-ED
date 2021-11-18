@@ -243,9 +243,9 @@ void Mundo::top10Cielo(QLabel *lb){
         }
         tmp = tmp->siguiente;
     }
+
     arrayBuenasAcciones->bubbleSortMayorMenor(files);
     lb->setText(arrayBuenasAcciones->toStringMayores());
-
 }
 
 void Mundo::top5Cielo(QLabel * lb){
@@ -269,10 +269,9 @@ void Mundo::top5Cielo(QLabel * lb){
     }
     arrayBuenasAcciones->bubbleSortMenorMayor(files);
     lb->setText(arrayBuenasAcciones->toStringMenores());
-
 }
 
-void Mundo::top10Infierno(QLabel *lb){
+void Mundo::top10Infierno(QLabel *lb,QLabel *lb2 ){
     NodoPersona * tmp = personas->primerNodo;
     int pecadosP = 0;
 
@@ -293,10 +292,10 @@ void Mundo::top10Infierno(QLabel *lb){
     }
     arrayPecados->bubbleSortMayorMenor(files);
     lb->setText(arrayPecados->toStringMayores());
-
+    lb2->setText(arrayPecados->toStringMayoresCantidad());
 }
 
-void Mundo::top5Infierno(QLabel *lb){
+void Mundo::top5Infierno(QLabel *lb, QLabel *lb2){
     NodoPersona * tmp = personas->primerNodo;
     int pecadosP = 0;
     for( int i=0; i<files->index; i++){
@@ -317,6 +316,7 @@ void Mundo::top5Infierno(QLabel *lb){
     }
     arrayPecados->bubbleSortMenorMayor(files);
     lb->setText(arrayPecados->toStringMenores());
+    lb2->setText(arrayPecados->toStringMenoresCantidad());
 }
 
 void Mundo::buscarBAFamilias(int id, QLabel *lb){
@@ -329,5 +329,16 @@ void Mundo::buscarBAFamilias(int id, QLabel *lb){
         lb->setText("No existe");
     }
 
+}
+
+void Mundo::buscarPecadosFamilias(int id, QLabel *lb){
+    NodoPersona* buscado= treePersonas->buscarMasCercano(id);
+    buscado = personas->buscar(id, buscado);
+    if(buscado!= NULL){
+        NodoFamiliaListaSimple *nodoBuscado = listArbolFamilias->buscar(buscado->persona);
+        lb->setText(*nodoBuscado->arbol->toStringInOrdenP());
+    }else{
+        lb->setText("No existe");
+    }
 
 }

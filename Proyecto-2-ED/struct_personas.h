@@ -181,6 +181,28 @@ struct Persona{
         return datos;
     }
 
+    QString toStringPecados(){
+        QString datos = "\nID: "+QString::number(id)
+                         +"\nNombre: "+name
+                         +"\nApellido: "+apellido
+                         +"\nPaís: "+ pais->name
+                         +"\nCreencia: "+creencia
+                         +"\nJob: "+profesion;
+        if(padre != NULL)
+            datos += "\nPADRE: \n\tID: "+QString::number(padre->id)+"\n\tNombre: "+padre->name;
+
+        datos+="\n\nPECADOS";
+        for(unsigned int i=0;i<7;i++){
+            if(i== 1 || i== 4)
+                datos+="\n\tNombre: "+pecados[i]->name+", \t\tValor: "+QString::number(pecados[i]->cant);
+            else
+                datos+="\n\tNombre: "+pecados[i]->name+", \tValor: "+QString::number(pecados[i]->cant);
+        }
+        datos+="\n\nHIJOS";
+
+        return datos;
+    }
+
 };
 
 struct NodoPersona{

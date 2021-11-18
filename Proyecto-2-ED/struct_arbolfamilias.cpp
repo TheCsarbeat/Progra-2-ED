@@ -185,6 +185,21 @@ void ArbolFamilias::toStringInOrdenBA(NodoArbolFamiliaALV* t, QString* dato){
    toStringInOrdenBA(t->r,dato);
 }
 
+QString * ArbolFamilias::toStringInOrdenP(){
+    QString *dato = new QString();
+    *dato = "";
+    toStringInOrdenP(raiz, dato);
+    return dato;
+}
+
+void ArbolFamilias::toStringInOrdenP(NodoArbolFamiliaALV* t, QString* dato){
+    if (t == NULL)
+       return;
+   toStringInOrdenP(t->l,dato);
+   *dato += t->persona->toStringPecados()+t->persona->hijos->toStringIDHijos();
+   toStringInOrdenP(t->r,dato);
+}
+
 void ArbolFamilias::imprimirNivel(int nivel){
     nivelImprimir(raiz, nivel, 0);
 }

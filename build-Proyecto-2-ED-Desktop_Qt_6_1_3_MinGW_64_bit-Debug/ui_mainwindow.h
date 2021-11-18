@@ -58,28 +58,15 @@ public:
     QPushButton *btnGuardarDatosWorld;
     QPushButton *pushButton;
     QWidget *pageCielo;
-    QPushButton *botonBAFamilias;
+    QPushButton *btnBAFamilias;
     QLineEdit *txtIdBuenasAcciones;
     QLabel *idBuenasAcciones;
-    QFrame *frameAngeles;
-    QLabel *labelAngeles;
-    QPushButton *botonNuriel;
-    QPushButton *botonMiguel;
-    QPushButton *botonAniel;
-    QPushButton *botonRaguel;
-    QPushButton *botonAzrael;
-    QPushButton *botonRafael;
-    QPushButton *botonUriel;
-    QPushButton *botonSariel;
-    QPushButton *botonShamsiel;
-    QPushButton *botonGabriel;
     QFrame *frame_14;
     QLabel *label_13;
     QPushButton *btnMapaContinentesBuenasAcciones;
     QPushButton *btnTop10Cielo;
     QPushButton *btnTop5Cielo;
     QLineEdit *txtCantHumanos_4;
-    QLabel *label_12;
     QLabel *label_14;
     QStackedWidget *panelConsultasCieloBuenasAcciones;
     QWidget *pageMapaBuenasAcciones;
@@ -93,16 +80,45 @@ public:
     QWidget *pageTop10Cielo;
     QLabel *lbtop10cielo;
     QLabel *label_18;
+    QFrame *frameAngeles;
+    QLabel *labelAngeles;
+    QPushButton *botonNuriel;
+    QPushButton *botonMiguel;
+    QPushButton *botonAniel;
+    QPushButton *botonRaguel;
+    QPushButton *botonAzrael;
+    QPushButton *botonRafael;
+    QPushButton *botonUriel;
+    QPushButton *botonSariel;
+    QPushButton *botonShamsiel;
+    QPushButton *botonGabriel;
     QWidget *pageTop5Cielo;
     QLabel *lbtop5Cielo;
     QLabel *label_19;
+    QLabel *lbFamiliaBA;
     QWidget *pageInfierno;
-    QLabel *idPecados;
-    QLineEdit *txtPecados;
-    QPushButton *pushButton_3;
-    QPushButton *botonTopPecados;
-    QPushButton *botonPaisMenosMalos_2;
-    QPushButton *botonmapaMalo;
+    QStackedWidget *panelConsultasInfiernoPecados;
+    QWidget *pageMapaInfierno;
+    QFrame *frame_2;
+    QLabel *lbEuropaHell;
+    QLabel *lbAfricaHell;
+    QLabel *lbAustraliaHell;
+    QLabel *lbAsiaHell;
+    QLabel *lbAmericaHell;
+    QLabel *label_17;
+    QWidget *pageTop10Infierno;
+    QLabel *lbtop10Infierno;
+    QLabel *label_20;
+    QLabel *lbtop10Infierno_2;
+    QWidget *pageTop5Infierno;
+    QLabel *lbtop5infierno;
+    QLabel *label_25;
+    QLabel *lbtop5infierno_2;
+    QWidget *pagePecadosFamilia;
+    QLabel *label_26;
+    QLabel *lbPecadosFamilias;
+    QPushButton *pushButton_4;
+    QLineEdit *lineEdit_2;
     QFrame *frameDemonios;
     QPushButton *botonMammon;
     QLabel *codicia;
@@ -119,29 +135,14 @@ public:
     QLabel *ira;
     QLabel *glotoneria;
     QLabel *lujuria;
-    QLabel *label_3;
-    QStackedWidget *panelConsultasInfiernoPecados;
-    QWidget *pageMapaInfierno;
-    QFrame *frame_2;
-    QLabel *lbEuropaHell;
-    QLabel *lbAfricaHell;
-    QLabel *lbAustraliaHell;
-    QLabel *lbAsiaHell;
-    QLabel *lbAmericaHell;
-    QLabel *label_17;
-    QWidget *pageTop10Infierno;
-    QLabel *lbtop10Infierno;
-    QLabel *label_20;
-    QWidget *pageTop5Infierno;
-    QLabel *lbtop5infierno;
-    QLabel *label_25;
     QFrame *frame_17;
     QLabel *label_16;
     QPushButton *btnMapaPecados;
     QPushButton *btnTop10Infierno;
     QPushButton *btnTop5Infierno;
-    QPushButton *pushButton_4;
-    QLineEdit *lineEdit_2;
+    QLabel *idPecados;
+    QLineEdit *txtPecados;
+    QPushButton *btnPecadosFamilia;
     QWidget *pageConsultas;
     QPushButton *pushButton_16;
     QPushButton *pushButton_17;
@@ -360,18 +361,125 @@ public:
         mainPanel->addWidget(pageCrearHumano);
         pageCielo = new QWidget();
         pageCielo->setObjectName(QString::fromUtf8("pageCielo"));
-        botonBAFamilias = new QPushButton(pageCielo);
-        botonBAFamilias->setObjectName(QString::fromUtf8("botonBAFamilias"));
-        botonBAFamilias->setGeometry(QRect(50, 140, 191, 25));
+        btnBAFamilias = new QPushButton(pageCielo);
+        btnBAFamilias->setObjectName(QString::fromUtf8("btnBAFamilias"));
+        btnBAFamilias->setGeometry(QRect(240, 150, 191, 25));
         txtIdBuenasAcciones = new QLineEdit(pageCielo);
         txtIdBuenasAcciones->setObjectName(QString::fromUtf8("txtIdBuenasAcciones"));
         txtIdBuenasAcciones->setGeometry(QRect(370, 90, 113, 24));
         idBuenasAcciones = new QLabel(pageCielo);
         idBuenasAcciones->setObjectName(QString::fromUtf8("idBuenasAcciones"));
         idBuenasAcciones->setGeometry(QRect(380, 60, 91, 16));
-        frameAngeles = new QFrame(pageCielo);
+        frame_14 = new QFrame(pageCielo);
+        frame_14->setObjectName(QString::fromUtf8("frame_14"));
+        frame_14->setGeometry(QRect(820, 10, 791, 221));
+        frame_14->setStyleSheet(QString::fromUtf8("background-color:rgb(250,250,250);"));
+        frame_14->setFrameShape(QFrame::StyledPanel);
+        frame_14->setFrameShadow(QFrame::Raised);
+        label_13 = new QLabel(frame_14);
+        label_13->setObjectName(QString::fromUtf8("label_13"));
+        label_13->setGeometry(QRect(0, 0, 841, 31));
+        label_13->setFont(font1);
+        label_13->setStyleSheet(QString::fromUtf8("color: white;\n"
+"background-color:rgb(64, 150, 180);\n"
+""));
+        btnMapaContinentesBuenasAcciones = new QPushButton(frame_14);
+        btnMapaContinentesBuenasAcciones->setObjectName(QString::fromUtf8("btnMapaContinentesBuenasAcciones"));
+        btnMapaContinentesBuenasAcciones->setGeometry(QRect(250, 160, 281, 51));
+        btnMapaContinentesBuenasAcciones->setStyleSheet(QString::fromUtf8("image-position:left;\n"
+"color: white;\n"
+"padding: 10px;\n"
+"border:0px;\n"
+"font: 12pt \"Open Sans\";\n"
+"background-color: rgb(64, 150, 180);"));
+        btnTop10Cielo = new QPushButton(frame_14);
+        btnTop10Cielo->setObjectName(QString::fromUtf8("btnTop10Cielo"));
+        btnTop10Cielo->setGeometry(QRect(100, 90, 281, 51));
+        btnTop10Cielo->setStyleSheet(QString::fromUtf8("image-position:left;\n"
+"color: white;\n"
+"padding: 10px;\n"
+"border:0px;\n"
+"font: 12pt \"Open Sans\";\n"
+"background-color: rgb(64, 150, 180);"));
+        btnTop5Cielo = new QPushButton(frame_14);
+        btnTop5Cielo->setObjectName(QString::fromUtf8("btnTop5Cielo"));
+        btnTop5Cielo->setGeometry(QRect(430, 90, 281, 51));
+        btnTop5Cielo->setStyleSheet(QString::fromUtf8("image-position:left;\n"
+"color: white;\n"
+"padding: 10px;\n"
+"border:0px;\n"
+"font: 12pt \"Open Sans\";\n"
+"background-color: rgb(64, 150, 180);"));
+        txtCantHumanos_4 = new QLineEdit(pageCielo);
+        txtCantHumanos_4->setObjectName(QString::fromUtf8("txtCantHumanos_4"));
+        txtCantHumanos_4->setGeometry(QRect(560, 90, 221, 21));
+        txtCantHumanos_4->setStyleSheet(QString::fromUtf8("border-width: 1px;\n"
+"border-style: solid;\n"
+"border-color: rgb(64, 150, 180);"));
+        label_14 = new QLabel(pageCielo);
+        label_14->setObjectName(QString::fromUtf8("label_14"));
+        label_14->setGeometry(QRect(50, 10, 111, 111));
+        label_14->setStyleSheet(QString::fromUtf8("image:url(\":/images/world.png\");"));
+        panelConsultasCieloBuenasAcciones = new QStackedWidget(pageCielo);
+        panelConsultasCieloBuenasAcciones->setObjectName(QString::fromUtf8("panelConsultasCieloBuenasAcciones"));
+        panelConsultasCieloBuenasAcciones->setGeometry(QRect(820, 250, 791, 551));
+        panelConsultasCieloBuenasAcciones->setStyleSheet(QString::fromUtf8("background-color:rgb(250,250,250);"));
+        pageMapaBuenasAcciones = new QWidget();
+        pageMapaBuenasAcciones->setObjectName(QString::fromUtf8("pageMapaBuenasAcciones"));
+        frame = new QFrame(pageMapaBuenasAcciones);
+        frame->setObjectName(QString::fromUtf8("frame"));
+        frame->setGeometry(QRect(0, 60, 791, 481));
+        frame->setFrameShape(QFrame::StyledPanel);
+        frame->setFrameShadow(QFrame::Raised);
+        lbEuropaHeaven = new QLabel(frame);
+        lbEuropaHeaven->setObjectName(QString::fromUtf8("lbEuropaHeaven"));
+        lbEuropaHeaven->setGeometry(QRect(350, 10, 171, 181));
+        lbEuropaHeaven->setStyleSheet(QString::fromUtf8("image:url(\":/images/continents/europa.png\");"));
+        lbAfricaHeaven = new QLabel(frame);
+        lbAfricaHeaven->setObjectName(QString::fromUtf8("lbAfricaHeaven"));
+        lbAfricaHeaven->setGeometry(QRect(320, 190, 251, 251));
+        lbAfricaHeaven->setStyleSheet(QString::fromUtf8("image:url(':/images/continents/africa.png');"));
+        lbAustraliaHeaven = new QLabel(frame);
+        lbAustraliaHeaven->setObjectName(QString::fromUtf8("lbAustraliaHeaven"));
+        lbAustraliaHeaven->setGeometry(QRect(590, 260, 171, 181));
+        lbAustraliaHeaven->setStyleSheet(QString::fromUtf8("image:url(\":/images/continents/oceania.png\");"));
+        lbAsiaHeaven = new QLabel(frame);
+        lbAsiaHeaven->setObjectName(QString::fromUtf8("lbAsiaHeaven"));
+        lbAsiaHeaven->setGeometry(QRect(560, 20, 211, 231));
+        lbAsiaHeaven->setStyleSheet(QString::fromUtf8("image:url(\":/images/continents/asia.png\");"));
+        lbAmericaHeaven = new QLabel(frame);
+        lbAmericaHeaven->setObjectName(QString::fromUtf8("lbAmericaHeaven"));
+        lbAmericaHeaven->setGeometry(QRect(-20, 20, 341, 411));
+        lbAmericaHeaven->setStyleSheet(QString::fromUtf8("image:url(':/images/continents/america.png');"));
+        label_15 = new QLabel(pageMapaBuenasAcciones);
+        label_15->setObjectName(QString::fromUtf8("label_15"));
+        label_15->setGeometry(QRect(0, 0, 791, 31));
+        label_15->setFont(font1);
+        label_15->setStyleSheet(QString::fromUtf8("color: white;\n"
+"background-color:rgb(64, 150, 180);\n"
+" text-align: center ;\n"
+""));
+        label_15->setAlignment(Qt::AlignCenter);
+        panelConsultasCieloBuenasAcciones->addWidget(pageMapaBuenasAcciones);
+        pageTop10Cielo = new QWidget();
+        pageTop10Cielo->setObjectName(QString::fromUtf8("pageTop10Cielo"));
+        lbtop10cielo = new QLabel(pageTop10Cielo);
+        lbtop10cielo->setObjectName(QString::fromUtf8("lbtop10cielo"));
+        lbtop10cielo->setGeometry(QRect(40, 60, 701, 441));
+        lbtop10cielo->setStyleSheet(QString::fromUtf8("text-align: center ;\n"
+"font: 14pt \"Open Sans\";"));
+        label_18 = new QLabel(pageTop10Cielo);
+        label_18->setObjectName(QString::fromUtf8("label_18"));
+        label_18->setGeometry(QRect(0, 0, 791, 31));
+        label_18->setFont(font1);
+        label_18->setStyleSheet(QString::fromUtf8("color: white;\n"
+"background-color:rgb(64, 150, 180);\n"
+" text-align: center ;\n"
+""));
+        label_18->setAlignment(Qt::AlignCenter);
+        frameAngeles = new QFrame(pageTop10Cielo);
         frameAngeles->setObjectName(QString::fromUtf8("frameAngeles"));
-        frameAngeles->setGeometry(QRect(40, 250, 761, 551));
+        frameAngeles->setGeometry(QRect(-240, 80, 761, 551));
         frameAngeles->setFrameShape(QFrame::StyledPanel);
         frameAngeles->setFrameShadow(QFrame::Raised);
         labelAngeles = new QLabel(frameAngeles);
@@ -494,117 +602,6 @@ public:
 " text-align: top ;\n"
 "border:1px;\n"
 "border-style:solid;"));
-        frame_14 = new QFrame(pageCielo);
-        frame_14->setObjectName(QString::fromUtf8("frame_14"));
-        frame_14->setGeometry(QRect(820, 10, 791, 221));
-        frame_14->setStyleSheet(QString::fromUtf8("background-color:rgb(250,250,250);"));
-        frame_14->setFrameShape(QFrame::StyledPanel);
-        frame_14->setFrameShadow(QFrame::Raised);
-        label_13 = new QLabel(frame_14);
-        label_13->setObjectName(QString::fromUtf8("label_13"));
-        label_13->setGeometry(QRect(0, 0, 841, 31));
-        label_13->setFont(font1);
-        label_13->setStyleSheet(QString::fromUtf8("color: white;\n"
-"background-color:rgb(64, 150, 180);\n"
-""));
-        btnMapaContinentesBuenasAcciones = new QPushButton(frame_14);
-        btnMapaContinentesBuenasAcciones->setObjectName(QString::fromUtf8("btnMapaContinentesBuenasAcciones"));
-        btnMapaContinentesBuenasAcciones->setGeometry(QRect(250, 160, 281, 51));
-        btnMapaContinentesBuenasAcciones->setStyleSheet(QString::fromUtf8("image-position:left;\n"
-"color: white;\n"
-"padding: 10px;\n"
-"border:0px;\n"
-"font: 12pt \"Open Sans\";\n"
-"background-color: rgb(64, 150, 180);"));
-        btnTop10Cielo = new QPushButton(frame_14);
-        btnTop10Cielo->setObjectName(QString::fromUtf8("btnTop10Cielo"));
-        btnTop10Cielo->setGeometry(QRect(100, 90, 281, 51));
-        btnTop10Cielo->setStyleSheet(QString::fromUtf8("image-position:left;\n"
-"color: white;\n"
-"padding: 10px;\n"
-"border:0px;\n"
-"font: 12pt \"Open Sans\";\n"
-"background-color: rgb(64, 150, 180);"));
-        btnTop5Cielo = new QPushButton(frame_14);
-        btnTop5Cielo->setObjectName(QString::fromUtf8("btnTop5Cielo"));
-        btnTop5Cielo->setGeometry(QRect(430, 90, 281, 51));
-        btnTop5Cielo->setStyleSheet(QString::fromUtf8("image-position:left;\n"
-"color: white;\n"
-"padding: 10px;\n"
-"border:0px;\n"
-"font: 12pt \"Open Sans\";\n"
-"background-color: rgb(64, 150, 180);"));
-        txtCantHumanos_4 = new QLineEdit(pageCielo);
-        txtCantHumanos_4->setObjectName(QString::fromUtf8("txtCantHumanos_4"));
-        txtCantHumanos_4->setGeometry(QRect(560, 90, 221, 21));
-        txtCantHumanos_4->setStyleSheet(QString::fromUtf8("border-width: 1px;\n"
-"border-style: solid;\n"
-"border-color: rgb(64, 150, 180);"));
-        label_12 = new QLabel(pageCielo);
-        label_12->setObjectName(QString::fromUtf8("label_12"));
-        label_12->setGeometry(QRect(560, 40, 91, 31));
-        label_12->setFont(font);
-        label_14 = new QLabel(pageCielo);
-        label_14->setObjectName(QString::fromUtf8("label_14"));
-        label_14->setGeometry(QRect(50, 10, 111, 111));
-        label_14->setStyleSheet(QString::fromUtf8("image:url(\":/images/world.png\");"));
-        panelConsultasCieloBuenasAcciones = new QStackedWidget(pageCielo);
-        panelConsultasCieloBuenasAcciones->setObjectName(QString::fromUtf8("panelConsultasCieloBuenasAcciones"));
-        panelConsultasCieloBuenasAcciones->setGeometry(QRect(820, 250, 791, 551));
-        panelConsultasCieloBuenasAcciones->setStyleSheet(QString::fromUtf8("background-color:rgb(250,250,250);"));
-        pageMapaBuenasAcciones = new QWidget();
-        pageMapaBuenasAcciones->setObjectName(QString::fromUtf8("pageMapaBuenasAcciones"));
-        frame = new QFrame(pageMapaBuenasAcciones);
-        frame->setObjectName(QString::fromUtf8("frame"));
-        frame->setGeometry(QRect(0, 60, 791, 481));
-        frame->setFrameShape(QFrame::StyledPanel);
-        frame->setFrameShadow(QFrame::Raised);
-        lbEuropaHeaven = new QLabel(frame);
-        lbEuropaHeaven->setObjectName(QString::fromUtf8("lbEuropaHeaven"));
-        lbEuropaHeaven->setGeometry(QRect(350, 10, 171, 181));
-        lbEuropaHeaven->setStyleSheet(QString::fromUtf8("image:url(\":/images/continents/europa.png\");"));
-        lbAfricaHeaven = new QLabel(frame);
-        lbAfricaHeaven->setObjectName(QString::fromUtf8("lbAfricaHeaven"));
-        lbAfricaHeaven->setGeometry(QRect(320, 190, 251, 251));
-        lbAfricaHeaven->setStyleSheet(QString::fromUtf8("image:url(':/images/continents/africa.png');"));
-        lbAustraliaHeaven = new QLabel(frame);
-        lbAustraliaHeaven->setObjectName(QString::fromUtf8("lbAustraliaHeaven"));
-        lbAustraliaHeaven->setGeometry(QRect(590, 260, 171, 181));
-        lbAustraliaHeaven->setStyleSheet(QString::fromUtf8("image:url(\":/images/continents/oceania.png\");"));
-        lbAsiaHeaven = new QLabel(frame);
-        lbAsiaHeaven->setObjectName(QString::fromUtf8("lbAsiaHeaven"));
-        lbAsiaHeaven->setGeometry(QRect(560, 20, 211, 231));
-        lbAsiaHeaven->setStyleSheet(QString::fromUtf8("image:url(\":/images/continents/asia.png\");"));
-        lbAmericaHeaven = new QLabel(frame);
-        lbAmericaHeaven->setObjectName(QString::fromUtf8("lbAmericaHeaven"));
-        lbAmericaHeaven->setGeometry(QRect(-20, 20, 341, 411));
-        lbAmericaHeaven->setStyleSheet(QString::fromUtf8("image:url(':/images/continents/america.png');"));
-        label_15 = new QLabel(pageMapaBuenasAcciones);
-        label_15->setObjectName(QString::fromUtf8("label_15"));
-        label_15->setGeometry(QRect(0, 0, 791, 31));
-        label_15->setFont(font1);
-        label_15->setStyleSheet(QString::fromUtf8("color: white;\n"
-"background-color:rgb(64, 150, 180);\n"
-" text-align: center ;\n"
-""));
-        label_15->setAlignment(Qt::AlignCenter);
-        panelConsultasCieloBuenasAcciones->addWidget(pageMapaBuenasAcciones);
-        pageTop10Cielo = new QWidget();
-        pageTop10Cielo->setObjectName(QString::fromUtf8("pageTop10Cielo"));
-        lbtop10cielo = new QLabel(pageTop10Cielo);
-        lbtop10cielo->setObjectName(QString::fromUtf8("lbtop10cielo"));
-        lbtop10cielo->setGeometry(QRect(40, 60, 701, 441));
-        lbtop10cielo->setStyleSheet(QString::fromUtf8("text-align: center ;\n"
-"font: 14pt \"Open Sans\";"));
-        label_18 = new QLabel(pageTop10Cielo);
-        label_18->setObjectName(QString::fromUtf8("label_18"));
-        label_18->setGeometry(QRect(0, 0, 791, 31));
-        label_18->setFont(font1);
-        label_18->setStyleSheet(QString::fromUtf8("color: white;\n"
-"background-color:rgb(64, 150, 180);\n"
-" text-align: center ;\n"
-""));
-        label_18->setAlignment(Qt::AlignCenter);
         panelConsultasCieloBuenasAcciones->addWidget(pageTop10Cielo);
         pageTop5Cielo = new QWidget();
         pageTop5Cielo->setObjectName(QString::fromUtf8("pageTop5Cielo"));
@@ -623,30 +620,121 @@ public:
 ""));
         label_19->setAlignment(Qt::AlignCenter);
         panelConsultasCieloBuenasAcciones->addWidget(pageTop5Cielo);
+        lbFamiliaBA = new QLabel(pageCielo);
+        lbFamiliaBA->setObjectName(QString::fromUtf8("lbFamiliaBA"));
+        lbFamiliaBA->setGeometry(QRect(40, 180, 751, 731));
         mainPanel->addWidget(pageCielo);
         pageInfierno = new QWidget();
         pageInfierno->setObjectName(QString::fromUtf8("pageInfierno"));
-        idPecados = new QLabel(pageInfierno);
-        idPecados->setObjectName(QString::fromUtf8("idPecados"));
-        idPecados->setGeometry(QRect(410, 60, 91, 16));
-        txtPecados = new QLineEdit(pageInfierno);
-        txtPecados->setObjectName(QString::fromUtf8("txtPecados"));
-        txtPecados->setGeometry(QRect(390, 100, 113, 24));
-        pushButton_3 = new QPushButton(pageInfierno);
-        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        pushButton_3->setGeometry(QRect(360, 140, 181, 25));
-        botonTopPecados = new QPushButton(pageInfierno);
-        botonTopPecados->setObjectName(QString::fromUtf8("botonTopPecados"));
-        botonTopPecados->setGeometry(QRect(50, 30, 171, 25));
-        botonPaisMenosMalos_2 = new QPushButton(pageInfierno);
-        botonPaisMenosMalos_2->setObjectName(QString::fromUtf8("botonPaisMenosMalos_2"));
-        botonPaisMenosMalos_2->setGeometry(QRect(50, 90, 171, 25));
-        botonmapaMalo = new QPushButton(pageInfierno);
-        botonmapaMalo->setObjectName(QString::fromUtf8("botonmapaMalo"));
-        botonmapaMalo->setGeometry(QRect(50, 150, 171, 25));
+        panelConsultasInfiernoPecados = new QStackedWidget(pageInfierno);
+        panelConsultasInfiernoPecados->setObjectName(QString::fromUtf8("panelConsultasInfiernoPecados"));
+        panelConsultasInfiernoPecados->setGeometry(QRect(30, 280, 791, 551));
+        panelConsultasInfiernoPecados->setStyleSheet(QString::fromUtf8("background-color:rgb(250,250,250);"));
+        pageMapaInfierno = new QWidget();
+        pageMapaInfierno->setObjectName(QString::fromUtf8("pageMapaInfierno"));
+        frame_2 = new QFrame(pageMapaInfierno);
+        frame_2->setObjectName(QString::fromUtf8("frame_2"));
+        frame_2->setGeometry(QRect(0, 60, 791, 481));
+        frame_2->setFrameShape(QFrame::StyledPanel);
+        frame_2->setFrameShadow(QFrame::Raised);
+        lbEuropaHell = new QLabel(frame_2);
+        lbEuropaHell->setObjectName(QString::fromUtf8("lbEuropaHell"));
+        lbEuropaHell->setGeometry(QRect(350, 10, 171, 181));
+        lbEuropaHell->setStyleSheet(QString::fromUtf8("image:url(\":/images/continents/europa.png\");"));
+        lbAfricaHell = new QLabel(frame_2);
+        lbAfricaHell->setObjectName(QString::fromUtf8("lbAfricaHell"));
+        lbAfricaHell->setGeometry(QRect(320, 190, 251, 251));
+        lbAfricaHell->setStyleSheet(QString::fromUtf8("image:url(':/images/continents/africa.png');"));
+        lbAustraliaHell = new QLabel(frame_2);
+        lbAustraliaHell->setObjectName(QString::fromUtf8("lbAustraliaHell"));
+        lbAustraliaHell->setGeometry(QRect(590, 260, 171, 181));
+        lbAustraliaHell->setStyleSheet(QString::fromUtf8("image:url(\":/images/continents/oceania.png\");"));
+        lbAsiaHell = new QLabel(frame_2);
+        lbAsiaHell->setObjectName(QString::fromUtf8("lbAsiaHell"));
+        lbAsiaHell->setGeometry(QRect(560, 20, 211, 231));
+        lbAsiaHell->setStyleSheet(QString::fromUtf8("image:url(\":/images/continents/asia.png\");"));
+        lbAmericaHell = new QLabel(frame_2);
+        lbAmericaHell->setObjectName(QString::fromUtf8("lbAmericaHell"));
+        lbAmericaHell->setGeometry(QRect(-20, 20, 341, 411));
+        lbAmericaHell->setStyleSheet(QString::fromUtf8("image:url(':/images/continents/america.png');"));
+        label_17 = new QLabel(pageMapaInfierno);
+        label_17->setObjectName(QString::fromUtf8("label_17"));
+        label_17->setGeometry(QRect(0, 0, 831, 31));
+        label_17->setFont(font1);
+        label_17->setStyleSheet(QString::fromUtf8("color: rgb(198, 46, 48);\n"
+"background-color: rgb(32, 30, 30);\n"
+" text-align: center ;\n"
+""));
+        label_17->setAlignment(Qt::AlignCenter);
+        panelConsultasInfiernoPecados->addWidget(pageMapaInfierno);
+        pageTop10Infierno = new QWidget();
+        pageTop10Infierno->setObjectName(QString::fromUtf8("pageTop10Infierno"));
+        lbtop10Infierno = new QLabel(pageTop10Infierno);
+        lbtop10Infierno->setObjectName(QString::fromUtf8("lbtop10Infierno"));
+        lbtop10Infierno->setGeometry(QRect(40, 40, 380, 491));
+        lbtop10Infierno->setStyleSheet(QString::fromUtf8("text-align: center ;\n"
+"font: 14pt \"Open Sans\";"));
+        label_20 = new QLabel(pageTop10Infierno);
+        label_20->setObjectName(QString::fromUtf8("label_20"));
+        label_20->setGeometry(QRect(-10, 0, 801, 31));
+        label_20->setFont(font1);
+        label_20->setStyleSheet(QString::fromUtf8("color: rgb(198, 46, 48);\n"
+"background-color: rgb(32, 30, 30);\n"
+" text-align: center ;\n"
+""));
+        label_20->setAlignment(Qt::AlignCenter);
+        lbtop10Infierno_2 = new QLabel(pageTop10Infierno);
+        lbtop10Infierno_2->setObjectName(QString::fromUtf8("lbtop10Infierno_2"));
+        lbtop10Infierno_2->setGeometry(QRect(450, 40, 310, 491));
+        lbtop10Infierno_2->setStyleSheet(QString::fromUtf8("text-align: center ;\n"
+"font: 14pt \"Open Sans\";"));
+        panelConsultasInfiernoPecados->addWidget(pageTop10Infierno);
+        pageTop5Infierno = new QWidget();
+        pageTop5Infierno->setObjectName(QString::fromUtf8("pageTop5Infierno"));
+        lbtop5infierno = new QLabel(pageTop5Infierno);
+        lbtop5infierno->setObjectName(QString::fromUtf8("lbtop5infierno"));
+        lbtop5infierno->setGeometry(QRect(40, 60, 380, 461));
+        lbtop5infierno->setStyleSheet(QString::fromUtf8("text-align: center ;\n"
+"font: 14pt \"Open Sans\";"));
+        label_25 = new QLabel(pageTop5Infierno);
+        label_25->setObjectName(QString::fromUtf8("label_25"));
+        label_25->setGeometry(QRect(0, 0, 801, 31));
+        label_25->setFont(font1);
+        label_25->setStyleSheet(QString::fromUtf8("color: rgb(198, 46, 48);\n"
+"background-color: rgb(32, 30, 30);\n"
+" text-align: center ;\n"
+""));
+        label_25->setAlignment(Qt::AlignCenter);
+        lbtop5infierno_2 = new QLabel(pageTop5Infierno);
+        lbtop5infierno_2->setObjectName(QString::fromUtf8("lbtop5infierno_2"));
+        lbtop5infierno_2->setGeometry(QRect(450, 60, 310, 461));
+        lbtop5infierno_2->setStyleSheet(QString::fromUtf8("text-align: center ;\n"
+"font: 14pt \"Open Sans\";"));
+        panelConsultasInfiernoPecados->addWidget(pageTop5Infierno);
+        pagePecadosFamilia = new QWidget();
+        pagePecadosFamilia->setObjectName(QString::fromUtf8("pagePecadosFamilia"));
+        label_26 = new QLabel(pagePecadosFamilia);
+        label_26->setObjectName(QString::fromUtf8("label_26"));
+        label_26->setGeometry(QRect(0, 0, 801, 31));
+        label_26->setFont(font1);
+        label_26->setStyleSheet(QString::fromUtf8("color: rgb(198, 46, 48);\n"
+"background-color: rgb(32, 30, 30);\n"
+" text-align: center ;\n"
+""));
+        label_26->setAlignment(Qt::AlignCenter);
+        lbPecadosFamilias = new QLabel(pagePecadosFamilia);
+        lbPecadosFamilias->setObjectName(QString::fromUtf8("lbPecadosFamilias"));
+        lbPecadosFamilias->setGeometry(QRect(90, 40, 601, 481));
+        panelConsultasInfiernoPecados->addWidget(pagePecadosFamilia);
+        pushButton_4 = new QPushButton(pageInfierno);
+        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
+        pushButton_4->setGeometry(QRect(170, 870, 75, 23));
+        lineEdit_2 = new QLineEdit(pageInfierno);
+        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
+        lineEdit_2->setGeometry(QRect(450, 860, 113, 20));
         frameDemonios = new QFrame(pageInfierno);
         frameDemonios->setObjectName(QString::fromUtf8("frameDemonios"));
-        frameDemonios->setGeometry(QRect(50, 250, 761, 551));
+        frameDemonios->setGeometry(QRect(850, 140, 761, 551));
         frameDemonios->setFrameShape(QFrame::StyledPanel);
         frameDemonios->setFrameShadow(QFrame::Raised);
         botonMammon = new QPushButton(frameDemonios);
@@ -751,87 +839,9 @@ public:
         lujuria->setObjectName(QString::fromUtf8("lujuria"));
         lujuria->setGeometry(QRect(350, 395, 71, 21));
         lujuria->setFont(font4);
-        label_3 = new QLabel(pageInfierno);
-        label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setGeometry(QRect(410, 10, 111, 16));
-        panelConsultasInfiernoPecados = new QStackedWidget(pageInfierno);
-        panelConsultasInfiernoPecados->setObjectName(QString::fromUtf8("panelConsultasInfiernoPecados"));
-        panelConsultasInfiernoPecados->setGeometry(QRect(830, 250, 791, 551));
-        panelConsultasInfiernoPecados->setStyleSheet(QString::fromUtf8("background-color:rgb(250,250,250);"));
-        pageMapaInfierno = new QWidget();
-        pageMapaInfierno->setObjectName(QString::fromUtf8("pageMapaInfierno"));
-        frame_2 = new QFrame(pageMapaInfierno);
-        frame_2->setObjectName(QString::fromUtf8("frame_2"));
-        frame_2->setGeometry(QRect(0, 60, 791, 481));
-        frame_2->setFrameShape(QFrame::StyledPanel);
-        frame_2->setFrameShadow(QFrame::Raised);
-        lbEuropaHell = new QLabel(frame_2);
-        lbEuropaHell->setObjectName(QString::fromUtf8("lbEuropaHell"));
-        lbEuropaHell->setGeometry(QRect(350, 10, 171, 181));
-        lbEuropaHell->setStyleSheet(QString::fromUtf8("image:url(\":/images/continents/europa.png\");"));
-        lbAfricaHell = new QLabel(frame_2);
-        lbAfricaHell->setObjectName(QString::fromUtf8("lbAfricaHell"));
-        lbAfricaHell->setGeometry(QRect(320, 190, 251, 251));
-        lbAfricaHell->setStyleSheet(QString::fromUtf8("image:url(':/images/continents/africa.png');"));
-        lbAustraliaHell = new QLabel(frame_2);
-        lbAustraliaHell->setObjectName(QString::fromUtf8("lbAustraliaHell"));
-        lbAustraliaHell->setGeometry(QRect(590, 260, 171, 181));
-        lbAustraliaHell->setStyleSheet(QString::fromUtf8("image:url(\":/images/continents/oceania.png\");"));
-        lbAsiaHell = new QLabel(frame_2);
-        lbAsiaHell->setObjectName(QString::fromUtf8("lbAsiaHell"));
-        lbAsiaHell->setGeometry(QRect(560, 20, 211, 231));
-        lbAsiaHell->setStyleSheet(QString::fromUtf8("image:url(\":/images/continents/asia.png\");"));
-        lbAmericaHell = new QLabel(frame_2);
-        lbAmericaHell->setObjectName(QString::fromUtf8("lbAmericaHell"));
-        lbAmericaHell->setGeometry(QRect(-20, 20, 341, 411));
-        lbAmericaHell->setStyleSheet(QString::fromUtf8("image:url(':/images/continents/america.png');"));
-        label_17 = new QLabel(pageMapaInfierno);
-        label_17->setObjectName(QString::fromUtf8("label_17"));
-        label_17->setGeometry(QRect(0, 0, 831, 31));
-        label_17->setFont(font1);
-        label_17->setStyleSheet(QString::fromUtf8("color: rgb(198, 46, 48);\n"
-"background-color: rgb(32, 30, 30);\n"
-" text-align: center ;\n"
-""));
-        label_17->setAlignment(Qt::AlignCenter);
-        panelConsultasInfiernoPecados->addWidget(pageMapaInfierno);
-        pageTop10Infierno = new QWidget();
-        pageTop10Infierno->setObjectName(QString::fromUtf8("pageTop10Infierno"));
-        lbtop10Infierno = new QLabel(pageTop10Infierno);
-        lbtop10Infierno->setObjectName(QString::fromUtf8("lbtop10Infierno"));
-        lbtop10Infierno->setGeometry(QRect(50, 40, 691, 461));
-        lbtop10Infierno->setStyleSheet(QString::fromUtf8("text-align: center ;\n"
-"font: 14pt \"Open Sans\";"));
-        label_20 = new QLabel(pageTop10Infierno);
-        label_20->setObjectName(QString::fromUtf8("label_20"));
-        label_20->setGeometry(QRect(-10, 0, 801, 31));
-        label_20->setFont(font1);
-        label_20->setStyleSheet(QString::fromUtf8("color: rgb(198, 46, 48);\n"
-"background-color: rgb(32, 30, 30);\n"
-" text-align: center ;\n"
-""));
-        label_20->setAlignment(Qt::AlignCenter);
-        panelConsultasInfiernoPecados->addWidget(pageTop10Infierno);
-        pageTop5Infierno = new QWidget();
-        pageTop5Infierno->setObjectName(QString::fromUtf8("pageTop5Infierno"));
-        lbtop5infierno = new QLabel(pageTop5Infierno);
-        lbtop5infierno->setObjectName(QString::fromUtf8("lbtop5infierno"));
-        lbtop5infierno->setGeometry(QRect(50, 40, 691, 461));
-        lbtop5infierno->setStyleSheet(QString::fromUtf8("text-align: center ;\n"
-"font: 14pt \"Open Sans\";"));
-        label_25 = new QLabel(pageTop5Infierno);
-        label_25->setObjectName(QString::fromUtf8("label_25"));
-        label_25->setGeometry(QRect(0, 0, 801, 31));
-        label_25->setFont(font1);
-        label_25->setStyleSheet(QString::fromUtf8("color: rgb(198, 46, 48);\n"
-"background-color: rgb(32, 30, 30);\n"
-" text-align: center ;\n"
-""));
-        label_25->setAlignment(Qt::AlignCenter);
-        panelConsultasInfiernoPecados->addWidget(pageTop5Infierno);
         frame_17 = new QFrame(pageInfierno);
         frame_17->setObjectName(QString::fromUtf8("frame_17"));
-        frame_17->setGeometry(QRect(830, 10, 791, 221));
+        frame_17->setGeometry(QRect(30, 20, 791, 241));
         frame_17->setStyleSheet(QString::fromUtf8("background-color:rgb(250,250,250);"));
         frame_17->setFrameShape(QFrame::StyledPanel);
         frame_17->setFrameShadow(QFrame::Raised);
@@ -844,7 +854,7 @@ public:
 ""));
         btnMapaPecados = new QPushButton(frame_17);
         btnMapaPecados->setObjectName(QString::fromUtf8("btnMapaPecados"));
-        btnMapaPecados->setGeometry(QRect(250, 160, 281, 51));
+        btnMapaPecados->setGeometry(QRect(490, 180, 281, 51));
         btnMapaPecados->setStyleSheet(QString::fromUtf8("image-position:left;\n"
 "color: black;\n"
 "padding: 10px;\n"
@@ -853,7 +863,7 @@ public:
 "background-color: rgb(198, 46, 48);"));
         btnTop10Infierno = new QPushButton(frame_17);
         btnTop10Infierno->setObjectName(QString::fromUtf8("btnTop10Infierno"));
-        btnTop10Infierno->setGeometry(QRect(100, 90, 281, 51));
+        btnTop10Infierno->setGeometry(QRect(490, 40, 281, 51));
         btnTop10Infierno->setStyleSheet(QString::fromUtf8("image-position:left;\n"
 "color: black;\n"
 "padding: 10px;\n"
@@ -862,19 +872,30 @@ public:
 "background-color: rgb(198, 46, 48);"));
         btnTop5Infierno = new QPushButton(frame_17);
         btnTop5Infierno->setObjectName(QString::fromUtf8("btnTop5Infierno"));
-        btnTop5Infierno->setGeometry(QRect(430, 90, 281, 51));
+        btnTop5Infierno->setGeometry(QRect(490, 110, 281, 51));
         btnTop5Infierno->setStyleSheet(QString::fromUtf8("image-position:left;\n"
 "color: black;\n"
 "padding: 10px;\n"
 "border:0px;\n"
 "font: 12pt \"Open Sans\";\n"
 "background-color: rgb(198, 46, 48);"));
-        pushButton_4 = new QPushButton(pageInfierno);
-        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
-        pushButton_4->setGeometry(QRect(170, 870, 75, 23));
-        lineEdit_2 = new QLineEdit(pageInfierno);
-        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
-        lineEdit_2->setGeometry(QRect(450, 860, 113, 20));
+        idPecados = new QLabel(frame_17);
+        idPecados->setObjectName(QString::fromUtf8("idPecados"));
+        idPecados->setGeometry(QRect(90, 50, 131, 31));
+        idPecados->setStyleSheet(QString::fromUtf8("font: 12pt \"Open Sans\";\n"
+""));
+        txtPecados = new QLineEdit(frame_17);
+        txtPecados->setObjectName(QString::fromUtf8("txtPecados"));
+        txtPecados->setGeometry(QRect(60, 90, 181, 24));
+        btnPecadosFamilia = new QPushButton(frame_17);
+        btnPecadosFamilia->setObjectName(QString::fromUtf8("btnPecadosFamilia"));
+        btnPecadosFamilia->setGeometry(QRect(40, 140, 231, 41));
+        btnPecadosFamilia->setStyleSheet(QString::fromUtf8("image-position:left;\n"
+"color: black;\n"
+"padding: 10px;\n"
+"border:0px;\n"
+"font: 12pt \"Open Sans\";\n"
+"background-color: rgb(198, 46, 48);"));
         mainPanel->addWidget(pageInfierno);
         pageConsultas = new QWidget();
         pageConsultas->setObjectName(QString::fromUtf8("pageConsultas"));
@@ -1070,7 +1091,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1900, 21));
+        menubar->setGeometry(QRect(0, 0, 1900, 25));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -1078,7 +1099,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        mainPanel->setCurrentIndex(0);
+        mainPanel->setCurrentIndex(2);
         panelConsultasCieloBuenasAcciones->setCurrentIndex(1);
         panelConsultasInfiernoPecados->setCurrentIndex(1);
 
@@ -1110,8 +1131,22 @@ public:
         label_24->setText(QString());
         btnGuardarDatosWorld->setText(QCoreApplication::translate("MainWindow", "Guardar Datos", nullptr));
         pushButton->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
-        botonBAFamilias->setText(QCoreApplication::translate("MainWindow", "Buenas acciones por familia", nullptr));
+        btnBAFamilias->setText(QCoreApplication::translate("MainWindow", "Buenas acciones por familia", nullptr));
         idBuenasAcciones->setText(QCoreApplication::translate("MainWindow", "Ingrese un ID:", nullptr));
+        label_13->setText(QCoreApplication::translate("MainWindow", "Consultas del Cielo", nullptr));
+        btnMapaContinentesBuenasAcciones->setText(QCoreApplication::translate("MainWindow", "Mapa de Continentes", nullptr));
+        btnTop10Cielo->setText(QCoreApplication::translate("MainWindow", "Top 10 pa\303\255ses buenas acciones", nullptr));
+        btnTop5Cielo->setText(QCoreApplication::translate("MainWindow", "Top 5 pa\303\255ses \"Buenos\"", nullptr));
+        txtCantHumanos_4->setText(QCoreApplication::translate("MainWindow", "10000", nullptr));
+        label_14->setText(QString());
+        lbEuropaHeaven->setText(QString());
+        lbAfricaHeaven->setText(QString());
+        lbAustraliaHeaven->setText(QString());
+        lbAsiaHeaven->setText(QString());
+        lbAmericaHeaven->setText(QString());
+        label_15->setText(QCoreApplication::translate("MainWindow", "Continentes Con m\303\241s buenas Acciones", nullptr));
+        lbtop10cielo->setText(QCoreApplication::translate("MainWindow", "Text", nullptr));
+        label_18->setText(QCoreApplication::translate("MainWindow", "Top 10 Paises M\303\241s buenos", nullptr));
         labelAngeles->setText(QCoreApplication::translate("MainWindow", "\303\201ngeles", nullptr));
         botonNuriel->setText(QCoreApplication::translate("MainWindow", "Nuriel", nullptr));
         botonMiguel->setText(QCoreApplication::translate("MainWindow", "Miguel", nullptr));
@@ -1123,28 +1158,24 @@ public:
         botonSariel->setText(QCoreApplication::translate("MainWindow", "Sariel", nullptr));
         botonShamsiel->setText(QCoreApplication::translate("MainWindow", "Shamsiel", nullptr));
         botonGabriel->setText(QCoreApplication::translate("MainWindow", "Gabriel", nullptr));
-        label_13->setText(QCoreApplication::translate("MainWindow", "Consultas del Cielo", nullptr));
-        btnMapaContinentesBuenasAcciones->setText(QCoreApplication::translate("MainWindow", "Mapa de Continentes", nullptr));
-        btnTop10Cielo->setText(QCoreApplication::translate("MainWindow", "Top 10 pa\303\255ses buenas acciones", nullptr));
-        btnTop5Cielo->setText(QCoreApplication::translate("MainWindow", "Top 5 pa\303\255ses \"Buenos\"", nullptr));
-        txtCantHumanos_4->setText(QCoreApplication::translate("MainWindow", "10000", nullptr));
-        label_12->setText(QCoreApplication::translate("MainWindow", "Cantidad:", nullptr));
-        label_14->setText(QString());
-        lbEuropaHeaven->setText(QString());
-        lbAfricaHeaven->setText(QString());
-        lbAustraliaHeaven->setText(QString());
-        lbAsiaHeaven->setText(QString());
-        lbAmericaHeaven->setText(QString());
-        label_15->setText(QCoreApplication::translate("MainWindow", "Continentes Con m\303\241s buenas Acciones", nullptr));
-        lbtop10cielo->setText(QCoreApplication::translate("MainWindow", "Text", nullptr));
-        label_18->setText(QCoreApplication::translate("MainWindow", "Top 10 Paises M\303\241s buenos", nullptr));
         lbtop5Cielo->setText(QString());
         label_19->setText(QCoreApplication::translate("MainWindow", "Top 5 Paises Menos buenos", nullptr));
-        idPecados->setText(QCoreApplication::translate("MainWindow", "Ingrese un ID: ", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("MainWindow", "Pecados de una familia", nullptr));
-        botonTopPecados->setText(QCoreApplication::translate("MainWindow", "Top 10 pa\303\255ses m\303\241s pecados", nullptr));
-        botonPaisMenosMalos_2->setText(QCoreApplication::translate("MainWindow", "Top 5 pa\303\255ses \"buenos\"", nullptr));
-        botonmapaMalo->setText(QCoreApplication::translate("MainWindow", "Mapa de continentes", nullptr));
+        lbFamiliaBA->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        lbEuropaHell->setText(QString());
+        lbAfricaHell->setText(QString());
+        lbAustraliaHell->setText(QString());
+        lbAsiaHell->setText(QString());
+        lbAmericaHell->setText(QString());
+        label_17->setText(QCoreApplication::translate("MainWindow", "Continentes Con M\303\241s Pecados", nullptr));
+        lbtop10Infierno->setText(QCoreApplication::translate("MainWindow", "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno est\303\241ndar de las industrias desde el a\303\261o 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido us\303\263 una galer\303\255a de textos y los mezcl\303\263 de tal manera que logr\303\263 hacer un libro de textos especimen. ", nullptr));
+        label_20->setText(QCoreApplication::translate("MainWindow", "10 Pa\303\255ses M\303\241s pecadores", nullptr));
+        lbtop10Infierno_2->setText(QCoreApplication::translate("MainWindow", "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno est\303\241ndar de las industrias desde el a\303\261o 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido us\303\263 una galer\303\255a de textos y los mezcl\303\263 de tal manera que logr\303\263 hacer un libro de textos especimen. ", nullptr));
+        lbtop5infierno->setText(QString());
+        label_25->setText(QCoreApplication::translate("MainWindow", "5 Pa\303\255ses Menos pecadores", nullptr));
+        lbtop5infierno_2->setText(QString());
+        label_26->setText(QCoreApplication::translate("MainWindow", "Pecados de una familia", nullptr));
+        lbPecadosFamilias->setText(QString());
+        pushButton_4->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
         botonMammon->setText(QCoreApplication::translate("MainWindow", "Mamm\303\263n", nullptr));
         codicia->setText(QCoreApplication::translate("MainWindow", "Codicia", nullptr));
         labelDemonios->setText(QCoreApplication::translate("MainWindow", "Demonios", nullptr));
@@ -1160,22 +1191,12 @@ public:
         ira->setText(QCoreApplication::translate("MainWindow", "Ira", nullptr));
         glotoneria->setText(QCoreApplication::translate("MainWindow", "Glotoner\303\255a", nullptr));
         lujuria->setText(QCoreApplication::translate("MainWindow", "Lujuria", nullptr));
-        label_3->setText(QCoreApplication::translate("MainWindow", "Consultas infierno", nullptr));
-        lbEuropaHell->setText(QString());
-        lbAfricaHell->setText(QString());
-        lbAustraliaHell->setText(QString());
-        lbAsiaHell->setText(QString());
-        lbAmericaHell->setText(QString());
-        label_17->setText(QCoreApplication::translate("MainWindow", "Continentes Con M\303\241s Pecados", nullptr));
-        lbtop10Infierno->setText(QCoreApplication::translate("MainWindow", "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno est\303\241ndar de las industrias desde el a\303\261o 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido us\303\263 una galer\303\255a de textos y los mezcl\303\263 de tal manera que logr\303\263 hacer un libro de textos especimen. ", nullptr));
-        label_20->setText(QCoreApplication::translate("MainWindow", "10 Pa\303\255ses M\303\241s pecadores", nullptr));
-        lbtop5infierno->setText(QString());
-        label_25->setText(QCoreApplication::translate("MainWindow", "5 Pa\303\255ses Menos pecadores", nullptr));
         label_16->setText(QCoreApplication::translate("MainWindow", "Consultas del Infierno", nullptr));
         btnMapaPecados->setText(QCoreApplication::translate("MainWindow", "Mapa de Continentes", nullptr));
         btnTop10Infierno->setText(QCoreApplication::translate("MainWindow", "Top 10 pa\303\255ses pecados", nullptr));
         btnTop5Infierno->setText(QCoreApplication::translate("MainWindow", "Top 5 pa\303\255ses \"Malos\"", nullptr));
-        pushButton_4->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        idPecados->setText(QCoreApplication::translate("MainWindow", "Ingrese un ID: ", nullptr));
+        btnPecadosFamilia->setText(QCoreApplication::translate("MainWindow", "Pecados de una familia", nullptr));
         pushButton_16->setText(QCoreApplication::translate("MainWindow", "Cielo (Salvaci\303\263n)", nullptr));
         pushButton_17->setText(QCoreApplication::translate("MainWindow", "Infierno (Condenaci\303\263n)", nullptr));
         labelListadoBuenos->setText(QCoreApplication::translate("MainWindow", "Listado de humano m\303\241s bueno al menos bueno:", nullptr));

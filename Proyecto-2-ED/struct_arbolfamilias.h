@@ -68,6 +68,9 @@ struct ArbolFamilias{
 
     QString* toStringInOrdenBA();
     void toStringInOrdenBA(NodoArbolFamiliaALV*, QString*);
+
+    QString* toStringInOrdenP();
+    void toStringInOrdenP(NodoArbolFamiliaALV*, QString*);
 };
 
 struct NodoFamiliaListaSimple{

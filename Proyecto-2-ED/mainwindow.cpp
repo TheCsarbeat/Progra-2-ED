@@ -169,20 +169,19 @@ void MainWindow::on_btnTop5Cielo_clicked(){
 
 
 void MainWindow::on_btnTop10Infierno_clicked(){
-     mainstruct->mundo->top10Infierno(ui->lbtop10Infierno);
+     mainstruct->mundo->top10Infierno(ui->lbtop10Infierno,ui->lbtop10Infierno_2);
      ui->panelConsultasInfiernoPecados->setCurrentIndex(1);
 }
 
 
 void MainWindow::on_btnTop5Infierno_clicked(){
-    mainstruct->mundo->top5Infierno(ui->lbtop5infierno);
+    mainstruct->mundo->top5Infierno(ui->lbtop5infierno, ui->lbtop5infierno_2);
     ui->panelConsultasInfiernoPecados->setCurrentIndex(2);
 }
 
 
 void MainWindow::on_pushButton_4_clicked()
 {
-
 
     mainstruct->mundo->infierno->imprimirDemonio(ui->lineEdit_2->text().toInt());
 }
@@ -194,6 +193,14 @@ void MainWindow::on_btnBAFamilias_clicked()
 
     mainstruct->mundo->buscarBAFamilias(id, ui->lbFamiliaBA);
 
+}
 
+void MainWindow::on_btnPecadosFamilia_clicked()
+{
+    int id = ui->txtPecados->text().toUInt();
+
+    mainstruct->mundo->buscarPecadosFamilias(id, ui->lbPecadosFamilias);
+
+    ui->panelConsultasInfiernoPecados->setCurrentIndex(3);
 }
 
