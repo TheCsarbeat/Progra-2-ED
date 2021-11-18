@@ -1,0 +1,13 @@
+debug/main.o
+debug/mainstruct.o
+debug/mainwindow.o
+debug/smtp.o
+debug/struct_arbolfamilias.o
+debug/struct_cielo.o
+debug/struct_file.o
+debug/struct_infierno.o
+debug/struct_mundo.o
+debug/struct_personas.o
+debug/qrc_MyResources.o
+debug/moc_mainwindow.o
+debug/moc_smtp.o

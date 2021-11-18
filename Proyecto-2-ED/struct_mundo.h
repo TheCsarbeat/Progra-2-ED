@@ -101,15 +101,6 @@ struct ArrayPaises{
             return respuesta;
     }
 
-    QString toStringMayoresCantidad(){
-        QString respuesta= "";
-        for(int i = 0; i<10; i++) {
-            respuesta += "\t\t Cantidad: "+QString::number(arrayPaises[i]->cantidad)+"\n";
-        }
-            return respuesta;
-    }
-
-
     QString toStringMenores(){
         QString respuesta= "";
         for(int i = 0; i<5; i++) {
@@ -125,14 +116,6 @@ struct ArrayPaises{
         }
             return respuesta;
      }
-
-    QString toStringMenoresCantidad(){
-        QString respuesta= "";
-        for(int i = 0; i<5; i++) {
-            respuesta += "\t\t Cantidad: "+QString::number(arrayPaises[i]->cantidad)+"\n";
-        }
-            return respuesta;
-    }
 
     void imprimir(){
         for(int i = 0; i<10; i++) {

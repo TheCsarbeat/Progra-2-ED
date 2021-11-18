@@ -30,51 +30,12 @@
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="pageCrearHumano">
      <property name="styleSheet">
       <string notr="true">background-color:white;</string>
      </property>
-     <widget class="QPushButton" name="pushButton_2">
-      <property name="geometry">
-       <rect>
-        <x>1260</x>
-        <y>40</y>
-        <width>161</width>
-        <height>51</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Buscar humano más cerca</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="txtcerca">
-      <property name="geometry">
-       <rect>
-        <x>1430</x>
-        <y>50</y>
-        <width>113</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>1000</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="txtCantHumanos_2">
-      <property name="geometry">
-       <rect>
-        <x>1290</x>
-        <y>110</y>
-        <width>113</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
      <widget class="QFrame" name="frame_12">
       <property name="geometry">
        <rect>
@@ -428,7 +389,12 @@ background-color: rgb(60, 185, 75);</string>
          <string notr="true">font: 12pt &quot;Open Sans&quot;;</string>
         </property>
         <property name="text">
-         <string>Aquí se ve el texto.</string>
+         <string>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Ut enim ad minim veniam, quis nostrud exercitation ullamco
+laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate
+velit esse cillum dolore eu fugiat nulla pariatur.</string>
         </property>
        </widget>
       </widget>
@@ -703,7 +669,7 @@ font: 14pt &quot;Open Sans&quot;;</string>
        <string notr="true">background-color:rgb(250,250,250);</string>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="pageMapaBuenasAcciones">
        <widget class="QFrame" name="frame">
@@ -976,28 +942,6 @@ velit esse cillum dolore eu fugiat nulla pariatur.</string>
        </widget>
       </widget>
       <widget class="QWidget" name="pageConsulta">
-       <widget class="QLabel" name="lbFamiliaBA">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>40</y>
-          <width>751</width>
-          <height>491</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">text-align: center ;
-font: 14pt &quot;Open Sans&quot;;</string>
-        </property>
-        <property name="text">
-         <string>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-Ut enim ad minim veniam, quis nostrud exercitation ullamco
-laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate
-velit esse cillum dolore eu fugiat nulla pariatur.</string>
-        </property>
-       </widget>
        <widget class="QLabel" name="label_26">
         <property name="geometry">
          <rect>
@@ -1027,6 +971,51 @@ background-color:rgb(64, 150, 180);
         <property name="alignment">
          <set>Qt::AlignCenter</set>
         </property>
+       </widget>
+       <widget class="QScrollArea" name="scrollAreaFamiliasBA">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>50</y>
+          <width>751</width>
+          <height>491</height>
+         </rect>
+        </property>
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents_5">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>749</width>
+           <height>489</height>
+          </rect>
+         </property>
+         <widget class="QLabel" name="lbFamiliaBA">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>10</y>
+            <width>751</width>
+            <height>461</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">text-align: center ;
+font: 12pt &quot;Open Sans&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Ut enim ad minim veniam, quis nostrud exercitation ullamco
+laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate
+velit esse cillum dolore eu fugiat nulla pariatur.</string>
+          </property>
+         </widget>
+        </widget>
        </widget>
       </widget>
      </widget>
@@ -1410,86 +1399,34 @@ background-color:rgb(64, 150, 180);
      </widget>
     </widget>
     <widget class="QWidget" name="pageInfierno">
-     <widget class="QLabel" name="idPecados">
+     <widget class="QPushButton" name="pushButton_4">
       <property name="geometry">
        <rect>
-        <x>410</x>
-        <y>60</y>
-        <width>91</width>
-        <height>16</height>
+        <x>170</x>
+        <y>870</y>
+        <width>75</width>
+        <height>23</height>
        </rect>
       </property>
       <property name="text">
-       <string>Ingrese un ID: </string>
+       <string>PushButton</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="txtPecados">
+     <widget class="QLineEdit" name="lineEdit_2">
       <property name="geometry">
        <rect>
-        <x>390</x>
-        <y>100</y>
+        <x>150</x>
+        <y>900</y>
         <width>113</width>
-        <height>24</height>
+        <height>20</height>
        </rect>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_3">
-      <property name="geometry">
-       <rect>
-        <x>360</x>
-        <y>140</y>
-        <width>181</width>
-        <height>25</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Pecados de una familia</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="botonTopPecados">
-      <property name="geometry">
-       <rect>
-        <x>50</x>
-        <y>30</y>
-        <width>171</width>
-        <height>25</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Top 10 países más pecados</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="botonPaisMenosMalos_2">
-      <property name="geometry">
-       <rect>
-        <x>50</x>
-        <y>90</y>
-        <width>171</width>
-        <height>25</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Top 5 países &quot;buenos&quot;</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="botonmapaMalo">
-      <property name="geometry">
-       <rect>
-        <x>50</x>
-        <y>150</y>
-        <width>171</width>
-        <height>25</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Mapa de continentes</string>
       </property>
      </widget>
      <widget class="QFrame" name="frameDemonios">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>250</y>
+        <x>850</x>
+        <y>320</y>
         <width>761</width>
         <height>551</height>
        </rect>
@@ -1544,24 +1481,6 @@ background-color:rgb(64, 150, 180);
        </property>
        <property name="text">
         <string>Codicia</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="labelDemonios">
-       <property name="geometry">
-        <rect>
-         <x>330</x>
-         <y>10</y>
-         <width>131</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>14</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Demonios</string>
        </property>
       </widget>
       <widget class="QPushButton" name="botonLucifer">
@@ -1841,25 +1760,198 @@ background-color:rgb(64, 150, 180);
         <string>Lujuria</string>
        </property>
       </widget>
+      <widget class="QLabel" name="label_30">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>761</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Doppio One</family>
+         <pointsize>16</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(198, 46, 48);
+background-color: rgb(32, 30, 30);
+ text-align: center ;
+</string>
+       </property>
+       <property name="text">
+        <string>Demonios</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
      </widget>
-     <widget class="QLabel" name="label_3">
+     <widget class="QFrame" name="frame_17">
       <property name="geometry">
        <rect>
-        <x>410</x>
-        <y>10</y>
-        <width>111</width>
-        <height>16</height>
+        <x>10</x>
+        <y>0</y>
+        <width>791</width>
+        <height>241</height>
        </rect>
       </property>
-      <property name="text">
-       <string>Consultas infierno</string>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(250,250,250);</string>
       </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="label_16">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>841</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Doppio One</family>
+         <pointsize>16</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(198, 46, 48);
+background-color: rgb(32, 30, 30);
+</string>
+       </property>
+       <property name="text">
+        <string>Consultas del Infierno</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnMapaPecados">
+       <property name="geometry">
+        <rect>
+         <x>490</x>
+         <y>180</y>
+         <width>281</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image-position:left;
+color: black;
+padding: 10px;
+border:0px;
+font: 12pt &quot;Open Sans&quot;;
+background-color: rgb(198, 46, 48);</string>
+       </property>
+       <property name="text">
+        <string>Mapa de Continentes</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnTop10Infierno">
+       <property name="geometry">
+        <rect>
+         <x>490</x>
+         <y>40</y>
+         <width>281</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image-position:left;
+color: black;
+padding: 10px;
+border:0px;
+font: 12pt &quot;Open Sans&quot;;
+background-color: rgb(198, 46, 48);</string>
+       </property>
+       <property name="text">
+        <string>Top 10 países pecados</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnTop5Infierno">
+       <property name="geometry">
+        <rect>
+         <x>490</x>
+         <y>110</y>
+         <width>281</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image-position:left;
+color: black;
+padding: 10px;
+border:0px;
+font: 12pt &quot;Open Sans&quot;;
+background-color: rgb(198, 46, 48);</string>
+       </property>
+       <property name="text">
+        <string>Top 5 países &quot;Malos&quot;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="idPecados">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>50</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 12pt &quot;Open Sans&quot;;
+</string>
+       </property>
+       <property name="text">
+        <string>Ingrese un ID: </string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="txtPecados">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>90</y>
+         <width>181</width>
+         <height>24</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnPecadosFamilia">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>140</y>
+         <width>251</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image-position:left;
+color: black;
+padding: 10px;
+border:0px;
+font: 12pt &quot;Open Sans&quot;;
+background-color: rgb(198, 46, 48);</string>
+       </property>
+       <property name="text">
+        <string>Pecados de una familia</string>
+       </property>
+      </widget>
      </widget>
      <widget class="QStackedWidget" name="panelConsultasInfiernoPecados">
       <property name="geometry">
        <rect>
-        <x>830</x>
-        <y>250</y>
+        <x>10</x>
+        <y>320</y>
         <width>791</width>
         <height>551</height>
        </rect>
@@ -1868,7 +1960,7 @@ background-color:rgb(64, 150, 180);
        <string notr="true">background-color:rgb(250,250,250);</string>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="pageMapaInfierno">
        <widget class="QFrame" name="frame_2">
@@ -2002,10 +2094,10 @@ background-color: rgb(32, 30, 30);
        <widget class="QLabel" name="lbtop10Infierno">
         <property name="geometry">
          <rect>
-          <x>50</x>
+          <x>40</x>
           <y>40</y>
-          <width>691</width>
-          <height>461</height>
+          <width>380</width>
+          <height>491</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -2046,14 +2138,31 @@ background-color: rgb(32, 30, 30);
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
+       <widget class="QLabel" name="lbtop10Infierno_2">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>40</y>
+          <width>310</width>
+          <height>491</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">text-align: center ;
+font: 14pt &quot;Open Sans&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. </string>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="pageTop5Infierno">
        <widget class="QLabel" name="lbtop5infierno">
         <property name="geometry">
          <rect>
-          <x>50</x>
-          <y>40</y>
-          <width>691</width>
+          <x>40</x>
+          <y>60</y>
+          <width>380</width>
           <height>461</height>
          </rect>
         </property>
@@ -2095,137 +2204,127 @@ background-color: rgb(32, 30, 30);
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
+       <widget class="QLabel" name="lbtop5infierno_2">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>60</y>
+          <width>310</width>
+          <height>461</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">text-align: center ;
+font: 14pt &quot;Open Sans&quot;;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="pagePecadosFamilia">
+       <widget class="QLabel" name="label_29">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>801</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Doppio One</family>
+          <pointsize>16</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(198, 46, 48);
+background-color: rgb(32, 30, 30);
+ text-align: center ;
+</string>
+        </property>
+        <property name="text">
+         <string>Pecados de una familia</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QScrollArea" name="scrollArea_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>50</y>
+          <width>771</width>
+          <height>481</height>
+         </rect>
+        </property>
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents_6">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>769</width>
+           <height>479</height>
+          </rect>
+         </property>
+         <widget class="QLabel" name="lbPecadosFamilias">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>10</y>
+            <width>771</width>
+            <height>451</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">text-align: center ;
+font: 12pt &quot;Open Sans&quot;;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </widget>
+       </widget>
       </widget>
      </widget>
-     <widget class="QFrame" name="frame_17">
+     <widget class="QLabel" name="label_32">
+      <property name="geometry">
+       <rect>
+        <x>1220</x>
+        <y>10</y>
+        <width>361</width>
+        <height>271</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">image:url(&quot;:/images/world.png&quot;);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_31">
       <property name="geometry">
        <rect>
         <x>830</x>
         <y>10</y>
-        <width>791</width>
-        <height>221</height>
+        <width>361</width>
+        <height>271</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color:rgb(250,250,250);</string>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <widget class="QLabel" name="label_16">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>841</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Doppio One</family>
-         <pointsize>16</pointsize>
-         <weight>50</weight>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(198, 46, 48);
-background-color: rgb(32, 30, 30);
-</string>
-       </property>
-       <property name="text">
-        <string>Consultas del Infierno</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="btnMapaPecados">
-       <property name="geometry">
-        <rect>
-         <x>250</x>
-         <y>160</y>
-         <width>281</width>
-         <height>51</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">image-position:left;
-color: black;
-padding: 10px;
-border:0px;
-font: 12pt &quot;Open Sans&quot;;
-background-color: rgb(198, 46, 48);</string>
-       </property>
-       <property name="text">
-        <string>Mapa de Continentes</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="btnTop10Infierno">
-       <property name="geometry">
-        <rect>
-         <x>100</x>
-         <y>90</y>
-         <width>281</width>
-         <height>51</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">image-position:left;
-color: black;
-padding: 10px;
-border:0px;
-font: 12pt &quot;Open Sans&quot;;
-background-color: rgb(198, 46, 48);</string>
-       </property>
-       <property name="text">
-        <string>Top 10 países pecados</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="btnTop5Infierno">
-       <property name="geometry">
-        <rect>
-         <x>430</x>
-         <y>90</y>
-         <width>281</width>
-         <height>51</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">image-position:left;
-color: black;
-padding: 10px;
-border:0px;
-font: 12pt &quot;Open Sans&quot;;
-background-color: rgb(198, 46, 48);</string>
-       </property>
-       <property name="text">
-        <string>Top 5 países &quot;Malos&quot;</string>
-       </property>
-      </widget>
-     </widget>
-     <widget class="QPushButton" name="pushButton_4">
-      <property name="geometry">
-       <rect>
-        <x>170</x>
-        <y>870</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
+       <string notr="true">image:url(&quot;:/images/hell.png&quot;);</string>
       </property>
       <property name="text">
-       <string>PushButton</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lineEdit_2">
-      <property name="geometry">
-       <rect>
-        <x>450</x>
-        <y>860</y>
-        <width>113</width>
-        <height>20</height>
-       </rect>
+       <string/>
       </property>
      </widget>
     </widget>

@@ -129,7 +129,9 @@ void Mundo::hacerPecar(){
             randomP = QRandomGenerator::global()->bounded(100);
             randomBA = QRandomGenerator::global()->bounded(100);
             tmp->persona->pecados[i]->cant += randomP;
+            tmp->persona->pecadosPersona += randomP;
             tmp->persona->buenasAcciones[i]->cant += randomBA;
+            tmp->persona->buenasAccionesPersona += randomBA;
             hacerHerencia(tmp->persona, randomP, randomBA, i);
         }
         tmp = tmp->siguiente;
@@ -141,10 +143,16 @@ void Mundo::hacerHerencia(Persona * persona, int randomP, int randomBA, int posi
     while(hijo!=NULL){
         hijo->persona->pecados[position]->cant += randomP*0.5;
         hijo->persona->buenasAcciones[position]->cant += randomBA*0.5;
+        hijo->persona->pecadosPersona += randomP*0.5;
+        hijo->persona->buenasAccionesPersona += randomBA*0.5;
+
         NodoPersona * nieto = hijo->persona->hijos->primerNodo;
         while(nieto!=NULL){
             nieto->persona->pecados[position]->cant += randomBA*0.25;
             nieto->persona->buenasAcciones[position]->cant += randomBA*0.25;
+
+            nieto->persona->pecadosPersona += randomP*0.25;
+            nieto->persona->buenasAccionesPersona += randomBA*0.25;
             nieto = nieto->siguiente;
         }
         hijo = hijo->siguiente;
@@ -246,6 +254,7 @@ void Mundo::top10Cielo(QLabel *lb,QLabel *lb2){
 
     arrayBuenasAcciones->bubbleSortMayorMenor(files);
     lb->setText(arrayBuenasAcciones->toStringMayores());
+    lb2->setText(arrayBuenasAcciones->toStringMayoresCantidad());
 }
 
 void Mundo::top5Cielo(QLabel * lb,QLabel *lb2){

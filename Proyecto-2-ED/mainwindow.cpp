@@ -22,6 +22,15 @@ void MainWindow::start(){
     QVBoxLayout * lay = new QVBoxLayout();
     lay->addWidget(ui->lbHumanFound);
     ui->scrollAreaWidgetContents_4->setLayout(lay);
+
+    QVBoxLayout * lay1 = new QVBoxLayout();
+    lay1->addWidget(ui->lbFamiliaBA);
+    ui->scrollAreaWidgetContents_5->setLayout(lay1);
+
+    QVBoxLayout * lay2 = new QVBoxLayout();
+    lay2->addWidget(ui->lbPecadosFamilias);
+    ui->scrollAreaWidgetContents_6->setLayout(lay2);
+
 }
 
 
@@ -191,7 +200,7 @@ void MainWindow::on_btnBAFamilias_clicked()
     int id = ui->txtIdBuenasAcciones->text().toUInt();
 
     mainstruct->mundo->buscarBAFamilias(id, ui->lbFamiliaBA);
-    ui->panelConsultasCieloBuenasAcciones->setCurrentIndex(4);
+    ui->panelConsultasCieloBuenasAcciones->setCurrentIndex(3);
 
 }
 
