@@ -75,7 +75,6 @@ struct ArbolFamilias{
     void toStringInOrdenP(NodoArbolFamiliaALV*, QString*);
 
     Persona * aplastarArbolBB();
-
     NodoArbolFamiliaALV* crearLista(NodoArbolFamiliaALV*nodo, Persona * arr[]);
 
 };

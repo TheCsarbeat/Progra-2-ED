@@ -206,7 +206,7 @@ struct Mundo{
     void buscarBAFamilias(int,QLabel *);
     void buscarPecadosFamilias(int,QLabel *);
 
-    void consutlaHumanStateFamily(QString lastName, QString country,QLabel *lb);
+    void consutlaHumanStateFamily(QString , QString ,QLabel *);
 };
 
 #endif // STRUCT_MUNDO_H
