@@ -2,7 +2,7 @@
 #define MAINSTRUCT_H
 
 #include "struct_mundo.h"
-#include <QComboBox>
+
 
 struct MainStruct;
 

@@ -2,25 +2,26 @@
 
 //==================================HEAPFAMILIAS===================================
 
-void HeapFamilia::swap(NodoHeap * a1, NodoHeap * a2){
-    NodoHeap temp = *a1;
-    *a1 = *a2;
-    *a2 = temp;
+void HeapFamilia::swap(int a1, int a2){
+    Persona temp = array[a1];
+    array[a1] = array[a2];
+    array[a2] = temp;
 }
 //sigue cambiar que el heap ordene a las personas por el pecado que es
 void HeapFamilia::heapifyUp(int i){
     // check if the node at index `i` and its parent violate the heap property
     int parent1 = parent(i);
-    if (i >= 0 && parent(i) >= 0 && array[parent(i)]->persona->pecados[pecado]->cant < array[i]->persona->pecados[pecado]->cant){
+    if (i >= 0 && parent(i) >= 0 && array[parent(i)].pecados[pecado]->cant < array[i].pecados[pecado]->cant){
         // swap the two if heap property is violated
-        swap(array[i],array[parent(i)]);
+        swap(i,parent(i));
         // call heapify-up on the parent
         heapifyUp(parent(i));
     }
+
 }
 
-void HeapFamilia::insertar(Persona * nuevo){
-    array.push_back(new NodoHeap(nuevo));
+void HeapFamilia::insertar(Persona nuevo){
+    array.push_back(nuevo);
     cant++;
     int i = cant - 1;
     heapifyUp(i);
@@ -28,8 +29,8 @@ void HeapFamilia::insertar(Persona * nuevo){
 
 void HeapFamilia::imprimir(){
     for(int i=0;i<cant;i++){
-        array[i]->persona->imprimir();
-        array[i]->persona->pecados[pecado]->imprimir();
+        array[i].imprimir();
+        array[i].pecados[pecado]->imprimir();
         qDebug()<<"\n"<<cant;
     }
 }
@@ -81,12 +82,13 @@ void Demonio::crearHeap(ListaSimpleArbolFamilias * listaArboles){
         lista = tmp->arbol->getNodesInList();
         p = lista->primerNodo;
         while(p!=NULL){
-            listaHeaps->primerNodo->heap->insertar(p->persona);
+            listaHeaps->primerNodo->heap->insertar(*(p->persona));
             p = p->siguiente;
         }
         tmp = tmp->siguiente;
     }
 }
+
 void Demonio::limpiarListaHeaps(){
     NodoListaSimpleHeaps * tmp = listaHeaps->primerNodo;
     while(tmp!=NULL){
@@ -95,58 +97,6 @@ void Demonio::limpiarListaHeaps(){
         tmp = tmp->siguiente;
     }
     listaHeaps->deleteAllNodes();
-}
-
-void Demonio::bubblesortDemon(QVector<NodoHeap*> * list){
-
-}
-
-void Demonio::buscarMasPecadores(ListaDoblePersonas * list){
-    int limite = list->largo * 0.05;
-    QVector<NodoHeap*> todosOrdenados;
-    QVector<Persona*> top5;
-    NodoPersona * p = list->primerNodo;
-    while(p!=NULL){
-        todosOrdenados.push_back(new NodoHeap(p->persona));
-        p = p->siguiente;
-    }
-    NodoHeap * tmp = new NodoHeap();
-    for(int i = 0; i<todosOrdenados.size(); i++){
-        for(int j = i+1; j<todosOrdenados.size(); j++){
-            if(todosOrdenados[j]->persona->calcularPecado(pecado) > todosOrdenados[i]->persona->calcularPecado(pecado)){
-                 *tmp = *todosOrdenados[i];
-                 *todosOrdenados[i] = *todosOrdenados[j];
-                 *todosOrdenados[j] = *tmp;
-            }
-        }
-    }
-    delete tmp;
-    for(int i=0;i<limite;i++){
-        top5.push_back(todosOrdenados[i]->persona);
-    }
-    agregarAHeaps(top5);
-}
-
-void Demonio::agregarAHeaps(QVector<Persona*> list){
-    NodoListaSimpleHeaps * nodo = listaHeaps->primerNodo;
-    bool flag = false;
-    for(int i=0;i<list.size();i++){
-        flag = false;
-        nodo = listaHeaps->primerNodo;
-        while(nodo!=NULL){
-            if(list[i]->apellido == nodo->heap->apellido && list[i]->pais->name == nodo->heap->pais){
-                flag = true;
-                nodo->heap->insertar(list[i]);
-            }
-            nodo = nodo->siguiente;
-        }
-        if(flag == false){
-            listaHeaps->insertarAlInicio(new HeapFamilia(pecado));
-            listaHeaps->primerNodo->heap->apellido = list[i]->apellido;
-            listaHeaps->primerNodo->heap->pais = list[i]->pais->name;
-            listaHeaps->primerNodo->heap->insertar(list[i]);
-        }
-    }
 }
 
 //==================================INFIERNO===================================

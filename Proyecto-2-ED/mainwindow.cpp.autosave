@@ -15,10 +15,11 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::start(){
+    
     QLabel *arrayLabelsBuenasAcciones[5] = {ui->lbAmericaHeaven, ui->lbAfricaHeaven, ui->lbEuropaHeaven, ui->lbAustraliaHeaven, ui->lbAsiaHeaven };
     QLabel *arrayLabelsPecados[5] = {ui->lbAmericaHell, ui->lbAfricaHell, ui->lbEuropaHell, ui->lbAustraliaHell, ui->lbAsiaHell };
-    QComboBox * arrayCBO[2] = {ui->cboLastNameConsulta, ui->cboCountryConsulta};
-    mainstruct = new MainStruct(arrayLabelsBuenasAcciones,arrayLabelsPecados, arrayCBO);
+    QComboBox 
+    mainstruct = new MainStruct(arrayLabelsBuenasAcciones,arrayLabelsPecados, );
 
     QVBoxLayout * lay = new QVBoxLayout();
     lay->addWidget(ui->lbHumanFound);

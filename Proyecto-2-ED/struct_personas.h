@@ -64,19 +64,16 @@ struct Persona{
     QString creencia;
     QString profesion;
     QString email;
+    bool vivo;
     QDateTime nacimiento;
     Pecado * pecados[7];
     BuenaAccion * buenasAcciones[7];
     Persona * padre;
     ListaDoblePersonas *hijos;
-<<<<<<< HEAD
 
     int pecadosPersona;
     int buenasAccionesPersona;
 
-=======
-    int estado; //0=Vivo, 1=Infierno, 2=Cielo
->>>>>>> pinoli
     Persona(){
         id = 0;
         name = "";
@@ -85,13 +82,10 @@ struct Persona{
         creencia = "";
         profesion = "";
         email = "ytcesarjs@gmail.com";
+        vivo = true;
         nacimiento = QDateTime::currentDateTime();
-<<<<<<< HEAD
         pecadosPersona = 0;
         buenasAccionesPersona = 0;
-=======
-        estado = 0;
->>>>>>> pinoli
         for(int i = 0; i<7; i++){
             pecados[i] = new Pecado(); //se debe asignar el nombre del pecado según la posición ya que por el momento está vacío, lo mismo con las buenas acciones
             buenasAcciones[i] = new BuenaAccion();
@@ -108,14 +102,10 @@ struct Persona{
         creencia = _creencia;
         profesion = _profesion;
         email = "erksmartinez2014@gmail.com";
-<<<<<<< HEAD
         vivo = true;
         pecadosPersona = 0;
         buenasAccionesPersona = 0;
-=======
->>>>>>> pinoli
         nacimiento = QDateTime::currentDateTime();
-        estado = 0;
         QString arrayNamePecado[7] = {"Lujuria","Gula","Avaricia","Pereza","Ira","Envidia","Soberbia"};
         QString arrayNameBuenas[7] = {"Castidad","Ayuno","Donación","Diligencia","Calma","Solidaridad","Humildad"};
         for(int i = 0; i<7; i++){
@@ -145,7 +135,6 @@ struct Persona{
         }
     }
 
-<<<<<<< HEAD
     QString toString(){
         QString datos = "\nID: "+QString::number(id)
                          +"\nNombre: "+name
@@ -219,10 +208,6 @@ struct Persona{
         return datos;
     }
 
-=======
-    QString toString();
-    int calcularPecado(int);
->>>>>>> pinoli
 };
 
 struct NodoPersona{

@@ -5,6 +5,7 @@
 #include <QDateTime>
 #include <QFile>
 #include <QTextStream>
+#include <QComboBox>
 #include <QRandomGenerator>
 
 struct Pais;

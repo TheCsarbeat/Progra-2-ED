@@ -2314,7 +2314,6 @@ font: 12pt &quot;Open Sans&quot;;</string>
      <widget class="QLabel" name="label_31">
       <property name="geometry">
        <rect>
-<<<<<<< HEAD
         <x>830</x>
         <y>10</y>
         <width>361</width>
@@ -2323,16 +2322,6 @@ font: 12pt &quot;Open Sans&quot;;</string>
       </property>
       <property name="styleSheet">
        <string notr="true">image:url(&quot;:/images/hell.png&quot;);</string>
-=======
-        <x>310</x>
-        <y>850</y>
-        <width>111</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Imprimir Demonio</string>
->>>>>>> pinoli
       </property>
       <property name="text">
        <string/>
@@ -3090,7 +3079,7 @@ font: 12pt &quot;Open Sans&quot;;</string>
      <x>0</x>
      <y>0</y>
      <width>1900</width>
-     <height>20</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
