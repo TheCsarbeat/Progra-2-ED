@@ -32,7 +32,7 @@ void Mundo::crearHumanos(int dato){
                 listArbolFamilias->insertarALInicio(p);
         }
     }
-    //personas->imprimir();
+    personas->imprimir();
     //qDebug()<<personas->primerNodo->persona->id;
 }
 
@@ -205,8 +205,6 @@ void Mundo::continentsMasPecados(){
         for(unsigned int i=0;i<7;i++){
             pecadosPersona += tmp->persona->pecados[i]->cant;
         }
-
-
         if(tmp->persona->pais->continente == arrayPecadosMapa->arrayContinents[0]->name)
             arrayPecadosMapa->arrayContinents[0]->cant += pecadosPersona;
 

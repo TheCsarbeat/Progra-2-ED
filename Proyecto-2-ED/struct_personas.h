@@ -64,13 +64,12 @@ struct Persona{
     QString creencia;
     QString profesion;
     QString email;
-    bool vivo;
     QDateTime nacimiento;
     Pecado * pecados[7];
     BuenaAccion * buenasAcciones[7];
     Persona * padre;
     ListaDoblePersonas *hijos;
-    int pecadosdPersona;
+    int estado; //0=Vivo, 1=Infierno, 2=Cielo
     Persona(){
         id = 0;
         name = "";
@@ -79,9 +78,8 @@ struct Persona{
         creencia = "";
         profesion = "";
         email = "ytcesarjs@gmail.com";
-        vivo = true;
         nacimiento = QDateTime::currentDateTime();
-        pecadosdPersona = 0;
+        estado = 0;
         for(int i = 0; i<7; i++){
             pecados[i] = new Pecado(); //se debe asignar el nombre del pecado según la posición ya que por el momento está vacío, lo mismo con las buenas acciones
             buenasAcciones[i] = new BuenaAccion();
@@ -98,8 +96,8 @@ struct Persona{
         creencia = _creencia;
         profesion = _profesion;
         email = "erksmartinez2014@gmail.com";
-        vivo = true;
         nacimiento = QDateTime::currentDateTime();
+        estado = 0;
         QString arrayNamePecado[7] = {"Lujuria","Gula","Avaricia","Pereza","Ira","Envidia","Soberbia"};
         QString arrayNameBuenas[7] = {"Castidad","Ayuno","Donación","Diligencia","Calma","Solidaridad","Humildad"};
         for(int i = 0; i<7; i++){
@@ -129,32 +127,8 @@ struct Persona{
         }
     }
 
-    QString toString(){
-        QString datos = "\nID: "+QString::number(id)
-                         +"\nNombre: "+name
-                         +"\nPaís: "+ pais->name
-                         +"\nCreencia: "+creencia
-                         +"\nJob: "+creencia
-                         +"\n\nPECADOS: ";
-        for(unsigned int i=0;i<7;i++){
-            if(i== 1 || i== 4)
-                datos+="\n\tNombre: "+pecados[i]->name+", \t\tValor: "+QString::number(pecados[i]->cant);
-            else
-                datos+="\n\tNombre: "+pecados[i]->name+", \tValor: "+QString::number(pecados[i]->cant);
-        }
-
-        datos+="\n\nBUENAS ACCIONES";
-        for(unsigned int i=0;i<7;i++){
-            if(i== 1 || i== 4)
-                datos+="\n\tNombre: "+buenasAcciones[i]->name+", \t\tValor: "+QString::number(buenasAcciones[i]->cant);
-            else
-                datos+="\n\tNombre: "+buenasAcciones[i]->name+", \tValor: "+QString::number(buenasAcciones[i]->cant);
-        }
-        datos+="\n\nHIJOS";
-
-        return datos;
-    }
-
+    QString toString();
+    int calcularPecado(int);
 };
 
 struct NodoPersona{
