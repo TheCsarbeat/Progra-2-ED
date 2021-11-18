@@ -71,7 +71,7 @@ struct Persona{
     Persona * padre;
     ListaDoblePersonas *hijos;
 
-    int pecadosdPersona;
+    int pecadosPersona;
     int buenasAccionesPersona;
 
     Persona(){
@@ -84,7 +84,7 @@ struct Persona{
         email = "ytcesarjs@gmail.com";
         vivo = true;
         nacimiento = QDateTime::currentDateTime();
-        pecadosdPersona = 0;
+        pecadosPersona = 0;
         buenasAccionesPersona = 0;
         for(int i = 0; i<7; i++){
             pecados[i] = new Pecado(); //se debe asignar el nombre del pecado según la posición ya que por el momento está vacío, lo mismo con las buenas acciones
@@ -103,7 +103,7 @@ struct Persona{
         profesion = _profesion;
         email = "erksmartinez2014@gmail.com";
         vivo = true;
-        pecadosdPersona = 0;
+        pecadosPersona = 0;
         buenasAccionesPersona = 0;
         nacimiento = QDateTime::currentDateTime();
         QString arrayNamePecado[7] = {"Lujuria","Gula","Avaricia","Pereza","Ira","Envidia","Soberbia"};
