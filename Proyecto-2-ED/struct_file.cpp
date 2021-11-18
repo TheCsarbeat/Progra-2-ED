@@ -25,6 +25,7 @@ void Files::loadNames(){
         names[i] = stream.readLine();
         i++;
     }
+    indexName= i;
     file.close();
 }
 
@@ -46,6 +47,7 @@ void Files::loadLastNames(){
         lastNames[i] = stream.readLine();
         i++;
     }
+    indexLasName = i;
     file.close();
 }
 
@@ -67,6 +69,7 @@ void Files::loadReligions(){
         religions[i] = stream.readLine();
         i++;
     }
+    indexReligions = i;
     file.close();
 }
 
@@ -88,6 +91,7 @@ void Files::loadJobs(){
         jobs[i] = stream.readLine();
         i++;
     }
+    indexJobs = i;
     file.close();
 }
 

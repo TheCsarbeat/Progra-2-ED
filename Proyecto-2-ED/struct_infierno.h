@@ -12,26 +12,12 @@ struct Demonio;
 struct HeapFamilias;
 struct NodoListaSimpleHeaps;
 struct ListaSimpleHeaps;
-struct NodoHeap;
-
-struct NodoHeap{
-    Persona * persona;
-
-    NodoHeap(){
-        persona = NULL;
-    }
-    NodoHeap(Persona * _persona){
-        persona = _persona;
-    }
-};
 
 struct HeapFamilia{
     int capacidad;
-    int cant;
     int pecado;
-    QString apellido;
-    QString pais;
-    QVector<NodoHeap*> array;
+    int cant;
+    QVector<Persona> array;
 
     HeapFamilia(){
         capacidad = 0;
@@ -44,7 +30,7 @@ struct HeapFamilia{
         cant = 0;
     }
 
-    void swap(NodoHeap *, NodoHeap *);
+    void swap(int, int);
 
     int parent(int i) {
         return (i - 1) / 2;
@@ -61,7 +47,7 @@ struct HeapFamilia{
     }
 
     void heapifyUp(int i);
-    void insertar(Persona *);
+    void insertar(Persona);
     void imprimir();
 };
 
@@ -111,9 +97,6 @@ struct Demonio{
 
     void crearHeap(ListaSimpleArbolFamilias *);
     void limpiarListaHeaps();
-    void buscarMasPecadores(ListaDoblePersonas *);
-    void agregarAHeaps(QVector<Persona*>);
-    void bubblesortDemon(QVector<NodoHeap*> *);
 };
 
 struct Infierno{

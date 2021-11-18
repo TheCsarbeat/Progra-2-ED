@@ -87,6 +87,27 @@ NodoArbolFamiliaALV *ArbolFamilias::insert(NodoArbolFamiliaALV *r, Persona *pers
    } return r;
 }
 
+NodoArbolFamiliaALV *ArbolFamilias::insertSinHijos(Persona *persona){
+    if(isEmpty())
+        raiz= new NodoArbolFamiliaALV(persona);
+    else
+        raiz= insertSinHijos(raiz, persona);
+
+}
+
+NodoArbolFamiliaALV *ArbolFamilias::insertSinHijos(NodoArbolFamiliaALV *r, Persona *persona) {
+   if (r == NULL) {
+      r = new NodoArbolFamiliaALV(persona);
+      return r;
+   } else if (persona->id < r->persona->id) {
+      r->l = insertSinHijos(r->l, persona);
+      r = balance(r);
+   } else if (persona->id >= r->persona->id) {
+      r->r = insertSinHijos(r->r, persona);
+      r = balance(r);
+   } return r;
+}
+
 
 void ArbolFamilias::asignarHijos(Persona *persona){
     int cont = QRandomGenerator::global()->bounded(3);
@@ -132,6 +153,51 @@ void ArbolFamilias::postOrder(NodoArbolFamiliaALV *t) {
   postOrder(t ->l);
   postOrder(t ->r);
   qDebug() << t->persona->id << " ";
+}
+
+QString * ArbolFamilias::toStringInOrden(){
+    QString *dato = new QString();
+    *dato = "";
+    toStringInOrden(raiz, dato);
+    return dato;
+}
+
+void ArbolFamilias::toStringInOrden(NodoArbolFamiliaALV* t, QString* dato){
+    if (t == NULL)
+       return;
+   toStringInOrden(t->l,dato);
+   *dato += t->persona->toString()+t->persona->hijos->toStringIDHijos();
+   toStringInOrden(t->r,dato);
+}
+
+QString * ArbolFamilias::toStringInOrdenBA(){
+    QString *dato = new QString();
+    *dato = "";
+    toStringInOrdenBA(raiz, dato);
+    return dato;
+}
+
+void ArbolFamilias::toStringInOrdenBA(NodoArbolFamiliaALV* t, QString* dato){
+    if (t == NULL)
+       return;
+   toStringInOrdenBA(t->l,dato);
+   *dato += t->persona->toStringBuenasAcciones()+t->persona->hijos->toStringIDHijos();
+   toStringInOrdenBA(t->r,dato);
+}
+
+QString * ArbolFamilias::toStringInOrdenP(){
+    QString *dato = new QString();
+    *dato = "";
+    toStringInOrdenP(raiz, dato);
+    return dato;
+}
+
+void ArbolFamilias::toStringInOrdenP(NodoArbolFamiliaALV* t, QString* dato){
+    if (t == NULL)
+       return;
+   toStringInOrdenP(t->l,dato);
+   *dato += t->persona->toStringPecados()+t->persona->hijos->toStringIDHijos();
+   toStringInOrdenP(t->r,dato);
 }
 
 void ArbolFamilias::imprimirNivel(int nivel){

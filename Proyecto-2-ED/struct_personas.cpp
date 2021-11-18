@@ -10,37 +10,6 @@ void BuenaAccion::imprimir(){
     qDebug()<<"\n"<<name;
     qDebug()<<"\nCantidad: "<<cant;
 }
-//===================PERSONAS===========================
-QString Persona::toString(){
-    QString datos = "\nID: "+QString::number(id)
-                     +"\nNombre: "+name
-                     +"\nPaís: "+ pais->name
-                     +"\nCreencia: "+creencia
-                     +"\nJob: "+creencia
-                     +"\n\nPECADOS: ";
-    for(unsigned int i=0;i<7;i++){
-        if(i== 1 || i== 4)
-            datos+="\n\tNombre: "+pecados[i]->name+", \t\tValor: "+QString::number(pecados[i]->cant);
-        else
-            datos+="\n\tNombre: "+pecados[i]->name+", \tValor: "+QString::number(pecados[i]->cant);
-    }
-
-    datos+="\n\nBUENAS ACCIONES";
-    for(unsigned int i=0;i<7;i++){
-        if(i== 1 || i== 4)
-            datos+="\n\tNombre: "+buenasAcciones[i]->name+", \t\tValor: "+QString::number(buenasAcciones[i]->cant);
-        else
-            datos+="\n\tNombre: "+buenasAcciones[i]->name+", \tValor: "+QString::number(buenasAcciones[i]->cant);
-    }
-    datos+="\n\nHIJOS";
-
-    return datos;
-}
-
-int Persona::calcularPecado(int index){
-    return pecados[index]->cant - buenasAcciones[index]->cant;
-}
-
 
 bool ListaDoblePersonas::isEmpty(){
     return primerNodo == NULL;
@@ -136,10 +105,10 @@ void ListaDoblePersonas::imprimir(){
     int cont =0;
     qDebug()<<"[";
     while (temp != NULL){
-        temp->persona->imprimir();
+        //temp->persona->imprimir();
         //qDebug()<<"Posicion en lista: "<<cont;
         //qDebug()<<QString::number(temp->persona->id)<<", ";
-        //qDebug()<<temp->persona->pais->name<<","<<temp->persona->id;
+        qDebug()<<temp->persona->pais->name<<","<<temp->persona->id;
         cont++;
         temp = temp->siguiente;
     }

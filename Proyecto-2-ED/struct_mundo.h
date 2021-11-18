@@ -5,12 +5,13 @@
 #include "struct_file.h"
 #include "struct_arbolfamilias.h"
 #include "struct_infierno.h"
+#include "struct_cielo.h"
 
 #include <QMessageBox>
 #include <QRandomGenerator>
 #include <QString>
 #include <QLabel>
-
+#include <QtMath>
 
 struct Mundo;
 struct ArrayContinent;
@@ -87,18 +88,35 @@ struct ArrayPaises{
     QString toStringMayores(){
         QString respuesta= "";
         for(int i = 0; i<10; i++) {
-            respuesta += QString::number(i+1)+" # "+arrayPaises[i]->nombre+"\t\t Cantidad: "+QString::number(arrayPaises[i]->cantidad)+"\n";
+            respuesta += QString::number(i+1)+" # "+arrayPaises[i]->nombre+"\n";
         }
         return respuesta;
+    }
+
+    QString toStringMayoresCantidad(){
+        QString respuesta= "";
+        for(int i = 0; i<10; i++) {
+            respuesta += "Cantidad: "+QString::number(arrayPaises[i]->cantidad)+"\n";
+        }
+            return respuesta;
     }
 
     QString toStringMenores(){
         QString respuesta= "";
         for(int i = 0; i<5; i++) {
-            respuesta += QString::number(i+1)+" # "+arrayPaises[i]->nombre+"\t\t Cantidad: "+QString::number(arrayPaises[i]->cantidad)+"\n";
+            respuesta += QString::number(i+1)+" # "+arrayPaises[i]->nombre+"\n";
         }
         return respuesta;
     }
+
+    QString toStringMenoresCantidad(){
+        QString respuesta= "";
+        for(int i = 0; i<5; i++) {
+            respuesta += "Cantidad: "+QString::number(arrayPaises[i]->cantidad)+"\n";
+        }
+            return respuesta;
+     }
+
     void imprimir(){
         for(int i = 0; i<10; i++) {
             qDebug()<<i+1<<" # "<<arrayPaises[i]->nombre<<"\t\t\t\t\tCantidad: "<<arrayPaises[i]->cantidad;
@@ -150,6 +168,8 @@ struct Mundo{
     ArrayPaises *arrayBuenasAcciones;
     ArrayPaises *arrayPecados;
     Infierno * infierno;
+    CieloHash *cielo;
+    ArbolAngelesCielo *arbolAngeles;
 
     Mundo(QLabel * lbBuenasAccionesMapa[],QLabel * lbPecadosMapa[]){
         personas = new ListaDoblePersonas();
@@ -161,8 +181,9 @@ struct Mundo{
         arrayPecadosMapa = new ArrayContinent(lbPecadosMapa);
         arrayBuenasAcciones = new ArrayPaises(files);
         arrayPecados = new ArrayPaises(files);
-
         infierno = new Infierno();
+        cielo = new CieloHash();
+        arbolAngeles = new ArbolAngelesCielo();
     }
 
     void crearHumanos(int);
@@ -177,10 +198,13 @@ struct Mundo{
     void continentsMasBuenasAcciones();
     void continentsMasPecados();
 
-    void top10Cielo(QLabel *);
-    void top5Cielo(QLabel *);
-    void top10Infierno(QLabel *);
-    void top5Infierno(QLabel *);
+    void top10Cielo(QLabel *,QLabel *);
+    void top5Cielo(QLabel *, QLabel *);
+    void top10Infierno(QLabel *, QLabel *);
+    void top5Infierno(QLabel *, QLabel *);
+
+    void buscarBAFamilias(int,QLabel *);
+    void buscarPecadosFamilias(int,QLabel *);
 };
 
 #endif // STRUCT_MUNDO_H

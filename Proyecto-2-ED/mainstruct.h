@@ -3,11 +3,12 @@
 
 #include "struct_mundo.h"
 
+
 struct MainStruct;
 
 struct MainStruct{
     Mundo * mundo;
-    MainStruct(QLabel * lbBuenasAccionesMapa[],QLabel * lbPecadosMapa[]){
+    MainStruct(QLabel * lbBuenasAccionesMapa[],QLabel * lbPecadosMapa[], QComboBox * cbo[]){
         mundo = new Mundo(lbBuenasAccionesMapa, lbPecadosMapa);
     }
 
