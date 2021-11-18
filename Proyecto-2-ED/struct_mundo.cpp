@@ -224,7 +224,7 @@ void Mundo::continentsMasPecados(){
     arrayPecadosMapa->showMap(1);
 }
 
-void Mundo::top10Cielo(QLabel *lb){
+void Mundo::top10Cielo(QLabel *lb,QLabel *lb2){
     NodoPersona * tmp = personas->primerNodo;
     int buenasAccionesP = 0;
     for( int i=0; i<files->index; i++){
@@ -245,10 +245,11 @@ void Mundo::top10Cielo(QLabel *lb){
     }
     arrayBuenasAcciones->bubbleSortMayorMenor(files);
     lb->setText(arrayBuenasAcciones->toStringMayores());
+    lb2->setText(arrayBuenasAcciones->toStringMayoresCantidad());
 
 }
 
-void Mundo::top5Cielo(QLabel * lb){
+void Mundo::top5Cielo(QLabel * lb,QLabel *lb2){
     NodoPersona * tmp = personas->primerNodo;
     int buenasAccionesP = 0;
     for( int i=0; i<files->index; i++){
@@ -269,10 +270,11 @@ void Mundo::top5Cielo(QLabel * lb){
     }
     arrayBuenasAcciones->bubbleSortMenorMayor(files);
     lb->setText(arrayBuenasAcciones->toStringMenores());
+    lb2->setText(arrayBuenasAcciones->toStringMenoresCantidad());
 
 }
 
-void Mundo::top10Infierno(QLabel *lb){
+void Mundo::top10Infierno(QLabel *lb,QLabel *lb2){
     NodoPersona * tmp = personas->primerNodo;
     int pecadosP = 0;
 
@@ -293,6 +295,7 @@ void Mundo::top10Infierno(QLabel *lb){
     }
     arrayPecados->bubbleSortMayorMenor(files);
     lb->setText(arrayPecados->toStringMayores());
+    lb2->setText(arrayPecados->toStringMayoresCantidad());
 
 }
 

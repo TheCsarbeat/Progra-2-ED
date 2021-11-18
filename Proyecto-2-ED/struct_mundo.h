@@ -88,7 +88,15 @@ struct ArrayPaises{
     QString toStringMayores(){
         QString respuesta= "";
         for(int i = 0; i<10; i++) {
-            respuesta += QString::number(i+1)+" # "+arrayPaises[i]->nombre+"\t\t Cantidad: "+QString::number(arrayPaises[i]->cantidad)+"\n";
+            respuesta += QString::number(i+1)+" # "+arrayPaises[i]->nombre+"\n";
+        }
+        return respuesta;
+    }
+
+    QString toStringMayoresCantidad(){
+        QString respuesta= "";
+        for(int i = 0; i<10; i++) {
+            respuesta += "Cantidad: "+QString::number(arrayPaises[i]->cantidad)+"\n";
         }
         return respuesta;
     }
@@ -96,7 +104,15 @@ struct ArrayPaises{
     QString toStringMenores(){
         QString respuesta= "";
         for(int i = 0; i<5; i++) {
-            respuesta += QString::number(i+1)+" # "+arrayPaises[i]->nombre+"\t\t Cantidad: "+QString::number(arrayPaises[i]->cantidad)+"\n";
+            respuesta += QString::number(i+1)+" # "+arrayPaises[i]->nombre+"\n";
+        }
+        return respuesta;
+    }
+
+    QString toStringMenoresCantidad(){
+        QString respuesta= "";
+        for(int i = 0; i<5; i++) {
+            respuesta += "Cantidad: "+QString::number(arrayPaises[i]->cantidad)+"\n";
         }
         return respuesta;
     }
@@ -181,9 +197,9 @@ struct Mundo{
     void continentsMasBuenasAcciones();
     void continentsMasPecados();
 
-    void top10Cielo(QLabel *);
-    void top5Cielo(QLabel *);
-    void top10Infierno(QLabel *);
+    void top10Cielo(QLabel *,QLabel *);
+    void top5Cielo(QLabel *, QLabel *);
+    void top10Infierno(QLabel *, QLabel *);
     void top5Infierno(QLabel *);
 
     void buscarBAFamilias(int,QLabel *);
