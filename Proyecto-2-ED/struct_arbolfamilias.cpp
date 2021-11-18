@@ -66,9 +66,10 @@ NodoArbolFamiliaALV *ArbolFamilias::balance(NodoArbolFamiliaALV *t) {
 }
 
 NodoArbolFamiliaALV *ArbolFamilias::insert(Persona *persona){
-    if(isEmpty())
+    if(isEmpty()){
         raiz= new NodoArbolFamiliaALV(persona);
-    else
+        cant++;
+    }else
         raiz= insert(raiz, persona);
 
 }
@@ -76,7 +77,8 @@ NodoArbolFamiliaALV *ArbolFamilias::insert(Persona *persona){
 NodoArbolFamiliaALV *ArbolFamilias::insert(NodoArbolFamiliaALV *r, Persona *persona) {
    if (r == NULL) {
       asignarHijos(persona);
-      r = new NodoArbolFamiliaALV(persona);      
+      r = new NodoArbolFamiliaALV(persona);
+      cant++;
       return r;
    } else if (persona->id < r->persona->id) {
       r->l = insert(r->l, persona);
@@ -88,9 +90,10 @@ NodoArbolFamiliaALV *ArbolFamilias::insert(NodoArbolFamiliaALV *r, Persona *pers
 }
 
 NodoArbolFamiliaALV *ArbolFamilias::insertSinHijos(Persona *persona){
-    if(isEmpty())
+    if(isEmpty()){
         raiz= new NodoArbolFamiliaALV(persona);
-    else
+        cant++;
+    }else
         raiz= insertSinHijos(raiz, persona);
 
 }
@@ -98,6 +101,7 @@ NodoArbolFamiliaALV *ArbolFamilias::insertSinHijos(Persona *persona){
 NodoArbolFamiliaALV *ArbolFamilias::insertSinHijos(NodoArbolFamiliaALV *r, Persona *persona) {
    if (r == NULL) {
       r = new NodoArbolFamiliaALV(persona);
+      cant++;
       return r;
    } else if (persona->id < r->persona->id) {
       r->l = insertSinHijos(r->l, persona);
@@ -255,14 +259,12 @@ NodoFamiliaListaSimple* ListaSimpleArbolFamilias::buscar(Persona * persona){
     return NULL;
 }
 
-NodoFamiliaListaSimple* ListaSimpleArbolFamilias::buscar(int index){
+NodoFamiliaListaSimple* ListaSimpleArbolFamilias::buscar(QString lastName, QString country){
     if(!isEmpy()){
         NodoFamiliaListaSimple *temp = primerNodo;
-        int cont = 0;
         while(temp->siguiente != NULL){
-            if(cont == index)
+            if(temp->arbol->raiz->persona->apellido == lastName && temp->arbol->raiz->persona->pais->name == country)
                 return temp;
-            cont++;
             temp = temp->siguiente;
         }
     }

@@ -2650,20 +2650,25 @@ background-color: rgb(255, 205, 2);</string>
         <string>Pais</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="txtApellidosConsulta2_2">
-       <property name="geometry">
-        <rect>
-         <x>310</x>
-         <y>100</y>
-         <width>181</width>
-         <height>24</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QComboBox" name="comboBox">
+      <widget class="QComboBox" name="cboLastNameConsulta">
        <property name="geometry">
         <rect>
          <x>40</x>
+         <y>90</y>
+         <width>251</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-width: 1px;
+border-style: solid;
+</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="cboCountryConsulta">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
          <y>90</y>
          <width>251</width>
          <height>22</height>

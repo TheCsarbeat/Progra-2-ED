@@ -39,14 +39,17 @@ struct Files{
     int indexLasName;
     int indexReligions;
     int indexJobs;
-    int index;
+    int index;    
+    QComboBox * arrayCBO[2];
 
-    Files(){
+    Files(QComboBox *cbo[]){
         index = 0;
         indexName  =0 ;
         indexLasName =0 ;
         indexReligions= 0;
         indexJobs =0;
+        arrayCBO[0] = cbo[0];
+        arrayCBO[1] = cbo[1];
         loadNames();
         loadLastNames();
         loadReligions();
@@ -78,9 +81,9 @@ struct Files{
             *paises[i] = *paises[randomIndex];
             *paises[randomIndex] = temp;
         }
-        /*for(int i=0; i<index; i++){
-            qDebug()<<paises[i]->name<<", ";
-        }*/
+        for(int i=0; i<index; i++){
+            arrayCBO[1]->addItem(paises[i]->name);
+        }
     }
     void printNames();
 

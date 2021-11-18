@@ -25,10 +25,12 @@ struct NodoArbolFamiliaALV{
 
 struct ArbolFamilias{
     NodoArbolFamiliaALV *raiz;
+    int cant;
 
 
     ArbolFamilias(){
         raiz =  NULL;
+        cant = 0;
     }
 
     bool isEmpty();
@@ -71,6 +73,11 @@ struct ArbolFamilias{
 
     QString* toStringInOrdenP();
     void toStringInOrdenP(NodoArbolFamiliaALV*, QString*);
+
+    Persona * aplastarArbolBB();
+
+    NodoArbolFamiliaALV* crearLista(NodoArbolFamiliaALV*nodo, Persona * arr[]);
+
 };
 
 struct NodoFamiliaListaSimple{
@@ -122,7 +129,7 @@ struct ListaSimpleArbolFamilias{
     NodoFamiliaListaSimple * buscar(Persona * );
 
     //no funciona
-    NodoFamiliaListaSimple * buscar(int);
+    NodoFamiliaListaSimple * buscar(QString, QString);
 };
 
 

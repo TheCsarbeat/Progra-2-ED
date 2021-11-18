@@ -354,3 +354,15 @@ void Mundo::buscarPecadosFamilias(int id, QLabel *lb){
     }
 
 }
+
+void Mundo::consutlaHumanStateFamily(QString lastName, QString country,QLabel *lb){
+    NodoPersona* buscado= treePersonas->buscarMasCercano(id);
+    buscado = personas->buscar(id, buscado);
+    if(buscado!= NULL){
+        NodoFamiliaListaSimple *nodoBuscado = listArbolFamilias->buscar(buscado->persona);
+        lb->setText(*nodoBuscado->arbol->toStringInOrdenP());
+    }else{
+        lb->setText("No existe");
+    }
+
+}
