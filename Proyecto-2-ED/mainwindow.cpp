@@ -187,7 +187,8 @@ void MainWindow::on_btnPecadosFamilia_clicked()
 void MainWindow::on_btnMatarTodos_clicked()
 {
     if(mainstruct->mundo->personas->largo != 0){
-        mainstruct->mundo->infierno->matarMasPecadores(mainstruct->mundo->personas, mainstruct->mundo->files);
+        mainstruct->mundo->infierno->matarMasPecadores(mainstruct->mundo->personas, mainstruct->mundo->files, &mainstruct->mundo->filesNameToSend, &mainstruct->mundo->currentFileName);
+        sendEmail(mainstruct->mundo->currentFileName, "Condenación","Se ha presionado el botón de condenar estas son las personas condenadas");
         msg.setText("Los demonios han tomado las almas más pecadoras");
         msg.exec();
     }else{

@@ -212,7 +212,7 @@ void Infierno::limpiarDemonios(){
     }
 }
 
-void Infierno::matarMasPecadores(ListaDoblePersonas * list, Files * file){
+void Infierno::matarMasPecadores(ListaDoblePersonas * list, Files * file, QStringList *filesName, QString *current){
     int largo = list->largo;
     NodoHeap * arrayPersonasInfierno[largo];
     NodoPersona * p = list->primerNodo;
@@ -227,6 +227,8 @@ void Infierno::matarMasPecadores(ListaDoblePersonas * list, Files * file){
     }
     QDateTime date = QDateTime::currentDateTime();
     QString name = "Condenados_"+date.toString("yyyyMMdd")+"_"+date.toString("HHmmss")+".txt";
+    filesName->append(name);
+    *current = name;
     file->writeFile(name,log);
 }
 
@@ -236,8 +238,8 @@ Persona * Infierno::salvarHumano(){
         NodoListaSimpleHeaps *temp = demonios[i]->listaHeaps->primerNodo;
         while(temp!=NULL){
             for(int j = 0; j<temp->heap->array.length(); j++){
-                if(temp->heap->array[j]->persona->buenasAccionesPersona > temp->heap->array[j]->persona->pecadosPersona && temp->heap->array[j]->persona->estado ==0){
-                    temp->heap->array[j]->persona->estado =2;
+                if(temp->heap->array[j]->persona->buenasAccionesPersona > temp->heap->array[j]->persona->pecadosPersona && temp->heap->array[j]->persona->estado ==1){
+                    temp->heap->array[j]->persona->estado = 2;
                     //Aqu[i tiene que ir la funci[on de mierda para eliminar del heap.
                     return temp->heap->array[j]->persona;
                 }

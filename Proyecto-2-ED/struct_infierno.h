@@ -136,7 +136,7 @@ struct Infierno{
     void crearHeapsDemonios(ListaSimpleArbolFamilias *);
     void limpiarDemonios();
     Persona* salvarHumano();
-    void matarMasPecadores(ListaDoblePersonas *,Files *);
+    void matarMasPecadores(ListaDoblePersonas *,Files *, QStringList *,QString *);
 };
 
 #endif // STRUCT_INFIERNO_H
