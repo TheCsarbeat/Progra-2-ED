@@ -54,22 +54,14 @@ void MainWindow::on_btnPecar_clicked(){
 }
 
 void MainWindow::on_btnGuardarDatosWorld_clicked(){
-    //mainstruct->mundo->guarDatosWorld();
-
+    mainstruct->mundo->guarDatosWorld();
     msg.setText("Se han guardado los datos");
     msg.exec();
 }
 
 void MainWindow::on_pushButton_2_clicked(){
 
-    //qDebug()<<"El mas cercano: "<<mainstruct->mundo->treePersonas->buscarMasCercano(ui->txtcerca->text().toInt())->persona->id;
-    mainstruct->mundo->arbolAngeles->nivel ++;
-    int nivel = mainstruct->mundo->arbolAngeles->nivel;
-    int cantArboles  = qPow(3, nivel);
-    for(int i = 0; i < cantArboles; i++)
-        mainstruct->mundo->arbolAngeles->insertar(new Angel("FERKS "+QString::number(i+1), nivel, i+1, new Persona));
-    qDebug()<<"\n\n";
-    mainstruct->mundo->arbolAngeles->imprimirNivel(nivel);
+
 }
 
 //--------------------SIDE BUTTONS--------------------
@@ -134,33 +126,23 @@ void MainWindow::on_btnMapaPecados_clicked(){
     ui->panelConsultasInfiernoPecados->setCurrentIndex(0);
 }
 
-
-void MainWindow::on_pushButton_clicked(){
-    files.clear();
-
-    /*QFileDialog dialog(this);
-    dialog.setDirectory(QDir::homePath());
-    dialog.setFileMode(QFileDialog::ExistingFiles);
-
-    if (dialog.exec())
-        files = dialog.selectedFiles();*/
-    files.append("datosWorld.txt");
+void MainWindow::sendEmail(QString currentEmail, QString subject, QString msg){
     QString fileListString;
     foreach(QString file, files){
         fileListString.append( "\"" + QFileInfo(file).fileName() + "\" " );
         qDebug()<<file;
     }
-
-    //ui->file->setText( fileListString );
-
     Smtp* smtp = new Smtp("ferkssoporte@gmail.com", "DistributividaD...", "smtp.gmail.com", 465);
     connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
 
-    if(!files.isEmpty())
-        smtp->sendMail("ferkssoporte@gmail.com", "cesarjjxd@gmail.com" , "ui->subject->text()","ui->msg->toPlainText()", files );
+    if(!files.isEmpty() && currentEmail == "")
+        smtp->sendMail("ferkssoporte@gmail.com", "quesonconpicha@gmail.com" , subject,msg, files );
+    else if(currentEmail != "")
+        smtp->sendMail("ferkssoporte@gmail.com", "quesonconpicha@gmail.com" , subject,msg,QStringList(currentEmail));
     else
-        smtp->sendMail("ferkssoporte@gmail.com", "cesarjjxd@gmail.com" , "ui->subject->text()","ui->msg->toPlainText()");
+        smtp->sendMail("ferkssoporte@gmail.com", "quesonconpicha@gmail.com" , subject,msg);
 }
+
 
 
 void MainWindow::on_btnTop10Cielo_clicked(){
@@ -211,5 +193,42 @@ void MainWindow::on_btnMatarTodos_clicked()
 void MainWindow::on_btnImprimir_clicked()
 {
     mainstruct->mundo->infierno->imprimirDemonio(ui->lineEdit_2->text().toInt());
+}
+
+
+void MainWindow::on_btnPecadosFamilia_2_clicked()
+{
+
+}
+
+
+void MainWindow::on_btnEstadoFamilia_clicked(){
+    mainstruct->mundo->consutlaHumanStateFamily(ui->cboLastNameConsulta->currentText(),ui->cboCountryConsulta->currentText(), ui->lbStateFamily);
+}
+
+
+void MainWindow::on_btnSalvacion_clicked(){
+
+    mainstruct->mundo->salvacion();
+    files.append(mainstruct->mundo->currentFileName);
+    sendEmail(mainstruct->mundo->currentFileName, "Salvación","Se ha presionado el botón de salvación estas son las personas salvadas");
+    msg.setText("Se han salvado humanos ver datos en los archivos LOG");
+    msg.exec();
+
+
+}
+
+
+void MainWindow::on_pushButton_clicked(){
+    //sendEmail("", "Files from Heaven vs Hell","These are the files created in the program HEAVEN vs HELL");
+    for (int i = 0;i<mainstruct->mundo->filesNameToSend.length() ;i++ ) {
+        if(files.indexOf(mainstruct->mundo->filesNameToSend.at(i)) == -1){
+            files.append(mainstruct->mundo->filesNameToSend.at(i));
+        }
+    }
+    sendEmail("", "Files from Heaven vs Hell","These are the files created in the program HEAVEN vs HELL");
+    msg.setText("Se han enviado los archivos al correo");
+    msg.exec();
+
 }
 

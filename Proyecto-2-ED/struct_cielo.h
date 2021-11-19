@@ -1,6 +1,14 @@
 #ifndef STRUCT_CIELO_H
 #define STRUCT_CIELO_H
-#include "struct_arbolfamilias.h"
+
+#include "struct_personas.h"
+#include <QString>
+#include <QTextStream>
+#include <QVector>
+
+#include <QRandomGenerator>
+#include <QString>
+
 
 struct Angel{
     QString name;
@@ -23,6 +31,12 @@ struct Angel{
         version = _version;
         generacion = _generacion;
         persona = p;
+    }
+
+    QString toString(){
+        return "\nAngel: "+name
+                +"\nVersión: "+QString::number(version)
+                +"\nGeneración: "+QString::number(generacion);
     }
 
 };
@@ -65,19 +79,81 @@ struct ArbolAngelesCielo{
 
 };
 
+struct NodoArbolCieloALV{
+    Persona *persona;
+    Angel *angel;
+    NodoArbolCieloALV *l;
+    NodoArbolCieloALV *r;
+
+
+    NodoArbolCieloALV(){
+        persona = new Persona();
+        angel = new Angel();
+        l = r = NULL;
+    }
+    NodoArbolCieloALV(Persona * _persona, Angel *_angel){
+        persona = _persona;
+        angel = _angel;
+        l = r = NULL;
+    }
+};
+
+struct ArbolCieloALV{
+    NodoArbolCieloALV *raiz;
+    int cant;
+
+    ArbolCieloALV(){
+        raiz =  NULL;
+        cant = 0;
+    }
+
+    bool isEmpty();
+    int height(NodoArbolCieloALV *t);
+    int difference(NodoArbolCieloALV *t);
+    NodoArbolCieloALV* rr_rotat(NodoArbolCieloALV *parent);
+    NodoArbolCieloALV* ll_rotat(NodoArbolCieloALV *parent);
+    NodoArbolCieloALV* lr_rotat(NodoArbolCieloALV *parent);
+    NodoArbolCieloALV* rl_rotat(NodoArbolCieloALV *parent);
+    NodoArbolCieloALV* balance(NodoArbolCieloALV *t);
+    NodoArbolCieloALV* insert(Persona*, Angel*);
+    NodoArbolCieloALV* insert(NodoArbolCieloALV *r, Persona*,Angel*);
+
+    void imprimirNivel(int nivel);
+    void nivelImprimir(NodoArbolCieloALV* , int , int);
+    int treeHeight(NodoArbolCieloALV* nodo);
+
+    void show(NodoArbolCieloALV *p, int l);
+
+    void inOrder(NodoArbolCieloALV *t);
+    void preOrder(NodoArbolCieloALV *t);
+    void postOrder(NodoArbolCieloALV *t);
+
+    QString* toStringInOrden();
+    void toStringInOrden(NodoArbolCieloALV*, QString*);
+
+    QString* toStringInOrdenBA();
+    void toStringInOrdenBA(NodoArbolCieloALV*, QString*);
+
+    QString* toStringInOrdenP();
+    void toStringInOrdenP(NodoArbolCieloALV*, QString*);
+
+    void bubbleSortPecados(NodoPersona *[]);
+
+};
+
 struct CieloHash{
-    ArbolFamilias *hashTableCielo[1000];
+    ArbolCieloALV *hashTableCielo[1000];
     CieloHash(){
         for(int i = 0; i<1000; i++)
-            hashTableCielo[i] = new ArbolFamilias();
+            hashTableCielo[i] = new ArbolCieloALV();
     }
 
     int funcioHash(Persona* persona){
         return persona->id% 1000;
     }
 
-    void insertar(Persona *persona){
-        hashTableCielo[funcioHash(persona)]->insertSinHijos(persona);
+    void insertar(Persona *persona, Angel *angel){
+        hashTableCielo[funcioHash(persona)]->insert(persona, angel);
     }
     void imprimir(){
         hashTableCielo[0]->inOrder(hashTableCielo[0]->raiz);

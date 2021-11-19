@@ -12,6 +12,24 @@ void BuenaAccion::imprimir(){
 }
 
 //Persona
+QString Persona::toStringsimplified(){
+    QString datos = "\nID: "+QString::number(id)
+                     +"\nNombre: "+name
+                     +"\nApellido: "+apellido
+                     +"\nPaís: "+ pais->name
+                     +"\nCreencia: "+creencia
+                     +"\nJob: "+profesion;
+
+    datos +="\n\nPECADOS: "+QString::number(pecadosPersona);
+
+    datos+="\n\nBUENAS ACCIONES: "+QString::number(buenasAccionesPersona);
+
+    datos+="\n\nHIJOS";
+
+    return datos;
+}
+
+//Persona
 QString Persona::toString(){
     QString datos = "\nID: "+QString::number(id)
                      +"\nNombre: "+name
@@ -21,7 +39,7 @@ QString Persona::toString(){
                      +"\nJob: "+profesion;
     if(padre != NULL)
         datos += "\nPADRE: \n\tID: "+QString::number(padre->id)+"\n\tNombre: "+padre->name;
-    datos +="\n\nPECADOS: ";
+    datos +="\n\nPECADOS: "+QString::number(pecadosPersona);
     for(unsigned int i=0;i<7;i++){
         if(i== 1 || i== 4)
             datos+="\n\tNombre: "+pecados[i]->name+", \t\tValor: "+QString::number(pecados[i]->cant);
@@ -29,7 +47,7 @@ QString Persona::toString(){
             datos+="\n\tNombre: "+pecados[i]->name+", \tValor: "+QString::number(pecados[i]->cant);
     }
 
-    datos+="\n\nBUENAS ACCIONES";
+    datos+="\n\nBUENAS ACCIONES: "+QString::number(buenasAccionesPersona);
     for(unsigned int i=0;i<7;i++){
         if(i== 1 || i== 4)
             datos+="\n\tNombre: "+buenasAcciones[i]->name+", \t\tValor: "+QString::number(buenasAcciones[i]->cant);

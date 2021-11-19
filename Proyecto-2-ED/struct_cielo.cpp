@@ -51,3 +51,117 @@ void ArbolAngelesCielo::nivelImprimir(NodoArbolAngelesCielo *nodo , int nivel, i
         }
    }
 }
+
+//----------------------------------------ARBOL BUCKET AVL--------------------------------------
+
+bool ArbolCieloALV::isEmpty(){
+    return raiz == NULL;
+}
+int ArbolCieloALV::height(NodoArbolCieloALV *t) {
+   int h = 0;
+   if (t != NULL) {
+      int l_height = height(t->l);
+      int r_height = height(t->r);
+      int max_height = qMax(l_height, r_height);
+      h = max_height + 1;
+   }
+   return h;
+}
+int ArbolCieloALV::difference(NodoArbolCieloALV *t) {
+   int l_height = height(t->l);
+   int r_height = height(t->r);
+   int b_factor = l_height - r_height;
+   return b_factor;
+}
+NodoArbolCieloALV *ArbolCieloALV::rr_rotat(NodoArbolCieloALV *parent) {
+   NodoArbolCieloALV *t;
+   t = parent->r;
+   parent->r = t->l;
+   t->l = parent;
+   //cout<<"Right-Right Rotation";
+   return t;
+}
+NodoArbolCieloALV *ArbolCieloALV::ll_rotat(NodoArbolCieloALV *parent) {
+   NodoArbolCieloALV *t;
+   t = parent->l;
+   parent->l = t->r;
+   t->r = parent;
+   //cout<<"Left-Left Rotation";
+   return t;
+}
+NodoArbolCieloALV *ArbolCieloALV::lr_rotat(NodoArbolCieloALV *parent) {
+   NodoArbolCieloALV *t;
+   t = parent->l;
+   parent->l = rr_rotat(t);
+   //cout<<"Left-Right Rotation";
+   return ll_rotat(parent);
+}
+NodoArbolCieloALV *ArbolCieloALV::rl_rotat(NodoArbolCieloALV *parent) {
+   NodoArbolCieloALV *t;
+   t = parent->r;
+   parent->r = ll_rotat(t);
+   //cout<<"Right-Left Rotation";
+   return rr_rotat(parent);
+}
+NodoArbolCieloALV *ArbolCieloALV::balance(NodoArbolCieloALV *t) {
+   int bal_factor = difference(t);
+   if (bal_factor > 1) {
+      if (difference(t->l) > 0)
+         t = ll_rotat(t);
+      else
+         t = lr_rotat(t);
+   } else if (bal_factor < -1) {
+      if (difference(t->r) > 0)
+         t = rl_rotat(t);
+      else
+         t = rr_rotat(t);
+   }
+   return t;
+}
+
+NodoArbolCieloALV *ArbolCieloALV::insert(Persona *persona, Angel *angel){
+    if(isEmpty()){
+        raiz= new NodoArbolCieloALV(persona, angel);
+        cant++;
+    }else
+        raiz= insert(raiz, persona, angel);
+
+}
+
+NodoArbolCieloALV *ArbolCieloALV::insert(NodoArbolCieloALV *r, Persona *persona, Angel*angel) {
+   if (r == NULL) {
+      r = new NodoArbolCieloALV(persona,angel);
+      cant++;
+      return r;
+   } else if (persona->id < r->persona->id) {
+      r->l = insert(r->l, persona, angel);
+      r = balance(r);
+   } else if (persona->id >= r->persona->id) {
+      r->r = insert(r->r, persona, angel);
+      r = balance(r);
+   } return r;
+}
+
+void ArbolCieloALV::inOrder(NodoArbolCieloALV *t) {
+   if (t == NULL)
+      return;
+  inOrder(t->l);
+  t->persona->imprimir();
+  inOrder(t->r);
+}
+
+QString * ArbolCieloALV::toStringInOrden(){
+    QString *dato = new QString();
+    *dato = "";
+    toStringInOrden(raiz, dato);
+    return dato;
+}
+
+void ArbolCieloALV::toStringInOrden(NodoArbolCieloALV* t, QString* dato){
+    if (t == NULL)
+       return;
+   toStringInOrden(t->l,dato);
+   *dato += t->persona->toString()+t->persona->hijos->toStringIDHijos();
+   toStringInOrden(t->r,dato);
+}
+

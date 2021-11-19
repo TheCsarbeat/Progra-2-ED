@@ -71,6 +71,7 @@ struct Persona{
     Persona * padre;
     ListaDoblePersonas *hijos;
 
+
     int pecadosPersona;
     int buenasAccionesPersona;
 
@@ -134,7 +135,7 @@ struct Persona{
             buenasAcciones[i]->imprimir();
         }
     }
-
+    QString toStringsimplified();
     QString toString();
     QString toStringBuenasAcciones();
     QString toStringPecados();

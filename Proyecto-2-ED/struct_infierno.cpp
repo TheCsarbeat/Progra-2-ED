@@ -174,3 +174,22 @@ void Infierno::llenarArray(ListaDoblePersonas * list){
         p = p->siguiente;
     }
 }
+
+Persona * Infierno::salvarHumano(){
+    //**************Buscar Humano a salvar********
+    for(int i = 0; i<7; i++){
+        NodoListaSimpleHeaps *temp = demonios[i]->listaHeaps->primerNodo;
+        while(temp!=NULL){
+            for(int j = 0; j<temp->heap->array.length(); j++){
+                if(temp->heap->array[j]->persona->buenasAccionesPersona > temp->heap->array[j]->persona->pecadosPersona && temp->heap->array[j]->persona->estado ==0){
+                    temp->heap->array[j]->persona->estado =2;
+                    //Aqu[i tiene que ir la funci[on de mierda para eliminar del heap.
+                    return temp->heap->array[j]->persona;
+                }
+                //qDebug()<<"Cant: "<<temp->heap->array[j]->persona->buenasAccionesPersona <<temp->heap->array[j]->persona->pecadosPersona <<temp->heap->array[j]->persona->estado;
+            }
+            temp = temp->siguiente;
+        }
+    }
+    return NULL;
+}

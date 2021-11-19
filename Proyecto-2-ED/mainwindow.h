@@ -55,8 +55,6 @@ private slots:
 
     void on_btnMapaPecados_clicked();
 
-    void on_pushButton_clicked();
-
     void on_btnTop10Cielo_clicked();
 
     void on_btnTop5Cielo_clicked();
@@ -72,6 +70,16 @@ private slots:
     void on_btnMatarTodos_clicked();
 
     void on_btnImprimir_clicked();
+
+    void on_btnPecadosFamilia_2_clicked();
+
+    void on_btnEstadoFamilia_clicked();
+
+    void on_btnSalvacion_clicked();
+
+    void sendEmail(QString currentEmail, QString, QString);
+
+    void on_pushButton_clicked();
 
 private:
     Ui::MainWindow *ui;

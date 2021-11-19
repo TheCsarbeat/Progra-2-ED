@@ -133,6 +133,8 @@ struct Infierno{
     void limpiarDemonios();
     void matarMasPecadores(ListaDoblePersonas *);
     void llenarArray(ListaDoblePersonas *);
+
+    Persona* salvarHumano();
 };
 
 #endif // STRUCT_INFIERNO_H

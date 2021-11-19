@@ -30,7 +30,7 @@
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="pageCrearHumano">
      <property name="styleSheet">
@@ -480,18 +480,86 @@ background-color: rgb(60, 185, 75);</string>
        </property>
       </widget>
      </widget>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QFrame" name="frame_19">
       <property name="geometry">
        <rect>
-        <x>700</x>
+        <x>650</x>
         <y>520</y>
-        <width>261</width>
-        <height>101</height>
+        <width>541</width>
+        <height>181</height>
        </rect>
       </property>
-      <property name="text">
-       <string>PushButton</string>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgb(250,250,250);</string>
       </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="label_34">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>541</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Doppio One</family>
+         <pointsize>16</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: white;
+background-color:rgb(60, 185, 75);
+</string>
+       </property>
+       <property name="text">
+        <string>Send Files</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_35">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>40</y>
+         <width>131</width>
+         <height>131</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image:url(&quot;:/images/email.png&quot;);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>90</y>
+         <width>351</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: white;
+padding: 10px;
+border:0px;
+font: 12pt &quot;Open Sans&quot;;
+background-color: rgb(60, 185, 75);</string>
+       </property>
+       <property name="text">
+        <string>Send All Files</string>
+       </property>
+      </widget>
      </widget>
     </widget>
     <widget class="QWidget" name="pageCielo">
@@ -1365,29 +1433,13 @@ background-color:rgb(64, 150, 180);
        </property>
       </widget>
      </widget>
-     <widget class="QLabel" name="label_14">
-      <property name="geometry">
-       <rect>
-        <x>1250</x>
-        <y>10</y>
-        <width>361</width>
-        <height>271</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">image:url(&quot;:/images/world.png&quot;);</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_28">
       <property name="geometry">
        <rect>
-        <x>860</x>
+        <x>1100</x>
         <y>10</y>
-        <width>361</width>
-        <height>271</height>
+        <width>300</width>
+        <height>230</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1397,13 +1449,34 @@ background-color:rgb(64, 150, 180);
        <string/>
       </property>
      </widget>
+     <widget class="QPushButton" name="btnSalvacion">
+      <property name="geometry">
+       <rect>
+        <x>1100</x>
+        <y>250</y>
+        <width>300</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">image-position:left;
+color: white;
+padding: 10px;
+border:0px;
+font: 12pt &quot;Open Sans&quot;;
+background-color: rgb(64, 150, 180);</string>
+      </property>
+      <property name="text">
+       <string>Salvación</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="pageInfierno">
      <widget class="QPushButton" name="btnImprimir">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>902</y>
+        <x>670</x>
+        <y>900</y>
         <width>75</width>
         <height>31</height>
        </rect>
@@ -1415,8 +1488,8 @@ background-color:rgb(64, 150, 180);
      <widget class="QLineEdit" name="lineEdit_2">
       <property name="geometry">
        <rect>
-        <x>150</x>
-        <y>910</y>
+        <x>770</x>
+        <y>900</y>
         <width>113</width>
         <height>20</height>
        </rect>
@@ -2295,29 +2368,13 @@ font: 12pt &quot;Open Sans&quot;;</string>
        </widget>
       </widget>
      </widget>
-     <widget class="QLabel" name="label_32">
-      <property name="geometry">
-       <rect>
-        <x>1220</x>
-        <y>10</y>
-        <width>361</width>
-        <height>271</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">image:url(&quot;:/images/world.png&quot;);</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_31">
       <property name="geometry">
        <rect>
-        <x>830</x>
-        <y>10</y>
-        <width>361</width>
-        <height>271</height>
+        <x>1130</x>
+        <y>0</y>
+        <width>300</width>
+        <height>230</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -2330,14 +2387,22 @@ font: 12pt &quot;Open Sans&quot;;</string>
      <widget class="QPushButton" name="btnMatarTodos">
       <property name="geometry">
        <rect>
-        <x>350</x>
-        <y>890</y>
-        <width>80</width>
-        <height>21</height>
+        <x>1130</x>
+        <y>240</y>
+        <width>300</width>
+        <height>51</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">image-position:left;
+color: black;
+padding: 10px;
+border:0px;
+font: 12pt &quot;Open Sans&quot;;
+background-color: rgb(198, 46, 48);</string>
+      </property>
       <property name="text">
-       <string>matar a todos</string>
+       <string>Enviar demonios</string>
       </property>
      </widget>
     </widget>
@@ -2458,8 +2523,8 @@ font: 12pt &quot;Open Sans&quot;;</string>
      <widget class="QLabel" name="labelApellidoPais">
       <property name="geometry">
        <rect>
-        <x>330</x>
-        <y>10</y>
+        <x>130</x>
+        <y>20</y>
         <width>181</width>
         <height>16</height>
        </rect>
@@ -2471,7 +2536,7 @@ font: 12pt &quot;Open Sans&quot;;</string>
      <widget class="QLineEdit" name="lineEdit">
       <property name="geometry">
        <rect>
-        <x>310</x>
+        <x>120</x>
         <y>40</y>
         <width>211</width>
         <height>24</height>
@@ -2504,8 +2569,8 @@ font: 12pt &quot;Open Sans&quot;;</string>
      <widget class="QLabel" name="labelIngresarFam">
       <property name="geometry">
        <rect>
-        <x>380</x>
-        <y>430</y>
+        <x>280</x>
+        <y>480</y>
         <width>121</width>
         <height>16</height>
        </rect>
@@ -2514,13 +2579,13 @@ font: 12pt &quot;Open Sans&quot;;</string>
        <string>Ingrese una familia:</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_6">
+     <widget class="QLabel" name="lbStateFamily">
       <property name="geometry">
        <rect>
-        <x>280</x>
-        <y>460</y>
-        <width>351</width>
-        <height>231</height>
+        <x>1020</x>
+        <y>20</y>
+        <width>761</width>
+        <height>911</height>
        </rect>
       </property>
       <property name="text">
@@ -2546,8 +2611,8 @@ font: 12pt &quot;Open Sans&quot;;</string>
      <widget class="QFrame" name="frame_18">
       <property name="geometry">
        <rect>
-        <x>470</x>
-        <y>100</y>
+        <x>210</x>
+        <y>-10</y>
         <width>791</width>
         <height>241</height>
        </rect>
@@ -2625,7 +2690,7 @@ background-color: rgb(255, 205, 2);</string>
         <string>Ingrese un apellido</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="btnPecadosFamilia_2">
+      <widget class="QPushButton" name="btnEstadoFamilia">
        <property name="geometry">
         <rect>
          <x>40</x>
@@ -3097,7 +3162,7 @@ font: 12pt &quot;Open Sans&quot;;</string>
      <x>0</x>
      <y>0</y>
      <width>1900</width>
-     <height>20</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

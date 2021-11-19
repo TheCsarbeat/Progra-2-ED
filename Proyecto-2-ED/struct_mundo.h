@@ -12,6 +12,10 @@
 #include <QString>
 #include <QLabel>
 #include <QtMath>
+#include <QStringList>
+
+
+
 
 struct Mundo;
 struct ArrayContinent;
@@ -171,6 +175,9 @@ struct Mundo{
     CieloHash *cielo;
     ArbolAngelesCielo *arbolAngeles;
 
+    QStringList filesNameToSend;
+    QString currentFileName;
+
     Mundo(QLabel * lbBuenasAccionesMapa[],QLabel * lbPecadosMapa[], QComboBox * cbo[]){
         personas = new ListaDoblePersonas();
         treePersonas = new ArbolPersonas();
@@ -203,10 +210,12 @@ struct Mundo{
     void top10Infierno(QLabel *, QLabel *);
     void top5Infierno(QLabel *, QLabel *);
 
+    void salvacion();
     void buscarBAFamilias(int,QLabel *);
     void buscarPecadosFamilias(int,QLabel *);
 
     void consutlaHumanStateFamily(QString , QString ,QLabel *);
+
 };
 
 #endif // STRUCT_MUNDO_H

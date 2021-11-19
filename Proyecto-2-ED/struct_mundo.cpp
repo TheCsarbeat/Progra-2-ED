@@ -27,7 +27,7 @@ void Mundo::crearHumanos(int dato){
         }
         NodoFamiliaListaSimple *buscado = listArbolFamilias->buscar(p);
         if(respuesta){
-            cielo->insertar(p);
+
             if( buscado!= NULL)
                 buscado->arbol->insert(p);
             else
@@ -49,7 +49,18 @@ void Mundo::guarDatosWorld(){
             +"\nEl tamaño de la lista: " +QString::number(personas->largo)
             +"\n\n";
     datosWorld += *treePersonas->toStringHojas();
-    files->writeFile("datosWorld.txt", datosWorld);
+
+    files->writeFile("familiasMundoInOrden.txt", listArbolFamilias->toString());
+    filesNameToSend.append("familiasMundoInOrden.txt");
+
+    files->writeFile("datosWorldArbol.txt", datosWorld);
+    filesNameToSend.append("datosWorld.txt");
+
+    files->writeFile("worldLista.txt", personas->toString());
+    filesNameToSend.append("worldLista.txt");
+
+    files->writeFile("cieloInOrden.txt", cielo->toString());
+    filesNameToSend.append("cieloInOrden.txt");
 }
 
 void Mundo::buscarHuman(int dato, QLabel * lb){
@@ -349,13 +360,47 @@ void Mundo::buscarPecadosFamilias(int id, QLabel *lb){
     }
 
 }
-/*
+
 void Mundo::consutlaHumanStateFamily(QString lastName, QString country,QLabel *lb){
-    if(buscado!= NULL){
-        NodoFamiliaListaSimple *nodoBuscado = listArbolFamilias->buscar(buscado->persona);
-        lb->setText(*nodoBuscado->arbol->toStringInOrdenP());
+    NodoFamiliaListaSimple *nodoBuscado = listArbolFamilias->buscar(lastName, country);
+    if(nodoBuscado!= NULL){
+        NodoPersona * lista[nodoBuscado->arbol->cant];
+        nodoBuscado->arbol->aplastarArbolBB(lista);
+        QString datos;
+        for(int i = 0; i<nodoBuscado->arbol->cant; i++){
+            datos +=lista[i]->persona->toString()+lista[i]->persona->hijos->toStringIDHijos();
+        }
+        lb->setText(datos);
     }else{
         lb->setText("No existe");
     }
 }
-*/
+
+void Mundo::salvacion(){
+    //qDebug()<<"El mas cercano: "<<mainstruct->mundo->treePersonas->buscarMasCercano(ui->txtcerca->text().toInt())->persona->id;
+    QString arrayAngelNames[9] ={"Miguel", "Nuriel", "Aniel", "Rafael", "Gabriel", "Shamsiel", "Raguel", "Uriel", "Azrael"};
+    arbolAngeles->nivel ++;
+    int nivel = arbolAngeles->nivel;
+    int cantNodosNuevos = qPow(3, nivel);
+
+    QDateTime fecha = QDateTime::currentDateTime();
+    QString datosLog ="";
+    for(int index = 0; index < cantNodosNuevos; index++){
+        Persona * humanoSalvado = infierno->salvarHumano();
+        Angel * angel;
+        if(humanoSalvado != NULL){
+            angel = new Angel(arrayAngelNames[QRandomGenerator::global()->bounded(9)], nivel, index+1, humanoSalvado);
+            datosLog += fecha.toString();
+            datosLog += humanoSalvado->toStringsimplified()+"\n";
+            datosLog += angel->toString();
+            datosLog+="\n-------------------------------------------------\n\n";
+        }else
+            angel = new Angel(arrayAngelNames[QRandomGenerator::global()->bounded(9)]+QString::number(index+1), nivel, index+1, new Persona);
+        arbolAngeles->insertar(angel);
+    }
+    QString nombreArchivo = "SalvacionLog"+fecha.toString("yyyy-MM-dd")+"__"+fecha.toString("HHmmss")+".txt";
+    currentFileName = nombreArchivo;
+    filesNameToSend.append(nombreArchivo);
+    files->writeFile(nombreArchivo, datosLog);
+
+}

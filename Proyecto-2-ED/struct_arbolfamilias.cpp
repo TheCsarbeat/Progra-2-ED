@@ -228,7 +228,47 @@ int ArbolFamilias::treeHeight(NodoArbolFamiliaALV* nodo){
      return qMax (treeHeight (nodo-> l), treeHeight (nodo-> r)) + 1; // La altura del árbol = MAX (la altura del subárbol izquierdo, la altura del subárbol derecho) + 1;
 }
 
+void ArbolFamilias::aplastarArbolBB(NodoPersona *lista[]){
+    QVector<Persona*> array;
+    ListaDoblePersonas * listaDoble = new ListaDoblePersonas();
+    crearLista(raiz, listaDoble);
 
+    NodoPersona *temp = listaDoble->primerNodo;
+    int i = 0;
+    while(temp!=NULL){
+        lista[i] = new NodoPersona(temp->persona);
+        temp = temp->siguiente;
+        i++;
+    }
+
+    qDebug()<<i<<"    "<<cant;
+
+    bubbleSortPecados(lista);
+}
+
+void ArbolFamilias::crearLista(NodoArbolFamiliaALV *nodo, ListaDoblePersonas * arr){
+   if (nodo != NULL)   {
+     crearLista(nodo->l, arr);
+
+     arr->insertar(nodo->persona);
+     crearLista(nodo->r, arr);
+   }
+}
+
+void ArbolFamilias::bubbleSortPecados(NodoPersona *arr[]){
+    NodoPersona temp;
+    qDebug()<<"Cantidad del arbol: "<<cant;
+    for(int i = 0; i<cant; i++) {
+       for(int j = i+1; j<cant; j++)           {
+          if(arr[j]->persona->pecadosPersona > arr[i]->persona->pecadosPersona) {
+
+             temp = *arr[i];
+             *arr[i] = *arr[j];
+             *arr[j] = temp;
+          }
+       }
+    }
+}
 
 //*************************************************Lista de familiar************************
 bool ListaSimpleArbolFamilias::isEmpy(){
@@ -276,7 +316,7 @@ void ListaSimpleArbolFamilias::imprimir(){
     int cont =0;
     while (temp != NULL){
         qDebug()<<"\n\n";
-        qDebug()<<"\nFamilia: "<<cont<<"\n";
+        qDebug()<<"\nFamilia: "<<cont<<"\n"<<"cantidad: "<<temp->arbol->cant;
         temp->arbol->inOrder(temp->arbol->raiz);
         cont++;
         temp = temp->siguiente;
@@ -317,5 +357,19 @@ void ArbolFamilias::getNodesInList(NodoArbolFamiliaALV *t, ListaDoblePersonas * 
         lista->insertar(t->persona);
         getNodesInList(t->r,lista);
     }
+}
+
+QString ListaSimpleArbolFamilias::toString(){
+    QString dato = "";
+    NodoFamiliaListaSimple * temp = primerNodo;
+    int cont =0;
+    while (temp != NULL){
+        dato += "\n\n\nFamilia: "+QString::number(cont)+"Canitdad de Miembros: "+QString::number(temp->arbol->cant)+"\n";
+        dato += *temp->arbol->toStringInOrden();
+        cont++;
+        temp = temp->siguiente;
+    }
+    dato += "\n\nLargo: "+QString::number(largo);
+    return dato;
 }
 

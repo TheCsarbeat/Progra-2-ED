@@ -4,6 +4,7 @@
 #include "struct_personas.h"
 #include <QString>
 #include <QTextStream>
+#include <QVector>
 
 #include <QRandomGenerator>
 #include <QString>
@@ -74,8 +75,10 @@ struct ArbolFamilias{
     QString* toStringInOrdenP();
     void toStringInOrdenP(NodoArbolFamiliaALV*, QString*);
 
-    Persona * aplastarArbolBB();
-    NodoArbolFamiliaALV* crearLista(NodoArbolFamiliaALV*nodo, Persona * arr[]);
+    void aplastarArbolBB(NodoPersona *[]);
+    void crearLista(NodoArbolFamiliaALV*nodo,ListaDoblePersonas*);
+
+    void bubbleSortPecados(NodoPersona *[]);
 
 };
 
@@ -111,19 +114,7 @@ struct ListaSimpleArbolFamilias{
     bool isEmpy();
     void imprimir();
 
-    QString toString(){
-        QString dato = "";
-        NodoFamiliaListaSimple * temp = primerNodo;
-        int cont =0;
-        while (temp != NULL){
-            dato += "\n\n\nFamilia: "+QString::number(cont)+"\n";
-            dato += *temp->arbol->toStringInOrden();
-            cont++;
-            temp = temp->siguiente;
-        }
-        dato += "\n\nLargo: "+QString::number(largo);
-        return dato;
-    }
+    QString toString();
     void insertarALInicio(Persona *);
     NodoFamiliaListaSimple * buscar(Persona * );
 

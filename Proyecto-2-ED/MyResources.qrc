@@ -96,5 +96,6 @@
         <file>images/continents/oceaniaR3.png</file>
         <file>images/continents/oceaniaR4.png</file>
         <file>images/continents/oceaniaR5.png</file>
+        <file>images/email.png</file>
     </qresource>
 </RCC>
