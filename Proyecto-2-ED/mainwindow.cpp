@@ -186,7 +186,14 @@ void MainWindow::on_btnPecadosFamilia_clicked()
 
 void MainWindow::on_btnMatarTodos_clicked()
 {
-    mainstruct->mundo->infierno->matarMasPecadores(mainstruct->mundo->personas);
+    if(mainstruct->mundo->personas->largo != 0){
+        mainstruct->mundo->infierno->matarMasPecadores(mainstruct->mundo->personas, mainstruct->mundo->files);
+        msg.setText("Los demonios han tomado las almas más pecadoras");
+        msg.exec();
+    }else{
+        msg.setText("No hay humanos en el mundo");
+        msg.exec();
+    }
 }
 
 

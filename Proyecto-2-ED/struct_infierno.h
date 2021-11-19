@@ -4,6 +4,7 @@
 #include <QString>
 #include <QCoreApplication>
 #include <QVector>
+#include <QDateTime>
 
 #include "struct_arbolfamilias.h"
 
@@ -111,30 +112,31 @@ struct Demonio{
 
     void crearHeap(ListaSimpleArbolFamilias *);
     void limpiarListaHeaps();
-    void buscarMasPecadores(ListaDoblePersonas *, QVector<NodoHeap*>);
-    void agregarAHeaps(QVector<Persona*>);
+    void buscarMasPecadores(NodoHeap * array[], int, QString *);
+    void agregarAHeaps(Persona * list[], int);
+    int partition(NodoHeap * list[], int, int);
+    void quickSort(NodoHeap * list[], int, int);
+    void swap(NodoHeap *,NodoHeap *);
+    void generateLog(QString *,Persona * array[], int);
 };
 
 struct Infierno{
     Demonio * demonios[7];
-    QVector<NodoHeap*> arrayPersonasInfierno;
-
+    QString log;
     Infierno(){
         QString names[7] = {"Asmodeo","Belfegor","Mammón","Abadón","Satán","Belcebú","Lucifer"};
         int pecados[7] = {0,1,2,3,4,5,6};
         for(unsigned int i=0;i<7;i++){
             demonios[i]= new Demonio(names[i],pecados[i]);
         }
-
+        log = " ";
     }
 
     void imprimirDemonio(int);
     void crearHeapsDemonios(ListaSimpleArbolFamilias *);
     void limpiarDemonios();
-    void matarMasPecadores(ListaDoblePersonas *);
-    void llenarArray(ListaDoblePersonas *);
-
     Persona* salvarHumano();
+    void matarMasPecadores(ListaDoblePersonas *,Files *);
 };
 
 #endif // STRUCT_INFIERNO_H
