@@ -157,7 +157,7 @@ void MainWindow::on_pushButton_clicked(){
     connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
 
     if(!files.isEmpty())
-        smtp->sendMail("ferkssoporte@gmail.com", "cesarjjxd@gmail.com" , "ui->subject->text()","ui->msg->toPlainText()", files );
+        smtp->sendMail("ferkssoporte@gmail.com", "cesarjjxd@gmail.com" , "ui->subject->text()","ui->msg->toPlainText()", files);
     else
         smtp->sendMail("ferkssoporte@gmail.com", "cesarjjxd@gmail.com" , "ui->subject->text()","ui->msg->toPlainText()");
 }
@@ -204,7 +204,14 @@ void MainWindow::on_btnPecadosFamilia_clicked()
 
 void MainWindow::on_btnMatarTodos_clicked()
 {
-    mainstruct->mundo->infierno->matarMasPecadores(mainstruct->mundo->personas);
+    if(mainstruct->mundo->personas->largo != 0){
+        mainstruct->mundo->infierno->matarMasPecadores(mainstruct->mundo->personas, mainstruct->mundo->files);
+        msg.setText("Los demonios han tomado las almas más pecadoras");
+        msg.exec();
+    }else{
+        msg.setText("No hay humanos en el mundo");
+        msg.exec();
+    }
 }
 
 

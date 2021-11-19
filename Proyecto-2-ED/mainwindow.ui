@@ -30,7 +30,7 @@
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="pageCrearHumano">
      <property name="styleSheet">
@@ -1365,27 +1365,11 @@ background-color:rgb(64, 150, 180);
        </property>
       </widget>
      </widget>
-     <widget class="QLabel" name="label_14">
-      <property name="geometry">
-       <rect>
-        <x>1250</x>
-        <y>10</y>
-        <width>361</width>
-        <height>271</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">image:url(&quot;:/images/world.png&quot;);</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_28">
       <property name="geometry">
        <rect>
-        <x>860</x>
-        <y>10</y>
+        <x>1080</x>
+        <y>30</y>
         <width>361</width>
         <height>271</height>
        </rect>
@@ -1402,8 +1386,8 @@ background-color:rgb(64, 150, 180);
      <widget class="QPushButton" name="btnImprimir">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>902</y>
+        <x>690</x>
+        <y>900</y>
         <width>75</width>
         <height>31</height>
        </rect>
@@ -1415,7 +1399,7 @@ background-color:rgb(64, 150, 180);
      <widget class="QLineEdit" name="lineEdit_2">
       <property name="geometry">
        <rect>
-        <x>150</x>
+        <x>780</x>
         <y>910</y>
         <width>113</width>
         <height>20</height>
@@ -2295,27 +2279,11 @@ font: 12pt &quot;Open Sans&quot;;</string>
        </widget>
       </widget>
      </widget>
-     <widget class="QLabel" name="label_32">
-      <property name="geometry">
-       <rect>
-        <x>1220</x>
-        <y>10</y>
-        <width>361</width>
-        <height>271</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">image:url(&quot;:/images/world.png&quot;);</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_31">
       <property name="geometry">
        <rect>
-        <x>830</x>
-        <y>10</y>
+        <x>1070</x>
+        <y>20</y>
         <width>361</width>
         <height>271</height>
        </rect>
@@ -2330,14 +2298,22 @@ font: 12pt &quot;Open Sans&quot;;</string>
      <widget class="QPushButton" name="btnMatarTodos">
       <property name="geometry">
        <rect>
-        <x>350</x>
+        <x>1110</x>
         <y>890</y>
-        <width>80</width>
-        <height>21</height>
+        <width>231</width>
+        <height>51</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">image-position:left;
+color: black;
+padding: 10px;
+border:0px;
+font: 12pt &quot;Open Sans&quot;;
+background-color: rgb(198, 46, 48);</string>
+      </property>
       <property name="text">
-       <string>matar a todos</string>
+       <string>Enviar demonios</string>
       </property>
      </widget>
     </widget>
