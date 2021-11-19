@@ -34,6 +34,47 @@ struct PaisesData{
         cantidad = 0;
     }
 };
+struct ArrayApellidos;
+struct ApellidosData{
+    QString apellido;
+    int cantidad;
+    ApellidosData(){
+        apellido = "";
+        cantidad = 0;
+    }
+
+};
+struct ArrayCreencias;
+struct CreenciaData{
+    QString nombre;
+    int cantidad;
+    CreenciaData(){
+        nombre = "";
+        cantidad = 0;
+    }
+
+};
+struct ArrayProfesiones;
+struct ProfesionData{
+    QString nombre;
+    int cantidad;
+    ProfesionData(){
+        nombre = "";
+        cantidad = 0;
+    }
+
+};
+
+struct ArrayContinentes;
+struct ContinentesData{
+    QString nombre;
+    int cantidad;
+    ContinentesData(){
+        nombre = "";
+        cantidad = 0;
+    }
+
+};
 
 struct ArrayContinent{
     QString names[5] = {"america", "africa", "europa","oceania", "asia"};
@@ -76,6 +117,8 @@ struct ArrayContinent{
 
 struct ArrayPaises{
     PaisesData *arrayPaises[196];
+    int cantidadPecados;
+    int cantidadBA;
 
     ArrayPaises(Files * file){
         int cantidad = file->index;
@@ -117,6 +160,24 @@ struct ArrayPaises{
             return respuesta;
      }
 
+    QString toStringPaises(Files * file){
+        QString respuesta= "";
+        for(int i = 0; i<file->index; i++) {
+            respuesta += QString::number(i+1)+" # "+arrayPaises[i]->nombre+"\tCantidad: " + QString::number(arrayPaises[i]->cantidad)+
+                    "\t\tPorcentaje: "+QString::number((double)(arrayPaises[i]->cantidad*100)/cantidadPecados)+ " %" +"\n";
+        }
+        return respuesta;
+    }
+
+    QString toStringPaises2(Files * file){
+        QString respuesta= "";
+        for(int i = 0; i<file->index; i++) {
+            respuesta += QString::number(i+1)+" # "+arrayPaises[i]->nombre+"\tCantidad: " + QString::number(arrayPaises[i]->cantidad)+
+                    "\t\tPorcentaje: "+QString::number((double)(arrayPaises[i]->cantidad*100)/cantidadBA)+ " %" +"\n";
+        }
+        return respuesta;
+    }
+
     void imprimir(){
         for(int i = 0; i<10; i++) {
             qDebug()<<i+1<<" # "<<arrayPaises[i]->nombre<<"\t\t\t\t\tCantidad: "<<arrayPaises[i]->cantidad;
@@ -155,7 +216,203 @@ struct ArrayPaises{
            }
         }
     }
+
+    void bubbleSort(Files * file){
+        PaisesData *temp = new PaisesData();
+        for(int i = 0; i<file->index; i++) {
+           for(int j = i+1; j<file->index; j++)           {
+              if(arrayPaises[j]->cantidad > arrayPaises[i]->cantidad) {
+                 *temp = *arrayPaises[i];
+                 *arrayPaises[i] = *arrayPaises[j];
+                 *arrayPaises[j] = *temp;
+              }
+           }
+        }
+    }
 };
+
+struct ArrayApellidos{
+    ApellidosData *arrayApellidos[566];
+    int cantidadPecados;
+    int cantidadBA;
+    ArrayApellidos(Files * file){
+        int cantidad = file->indexLasName;
+        cantidadPecados = 0;
+        for (int i=0; i<cantidad; i++){
+            arrayApellidos[i] = new ApellidosData();
+            arrayApellidos[i]->apellido = file->lastNames[i];
+
+        }
+    }
+
+    QString toStringApellidos(){
+        QString respuesta= "";
+        for(int i = 0; i<50; i++) {
+            respuesta += QString::number(i+1)+" # "+arrayApellidos[i]->apellido+"\tCantidad: " + QString::number(arrayApellidos[i]->cantidad)+
+                    "\t\tPorcentaje: "+QString::number((double)(arrayApellidos[i]->cantidad*100)/cantidadPecados)+ " %" +"\n";
+        }
+        return respuesta;
+    }
+
+    QString toStringApellidos2(){
+        QString respuesta= "";
+        for(int i = 0; i<50; i++) {
+            respuesta += QString::number(i+1)+" # "+arrayApellidos[i]->apellido+"\tCantidad: " + QString::number(arrayApellidos[i]->cantidad)+
+                    "\t\tPorcentaje: "+QString::number((double)(arrayApellidos[i]->cantidad*100)/cantidadBA)+ " %" +"\n";
+        }
+        return respuesta;
+    }
+
+    void bubbleSort(Files * file){
+        ApellidosData *temp = new ApellidosData();
+        for(int i = 0; i<file->indexLasName; i++) {
+           for(int j = i+1; j<file->indexLasName; j++)           {
+              if(arrayApellidos[j]->cantidad > arrayApellidos[i]->cantidad) {
+                 *temp = *arrayApellidos[i];
+                 *arrayApellidos[i] = *arrayApellidos[j];
+                 *arrayApellidos[j] = *temp;
+              }
+           }
+        }
+    }
+};
+
+struct ArrayProfesiones{
+    ProfesionData *arrayProfesiones[80];
+    int cantidadPecados;
+    int cantidadBA;
+    ArrayProfesiones(Files * file){
+        int cantidad = file->indexJobs;
+        for (int i=0; i<cantidad; i++){
+            arrayProfesiones[i] = new ProfesionData();
+            arrayProfesiones[i]->nombre = file->jobs[i];
+        }
+    }
+
+    QString toStringProfesiones(){
+        QString respuesta= "";
+        for(int i = 0; i<80; i++) {
+            respuesta += QString::number(i+1)+" # "+arrayProfesiones[i]->nombre+"\tCantidad: " + QString::number(arrayProfesiones[i]->cantidad)+
+                    "\t\tPorcentaje: "+QString::number((double)(arrayProfesiones[i]->cantidad*100)/cantidadPecados)+ " %" +"\n";
+        }
+        return respuesta;
+    }
+
+    QString toStringProfesiones2(){
+        QString respuesta= "";
+        for(int i = 0; i<80; i++) {
+            respuesta += QString::number(i+1)+" # "+arrayProfesiones[i]->nombre+"\tCantidad: " + QString::number(arrayProfesiones[i]->cantidad)+
+                    "\t\tPorcentaje: "+QString::number((double)(arrayProfesiones[i]->cantidad*100)/cantidadBA)+ " %" +"\n";
+        }
+        return respuesta;
+    }
+
+    void bubbleSort(){
+        ProfesionData *temp = new ProfesionData();
+        for(int i = 0; i<80; i++) {
+            for(int j = i+1; j<80; j++){
+                if(arrayProfesiones[j]->cantidad > arrayProfesiones[i]->cantidad) {
+                    *temp = *arrayProfesiones[i];
+                    *arrayProfesiones[i] = *arrayProfesiones[j];
+                    *arrayProfesiones[j] = *temp;
+                 }
+             }
+        }
+    }
+};
+
+struct ArrayCreencias{
+    CreenciaData *arrayCreencia[19];
+    int cantidadPecados;
+    int cantidadBA;
+
+    ArrayCreencias(Files * file){
+        int cantidad = file->indexReligions;
+        for (int i=0; i<cantidad; i++){
+            arrayCreencia[i] = new CreenciaData();
+            arrayCreencia[i]->nombre = file->religions[i];
+        }
+    }
+
+    QString toStringCreencia(){
+        QString respuesta= "";
+        for(int i = 0; i<19; i++) {
+            respuesta += QString::number(i+1)+" # "+arrayCreencia[i]->nombre+"\tCantidad: " + QString::number(arrayCreencia[i]->cantidad)+
+                    "\t\tPorcentaje: "+QString::number((double)(arrayCreencia[i]->cantidad*100)/cantidadPecados)+ " %" +"\n";
+        }
+        return respuesta;
+    }
+
+    QString toStringCreencia2(){
+        QString respuesta= "";
+        for(int i = 0; i<19; i++) {
+            respuesta += QString::number(i+1)+" # "+arrayCreencia[i]->nombre+"\tCantidad: " + QString::number(arrayCreencia[i]->cantidad)+
+                    "\t\tPorcentaje: "+QString::number((double)(arrayCreencia[i]->cantidad*100)/cantidadBA)+ " %" +"\n";
+        }
+        return respuesta;
+    }
+
+    void bubbleSort(){
+        CreenciaData *temp = new CreenciaData();
+        for(int i = 0; i<19; i++) {
+            for(int j = i+1; j<19; j++){
+                if(arrayCreencia[j]->cantidad > arrayCreencia[i]->cantidad) {
+                    *temp = *arrayCreencia[i];
+                    *arrayCreencia[i] = *arrayCreencia[j];
+                    *arrayCreencia[j] = *temp;
+                 }
+             }
+        }
+    }
+};
+
+struct ArrayContinentes{
+
+    QString names[5] = {"america", "africa", "europa","oceania", "asia"};
+    ContinentesData *arrayContinentes[7];
+    int cantidadPecados;
+    int cantidadBA;
+
+    ArrayContinentes(){
+
+        for (int i=0; i<5; i++){
+            arrayContinentes[i] = new ContinentesData();
+            arrayContinentes[i]->nombre = names[i];
+        }
+    }
+
+    QString toStringContinentes(){
+        QString respuesta= "";
+        for(int i = 0; i<5; i++) {
+            respuesta += QString::number(i+1)+" # "+arrayContinentes[i]->nombre+"\tCantidad: " + QString::number(arrayContinentes[i]->cantidad)+
+                    "\t\tPorcentaje: "+QString::number((double)(arrayContinentes[i]->cantidad*100)/cantidadPecados)+ " %" +"\n";
+        }
+        return respuesta;
+    }
+
+    QString toStringContinentes2(){
+        QString respuesta= "";
+        for(int i = 0; i<5; i++) {
+            respuesta += QString::number(i+1)+" # "+arrayContinentes[i]->nombre+"\tCantidad: " + QString::number(arrayContinentes[i]->cantidad)+
+                    "\t\tPorcentaje: "+QString::number((double)(arrayContinentes[i]->cantidad*100)/cantidadBA)+ " %" +"\n";
+        }
+        return respuesta;
+    }
+
+    void bubbleSort(){
+        ContinentesData *temp = new ContinentesData();
+        for(int i = 0; i<5; i++) {
+            for(int j = i+1; j<5; j++){
+                if(arrayContinentes[j]->cantidad > arrayContinentes[i]->cantidad) {
+                    *temp = *arrayContinentes[i];
+                    *arrayContinentes[i] = *arrayContinentes[j];
+                    *arrayContinentes[j] = *temp;
+                 }
+             }
+        }
+    }
+};
+
 
 struct Mundo{
     ListaDoblePersonas * personas;
@@ -170,6 +427,16 @@ struct Mundo{
     Infierno * infierno;
     CieloHash *cielo;
     ArbolAngelesCielo *arbolAngeles;
+    ArrayApellidos * arrayBAapellidos;
+    ArrayApellidos * arrayPecadoApellidos;
+    ArrayCreencias * arrayBAcreencias;
+    ArrayCreencias * arrayPecadoCreencias;
+    ArrayProfesiones * arrayBAprofesiones;
+    ArrayProfesiones * arrayPecadoProfesiones;
+    ArrayPaises * arrayBAPaises;
+    ArrayPaises * arrayPecadoPaises;
+    ArrayContinentes * arrayBAContinentes;
+    ArrayContinentes * arrayPecadosContinentes;
 
     Mundo(QLabel * lbBuenasAccionesMapa[],QLabel * lbPecadosMapa[], QComboBox * cbo[]){
         personas = new ListaDoblePersonas();
@@ -184,6 +451,18 @@ struct Mundo{
         infierno = new Infierno();
         cielo = new CieloHash();
         arbolAngeles = new ArbolAngelesCielo();
+        arrayPecadoApellidos = new ArrayApellidos(files);
+        arrayBAapellidos = new ArrayApellidos(files);
+        arrayBAcreencias = new ArrayCreencias(files);
+        arrayBAprofesiones = new ArrayProfesiones(files);
+        arrayPecadoProfesiones = new ArrayProfesiones(files);
+        arrayBAPaises = new ArrayPaises(files);
+        arrayPecadoPaises = new ArrayPaises(files);
+        arrayBAContinentes = new ArrayContinentes();
+        arrayPecadosContinentes = new ArrayContinentes();
+        arrayPecadoCreencias = new ArrayCreencias(files);
+
+
     }
 
     void crearHumanos(int);
@@ -207,6 +486,17 @@ struct Mundo{
     void buscarPecadosFamilias(int,QLabel *);
 
     void consutlaHumanStateFamily(QString lastName, QString country,QLabel *lb);
+
+    void apellidosPecadores(QLabel *);
+    void apellidosBA(QLabel *);
+    void continentesPecadores(QLabel *);
+    void continentesBA(QLabel *);
+    void paisesPecadores(QLabel *);
+    void paisesBA(QLabel *);
+    void creenciasPecadores(QLabel *);
+    void creenciasBA(QLabel *);
+    void profesionesPecadores(QLabel *);
+    void profesionesBA(QLabel *);
 };
 
 #endif // STRUCT_MUNDO_H

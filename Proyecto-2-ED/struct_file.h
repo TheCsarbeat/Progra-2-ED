@@ -43,7 +43,7 @@ struct Files{
     QComboBox * arrayCBO[2];
 
     Files(QComboBox *cbo[]){
-        index = 0;
+        index = 0;  // Es el index de los países.
         indexName  =0 ;
         indexLasName =0 ;
         indexReligions= 0;

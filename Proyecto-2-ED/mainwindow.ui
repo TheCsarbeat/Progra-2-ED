@@ -30,7 +30,7 @@
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="pageCrearHumano">
      <property name="styleSheet">
@@ -2329,116 +2329,1080 @@ font: 12pt &quot;Open Sans&quot;;</string>
      </widget>
     </widget>
     <widget class="QWidget" name="pageConsultas">
-     <widget class="QPushButton" name="pushButton_16">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>30</y>
-        <width>151</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Cielo (Salvación)</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_17">
-      <property name="geometry">
-       <rect>
-        <x>210</x>
-        <y>30</y>
-        <width>161</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Infierno (Condenación)</string>
-      </property>
-     </widget>
      <widget class="QStackedWidget" name="panelConsultas">
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>120</y>
+        <y>10</y>
         <width>1671</width>
-        <height>831</height>
+        <height>961</height>
        </rect>
       </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
       <widget class="QWidget" name="page">
-       <widget class="QScrollArea" name="scrollConsultaBueno">
+       <widget class="QStackedWidget" name="panelConsultas_2">
         <property name="geometry">
          <rect>
-          <x>50</x>
-          <y>50</y>
-          <width>661</width>
-          <height>301</height>
+          <x>10</x>
+          <y>290</y>
+          <width>791</width>
+          <height>551</height>
          </rect>
         </property>
-        <property name="widgetResizable">
-         <bool>true</bool>
+        <property name="styleSheet">
+         <string notr="true">background-color:rgb(250,250,250);</string>
         </property>
-        <widget class="QWidget" name="scrollAreaWidgetContents_2">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>0</y>
-           <width>659</width>
-           <height>299</height>
-          </rect>
-         </property>
-         <widget class="QLabel" name="labelListadoBuenos">
+        <property name="currentIndex">
+         <number>10</number>
+        </property>
+        <widget class="QWidget" name="pageCondenacion">
+         <widget class="QLabel" name="label_36">
           <property name="geometry">
            <rect>
-            <x>150</x>
-            <y>80</y>
-            <width>281</width>
-            <height>16</height>
+            <x>0</x>
+            <y>0</y>
+            <width>831</width>
+            <height>31</height>
            </rect>
           </property>
+          <property name="font">
+           <font>
+            <family>Doppio One</family>
+            <pointsize>16</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(32, 30, 30);
+background-color: orange;
+</string>
+          </property>
           <property name="text">
-           <string>Listado de humano más bueno al menos bueno:</string>
+           <string>Condenación</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QScrollArea" name="scrollArea_4">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>50</y>
+            <width>761</width>
+            <height>491</height>
+           </rect>
+          </property>
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>759</width>
+             <height>489</height>
+            </rect>
+           </property>
+           <widget class="QLabel" name="lbCondenacion">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>751</width>
+              <height>481</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">text-align: center ;
+font: 14pt &quot;Open Sans&quot;;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="pageApellidos">
+         <widget class="QLabel" name="label_37">
+          <property name="geometry">
+           <rect>
+            <x>-10</x>
+            <y>0</y>
+            <width>801</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Doppio One</family>
+            <pointsize>16</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(32, 30, 30);
+background-color: orange;
+</string>
+          </property>
+          <property name="text">
+           <string>Apellidos de más a menos pecadores</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QScrollArea" name="scrollArea_5">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>50</y>
+            <width>761</width>
+            <height>471</height>
+           </rect>
+          </property>
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_2">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>759</width>
+             <height>469</height>
+            </rect>
+           </property>
+           <widget class="QLabel" name="lbApellidos">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>751</width>
+              <height>471</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">text-align: center ;
+font: 14pt &quot;Open Sans&quot;;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="pageContinentes">
+         <widget class="QLabel" name="lbContinentes">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>60</y>
+            <width>721</width>
+            <height>461</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">text-align: center ;
+font: 14pt &quot;Open Sans&quot;;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_38">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>801</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Doppio One</family>
+            <pointsize>16</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(32, 30, 30);
+background-color: orange;</string>
+          </property>
+          <property name="text">
+           <string>Continentes de más a menos pecadores</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
           </property>
          </widget>
         </widget>
+        <widget class="QWidget" name="pagePaises">
+         <widget class="QLabel" name="label_40">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>801</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Doppio One</family>
+            <pointsize>16</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(32, 30, 30);
+background-color: orange;</string>
+          </property>
+          <property name="text">
+           <string>Países de más a menos pecadores</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QScrollArea" name="scrollArea_6">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>50</y>
+            <width>751</width>
+            <height>491</height>
+           </rect>
+          </property>
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_8">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>749</width>
+             <height>489</height>
+            </rect>
+           </property>
+           <widget class="QLabel" name="lbPaises">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>741</width>
+              <height>481</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">text-align: center ;
+font: 14pt &quot;Open Sans&quot;;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="pageCreencias">
+         <widget class="QLabel" name="label_41">
+          <property name="geometry">
+           <rect>
+            <x>-10</x>
+            <y>0</y>
+            <width>801</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Doppio One</family>
+            <pointsize>16</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(32, 30, 30);
+background-color: orange;</string>
+          </property>
+          <property name="text">
+           <string>Creencias de más a menos pecadores</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QScrollArea" name="scrollArea_7">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>50</y>
+            <width>751</width>
+            <height>481</height>
+           </rect>
+          </property>
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_9">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>749</width>
+             <height>479</height>
+            </rect>
+           </property>
+           <widget class="QLabel" name="lbCreencias">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>0</y>
+              <width>731</width>
+              <height>471</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">text-align: center ;
+font: 14pt &quot;Open Sans&quot;;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="pageProfesiones">
+         <widget class="QLabel" name="label_42">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>801</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Doppio One</family>
+            <pointsize>16</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(32, 30, 30);
+background-color: orange;</string>
+          </property>
+          <property name="text">
+           <string>Profesiones de más a menos pecadores</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QScrollArea" name="scrollArea_8">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>50</y>
+            <width>751</width>
+            <height>481</height>
+           </rect>
+          </property>
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_10">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>749</width>
+             <height>479</height>
+            </rect>
+           </property>
+           <widget class="QLabel" name="lbProfesiones">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>741</width>
+              <height>471</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">text-align: center ;
+font: 14pt &quot;Open Sans&quot;;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="pageApellidosBuenos">
+         <widget class="QLabel" name="label_43">
+          <property name="geometry">
+           <rect>
+            <x>-10</x>
+            <y>0</y>
+            <width>801</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Doppio One</family>
+            <pointsize>16</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(32, 30, 30);
+background-color: orange;
+
+</string>
+          </property>
+          <property name="text">
+           <string>Apellidos de más a menos buenos</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QScrollArea" name="scrollArea_9">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>50</y>
+            <width>771</width>
+            <height>491</height>
+           </rect>
+          </property>
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_11">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>769</width>
+             <height>489</height>
+            </rect>
+           </property>
+           <widget class="QLabel" name="lbApellidosBuenos">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>761</width>
+              <height>481</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">text-align: center ;
+font: 14pt &quot;Open Sans&quot;;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="pageContinentesBuenos">
+         <widget class="QLabel" name="label_44">
+          <property name="geometry">
+           <rect>
+            <x>-10</x>
+            <y>0</y>
+            <width>801</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Doppio One</family>
+            <pointsize>16</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(32, 30, 30);
+background-color: orange;
+
+</string>
+          </property>
+          <property name="text">
+           <string>Continentes de más a menos buenos</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QLabel" name="lbContinentesBuenos">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>50</y>
+            <width>751</width>
+            <height>471</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">text-align: center ;
+font: 14pt &quot;Open Sans&quot;;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="pagePaisesBuenos">
+         <widget class="QLabel" name="label_45">
+          <property name="geometry">
+           <rect>
+            <x>-10</x>
+            <y>0</y>
+            <width>801</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Doppio One</family>
+            <pointsize>16</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(32, 30, 30);
+background-color: orange;
+
+</string>
+          </property>
+          <property name="text">
+           <string>Países de más a menos buenos</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QScrollArea" name="scrollArea_10">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>50</y>
+            <width>751</width>
+            <height>481</height>
+           </rect>
+          </property>
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_12">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>749</width>
+             <height>479</height>
+            </rect>
+           </property>
+           <widget class="QLabel" name="lbPaisesBuenos">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>-5</y>
+              <width>741</width>
+              <height>481</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">text-align: center ;
+font: 14pt &quot;Open Sans&quot;;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="pageCreenciasBuenos">
+         <widget class="QLabel" name="label_46">
+          <property name="geometry">
+           <rect>
+            <x>-10</x>
+            <y>0</y>
+            <width>801</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Doppio One</family>
+            <pointsize>16</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(32, 30, 30);
+background-color: orange;
+
+</string>
+          </property>
+          <property name="text">
+           <string>Creencias de más a menos buenos</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QScrollArea" name="scrollArea_11">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>50</y>
+            <width>751</width>
+            <height>481</height>
+           </rect>
+          </property>
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_13">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>749</width>
+             <height>479</height>
+            </rect>
+           </property>
+           <widget class="QLabel" name="lbCreenciaBueno">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>-5</y>
+              <width>751</width>
+              <height>481</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">text-align: center ;
+font: 14pt &quot;Open Sans&quot;;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="pageProfesionesBuenas">
+         <widget class="QLabel" name="label_47">
+          <property name="geometry">
+           <rect>
+            <x>-10</x>
+            <y>0</y>
+            <width>801</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Doppio One</family>
+            <pointsize>16</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(32, 30, 30);
+background-color: orange;
+
+</string>
+          </property>
+          <property name="text">
+           <string>Profesiones de más a menos buenos</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QScrollArea" name="scrollArea_12">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>50</y>
+            <width>761</width>
+            <height>491</height>
+           </rect>
+          </property>
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_14">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>759</width>
+             <height>489</height>
+            </rect>
+           </property>
+           <widget class="QLabel" name="lbProfesionesBuenos">
+            <property name="geometry">
+             <rect>
+              <x>4</x>
+              <y>5</y>
+              <width>751</width>
+              <height>481</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">text-align: center ;
+font: 14pt &quot;Open Sans&quot;;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="pageSalvacion">
+         <widget class="QLabel" name="label_39">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>801</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>Doppio One</family>
+            <pointsize>16</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(32, 30, 30);
+background-color: orange;
+
+</string>
+          </property>
+          <property name="text">
+           <string>Salvación</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QScrollArea" name="scrollArea_3">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>50</y>
+            <width>761</width>
+            <height>481</height>
+           </rect>
+          </property>
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_7">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>759</width>
+             <height>479</height>
+            </rect>
+           </property>
+           <widget class="QLabel" name="lbSalvacion">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>771</width>
+              <height>471</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">text-align: center ;
+font: 14pt &quot;Open Sans&quot;;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+        </widget>
        </widget>
-       <widget class="QScrollArea" name="scrollConsultaPecado">
+       <widget class="QFrame" name="frameConsultas">
         <property name="geometry">
          <rect>
-          <x>50</x>
-          <y>370</y>
-          <width>661</width>
-          <height>301</height>
+          <x>10</x>
+          <y>10</y>
+          <width>911</width>
+          <height>241</height>
          </rect>
         </property>
-        <property name="widgetResizable">
-         <bool>true</bool>
+        <property name="styleSheet">
+         <string notr="true">background-color:rgb(250,250,250);</string>
         </property>
-        <widget class="QWidget" name="scrollAreaWidgetContents">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="label_35">
          <property name="geometry">
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>659</width>
-           <height>299</height>
+           <width>911</width>
+           <height>31</height>
           </rect>
          </property>
-         <widget class="QLabel" name="labelListadoPecador">
+         <property name="font">
+          <font>
+           <family>Doppio One</family>
+           <pointsize>16</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(32, 30, 30);
+background-color: orange;
+
+</string>
+         </property>
+         <property name="text">
+          <string>Consultas</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btnApellidos">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>170</y>
+           <width>281</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(32, 30, 30);
+background-color: rgb(255, 205, 2);
+padding: 10px;
+border:0px;
+font: 14pt &quot;Open Sans&quot;;
+</string>
+         </property>
+         <property name="text">
+          <string>Apellidos </string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btnProfesiones">
+         <property name="geometry">
+          <rect>
+           <x>610</x>
+           <y>50</y>
+           <width>281</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(32, 30, 30);
+background-color: rgb(255, 205, 2);
+padding: 10px;
+border:0px;
+font: 14pt &quot;Open Sans&quot;;
+</string>
+         </property>
+         <property name="text">
+          <string>Profesiones </string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btnCreencias">
+         <property name="geometry">
+          <rect>
+           <x>310</x>
+           <y>170</y>
+           <width>281</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(32, 30, 30);
+background-color: rgb(255, 205, 2);
+padding: 10px;
+border:0px;
+font: 14pt &quot;Open Sans&quot;;
+</string>
+         </property>
+         <property name="text">
+          <string>Creencias </string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btnPaises">
+         <property name="geometry">
+          <rect>
+           <x>310</x>
+           <y>110</y>
+           <width>281</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(32, 30, 30);
+background-color: rgb(255, 205, 2);
+padding: 10px;
+border:0px;
+font: 14pt &quot;Open Sans&quot;;
+</string>
+         </property>
+         <property name="text">
+          <string>Paises</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btnContinentes">
+         <property name="geometry">
+          <rect>
+           <x>310</x>
+           <y>50</y>
+           <width>281</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(32, 30, 30);
+background-color: rgb(255, 205, 2);
+padding: 10px;
+border:0px;
+font: 14pt &quot;Open Sans&quot;;
+</string>
+         </property>
+         <property name="text">
+          <string>Continentes </string>
+         </property>
+        </widget>
+        <widget class="QGroupBox" name="groupBox">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>40</y>
+           <width>251</width>
+           <height>101</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>Seleccion una opción</string>
+         </property>
+         <widget class="QRadioButton" name="rbPecados">
           <property name="geometry">
            <rect>
-            <x>70</x>
-            <y>180</y>
-            <width>311</width>
-            <height>16</height>
+            <x>10</x>
+            <y>30</y>
+            <width>97</width>
+            <height>22</height>
            </rect>
           </property>
           <property name="text">
-           <string>Listado de humano más pecador al menos pecador:</string>
+           <string>Pecados</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
           </property>
          </widget>
+         <widget class="QRadioButton" name="rbBA">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>70</y>
+            <width>121</width>
+            <height>22</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Buenas Acciones</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QPushButton" name="btnSalvacion">
+         <property name="geometry">
+          <rect>
+           <x>610</x>
+           <y>110</y>
+           <width>281</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(32, 30, 30);
+background-color: rgb(255, 205, 2);
+padding: 10px;
+border:0px;
+font: 14pt &quot;Open Sans&quot;;
+</string>
+         </property>
+         <property name="text">
+          <string>Salvación</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btnCondenacion">
+         <property name="geometry">
+          <rect>
+           <x>610</x>
+           <y>170</y>
+           <width>281</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(32, 30, 30);
+background-color: rgb(255, 205, 2);
+padding: 10px;
+border:0px;
+font: 14pt &quot;Open Sans&quot;;
+</string>
+         </property>
+         <property name="text">
+          <string>Condenación</string>
+         </property>
         </widget>
        </widget>
       </widget>
-      <widget class="QWidget" name="page_2"/>
+      <widget class="QWidget" name="widget"/>
      </widget>
     </widget>
     <widget class="QWidget" name="pageConsultas2">
@@ -3084,7 +4048,7 @@ font: 12pt &quot;Open Sans&quot;;</string>
      <x>0</x>
      <y>0</y>
      <width>1900</width>
-     <height>21</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>
