@@ -33,6 +33,37 @@ void MainWindow::start(){
     lay2->addWidget(ui->lbPecadosFamilias);
     ui->scrollAreaWidgetContents_6->setLayout(lay2);
 
+    QVBoxLayout * lay3 = new QVBoxLayout();
+    lay3->addWidget(ui->lbApellidos);
+    ui->scrollAreaWidgetContents_2->setLayout(lay3);
+
+    QVBoxLayout * lay4 = new QVBoxLayout();
+    lay4->addWidget(ui->lbApellidosBuenos);
+    ui->scrollAreaWidgetContents_11->setLayout(lay4);
+
+    QVBoxLayout * lay5 = new QVBoxLayout();
+    lay5->addWidget(ui->lbPaises);
+    ui->scrollAreaWidgetContents_8->setLayout(lay5);
+
+    QVBoxLayout * lay6 = new QVBoxLayout();
+    lay6->addWidget(ui->lbPaisesBuenos);
+    ui->scrollAreaWidgetContents_12->setLayout(lay6);
+
+    QVBoxLayout * lay7 = new QVBoxLayout();
+    lay7->addWidget(ui->lbCreencias);
+    ui->scrollAreaWidgetContents_9->setLayout(lay7);
+
+    QVBoxLayout * lay8 = new QVBoxLayout();
+    lay8->addWidget(ui->lbCreenciaBueno);
+    ui->scrollAreaWidgetContents_13->setLayout(lay8);
+
+    QVBoxLayout * lay9 = new QVBoxLayout();
+    lay9->addWidget(ui->lbProfesiones);
+    ui->scrollAreaWidgetContents_10->setLayout(lay9);
+
+    QVBoxLayout * lay10 = new QVBoxLayout();
+    lay10->addWidget(ui->lbProfesionesBuenos);
+    ui->scrollAreaWidgetContents_14->setLayout(lay10);
 }
 
 
@@ -240,3 +271,64 @@ void MainWindow::on_pushButton_clicked(){
 
 }
 
+
+
+void MainWindow::on_btnApellidos_clicked()
+{
+
+
+    if (ui->rbPecados->isChecked()){
+        ui->panelConsultas_2->setCurrentIndex(1);
+        mainstruct->mundo->apellidosPecadores(ui->lbApellidos);
+    }else{
+        ui->panelConsultas_2->setCurrentIndex(6);
+        mainstruct->mundo->apellidosBA(ui->lbApellidosBuenos);
+    }
+}
+
+void MainWindow::on_btnContinentes_clicked()
+{
+    if (ui->rbPecados->isChecked()){
+            ui->panelConsultas_2->setCurrentIndex(2);
+            mainstruct->mundo->continentesPecadores(ui->lbContinentes);
+    }else{
+        ui->panelConsultas_2->setCurrentIndex(7);
+        mainstruct->mundo->continentesBA(ui->lbContinentesBuenos);
+    }
+}
+
+
+void MainWindow::on_btnPaises_clicked()
+{
+    if (ui->rbPecados->isChecked()){
+        ui->panelConsultas_2->setCurrentIndex(3);
+        mainstruct->mundo->paisesPecadores(ui->lbPaises);
+    }else{
+        ui->panelConsultas_2->setCurrentIndex(8);
+        mainstruct->mundo->paisesBA(ui->lbPaisesBuenos);
+    }
+}
+
+
+void MainWindow::on_btnCreencias_clicked()
+{
+    if (ui->rbPecados->isChecked()){
+        ui->panelConsultas_2->setCurrentIndex(4);
+        mainstruct->mundo->creenciasPecadores(ui->lbCreencias);
+    }else{
+        ui->panelConsultas_2->setCurrentIndex(9);
+        mainstruct->mundo->creenciasBA(ui->lbCreenciaBueno);
+    }
+}
+
+
+void MainWindow::on_btnProfesiones_clicked()
+{
+    if (ui->rbPecados->isChecked()){
+        ui->panelConsultas_2->setCurrentIndex(5);
+        mainstruct->mundo->profesionesPecadores(ui->lbProfesiones);
+    }else{
+        ui->panelConsultas_2->setCurrentIndex(10);
+        mainstruct->mundo->profesionesBA(ui->lbProfesionesBuenos);
+    }
+}

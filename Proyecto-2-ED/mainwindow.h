@@ -81,6 +81,18 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_btnCondenacion_clicked();
+
+    void on_btnApellidos_clicked();
+
+    void on_btnContinentes_clicked();
+
+    void on_btnPaises_clicked();
+
+    void on_btnCreencias_clicked();
+
+    void on_btnProfesiones_clicked();
+
 private:
     Ui::MainWindow *ui;
     MainStruct * mainstruct;
