@@ -337,5 +337,6 @@ void MainWindow::on_btnGuardarDatosCielo_clicked(){
 
 void MainWindow::on_btnGanador_clicked(){
     int netoCielo = mainstruct->mundo->cielo->calcularNeto(ui->lbInfoCielo, ui->lbInfoCielo2);
+
 }
 
