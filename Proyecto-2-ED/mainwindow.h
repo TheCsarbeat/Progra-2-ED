@@ -68,10 +68,6 @@ private slots:
 
     void on_btnMatarTodos_clicked();
 
-    void on_btnImprimir_clicked();
-
-    void on_btnPecadosFamilia_2_clicked();
-
     void on_btnEstadoFamilia_clicked();
 
     void on_btnSalvacion_clicked();
@@ -89,6 +85,8 @@ private slots:
     void on_btnCreencias_clicked();
 
     void on_btnProfesiones_clicked();
+
+    void on_btnGenerarConsultas_clicked();
 
     void on_btnGuardarDatosCielo_clicked();
 

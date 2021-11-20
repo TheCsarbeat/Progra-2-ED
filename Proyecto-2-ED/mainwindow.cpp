@@ -66,7 +66,7 @@ void MainWindow::start(){
     ui->scrollAreaWidgetContents_14->setLayout(lay10);
 
     QVBoxLayout * lay11 = new QVBoxLayout();
-    lay11->addWidget(ui->lbStateFamily_2);
+    lay11->addWidget(ui->lbStateFamily);
     ui->scrollAreaWidgetContents_23->setLayout(lay11);
 }
 
@@ -109,8 +109,6 @@ void MainWindow::cambiarColor(QPushButton *btn){
     }
     style += colorHovered;
     btn->setStyleSheet(style);
-
-
 }
 
 void MainWindow::on_botonHumanos_clicked(){
@@ -216,6 +214,7 @@ void MainWindow::on_btnMatarTodos_clicked()
 {
     if(mainstruct->mundo->personas->largo != 0){
         mainstruct->mundo->infierno->matarMasPecadores(mainstruct->mundo->personas, mainstruct->mundo->files, &mainstruct->mundo->filesNameToSend, &mainstruct->mundo->currentFileName);
+        mainstruct->mundo->personas->vivos = mainstruct->mundo->personas->largo - mainstruct->mundo->infierno->condenados - mainstruct->mundo->cielo->salvados;
         //sendEmail(mainstruct->mundo->currentFileName, "Condenación","Se ha presionado el botón de condenar estas son las personas condenadas");
         msg.setText("Los demonios han tomado las almas más pecadoras");
         msg.exec();
@@ -226,20 +225,8 @@ void MainWindow::on_btnMatarTodos_clicked()
 }
 
 
-void MainWindow::on_btnImprimir_clicked()
-{
-    mainstruct->mundo->infierno->imprimirDemonio(ui->lineEdit_2->text().toInt());
-}
-
-
-void MainWindow::on_btnPecadosFamilia_2_clicked()
-{
-
-}
-
-
 void MainWindow::on_btnEstadoFamilia_clicked(){
-    mainstruct->mundo->consutlaHumanStateFamily(ui->cboLastNameConsulta->currentText(),ui->cboCountryConsulta->currentText(), ui->lbStateFamily_2);
+    mainstruct->mundo->consutlaHumanStateFamily(ui->cboLastNameConsulta->currentText(),ui->cboCountryConsulta->currentText(), ui->lbStateFamily);
 }
 
 
@@ -330,13 +317,41 @@ void MainWindow::on_btnProfesiones_clicked()
     }
 }
 
+void MainWindow::on_btnGenerarConsultas_clicked()
+{
+    if(mainstruct->mundo->infierno->condenados != 0){
+        mainstruct->mundo->infierno->generarConsulta(mainstruct->mundo->files);
+        msg.setText("Se ha generado el archivo de consultas");
+        msg.exec();
+    }else{
+        msg.setText("No hay humanos en el infierno");
+        msg.exec();
+    }
+}
+
 void MainWindow::on_btnGuardarDatosCielo_clicked(){
     mainstruct->mundo->guardarDatosCielo();
 }
 
 
 void MainWindow::on_btnGanador_clicked(){
+    QString datos1 = "";
+    QString datos2 = "";
+    int netoInfierno = mainstruct->mundo->infierno->sacarResultados(&datos1,&datos2);
+    ui->lbInfoInfierno->setText(datos1);
+    ui->lbInfoInfierno2->setText(datos2);
     int netoCielo = mainstruct->mundo->cielo->calcularNeto(ui->lbInfoCielo, ui->lbInfoCielo2);
 
+    QString resultado = "";
+    resultado += "Infierno                              Cielo";
+    resultado += "\n"+QString::number(netoInfierno)+"                              "+QString::number(netoCielo);
+    if(netoCielo > netoInfierno){
+        resultado += "\nEl ganador es el cielo";
+    }else if(netoCielo < netoInfierno){
+        resultado += "\nEl ganador es el infierno";
+    }else{
+        resultado += "\nEs un empate";
+    }
+    ui->lbGanador->setText(resultado);
 }
 
