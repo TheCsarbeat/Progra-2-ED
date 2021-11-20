@@ -30,7 +30,7 @@
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>5</number>
     </property>
     <widget class="QWidget" name="pageCrearHumano">
      <property name="styleSheet">
@@ -3881,6 +3881,45 @@ border-style: solid;
         <string>Información final del infierno</string>
        </property>
       </widget>
+     </widget>
+     <widget class="QLabel" name="lbDatosInfiernoGanador">
+      <property name="geometry">
+       <rect>
+        <x>760</x>
+        <y>60</y>
+        <width>311</width>
+        <height>391</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnImprimirDatoInfiernoGanador">
+      <property name="geometry">
+       <rect>
+        <x>850</x>
+        <y>510</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>imprimir</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbDatosInfiernoGanador2">
+      <property name="geometry">
+       <rect>
+        <x>1130</x>
+        <y>60</y>
+        <width>311</width>
+        <height>391</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
      </widget>
     </widget>
    </widget>

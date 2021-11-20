@@ -89,6 +89,8 @@ private slots:
 
     void on_btnGenerarConsultas_clicked();
 
+    void on_btnImprimirDatoInfiernoGanador_clicked();
+
 private:
     Ui::MainWindow *ui;
     MainStruct * mainstruct;

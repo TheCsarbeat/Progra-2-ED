@@ -392,6 +392,7 @@ void Mundo::salvacion(){
         Angel * angel;
         if(humanoSalvado != NULL){
             angel = new Angel(arrayAngelNames[QRandomGenerator::global()->bounded(9)], nivel, index+1, humanoSalvado);
+            cielo->insertar(humanoSalvado, angel);
             datosLog += fecha.toString();
             datosLog += humanoSalvado->toStringsimplified()+"\n";
             datosLog += angel->toString();

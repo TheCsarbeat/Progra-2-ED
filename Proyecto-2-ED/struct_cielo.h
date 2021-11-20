@@ -143,9 +143,11 @@ struct ArbolCieloALV{
 
 struct CieloHash{
     ArbolCieloALV *hashTableCielo[1000];
+    int salvados;
     CieloHash(){
         for(int i = 0; i<1000; i++)
             hashTableCielo[i] = new ArbolCieloALV();
+        salvados = 0;
     }
 
     int funcioHash(Persona* persona){
@@ -154,6 +156,7 @@ struct CieloHash{
 
     void insertar(Persona *persona, Angel *angel){
         hashTableCielo[funcioHash(persona)]->insert(persona, angel);
+        salvados++;
     }
     void imprimir(){
         hashTableCielo[0]->inOrder(hashTableCielo[0]->raiz);

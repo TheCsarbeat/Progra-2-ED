@@ -143,6 +143,7 @@ bool ListaDoblePersonas::insertar(Persona * persona){
         }
     }
     largo++;
+    vivos++;
     return true;
 }
 
@@ -192,6 +193,7 @@ bool ListaDoblePersonas::insertar(Persona * persona, NodoPersona * masCercano){
         }
     }
     largo++;
+    vivos++;
     return true;
 }
 

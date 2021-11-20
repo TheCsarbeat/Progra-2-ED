@@ -162,9 +162,11 @@ struct ListaDoblePersonas{
     NodoPersona * primerNodo;
     NodoPersona * ultimoNodo;
     int largo;
+    int vivos;
     ListaDoblePersonas(){
         primerNodo = ultimoNodo = NULL;
         largo = 0;
+        vivos = 0;
     }
 
     bool isEmpty();

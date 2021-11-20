@@ -117,7 +117,7 @@ struct Demonio{
 
     void crearHeap(ListaSimpleArbolFamilias *);
     void limpiarListaHeaps();
-    void buscarMasPecadores(NodoHeap * array[], int, QString *, int *);
+    void buscarMasPecadores(NodoHeap * array[], int, QString *, int *, int);
     void agregarAHeaps(Persona * list[], int);
     int partition(NodoHeap * list[], int, int);
     void quickSort(NodoHeap * list[], int, int);
@@ -125,12 +125,14 @@ struct Demonio{
     void generateLog(QString *,Persona * array[], int);
     QString consulta();
     double getPromedioPecados();
+    int getTotalPecados();
+    int getTotalBuenasAcciones();
 };
 
 struct Infierno{
     Demonio * demonios[7];
     QString log;
-    int cantTotalHumanos;
+    int condenados;
     Infierno(){
         QString names[7] = {"Asmodeo","Belfegor","Mammón","Abadón","Satán","Belcebú","Lucifer"};
         int pecados[7] = {0,1,2,3,4,5,6};
@@ -138,7 +140,7 @@ struct Infierno{
             demonios[i]= new Demonio(names[i],pecados[i]);
         }
         log = " ";
-        cantTotalHumanos = 0;
+        condenados = 0;
     }
 
     void imprimirDemonio(int);
@@ -147,6 +149,7 @@ struct Infierno{
     Persona* salvarHumano();
     void matarMasPecadores(ListaDoblePersonas *,Files *, QStringList *,QString *);
     void generarConsulta(Files *);
+    int sacarResultados(QString *, QString *);
 };
 
 #endif // STRUCT_INFIERNO_H
