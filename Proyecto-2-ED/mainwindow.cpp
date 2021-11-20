@@ -102,7 +102,7 @@ void MainWindow::on_pushButton_2_clicked(){
 //--------------------SIDE BUTTONS--------------------
 void MainWindow::cambiarColor(QPushButton *btn){
     QString style = btn->styleSheet();
-    for (int i = 210; i <=510; i+=50) {
+    for (int i = 210; i <=460; i+=50) {
         QString styleChild = ui->sideBarFrame->childAt(0,i)->styleSheet();
         styleChild += colorBackground;
         ui->sideBarFrame->childAt(0,i)->setStyleSheet(styleChild);
@@ -141,13 +141,6 @@ void MainWindow::on_botonConsultas_clicked(){
     ui->mainPanel->setCurrentIndex(3);
     cambiarColor(ui->botonConsultas);
 }
-
-
-void MainWindow::on_botonConsultas2_clicked(){
-    ui->mainPanel->setCurrentIndex(4);
-    cambiarColor(ui->botonConsultas2);
-}
-
 
 //---------------------------------- Cielo ----------------
 void MainWindow::on_btnMapaContinentesBuenasAcciones_clicked(){

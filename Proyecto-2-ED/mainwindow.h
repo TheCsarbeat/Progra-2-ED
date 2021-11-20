@@ -42,8 +42,6 @@ private slots:
 
     void on_botonConsultas_clicked();
 
-    void on_botonConsultas2_clicked();
-
     void on_btnPecar_clicked();
 
     void on_btnBuscarPersona_clicked();
