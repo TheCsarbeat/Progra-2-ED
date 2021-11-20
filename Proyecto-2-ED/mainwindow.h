@@ -88,7 +88,6 @@ private slots:
 
     void on_btnGenerarConsultas_clicked();
 
-    void on_btnImprimirDatoInfiernoGanador_clicked();
     void on_btnGuardarDatosCielo_clicked();
 
     void on_btnGanador_clicked();

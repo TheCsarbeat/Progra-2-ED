@@ -92,7 +92,7 @@ int CieloHash::calcularNeto(QLabel *lb, QLabel *lb2){
 
    datos1 += "La cantidad de PECADOS: "+QString::number(cantPecado[7]);
    for(int i = 0; i<7; i++)
-       datos1+= "\n\nPecado: "+arrayNamePecado[i]+"\nCantidad"+QString::number(cantPecado[i]);
+       datos1+= "\n\nPecado: "+arrayNamePecado[i]+"\nCantidad: "+QString::number(cantPecado[i]);
 
     lb->setText(datos);
     lb2->setText(datos1);

@@ -66,7 +66,7 @@ void MainWindow::start(){
     ui->scrollAreaWidgetContents_14->setLayout(lay10);
 
     QVBoxLayout * lay11 = new QVBoxLayout();
-    lay11->addWidget(ui->lbStateFamily_2);
+    lay11->addWidget(ui->lbStateFamily);
     ui->scrollAreaWidgetContents_23->setLayout(lay11);
 }
 
@@ -226,7 +226,7 @@ void MainWindow::on_btnMatarTodos_clicked()
 
 
 void MainWindow::on_btnEstadoFamilia_clicked(){
-    mainstruct->mundo->consutlaHumanStateFamily(ui->cboLastNameConsulta->currentText(),ui->cboCountryConsulta->currentText(), ui->lbStateFamily_2);
+    mainstruct->mundo->consutlaHumanStateFamily(ui->cboLastNameConsulta->currentText(),ui->cboCountryConsulta->currentText(), ui->lbStateFamily);
 }
 
 
@@ -329,19 +329,29 @@ void MainWindow::on_btnGenerarConsultas_clicked()
     }
 }
 
-
-void MainWindow::on_btnImprimirDatoInfiernoGanador_clicked()
-{
-    QString datos1 = "";
-    QString datos2 = "";
-    int neto = mainstruct->mundo->infierno->sacarResultados(&datos1,&datos2);
-}
 void MainWindow::on_btnGuardarDatosCielo_clicked(){
     mainstruct->mundo->guardarDatosCielo();
 }
 
 
 void MainWindow::on_btnGanador_clicked(){
+    QString datos1 = "";
+    QString datos2 = "";
+    int netoInfierno = mainstruct->mundo->infierno->sacarResultados(&datos1,&datos2);
+    ui->lbInfoInfierno->setText(datos1);
+    ui->lbInfoInfierno2->setText(datos2);
     int netoCielo = mainstruct->mundo->cielo->calcularNeto(ui->lbInfoCielo, ui->lbInfoCielo2);
+
+    QString resultado = "";
+    resultado += "Infierno                              Cielo";
+    resultado += "\n"+QString::number(netoInfierno)+"                              "+QString::number(netoCielo);
+    if(netoCielo > netoInfierno){
+        resultado += "\nEl ganador es el cielo";
+    }else if(netoCielo < netoInfierno){
+        resultado += "\nEl ganador es el infierno";
+    }else{
+        resultado += "\nEs un empate";
+    }
+    ui->lbGanador->setText(resultado);
 }
 

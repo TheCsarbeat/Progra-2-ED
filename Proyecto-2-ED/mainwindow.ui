@@ -30,7 +30,7 @@
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>5</number>
     </property>
     <widget class="QWidget" name="pageCrearHumano">
      <property name="styleSheet">
@@ -41,7 +41,7 @@
        <rect>
         <x>60</x>
         <y>30</y>
-        <width>541</width>
+        <width>551</width>
         <height>241</height>
        </rect>
       </property>
@@ -78,7 +78,7 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>541</width>
+         <width>551</width>
          <height>31</height>
         </rect>
        </property>
@@ -96,7 +96,7 @@ background-color:rgb(60, 185, 75);
 </string>
        </property>
        <property name="text">
-        <string>Creación de Humanos </string>
+        <string> Creación de Humanos </string>
        </property>
       </widget>
       <widget class="QLineEdit" name="txtCantHumanos">
@@ -216,7 +216,7 @@ background-color:rgb(60, 185, 75);
 </string>
        </property>
        <property name="text">
-        <string>Búsqueda de Humanos</string>
+        <string> Búsqueda de Humanos</string>
        </property>
       </widget>
       <widget class="QLineEdit" name="txtBuscar">
@@ -256,9 +256,9 @@ border-color: rgb(60, 185, 75);</string>
       <widget class="QPushButton" name="btnBuscarPersona">
        <property name="geometry">
         <rect>
-         <x>10</x>
+         <x>20</x>
          <y>150</y>
-         <width>351</width>
+         <width>341</width>
          <height>61</height>
         </rect>
        </property>
@@ -315,7 +315,7 @@ background-color:rgb(60, 185, 75);
 </string>
        </property>
        <property name="text">
-        <string>Hacer Pecar y Buenas Acciones</string>
+        <string> Hacer Pecar y Buenas Acciones</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_22">
@@ -402,9 +402,9 @@ velit esse cillum dolore eu fugiat nulla pariatur.</string>
      <widget class="QFrame" name="frame_16">
       <property name="geometry">
        <rect>
-        <x>70</x>
+        <x>60</x>
         <y>300</y>
-        <width>541</width>
+        <width>551</width>
         <height>181</height>
        </rect>
       </property>
@@ -422,7 +422,7 @@ velit esse cillum dolore eu fugiat nulla pariatur.</string>
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>541</width>
+         <width>551</width>
          <height>31</height>
         </rect>
        </property>
@@ -440,7 +440,7 @@ background-color:rgb(60, 185, 75);
 </string>
        </property>
        <property name="text">
-        <string>Guardar Datos WORLD</string>
+        <string> Guardar Datos WORLD</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_24">
@@ -464,7 +464,7 @@ background-color:rgb(60, 185, 75);
         <rect>
          <x>20</x>
          <y>100</y>
-         <width>351</width>
+         <width>331</width>
          <height>61</height>
         </rect>
        </property>
@@ -521,7 +521,7 @@ background-color:rgb(60, 185, 75);
 </string>
        </property>
        <property name="text">
-        <string>Send Files</string>
+        <string> Send Files</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_35">
@@ -543,9 +543,9 @@ background-color:rgb(60, 185, 75);
       <widget class="QPushButton" name="pushButton">
        <property name="geometry">
         <rect>
-         <x>10</x>
+         <x>20</x>
          <y>90</y>
-         <width>351</width>
+         <width>341</width>
          <height>61</height>
         </rect>
        </property>
@@ -3667,7 +3667,7 @@ border-style: solid;
       <property name="geometry">
        <rect>
         <x>420</x>
-        <y>-10</y>
+        <y>0</y>
         <width>791</width>
         <height>241</height>
        </rect>
@@ -3705,7 +3705,7 @@ background-color: orange;
 </string>
        </property>
        <property name="text">
-        <string>Información del ganador</string>
+        <string> Información del ganador</string>
        </property>
       </widget>
       <widget class="QPushButton" name="btnGanador">
@@ -3744,6 +3744,9 @@ font: 14pt &quot;Open Sans&quot;;</string>
        </property>
        <property name="text">
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit,&lt;/p&gt;&lt;p&gt;sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &lt;/p&gt;&lt;p&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco&lt;/p&gt;&lt;p&gt;laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate&lt;/p&gt;&lt;p&gt;velit esse cillum dolore eu fugiat nulla pariatur.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </widget>

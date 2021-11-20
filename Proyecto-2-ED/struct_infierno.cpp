@@ -331,7 +331,6 @@ Persona * Infierno::salvarHumano(){
         while(temp!=NULL){
             for(int j = 0; j<temp->heap->cant; j++){
                 if(temp->heap->array[j]->persona->buenasAccionesPersona > temp->heap->array[j]->persona->pecadosPersona && temp->heap->array[j]->persona->estado == 1){
-                    qDebug()<<"Hola";
                     personaSalvada = temp->heap->array[j]->persona;
                     personaSalvada->estado = 2;
                     temp->heap->deleteAtPosition(j);
