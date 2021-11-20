@@ -66,7 +66,7 @@ void MainWindow::start(){
     ui->scrollAreaWidgetContents_14->setLayout(lay10);
 
     QVBoxLayout * lay11 = new QVBoxLayout();
-    lay11->addWidget(ui->lbStateFamily);
+    lay11->addWidget(ui->lbStateFamily_2);
     ui->scrollAreaWidgetContents_23->setLayout(lay11);
 }
 
@@ -239,7 +239,7 @@ void MainWindow::on_btnPecadosFamilia_2_clicked()
 
 
 void MainWindow::on_btnEstadoFamilia_clicked(){
-    mainstruct->mundo->consutlaHumanStateFamily(ui->cboLastNameConsulta->currentText(),ui->cboCountryConsulta->currentText(), ui->lbStateFamily);
+    mainstruct->mundo->consutlaHumanStateFamily(ui->cboLastNameConsulta->currentText(),ui->cboCountryConsulta->currentText(), ui->lbStateFamily_2);
 }
 
 
@@ -332,5 +332,23 @@ void MainWindow::on_btnProfesiones_clicked()
 
 void MainWindow::on_btnGuardarDatosCielo_clicked(){
     mainstruct->mundo->guardarDatosCielo();
+}
+
+
+void MainWindow::on_btnInfoCielo_clicked()
+{
+    ui->panelGanador->setCurrentIndex(0);
+}
+
+
+void MainWindow::on_btnInfoCielo_2_clicked()
+{
+    ui->panelGanador->setCurrentIndex(1);
+}
+
+
+void MainWindow::on_btnInfoInfierno_clicked()
+{
+    ui->panelGanador->setCurrentIndex(2);
 }
 

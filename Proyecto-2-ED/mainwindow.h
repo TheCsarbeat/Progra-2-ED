@@ -79,7 +79,7 @@ private slots:
 
     void on_pushButton_clicked();
 
-    void on_btnCondenacion_clicked();
+    //void on_btnCondenacion_clicked();
 
     void on_btnApellidos_clicked();
 
@@ -92,6 +92,12 @@ private slots:
     void on_btnProfesiones_clicked();
 
     void on_btnGuardarDatosCielo_clicked();
+
+    void on_btnInfoCielo_clicked();
+
+    void on_btnInfoCielo_2_clicked();
+
+    void on_btnInfoInfierno_clicked();
 
 private:
     Ui::MainWindow *ui;
