@@ -30,7 +30,7 @@
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="pageCrearHumano">
      <property name="styleSheet">
@@ -1472,36 +1472,13 @@ background-color: rgb(64, 150, 180);</string>
      </widget>
     </widget>
     <widget class="QWidget" name="pageInfierno">
-     <widget class="QPushButton" name="btnImprimir">
-      <property name="geometry">
-       <rect>
-        <x>670</x>
-        <y>900</y>
-        <width>75</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>imprimir</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lineEdit_2">
-      <property name="geometry">
-       <rect>
-        <x>770</x>
-        <y>900</y>
-        <width>113</width>
-        <height>20</height>
-       </rect>
-      </property>
-     </widget>
      <widget class="QFrame" name="frameDemonios">
       <property name="geometry">
        <rect>
         <x>850</x>
-        <y>320</y>
+        <y>340</y>
         <width>761</width>
-        <height>551</height>
+        <height>541</height>
        </rect>
       </property>
       <property name="frameShape">
@@ -1701,7 +1678,7 @@ background-color: rgb(64, 150, 180);</string>
        <property name="geometry">
         <rect>
          <x>320</x>
-         <y>420</y>
+         <y>410</y>
          <width>120</width>
          <height>120</height>
         </rect>
@@ -1819,7 +1796,7 @@ background-color: rgb(64, 150, 180);</string>
        <property name="geometry">
         <rect>
          <x>350</x>
-         <y>395</y>
+         <y>390</y>
          <width>71</width>
          <height>21</height>
         </rect>
@@ -1870,7 +1847,7 @@ background-color: rgb(32, 30, 30);
         <x>10</x>
         <y>0</y>
         <width>791</width>
-        <height>241</height>
+        <height>301</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1974,9 +1951,9 @@ background-color: rgb(198, 46, 48);</string>
       <widget class="QLabel" name="idPecados">
        <property name="geometry">
         <rect>
-         <x>90</x>
+         <x>120</x>
          <y>50</y>
-         <width>131</width>
+         <width>161</width>
          <height>31</height>
         </rect>
        </property>
@@ -1987,12 +1964,15 @@ background-color: rgb(198, 46, 48);</string>
        <property name="text">
         <string>Ingrese un ID: </string>
        </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
       </widget>
       <widget class="QLineEdit" name="txtPecados">
        <property name="geometry">
         <rect>
-         <x>60</x>
-         <y>90</y>
+         <x>110</x>
+         <y>110</y>
          <width>181</width>
          <height>24</height>
         </rect>
@@ -2001,8 +1981,8 @@ background-color: rgb(198, 46, 48);</string>
       <widget class="QPushButton" name="btnPecadosFamilia">
        <property name="geometry">
         <rect>
-         <x>40</x>
-         <y>140</y>
+         <x>80</x>
+         <y>160</y>
          <width>251</width>
          <height>51</height>
         </rect>
@@ -2019,14 +1999,35 @@ background-color: rgb(198, 46, 48);</string>
         <string>Pecados de una familia</string>
        </property>
       </widget>
+      <widget class="QPushButton" name="btnGenerarConsultas">
+       <property name="geometry">
+        <rect>
+         <x>490</x>
+         <y>250</y>
+         <width>281</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image-position:left;
+color: black;
+padding: 10px;
+border:0px;
+font: 12pt &quot;Open Sans&quot;;
+background-color: rgb(198, 46, 48);</string>
+       </property>
+       <property name="text">
+        <string>Generar archivo consultas</string>
+       </property>
+      </widget>
      </widget>
      <widget class="QStackedWidget" name="panelConsultasInfiernoPecados">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>320</y>
+        <x>20</x>
+        <y>340</y>
         <width>791</width>
-        <height>551</height>
+        <height>561</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -2332,7 +2333,7 @@ background-color: rgb(32, 30, 30);
           <x>10</x>
           <y>50</y>
           <width>771</width>
-          <height>481</height>
+          <height>491</height>
          </rect>
         </property>
         <property name="widgetResizable">
@@ -2344,7 +2345,7 @@ background-color: rgb(32, 30, 30);
            <x>0</x>
            <y>0</y>
            <width>769</width>
-           <height>479</height>
+           <height>489</height>
           </rect>
          </property>
          <widget class="QLabel" name="lbPecadosFamilias">
@@ -2353,7 +2354,7 @@ background-color: rgb(32, 30, 30);
             <x>0</x>
             <y>10</y>
             <width>771</width>
-            <height>451</height>
+            <height>471</height>
            </rect>
           </property>
           <property name="styleSheet">
@@ -4068,7 +4069,7 @@ font: 12pt &quot;Open Sans&quot;;</string>
      <x>0</x>
      <y>0</y>
      <width>1900</width>
-     <height>21</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>

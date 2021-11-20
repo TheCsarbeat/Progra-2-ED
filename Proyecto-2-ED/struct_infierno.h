@@ -44,26 +44,22 @@ struct HeapFamilia{
         pecado = _pecado;
         cant = 0;
     }
-
-    void swap(NodoHeap *, NodoHeap *);
-
     int parent(int i) {
         return (i - 1) / 2;
     }
-
-    // return left child of `A[i]`
     int left(int i) {
         return (2*i + 1);
     }
-
-    // return right child of `A[i]`
     int right(int i) {
         return (2*i + 2);
     }
 
+    void heapifyDown(int);
     void heapifyUp(int i);
     void insertar(Persona *);
-    void imprimir();
+    QString imprimir();
+    void swap(NodoHeap *, NodoHeap *);
+    void deleteAtPosition(int);
 };
 
 struct NodoListaSimpleHeaps{
@@ -90,7 +86,7 @@ struct ListaSimpleHeaps{
         largo = 0;
     }
     bool isEmpy();
-    void imprimir();
+    QString imprimir();
     void insertarAlInicio(HeapFamilia *);
     void deleteAllNodes();
 };
@@ -99,30 +95,42 @@ struct Demonio{
     QString name;
     int pecado;
     ListaSimpleHeaps * listaHeaps;
+    int cantPersonas;
+    int pecadoMayor;
+    int pecadoMenor;
     Demonio(){
         name = "";
         pecado = -1;
         listaHeaps = new ListaSimpleHeaps();
+        cantPersonas = 0;
+        pecadoMenor = 150;
+        pecadoMayor = 0;
     }
     Demonio(QString _name,int _pecado){
         name = _name;
         pecado = _pecado;
         listaHeaps = new ListaSimpleHeaps();
+        cantPersonas = 0;
+        pecadoMenor = 150;
+        pecadoMayor = 0;
     }
 
     void crearHeap(ListaSimpleArbolFamilias *);
     void limpiarListaHeaps();
-    void buscarMasPecadores(NodoHeap * array[], int, QString *);
+    void buscarMasPecadores(NodoHeap * array[], int, QString *, int *);
     void agregarAHeaps(Persona * list[], int);
     int partition(NodoHeap * list[], int, int);
     void quickSort(NodoHeap * list[], int, int);
     void swap(NodoHeap *,NodoHeap *);
     void generateLog(QString *,Persona * array[], int);
+    QString consulta();
+    double getPromedioPecados();
 };
 
 struct Infierno{
     Demonio * demonios[7];
     QString log;
+    int cantTotalHumanos;
     Infierno(){
         QString names[7] = {"Asmodeo","Belfegor","Mammón","Abadón","Satán","Belcebú","Lucifer"};
         int pecados[7] = {0,1,2,3,4,5,6};
@@ -130,6 +138,7 @@ struct Infierno{
             demonios[i]= new Demonio(names[i],pecados[i]);
         }
         log = " ";
+        cantTotalHumanos = 0;
     }
 
     void imprimirDemonio(int);
@@ -137,6 +146,7 @@ struct Infierno{
     void limpiarDemonios();
     Persona* salvarHumano();
     void matarMasPecadores(ListaDoblePersonas *,Files *, QStringList *,QString *);
+    void generarConsulta(Files *);
 };
 
 #endif // STRUCT_INFIERNO_H

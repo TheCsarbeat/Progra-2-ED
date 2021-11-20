@@ -229,18 +229,6 @@ void MainWindow::on_btnMatarTodos_clicked()
 }
 
 
-void MainWindow::on_btnImprimir_clicked()
-{
-    mainstruct->mundo->infierno->imprimirDemonio(ui->lineEdit_2->text().toInt());
-}
-
-
-void MainWindow::on_btnPecadosFamilia_2_clicked()
-{
-
-}
-
-
 void MainWindow::on_btnEstadoFamilia_clicked(){
     mainstruct->mundo->consutlaHumanStateFamily(ui->cboLastNameConsulta->currentText(),ui->cboCountryConsulta->currentText(), ui->lbStateFamily);
 }
@@ -332,3 +320,16 @@ void MainWindow::on_btnProfesiones_clicked()
         mainstruct->mundo->profesionesBA(ui->lbProfesionesBuenos);
     }
 }
+
+void MainWindow::on_btnGenerarConsultas_clicked()
+{
+    if(mainstruct->mundo->infierno->cantTotalHumanos != 0){
+        mainstruct->mundo->infierno->generarConsulta(mainstruct->mundo->files);
+        msg.setText("Se ha generado el archivo de consultas");
+        msg.exec();
+    }else{
+        msg.setText("No hay humanos en el infierno");
+        msg.exec();
+    }
+}
+

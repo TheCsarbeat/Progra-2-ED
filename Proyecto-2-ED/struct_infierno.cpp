@@ -24,12 +24,25 @@ void HeapFamilia::swap(NodoHeap * a1, NodoHeap * a2){
 }
 //sigue cambiar que el heap ordene a las personas por el pecado que es
 void HeapFamilia::heapifyUp(int i){
-    // check if the node at index `i` and its parent violate the heap property
     if (i >= 0 && parent(i) >= 0 && array[parent(i)]->persona->pecados[pecado]->cant < array[i]->persona->pecados[pecado]->cant){
-        // swap the two if heap property is violated
         swap(array[i],array[parent(i)]);
-        // call heapify-up on the parent
         heapifyUp(parent(i));
+    }
+}
+
+void HeapFamilia::heapifyDown(int i){
+    int leftChild = left(i);
+    int rightChild = right(i);
+    int largest = i;
+    if(leftChild < array.size() && array[leftChild]->persona->pecados[pecado]->cant > array[i]->persona->pecados[pecado]->cant){
+        largest = leftChild;
+    }
+    if(rightChild < array.size() && array[rightChild]->persona->pecados[pecado]->cant > array[largest]->persona->pecados[pecado]->cant){
+        largest = rightChild;
+    }
+    if(largest != i){
+        swap(array[i],array[largest]);
+        heapifyDown(largest);
     }
 }
 
@@ -40,12 +53,21 @@ void HeapFamilia::insertar(Persona * nuevo){
     heapifyUp(i);
 }
 
-void HeapFamilia::imprimir(){
+void HeapFamilia::deleteAtPosition(int index){
+    array[index] = array.back();
+    array.pop_back();
+    heapifyDown(index);
+    heapifyUp(index);
+    cant--;
+}
+
+QString HeapFamilia::imprimir(){
+    QString heap = "";
     for(int i=0;i<cant;i++){
-        array[i]->persona->imprimir();
-        array[i]->persona->pecados[pecado]->imprimir();
-        qDebug()<<"\n"<<cant;
+        heap += "\n";
+        heap += array[i]->persona->toStringsimplified();
     }
+    return heap;
 }
 //==================================LISTA-SIMPLE-HEAPS===================================
 
@@ -74,15 +96,18 @@ void ListaSimpleHeaps::deleteAllNodes(){
     largo = 0;
 }
 
-void ListaSimpleHeaps::imprimir(){
+QString ListaSimpleHeaps::imprimir(){
     NodoListaSimpleHeaps * tmp = primerNodo;
     int i =0;
+    QString heaps;
     while(tmp!=NULL){
-        qDebug()<<"\n\nFamilia "<<i;
-        tmp->heap->imprimir();
+        heaps +="\n--------------------------------------------------";
+        heaps += "\n\nHeap "+QString::number(i);
+        heaps += tmp->heap->imprimir();
         tmp = tmp->siguiente;
         i++;
     }
+    return heaps;
 }
 
 //==================================DEMONIO===================================
@@ -152,13 +177,19 @@ void Demonio::generateLog(QString * log, Persona * array[], int limite){
    }
 }
 
-void Demonio::buscarMasPecadores(NodoHeap * array[], int largo, QString * log){
+void Demonio::buscarMasPecadores(NodoHeap * array[], int largo, QString * log, int * totalPeople){
     int limite = largo * 0.05;
     Persona * top5[limite];
     quickSort(array,0,largo-1);
     int i = 0;
     for(int j=largo-1;i<limite;j--){
         if(array[j]->persona->estado == 0){
+            if(array[j]->persona->pecados[pecado]->cant > pecadoMayor){
+                pecadoMayor = array[j]->persona->pecados[pecado]->cant;
+            }
+            if(array[j]->persona->pecados[pecado]->cant < pecadoMenor){
+                pecadoMenor = array[j]->persona->pecados[pecado]->cant;
+            }
             top5[i] = array[j]->persona;
             array[j]->persona->estado = 1;
             i++;
@@ -166,6 +197,8 @@ void Demonio::buscarMasPecadores(NodoHeap * array[], int largo, QString * log){
     }
     generateLog(log, top5, limite);
     agregarAHeaps(top5, limite);
+    cantPersonas+=limite;
+    *totalPeople += limite;
 }
 
 void Demonio::agregarAHeaps(Persona * list[], int size){
@@ -188,6 +221,33 @@ void Demonio::agregarAHeaps(Persona * list[], int size){
             listaHeaps->primerNodo->heap->insertar(list[i]);
         }
     }
+}
+
+QString Demonio::consulta(){
+    QString consulta = "\n\n=================================================\n                  Demonio: "
+            +convertDemonioToString(pecado)+"\n=================================================\nPecado: "
+            +convertPecadoToString(pecado)
+            +"\nCantidad de humanos: "+QString::number(cantPersonas)
+            +"\nPromedio de pecados de "+convertPecadoToString(pecado)+": "
+            +QString::number(getPromedioPecados())+"\nMáximo de pecados: "
+            +QString::number(pecadoMayor)+"\nMínimo de pecados: "
+            +QString::number(pecadoMenor);
+    consulta += listaHeaps->imprimir();
+    return consulta;
+}
+
+double Demonio::getPromedioPecados(){
+    NodoListaSimpleHeaps * nodo = listaHeaps->primerNodo;
+    int cantidadPecados = 0;
+    double promedio;
+    while(nodo != NULL){
+        for(int i=0;i<nodo->heap->array.size();i++){
+            cantidadPecados += nodo->heap->array[i]->persona->pecados[pecado]->cant;
+        }
+        nodo = nodo->siguiente;
+    }
+    promedio = (double)cantidadPecados / cantPersonas;
+    return promedio;
 }
 
 //==================================INFIERNO===================================
@@ -223,7 +283,7 @@ void Infierno::matarMasPecadores(ListaDoblePersonas * list, Files * file, QStrin
         cont++;
     }
     for(int i=0;i<7;i++){
-        demonios[i]->buscarMasPecadores(arrayPersonasInfierno, largo, &log);
+        demonios[i]->buscarMasPecadores(arrayPersonasInfierno, largo, &log, &cantTotalHumanos);
     }
     QDateTime date = QDateTime::currentDateTime();
     QString name = "Condenados_"+date.toString("yyyyMMdd")+"_"+date.toString("HHmmss")+".txt";
@@ -238,9 +298,11 @@ Persona * Infierno::salvarHumano(){
         NodoListaSimpleHeaps *temp = demonios[i]->listaHeaps->primerNodo;
         while(temp!=NULL){
             for(int j = 0; j<temp->heap->array.length(); j++){
-                if(temp->heap->array[j]->persona->buenasAccionesPersona > temp->heap->array[j]->persona->pecadosPersona && temp->heap->array[j]->persona->estado ==1){
+                if(temp->heap->array[j]->persona->buenasAccionesPersona > temp->heap->array[j]->persona->pecadosPersona && temp->heap->array[j]->persona->estado == 1){
                     temp->heap->array[j]->persona->estado = 2;
-                    //Aqu[i tiene que ir la funci[on de mierda para eliminar del heap.
+                    temp->heap->deleteAtPosition(j);
+                    demonios[i]->cantPersonas--;
+                    cantTotalHumanos--;
                     return temp->heap->array[j]->persona;
                 }
                 //qDebug()<<"Cant: "<<temp->heap->array[j]->persona->buenasAccionesPersona <<temp->heap->array[j]->persona->pecadosPersona <<temp->heap->array[j]->persona->estado;
@@ -249,4 +311,12 @@ Persona * Infierno::salvarHumano(){
         }
     }
     return NULL;
+}
+
+void Infierno::generarConsulta(Files * file){
+    QString consulta;
+    for(int i=0;i<7;i++){
+        consulta += demonios[i]->consulta();
+    }
+    file->writeFile("ConsultasInfierno.txt",consulta);
 }
