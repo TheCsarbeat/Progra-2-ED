@@ -140,6 +140,7 @@ struct Persona{
     QString toStringBuenasAcciones();
     QString toStringPecados();
     int calcularPecado(int);
+    QString toStringConsulta2();
 
 };
 

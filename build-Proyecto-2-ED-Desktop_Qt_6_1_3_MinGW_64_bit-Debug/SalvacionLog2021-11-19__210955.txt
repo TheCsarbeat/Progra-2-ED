@@ -1,0 +1,172 @@
+Fri Nov 19 21:09:55 2021
+ID: 37671
+Nombre: Christine, cant Hijos: 1
+Apellido: Hoehler
+País: Nueva Zelanda
+Creencia: Religion tradicional china
+Job: Fisico
+
+PECADOS: 620
+
+BUENAS ACCIONES: 671
+
+HIJOS
+
+Angel: Rafael
+Versión: 1
+Generación: 2
+-------------------------------------------------
+
+Fri Nov 19 21:09:55 2021
+ID: 26483
+Nombre: Thomas
+Apellido: Gollamudi
+País: Bahamas
+Creencia: El Judaismo
+Job: Panadero
+
+PECADOS: 424
+
+BUENAS ACCIONES: 431
+
+HIJOS
+
+Angel: Rafael
+Versión: 2
+Generación: 2
+-------------------------------------------------
+
+Fri Nov 19 21:09:55 2021
+ID: 94627
+Nombre: Christine, cant Hijos: 0
+Apellido: Lewalski
+País: Angola
+Creencia: Tenrikyo
+Job: Panadero
+
+PECADOS: 292
+
+BUENAS ACCIONES: 457
+
+HIJOS
+
+Angel: Nuriel
+Versión: 3
+Generación: 2
+-------------------------------------------------
+
+Fri Nov 19 21:09:55 2021
+ID: 81658
+Nombre: Christine
+Apellido: Peterkin
+País: Costa Rica
+Creencia: Tradicional africana
+Job: Repartidor
+
+PECADOS: 404
+
+BUENAS ACCIONES: 618
+
+HIJOS
+
+Angel: Shamsiel
+Versión: 4
+Generación: 2
+-------------------------------------------------
+
+Fri Nov 19 21:09:55 2021
+ID: 26000
+Nombre: Muhammad, cant Hijos: 0
+Apellido: Parkinson
+País: Nueva Zelanda
+Creencia: Zoroastrismo
+Job: Paleontologo
+
+PECADOS: 226
+
+BUENAS ACCIONES: 425
+
+HIJOS
+
+Angel: Miguel
+Versión: 5
+Generación: 2
+-------------------------------------------------
+
+Fri Nov 19 21:09:55 2021
+ID: 88454
+Nombre: Yan, cant Hijos: 2
+Apellido: Ekstrom
+País: Armenia
+Creencia: Budismo
+Job: Abogado
+
+PECADOS: 254
+
+BUENAS ACCIONES: 367
+
+HIJOS
+
+Angel: Raguel
+Versión: 6
+Generación: 2
+-------------------------------------------------
+
+Fri Nov 19 21:09:55 2021
+ID: 1144
+Nombre: Michael, cant Hijos: 2
+Apellido: Poole
+País: Camerún
+Creencia: Unitarismo universalista
+Job: Ganadero
+
+PECADOS: 282
+
+BUENAS ACCIONES: 424
+
+HIJOS
+
+Angel: Miguel
+Versión: 7
+Generación: 2
+-------------------------------------------------
+
+Fri Nov 19 21:09:55 2021
+ID: 69904
+Nombre: Andrey
+Apellido: Lewalski
+País: Andorra
+Creencia: El Judaismo
+Job: Pintor de brocha gorda
+
+PECADOS: 288
+
+BUENAS ACCIONES: 293
+
+HIJOS
+
+Angel: Gabriel
+Versión: 8
+Generación: 2
+-------------------------------------------------
+
+Fri Nov 19 21:09:55 2021
+ID: 77332
+Nombre: Jorge
+Apellido: Foran
+País: Albania
+Creencia: Cristianismo
+Job: Lingüista
+
+PECADOS: 312
+
+BUENAS ACCIONES: 422
+
+HIJOS
+
+Angel: Miguel
+Versión: 9
+Generación: 2
+-------------------------------------------------
+
+
