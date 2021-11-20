@@ -36,7 +36,15 @@ QString Persona::toString(){
                      +"\nApellido: "+apellido
                      +"\nPaís: "+ pais->name
                      +"\nCreencia: "+creencia
-                     +"\nJob: "+profesion;
+                     +"\nJob: "+profesion
+                     +"\nUbicación: ";
+    if (estado == 0)
+        datos += "Vivo";
+    else if (estado == 1)
+        datos += "Infierno";
+    else
+        datos += "Cielo";
+
     if(padre != NULL)
         datos += "\nPADRE: \n\tID: "+QString::number(padre->id)+"\n\tNombre: "+padre->name;
     datos +="\n\nPECADOS: "+QString::number(pecadosPersona);

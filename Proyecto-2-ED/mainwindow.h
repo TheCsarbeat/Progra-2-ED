@@ -47,6 +47,7 @@ private slots:
     void on_btnBuscarPersona_clicked();
 
     void cambiarColor(QPushButton *);
+
     void on_btnGuardarDatosWorld_clicked();
 
     void on_btnMapaContinentesBuenasAcciones_clicked();
@@ -78,8 +79,6 @@ private slots:
     void sendEmail(QString currentEmail, QString, QString);
 
     void on_pushButton_clicked();
-
-    void on_btnCondenacion_clicked();
 
     void on_btnApellidos_clicked();
 

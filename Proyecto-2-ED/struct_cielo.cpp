@@ -52,6 +52,44 @@ void ArbolAngelesCielo::nivelImprimir(NodoArbolAngelesCielo *nodo , int nivel, i
    }
 }
 
+int CieloHash::calcularNeto(QLabel *lb){
+   int neto =0;
+   int cantPecado[8], cantBA[8];//Son 7 pecados y BA el octavo es para tomar de una vez la cantidad total
+   int tempArrPecados[8], tempArrBA[8];
+
+   for(int i= 0; i<8; i++){
+       cantPecado[i] = 0;
+       cantBA[i] = 0;
+       tempArrPecados[i] = 0;
+       tempArrBA[i] = 0;
+   }
+   for (int i= 0; i<1000; i++){
+       if(!hashTableCielo[i]->isEmpty()){
+           for (int j =0; j<8; j++){
+               tempArrPecados[j] = 0;
+               tempArrBA[j] = 0;
+           }
+           hashTableCielo[i]->cantPecadosBA(tempArrPecados, tempArrBA);
+           for(int p = 0; p<8; p++){
+               cantPecado[p] += tempArrPecados[p];
+               cantBA[p] += tempArrBA[p];
+           }
+
+       }
+   }
+
+    neto = cantBA[7]-cantPecado[7];
+   qDebug()<<"\nLa cantidad total es: "<<neto;
+
+   qDebug()<<"\nLa cantidad total BUANAS ACCIONES:\n";
+       for(int p = 0; p<8; p++)
+           qDebug()<<cantBA[p];
+   qDebug()<<"\nLa cantidad total por pecado:\n";
+        for(int p = 0; p<8; p++)
+         qDebug()<<cantPecado[p];
+    return neto;
+}
+
 //----------------------------------------ARBOL BUCKET AVL--------------------------------------
 
 bool ArbolCieloALV::isEmpty(){
@@ -165,4 +203,26 @@ void ArbolCieloALV::toStringInOrden(NodoArbolCieloALV* t, QString* dato){
    *dato += t->persona->toString()+t->persona->hijos->toStringIDHijos();
    toStringInOrden(t->r,dato);
 }
+
+void ArbolCieloALV::cantPecadosBA(int arr[],int arrBA[]){
+    if(!isEmpty()){
+        cantPecadosBA(raiz, arr, arrBA);
+    }
+}
+
+void  ArbolCieloALV::cantPecadosBA(NodoArbolCieloALV* t, int arr[],int arrBA[]){
+    if (t == NULL)
+       return;
+   cantPecadosBA(t->l, arr,arrBA);
+   for(int i = 0; i<7; i++){
+       arr[i] += t->persona->pecados[i]->cant;
+       arrBA[i] += t->persona->buenasAcciones[i]->cant;
+   }
+   arr[7] += t->persona->pecadosPersona;
+   arrBA[7] += t->persona->buenasAccionesPersona;
+   t->persona->imprimir();
+
+   cantPecadosBA(t->r, arr, arrBA);
+}
+
 

@@ -115,7 +115,7 @@ NodoArbolFamiliaALV *ArbolFamilias::insertSinHijos(NodoArbolFamiliaALV *r, Perso
 
 void ArbolFamilias::asignarHijos(Persona *persona){
     int cont = QRandomGenerator::global()->bounded(3);
-    persona->name = persona->name + ", cant Hijos: "+QString::number(cont);
+    persona->name = persona->name + ", cant Hijos-solicitados: "+QString::number(cont);
     asignarHijos(persona, raiz, cont);
 }
 
