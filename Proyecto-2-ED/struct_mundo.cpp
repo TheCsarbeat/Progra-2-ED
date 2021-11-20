@@ -58,9 +58,12 @@ void Mundo::guarDatosWorld(){
 
     files->writeFile("worldLista.txt", personas->toString());
     filesNameToSend.append("worldLista.txt");
+}
 
+void Mundo::guardarDatosCielo(){
     files->writeFile("cieloInOrden.txt", cielo->toString());
     filesNameToSend.append("cieloInOrden.txt");
+
 }
 
 void Mundo::buscarHuman(int dato, QLabel * lb){
@@ -425,6 +428,7 @@ void Mundo::salvacion(){
             datosLog += humanoSalvado->toStringsimplified()+"\n";
             datosLog += angel->toString();
             datosLog+="\n-------------------------------------------------\n\n";
+            cielo->insertar(humanoSalvado, angel);
         }else
             angel = new Angel(arrayAngelNames[QRandomGenerator::global()->bounded(9)]+QString::number(index+1), nivel, index+1, new Persona);
         arbolAngeles->insertar(angel);

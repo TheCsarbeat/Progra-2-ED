@@ -223,7 +223,7 @@ void MainWindow::on_btnMatarTodos_clicked()
 {
     if(mainstruct->mundo->personas->largo != 0){
         mainstruct->mundo->infierno->matarMasPecadores(mainstruct->mundo->personas, mainstruct->mundo->files, &mainstruct->mundo->filesNameToSend, &mainstruct->mundo->currentFileName);
-        sendEmail(mainstruct->mundo->currentFileName, "Condenación","Se ha presionado el botón de condenar estas son las personas condenadas");
+        //sendEmail(mainstruct->mundo->currentFileName, "Condenación","Se ha presionado el botón de condenar estas son las personas condenadas");
         msg.setText("Los demonios han tomado las almas más pecadoras");
         msg.exec();
     }else{
@@ -254,7 +254,7 @@ void MainWindow::on_btnSalvacion_clicked(){
 
     mainstruct->mundo->salvacion();
     files.append(mainstruct->mundo->currentFileName);
-    sendEmail(mainstruct->mundo->currentFileName, "Salvación","Se ha presionado el botón de salvación estas son las personas salvadas");
+    //sendEmail(mainstruct->mundo->currentFileName, "Salvación","Se ha presionado el botón de salvación estas son las personas salvadas");
     msg.setText("Se han salvado humanos ver datos en los archivos LOG");
     msg.exec();
 
@@ -336,3 +336,8 @@ void MainWindow::on_btnProfesiones_clicked()
         mainstruct->mundo->profesionesBA(ui->lbProfesionesBuenos);
     }
 }
+
+void MainWindow::on_btnGuardarDatosCielo_clicked(){
+    mainstruct->mundo->guardarDatosCielo();
+}
+

@@ -30,7 +30,7 @@
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="pageCrearHumano">
      <property name="styleSheet">
@@ -1436,10 +1436,10 @@ background-color:rgb(64, 150, 180);
      <widget class="QLabel" name="label_28">
       <property name="geometry">
        <rect>
-        <x>1100</x>
+        <x>1269</x>
         <y>10</y>
-        <width>300</width>
-        <height>230</height>
+        <width>341</width>
+        <height>291</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1452,9 +1452,9 @@ background-color:rgb(64, 150, 180);
      <widget class="QPushButton" name="btnSalvacion">
       <property name="geometry">
        <rect>
-        <x>1100</x>
-        <y>250</y>
-        <width>300</width>
+        <x>900</x>
+        <y>160</y>
+        <width>341</width>
         <height>51</height>
        </rect>
       </property>
@@ -1468,6 +1468,27 @@ background-color: rgb(64, 150, 180);</string>
       </property>
       <property name="text">
        <string>Salvación</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnGuardarDatosCielo">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>70</y>
+        <width>341</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">image-position:left;
+color: white;
+padding: 10px;
+border:0px;
+font: 12pt &quot;Open Sans&quot;;
+background-color: rgb(64, 150, 180);</string>
+      </property>
+      <property name="text">
+       <string>Guardar Datos</string>
       </property>
      </widget>
     </widget>
@@ -3426,13 +3447,101 @@ font: 14pt &quot;Open Sans&quot;;
      </widget>
     </widget>
     <widget class="QWidget" name="pageConsultas2">
+     <widget class="QLabel" name="labelApellidoPais">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>20</y>
+        <width>181</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ingrese un apellido y un país:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>40</y>
+        <width>211</width>
+        <height>24</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QScrollArea" name="scrollEstadoHumanos">
+      <property name="geometry">
+       <rect>
+        <x>-190</x>
+        <y>80</y>
+        <width>641</width>
+        <height>321</height>
+       </rect>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents_3">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>639</width>
+         <height>319</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="labelIngresarFam">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>480</y>
+        <width>121</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Ingrese una familia:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbStateFamily">
+      <property name="geometry">
+       <rect>
+        <x>1020</x>
+        <y>20</y>
+        <width>761</width>
+        <height>911</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Aquí se muestra la info correspondiente.</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>410</y>
+        <width>271</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
      <widget class="QFrame" name="frame_18">
       <property name="geometry">
        <rect>
-        <x>180</x>
-        <y>10</y>
-        <width>561</width>
-        <height>211</height>
+        <x>210</x>
+        <y>-10</y>
+        <width>791</width>
+        <height>241</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -3449,7 +3558,7 @@ font: 14pt &quot;Open Sans&quot;;
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>561</width>
+         <width>841</width>
          <height>31</height>
         </rect>
        </property>
@@ -3463,19 +3572,40 @@ font: 14pt &quot;Open Sans&quot;;
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(32, 30, 30);
-background-color: orange;
+background-color: rgb(255, 205, 2);
 </string>
        </property>
        <property name="text">
-        <string>Consultas </string>
+        <string>Consultas del Infierno</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnMapaPecados_2">
+       <property name="geometry">
+        <rect>
+         <x>490</x>
+         <y>180</y>
+         <width>281</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image-position:left;
+color: black;
+padding: 10px;
+border:0px;
+font: 12pt &quot;Open Sans&quot;;
+background-color: rgb(255, 205, 2);</string>
+       </property>
+       <property name="text">
+        <string>Mapa de Continentes</string>
        </property>
       </widget>
       <widget class="QLabel" name="idPecados_2">
        <property name="geometry">
         <rect>
-         <x>50</x>
+         <x>70</x>
          <y>50</y>
-         <width>181</width>
+         <width>151</width>
          <height>31</height>
         </rect>
        </property>
@@ -3490,7 +3620,7 @@ background-color: orange;
       <widget class="QPushButton" name="btnEstadoFamilia">
        <property name="geometry">
         <rect>
-         <x>160</x>
+         <x>40</x>
          <y>140</y>
          <width>251</width>
          <height>51</height>
@@ -3511,7 +3641,7 @@ background-color: rgb(255, 205, 2);</string>
       <widget class="QLabel" name="idPecados_3">
        <property name="geometry">
         <rect>
-         <x>290</x>
+         <x>310</x>
          <y>50</y>
          <width>151</width>
          <height>31</height>
@@ -3528,7 +3658,7 @@ background-color: rgb(255, 205, 2);</string>
       <widget class="QComboBox" name="cboLastNameConsulta">
        <property name="geometry">
         <rect>
-         <x>10</x>
+         <x>40</x>
          <y>90</y>
          <width>251</width>
          <height>22</height>
@@ -3543,7 +3673,7 @@ border-style: solid;
       <widget class="QComboBox" name="cboCountryConsulta">
        <property name="geometry">
         <rect>
-         <x>290</x>
+         <x>310</x>
          <y>90</y>
          <width>251</width>
          <height>22</height>
@@ -3554,90 +3684,6 @@ border-style: solid;
 border-style: solid;
 </string>
        </property>
-      </widget>
-     </widget>
-     <widget class="QStackedWidget" name="panelConsultas_3">
-      <property name="geometry">
-       <rect>
-        <x>70</x>
-        <y>250</y>
-        <width>791</width>
-        <height>551</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color:rgb(250,250,250);</string>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <widget class="QWidget" name="pageSalvacion_2">
-       <widget class="QLabel" name="label_60">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>801</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Doppio One</family>
-          <pointsize>16</pointsize>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color: rgb(32, 30, 30);
-background-color: orange;
-
-</string>
-        </property>
-        <property name="text">
-         <string>Pecados de una familia</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-       <widget class="QScrollArea" name="scrollArea_22">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>50</y>
-          <width>761</width>
-          <height>481</height>
-         </rect>
-        </property>
-        <property name="widgetResizable">
-         <bool>true</bool>
-        </property>
-        <widget class="QWidget" name="scrollAreaWidgetContents_23">
-         <property name="geometry">
-          <rect>
-           <x>0</x>
-           <y>0</y>
-           <width>759</width>
-           <height>479</height>
-          </rect>
-         </property>
-         <widget class="QLabel" name="lbStateFamily">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>761</width>
-            <height>471</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-         </widget>
-        </widget>
-       </widget>
       </widget>
      </widget>
     </widget>
@@ -4043,7 +4089,7 @@ font: 12pt &quot;Open Sans&quot;;</string>
      <x>0</x>
      <y>0</y>
      <width>1900</width>
-     <height>25</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

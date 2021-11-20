@@ -93,6 +93,8 @@ private slots:
 
     void on_btnProfesiones_clicked();
 
+    void on_btnGuardarDatosCielo_clicked();
+
 private:
     Ui::MainWindow *ui;
     MainStruct * mainstruct;

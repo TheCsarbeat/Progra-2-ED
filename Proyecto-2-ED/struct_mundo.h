@@ -479,6 +479,7 @@ struct Mundo{
     void hacerHerencia(Persona *,int, int, int);
 
     void guarDatosWorld();
+    void guardarDatosCielo();
     void buscarHuman(int , QLabel* );
 
     void continentsMasBuenasAcciones();
