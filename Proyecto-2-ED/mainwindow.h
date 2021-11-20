@@ -47,6 +47,7 @@ private slots:
     void on_btnBuscarPersona_clicked();
 
     void cambiarColor(QPushButton *);
+
     void on_btnGuardarDatosWorld_clicked();
 
     void on_btnMapaContinentesBuenasAcciones_clicked();
@@ -88,6 +89,9 @@ private slots:
     void on_btnGenerarConsultas_clicked();
 
     void on_btnImprimirDatoInfiernoGanador_clicked();
+    void on_btnGuardarDatosCielo_clicked();
+
+    void on_btnGanador_clicked();
 
 private:
     Ui::MainWindow *ui;

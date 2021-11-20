@@ -64,6 +64,10 @@ void MainWindow::start(){
     QVBoxLayout * lay10 = new QVBoxLayout();
     lay10->addWidget(ui->lbProfesionesBuenos);
     ui->scrollAreaWidgetContents_14->setLayout(lay10);
+
+    QVBoxLayout * lay11 = new QVBoxLayout();
+    lay11->addWidget(ui->lbStateFamily_2);
+    ui->scrollAreaWidgetContents_23->setLayout(lay11);
 }
 
 
@@ -98,7 +102,7 @@ void MainWindow::on_pushButton_2_clicked(){
 //--------------------SIDE BUTTONS--------------------
 void MainWindow::cambiarColor(QPushButton *btn){
     QString style = btn->styleSheet();
-    for (int i = 210; i <=510; i+=50) {
+    for (int i = 210; i <=460; i+=50) {
         QString styleChild = ui->sideBarFrame->childAt(0,i)->styleSheet();
         styleChild += colorBackground;
         ui->sideBarFrame->childAt(0,i)->setStyleSheet(styleChild);
@@ -135,7 +139,6 @@ void MainWindow::on_botonConsultas_clicked(){
     ui->mainPanel->setCurrentIndex(3);
     cambiarColor(ui->botonConsultas);
 }
-
 
 //---------------------------------- Cielo ----------------
 void MainWindow::on_btnMapaContinentesBuenasAcciones_clicked(){
@@ -223,7 +226,7 @@ void MainWindow::on_btnMatarTodos_clicked()
 
 
 void MainWindow::on_btnEstadoFamilia_clicked(){
-    mainstruct->mundo->consutlaHumanStateFamily(ui->cboLastNameConsulta->currentText(),ui->cboCountryConsulta->currentText(), ui->lbStateFamily);
+    mainstruct->mundo->consutlaHumanStateFamily(ui->cboLastNameConsulta->currentText(),ui->cboCountryConsulta->currentText(), ui->lbStateFamily_2);
 }
 
 
@@ -231,7 +234,7 @@ void MainWindow::on_btnSalvacion_clicked(){
 
     mainstruct->mundo->salvacion();
     files.append(mainstruct->mundo->currentFileName);
-    sendEmail(mainstruct->mundo->currentFileName, "Salvación","Se ha presionado el botón de salvación estas son las personas salvadas");
+    //sendEmail(mainstruct->mundo->currentFileName, "Salvación","Se ha presionado el botón de salvación estas son las personas salvadas");
     msg.setText("Se han salvado humanos ver datos en los archivos LOG");
     msg.exec();
 
@@ -332,5 +335,13 @@ void MainWindow::on_btnImprimirDatoInfiernoGanador_clicked()
     QString datos1 = "";
     QString datos2 = "";
     int neto = mainstruct->mundo->infierno->sacarResultados(&datos1,&datos2);
+}
+void MainWindow::on_btnGuardarDatosCielo_clicked(){
+    mainstruct->mundo->guardarDatosCielo();
+}
+
+
+void MainWindow::on_btnGanador_clicked(){
+    int netoCielo = mainstruct->mundo->cielo->calcularNeto(ui->lbInfoCielo, ui->lbInfoCielo2);
 }
 

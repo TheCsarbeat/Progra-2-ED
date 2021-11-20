@@ -52,6 +52,53 @@ void ArbolAngelesCielo::nivelImprimir(NodoArbolAngelesCielo *nodo , int nivel, i
    }
 }
 
+int CieloHash::calcularNeto(QLabel *lb, QLabel *lb2){
+    int neto =0;
+    int cantPecado[8], cantBA[8];//Son 7 pecados y BA el octavo es para tomar de una vez la cantidad total
+    int tempArrPecados[8], tempArrBA[8];
+    QString datos = "", datos1 = "";
+    QString arrayNamePecado[7] = {"Lujuria","Gula","Avaricia","Pereza","Ira","Envidia","Soberbia"};
+    QString arrayNameBuenas[7] = {"Castidad","Ayuno","Donación","Diligencia","Calma","Solidaridad","Humildad"};
+
+
+    for(int i= 0; i<8; i++){
+       cantPecado[i] = 0;
+       cantBA[i] = 0;
+       tempArrPecados[i] = 0;
+       tempArrBA[i] = 0;
+    }
+   for (int i= 0; i<1000; i++){
+       if(!hashTableCielo[i]->isEmpty()){
+           for (int j =0; j<8; j++){
+               tempArrPecados[j] = 0;
+               tempArrBA[j] = 0;
+           }
+           hashTableCielo[i]->cantPecadosBA(tempArrPecados, tempArrBA);
+           for(int p = 0; p<8; p++){
+               cantPecado[p] += tempArrPecados[p];
+               cantBA[p] += tempArrBA[p];
+           }
+
+       }
+   }
+
+
+
+   neto = cantBA[7]-cantPecado[7];
+
+   datos += "La cantidad de BUENAS ACCIONES: "+QString::number(cantBA[7]);
+   for(int i = 0; i<7; i++)
+       datos+= "\n\nBuena Acción: "+arrayNameBuenas[i]+"\nCantidad: "+QString::number(cantBA[i]);
+
+   datos1 += "La cantidad de PECADOS: "+QString::number(cantPecado[7]);
+   for(int i = 0; i<7; i++)
+       datos1+= "\n\nPecado: "+arrayNamePecado[i]+"\nCantidad"+QString::number(cantPecado[i]);
+
+    lb->setText(datos);
+    lb2->setText(datos1);
+    return neto;
+}
+
 //----------------------------------------ARBOL BUCKET AVL--------------------------------------
 
 bool ArbolCieloALV::isEmpty(){
@@ -161,7 +208,30 @@ void ArbolCieloALV::toStringInOrden(NodoArbolCieloALV* t, QString* dato){
     if (t == NULL)
        return;
    toStringInOrden(t->l,dato);
+   t->persona->imprimir();
    *dato += t->persona->toString()+t->persona->hijos->toStringIDHijos();
    toStringInOrden(t->r,dato);
 }
+
+void ArbolCieloALV::cantPecadosBA(int arr[],int arrBA[]){
+    if(!isEmpty()){
+        cantPecadosBA(raiz, arr, arrBA);
+    }
+}
+
+void  ArbolCieloALV::cantPecadosBA(NodoArbolCieloALV* t, int arr[],int arrBA[]){
+    if (t == NULL)
+       return;
+   cantPecadosBA(t->l, arr,arrBA);
+   for(int i = 0; i<7; i++){
+       arr[i] += t->persona->pecados[i]->cant;
+       arrBA[i] += t->persona->buenasAcciones[i]->cant;
+   }
+   arr[7] += t->persona->pecadosPersona;
+   arrBA[7] += t->persona->buenasAccionesPersona;
+   t->persona->imprimir();
+
+   cantPecadosBA(t->r, arr, arrBA);
+}
+
 

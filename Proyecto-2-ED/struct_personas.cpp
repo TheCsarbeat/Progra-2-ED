@@ -36,7 +36,15 @@ QString Persona::toString(){
                      +"\nApellido: "+apellido
                      +"\nPaís: "+ pais->name
                      +"\nCreencia: "+creencia
-                     +"\nJob: "+profesion;
+                     +"\nJob: "+profesion
+                     +"\nUbicación: ";
+    if (estado == 0)
+        datos += "Vivo";
+    else if (estado == 1)
+        datos += "Infierno";
+    else
+        datos += "Cielo";
+
     if(padre != NULL)
         datos += "\nPADRE: \n\tID: "+QString::number(padre->id)+"\n\tNombre: "+padre->name;
     datos +="\n\nPECADOS: "+QString::number(pecadosPersona);
@@ -54,6 +62,33 @@ QString Persona::toString(){
         else
             datos+="\n\tNombre: "+buenasAcciones[i]->name+", \tValor: "+QString::number(buenasAcciones[i]->cant);
     }
+    datos+="\n\nHIJOS";
+
+    return datos;
+}
+
+QString Persona::toStringConsulta2(){
+    QString datos = "\nID: "+QString::number(id)
+                     +"\nNombre: "+name
+                     +"\nApellido: "+apellido
+                     +"\nPaís: "+ pais->name
+                     +"\nCreencia: "+creencia
+                     +"\nJob: "+profesion
+                     +"\nUbicación: ";
+    if (estado == 0){
+        datos += "Vivo";
+    }else if (estado == 1){
+        datos += "Infierno";
+    }else{
+         datos += "Cielo";
+    }
+    if(padre != NULL)
+        datos += "\nPADRE: \n\tID: "+QString::number(padre->id)+"\n\tNombre: "+padre->name;
+    datos +="\n\nPECADOS: "+QString::number(pecadosPersona);
+
+
+    datos+="\n\nBUENAS ACCIONES: "+QString::number(buenasAccionesPersona);
+
     datos+="\n\nHIJOS";
 
     return datos;

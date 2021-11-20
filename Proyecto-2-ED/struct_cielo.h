@@ -139,6 +139,9 @@ struct ArbolCieloALV{
 
     void bubbleSortPecados(NodoPersona *[]);
 
+    void cantPecadosBA(int arr[],int arr2[]);
+    void cantPecadosBA(NodoArbolCieloALV *t, int arr[], int arr2[]);
+
 };
 
 struct CieloHash{
@@ -169,6 +172,8 @@ struct CieloHash{
             dato +=  "\n\nPosicion: "+QString::number(i)+"\n"+ *hashTableCielo[i]->toStringInOrden();
         return dato;
     }
+
+    int calcularNeto(QLabel *, QLabel *);
 };
 
 #endif // STRUCT_CIELO_H
