@@ -258,7 +258,7 @@ int Demonio::getTotalPecados(){
     NodoListaSimpleHeaps * nodo = listaHeaps->primerNodo;
     int total = 0;
     while(nodo != NULL){
-        for(int i=0;i<nodo->heap->array.size();i++){
+        for(int i=0;i<nodo->heap->cant;i++){
             total += nodo->heap->array[i]->persona->pecados[pecado]->cant;
         }
         nodo = nodo->siguiente;
