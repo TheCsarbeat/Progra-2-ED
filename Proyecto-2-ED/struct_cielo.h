@@ -170,7 +170,7 @@ struct CieloHash{
         return dato;
     }
 
-    int calcularNeto(QLabel *);
+    int calcularNeto(QLabel *, QLabel *);
 };
 
 #endif // STRUCT_CIELO_H

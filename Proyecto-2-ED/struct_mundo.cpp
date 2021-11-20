@@ -438,8 +438,6 @@ void Mundo::salvacion(){
     filesNameToSend.append(nombreArchivo);
     files->writeFile(nombreArchivo, datosLog);
 
-    cielo->calcularNeto(new QLabel);
-
 }
 
 

@@ -92,11 +92,7 @@ private slots:
 
     void on_btnGuardarDatosCielo_clicked();
 
-    void on_btnInfoCielo_clicked();
-
-    void on_btnInfoCielo_2_clicked();
-
-    void on_btnInfoInfierno_clicked();
+    void on_btnGanador_clicked();
 
 private:
     Ui::MainWindow *ui;

@@ -52,17 +52,21 @@ void ArbolAngelesCielo::nivelImprimir(NodoArbolAngelesCielo *nodo , int nivel, i
    }
 }
 
-int CieloHash::calcularNeto(QLabel *lb){
-   int neto =0;
-   int cantPecado[8], cantBA[8];//Son 7 pecados y BA el octavo es para tomar de una vez la cantidad total
-   int tempArrPecados[8], tempArrBA[8];
+int CieloHash::calcularNeto(QLabel *lb, QLabel *lb2){
+    int neto =0;
+    int cantPecado[8], cantBA[8];//Son 7 pecados y BA el octavo es para tomar de una vez la cantidad total
+    int tempArrPecados[8], tempArrBA[8];
+    QString datos = "", datos1 = "";
+    QString arrayNamePecado[7] = {"Lujuria","Gula","Avaricia","Pereza","Ira","Envidia","Soberbia"};
+    QString arrayNameBuenas[7] = {"Castidad","Ayuno","Donación","Diligencia","Calma","Solidaridad","Humildad"};
 
-   for(int i= 0; i<8; i++){
+
+    for(int i= 0; i<8; i++){
        cantPecado[i] = 0;
        cantBA[i] = 0;
        tempArrPecados[i] = 0;
        tempArrBA[i] = 0;
-   }
+    }
    for (int i= 0; i<1000; i++){
        if(!hashTableCielo[i]->isEmpty()){
            for (int j =0; j<8; j++){
@@ -78,15 +82,20 @@ int CieloHash::calcularNeto(QLabel *lb){
        }
    }
 
-    neto = cantBA[7]-cantPecado[7];
-   qDebug()<<"\nLa cantidad total es: "<<neto;
 
-   qDebug()<<"\nLa cantidad total BUANAS ACCIONES:\n";
-       for(int p = 0; p<8; p++)
-           qDebug()<<cantBA[p];
-   qDebug()<<"\nLa cantidad total por pecado:\n";
-        for(int p = 0; p<8; p++)
-         qDebug()<<cantPecado[p];
+
+   neto = cantBA[7]-cantPecado[7];
+
+   datos += "La cantidad de BUENAS ACCIONES: "+QString::number(cantBA[7]);
+   for(int i = 0; i<7; i++)
+       datos+= "\n\nBuena Acción: "+arrayNameBuenas[i]+"\nCantidad: "+QString::number(cantBA[i]);
+
+   datos1 += "La cantidad de PECADOS: "+QString::number(cantPecado[7]);
+   for(int i = 0; i<7; i++)
+       datos1+= "\n\nPecado: "+arrayNamePecado[i]+"\nCantidad"+QString::number(cantPecado[i]);
+
+    lb->setText(datos);
+    lb2->setText(datos1);
     return neto;
 }
 
