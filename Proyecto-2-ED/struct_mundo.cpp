@@ -368,14 +368,43 @@ void Mundo::buscarPecadosFamilias(int id, QLabel *lb){
 
 void Mundo::consutlaHumanStateFamily(QString lastName, QString country,QLabel *lb){
     NodoFamiliaListaSimple *nodoBuscado = listArbolFamilias->buscar(lastName, country);
+    int cantidadCielo = 0;
+    int cantidadInfierno = 0;
+    int cantidadVivos = 0;
+
     if(nodoBuscado!= NULL){
         NodoPersona * lista[nodoBuscado->arbol->cant];
         nodoBuscado->arbol->aplastarArbolBB(lista);
         QString datos;
         for(int i = 0; i<nodoBuscado->arbol->cant; i++){
-            datos +=lista[i]->persona->toString()+lista[i]->persona->hijos->toStringIDHijos();
+            datos +=lista[i]->persona->toStringConsulta2()+lista[i]->persona->hijos->toStringIDHijos();
+            if (lista[i]->persona->estado == 0){
+                cantidadVivos ++;
+            }else if(lista[i]->persona->estado == 1){
+                cantidadInfierno ++;
+            }else{
+                cantidadCielo++;
+            }
         }
+        qDebug()<<nodoBuscado->arbol->cant;
+        qDebug()<<cantidadCielo;
+        qDebug()<<cantidadInfierno;
+        qDebug()<<cantidadVivos;
+        if (cantidadCielo!=0)
+            datos += "\nPorcentaje en el cielo: "+ QString::number((double)(cantidadCielo*100)/nodoBuscado->arbol->cant) + " %" ;
+        else
+            datos += "\nPorcentaje en el cielo: 0";
+        if (cantidadInfierno!=0)
+            datos += "\nPorcentaje en el infierno: "+QString::number((double)(cantidadInfierno*100)/nodoBuscado->arbol->cant) + " %" ;
+        else
+            datos += "\nPorcentaje en el infierno: 0";
+        if(cantidadVivos!=0)
+            datos += "\nPorcentaje vivos: "+QString::number((double)(cantidadVivos*100)/nodoBuscado->arbol->cant) + " %" ;
+        else
+            datos += "\nPorcentaje vivos: 0";
         lb->setText(datos);
+
+
     }else{
         lb->setText("No existe");
     }

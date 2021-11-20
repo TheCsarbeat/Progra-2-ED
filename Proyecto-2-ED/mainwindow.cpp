@@ -64,6 +64,10 @@ void MainWindow::start(){
     QVBoxLayout * lay10 = new QVBoxLayout();
     lay10->addWidget(ui->lbProfesionesBuenos);
     ui->scrollAreaWidgetContents_14->setLayout(lay10);
+
+    QVBoxLayout * lay11 = new QVBoxLayout();
+    lay11->addWidget(ui->lbStateFamily);
+    ui->scrollAreaWidgetContents_23->setLayout(lay11);
 }
 
 
