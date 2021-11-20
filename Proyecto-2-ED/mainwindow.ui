@@ -30,7 +30,7 @@
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="pageCrearHumano">
      <property name="styleSheet">
@@ -3513,7 +3513,7 @@ background-color: orange;
            <height>479</height>
           </rect>
          </property>
-         <widget class="QLabel" name="lbStateFamily_2">
+         <widget class="QLabel" name="lbStateFamily">
           <property name="geometry">
            <rect>
             <x>0</x>
@@ -3591,7 +3591,7 @@ background-color: orange;
         <string>Ingrese un apellido</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="btnEstadoFamilia_2">
+      <widget class="QPushButton" name="btnEstadoFamilia">
        <property name="geometry">
         <rect>
          <x>290</x>
@@ -3629,7 +3629,7 @@ background-color: rgb(255, 205, 2);</string>
         <string>Pais</string>
        </property>
       </widget>
-      <widget class="QComboBox" name="cboLastNameConsulta_2">
+      <widget class="QComboBox" name="cboLastNameConsulta">
        <property name="geometry">
         <rect>
          <x>100</x>
@@ -3644,7 +3644,7 @@ border-style: solid;
 </string>
        </property>
       </widget>
-      <widget class="QComboBox" name="cboCountryConsulta_2">
+      <widget class="QComboBox" name="cboCountryConsulta">
        <property name="geometry">
         <rect>
          <x>450</x>

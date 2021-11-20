@@ -105,8 +105,6 @@ void MainWindow::cambiarColor(QPushButton *btn){
     }
     style += colorHovered;
     btn->setStyleSheet(style);
-
-
 }
 
 void MainWindow::on_botonHumanos_clicked(){
@@ -136,12 +134,6 @@ void MainWindow::on_botonGanador_clicked(){
 void MainWindow::on_botonConsultas_clicked(){
     ui->mainPanel->setCurrentIndex(3);
     cambiarColor(ui->botonConsultas);
-}
-
-
-void MainWindow::on_botonConsultas2_clicked(){
-    ui->mainPanel->setCurrentIndex(4);
-    cambiarColor(ui->botonConsultas2);
 }
 
 
@@ -340,7 +332,5 @@ void MainWindow::on_btnImprimirDatoInfiernoGanador_clicked()
     QString datos1 = "";
     QString datos2 = "";
     int neto = mainstruct->mundo->infierno->sacarResultados(&datos1,&datos2);
-    ui->lbDatosInfiernoGanador->setText(datos1);
-    ui->lbDatosInfiernoGanador2->setText(datos2);
 }
 
