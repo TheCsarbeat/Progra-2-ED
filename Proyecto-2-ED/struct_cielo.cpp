@@ -161,6 +161,7 @@ void ArbolCieloALV::toStringInOrden(NodoArbolCieloALV* t, QString* dato){
     if (t == NULL)
        return;
    toStringInOrden(t->l,dato);
+   t->persona->imprimir();
    *dato += t->persona->toString()+t->persona->hijos->toStringIDHijos();
    toStringInOrden(t->r,dato);
 }
