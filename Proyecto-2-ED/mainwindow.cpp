@@ -85,6 +85,7 @@ void MainWindow::on_btnBuscarPersona_clicked(){
 void MainWindow::on_btnPecar_clicked(){
     if(mainstruct->mundo->personas->largo > 0){
         mainstruct->mundo->hacerPecar();
+        mainstruct->mundo->hanPecado = true;
         msg.setText("Los humanos han pecado y hecho buenas acciones");
         msg.exec();
     }else{
@@ -218,14 +219,14 @@ void MainWindow::on_btnPecadosFamilia_clicked()
 
 void MainWindow::on_btnMatarTodos_clicked()
 {
-    if(mainstruct->mundo->personas->largo != 0){
-        mainstruct->mundo->infierno->matarMasPecadores(mainstruct->mundo->personas, mainstruct->mundo->files, &mainstruct->mundo->filesNameToSend, &mainstruct->mundo->currentFileName);
+    if(mainstruct->mundo->hanPecado == true){
+        mainstruct->mundo->infierno->matarMasPecadores(mainstruct->mundo->personas, mainstruct->mundo->files, &mainstruct->mundo->filesNameToSend, &mainstruct->mundo->currentFileName,7);
         mainstruct->mundo->personas->vivos = mainstruct->mundo->personas->largo - mainstruct->mundo->infierno->condenados - mainstruct->mundo->cielo->salvados;
         //sendEmail(mainstruct->mundo->currentFileName, "Condenación","Se ha presionado el botón de condenar estas son las personas condenadas");
         msg.setText("Los demonios han tomado las almas más pecadoras");
         msg.exec();
     }else{
-        msg.setText("No hay humanos en el mundo");
+        msg.setText("No hay humanos en el mundo o no han pecado");
         msg.exec();
     }
 }
@@ -270,8 +271,6 @@ void MainWindow::on_pushButton_clicked(){
 
 void MainWindow::on_btnApellidos_clicked()
 {
-
-
     if (ui->rbPecados->isChecked()){
         ui->panelConsultas_2->setCurrentIndex(1);
         mainstruct->mundo->apellidosPecadores(ui->lbApellidos);
@@ -374,5 +373,109 @@ void MainWindow::on_btnGanador_clicked(){
         resultado += "\nEs un empate";
     }
     ui->lbGanador->setText(resultado);
+}
+
+
+void MainWindow::on_botonMammon_clicked()
+{
+    if(mainstruct->mundo->hanPecado == true){
+        mainstruct->mundo->infierno->matarMasPecadores(mainstruct->mundo->personas, mainstruct->mundo->files, &mainstruct->mundo->filesNameToSend, &mainstruct->mundo->currentFileName,2);
+        mainstruct->mundo->personas->vivos = mainstruct->mundo->personas->largo - mainstruct->mundo->infierno->condenados - mainstruct->mundo->cielo->salvados;
+        //sendEmail(mainstruct->mundo->currentFileName, "Condenación","Se ha presionado el botón de condenar estas son las personas condenadas");
+        msg.setText("Mammón ha tomado las almas más pecadoras");
+        msg.exec();
+    }else{
+        msg.setText("No hay humanos en el mundo o no han pecado");
+        msg.exec();
+    }
+}
+
+
+void MainWindow::on_botonLucifer_clicked()
+{
+    if(mainstruct->mundo->hanPecado == true){
+        mainstruct->mundo->infierno->matarMasPecadores(mainstruct->mundo->personas, mainstruct->mundo->files, &mainstruct->mundo->filesNameToSend, &mainstruct->mundo->currentFileName,6);
+        mainstruct->mundo->personas->vivos = mainstruct->mundo->personas->largo - mainstruct->mundo->infierno->condenados - mainstruct->mundo->cielo->salvados;
+        //sendEmail(mainstruct->mundo->currentFileName, "Condenación","Se ha presionado el botón de condenar estas son las personas condenadas");
+        msg.setText("Lucifer ha tomado las almas más pecadoras");
+        msg.exec();
+    }else{
+        msg.setText("No hay humanos en el mundo o no han pecado");
+        msg.exec();
+    }
+}
+
+
+void MainWindow::on_botonBelcebu_clicked()
+{
+    if(mainstruct->mundo->hanPecado == true){
+        mainstruct->mundo->infierno->matarMasPecadores(mainstruct->mundo->personas, mainstruct->mundo->files, &mainstruct->mundo->filesNameToSend, &mainstruct->mundo->currentFileName,5);
+        mainstruct->mundo->personas->vivos = mainstruct->mundo->personas->largo - mainstruct->mundo->infierno->condenados - mainstruct->mundo->cielo->salvados;
+        //sendEmail(mainstruct->mundo->currentFileName, "Condenación","Se ha presionado el botón de condenar estas son las personas condenadas");
+        msg.setText("Belcebú ha tomado las almas más pecadoras");
+        msg.exec();
+    }else{
+        msg.setText("No hay humanos en el mundo o no han pecado");
+        msg.exec();
+    }
+}
+
+
+void MainWindow::on_botonSatan_clicked()
+{
+    if(mainstruct->mundo->hanPecado == true){
+        mainstruct->mundo->infierno->matarMasPecadores(mainstruct->mundo->personas, mainstruct->mundo->files, &mainstruct->mundo->filesNameToSend, &mainstruct->mundo->currentFileName,4);
+        mainstruct->mundo->personas->vivos = mainstruct->mundo->personas->largo - mainstruct->mundo->infierno->condenados - mainstruct->mundo->cielo->salvados;
+        //sendEmail(mainstruct->mundo->currentFileName, "Condenación","Se ha presionado el botón de condenar estas son las personas condenadas");
+        msg.setText("Satán ha tomado las almas más pecadoras");
+        msg.exec();
+    }else{
+        msg.setText("No hay humanos en el mundo o no han pecado");
+        msg.exec();
+    }
+}
+
+void MainWindow::on_botonAbadon_clicked()
+{
+    if(mainstruct->mundo->hanPecado == true){
+        mainstruct->mundo->infierno->matarMasPecadores(mainstruct->mundo->personas, mainstruct->mundo->files, &mainstruct->mundo->filesNameToSend, &mainstruct->mundo->currentFileName,3);
+        mainstruct->mundo->personas->vivos = mainstruct->mundo->personas->largo - mainstruct->mundo->infierno->condenados - mainstruct->mundo->cielo->salvados;
+        //sendEmail(mainstruct->mundo->currentFileName, "Condenación","Se ha presionado el botón de condenar estas son las personas condenadas");
+        msg.setText("Abadón ha tomado las almas más pecadoras");
+        msg.exec();
+    }else{
+        msg.setText("No hay humanos en el mundo o no han pecado");
+        msg.exec();
+    }
+}
+
+
+void MainWindow::on_botonBelfegor_clicked()
+{
+    if(mainstruct->mundo->hanPecado == true){
+        mainstruct->mundo->infierno->matarMasPecadores(mainstruct->mundo->personas, mainstruct->mundo->files, &mainstruct->mundo->filesNameToSend, &mainstruct->mundo->currentFileName,1);
+        mainstruct->mundo->personas->vivos = mainstruct->mundo->personas->largo - mainstruct->mundo->infierno->condenados - mainstruct->mundo->cielo->salvados;
+        //sendEmail(mainstruct->mundo->currentFileName, "Condenación","Se ha presionado el botón de condenar estas son las personas condenadas");
+        msg.setText("Belfegor ha tomado las almas más pecadoras");
+        msg.exec();
+    }else{
+        msg.setText("No hay humanos en el mundo o no han pecado");
+        msg.exec();
+    }
+}
+
+
+void MainWindow::on_botonAsmodeo_clicked()
+{
+    if(mainstruct->mundo->hanPecado == true){
+        mainstruct->mundo->infierno->matarMasPecadores(mainstruct->mundo->personas, mainstruct->mundo->files, &mainstruct->mundo->filesNameToSend, &mainstruct->mundo->currentFileName,0);
+        mainstruct->mundo->personas->vivos = mainstruct->mundo->personas->largo - mainstruct->mundo->infierno->condenados - mainstruct->mundo->cielo->salvados;
+        //sendEmail(mainstruct->mundo->currentFileName, "Condenación","Se ha presionado el botón de condenar estas son las personas condenadas");
+        msg.setText("Asmodeo ha tomado las almas más pecadoras");
+        msg.exec();
+    }else{
+        msg.setText("No hay humanos en el mundo o no han pecado");
+        msg.exec();
+    }
 }
 

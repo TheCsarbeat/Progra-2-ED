@@ -92,6 +92,20 @@ private slots:
 
     void on_btnGanador_clicked();
 
+    void on_botonMammon_clicked();
+
+    void on_botonLucifer_clicked();
+
+    void on_botonBelcebu_clicked();
+
+    void on_botonSatan_clicked();
+
+    void on_botonAbadon_clicked();
+
+    void on_botonBelfegor_clicked();
+
+    void on_botonAsmodeo_clicked();
+
 private:
     Ui::MainWindow *ui;
     MainStruct * mainstruct;

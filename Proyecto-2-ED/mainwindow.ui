@@ -1525,6 +1525,9 @@ background-color: rgb(64, 150, 180);</string>
          <bold>true</bold>
         </font>
        </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="styleSheet">
         <string notr="true">image:url(&quot;:/images/demon.png&quot;);
  background-color: rgb(32, 30, 30);
@@ -1540,7 +1543,7 @@ background-color: rgb(64, 150, 180);</string>
        <property name="geometry">
         <rect>
          <x>70</x>
-         <y>60</y>
+         <y>50</y>
          <width>71</width>
          <height>16</height>
         </rect>
@@ -1571,6 +1574,9 @@ background-color: rgb(64, 150, 180);</string>
          <bold>true</bold>
         </font>
        </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="styleSheet">
         <string notr="true">image:url(&quot;:/images/demon1.png&quot;);
  background-color: rgb(32, 30, 30);
@@ -1598,6 +1604,9 @@ background-color: rgb(64, 150, 180);</string>
          <weight>75</weight>
          <bold>true</bold>
         </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
         <string notr="true">image:url(&quot;:/images/demon2.png&quot;);
@@ -1627,6 +1636,9 @@ background-color: rgb(64, 150, 180);</string>
          <bold>true</bold>
         </font>
        </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="styleSheet">
         <string notr="true">image:url(&quot;:/images/demon3.png&quot;);
  background-color: rgb(32, 30, 30);
@@ -1638,7 +1650,7 @@ background-color: rgb(64, 150, 180);</string>
         <string>Satán</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="botonAbandon">
+      <widget class="QPushButton" name="botonAbadon">
        <property name="geometry">
         <rect>
          <x>320</x>
@@ -1655,6 +1667,9 @@ background-color: rgb(64, 150, 180);</string>
          <bold>true</bold>
         </font>
        </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="styleSheet">
         <string notr="true">image:url(&quot;:/images/demon4.png&quot;);
  background-color: rgb(32, 30, 30);
@@ -1663,7 +1678,7 @@ background-color: rgb(64, 150, 180);</string>
  text-align: top ;</string>
        </property>
        <property name="text">
-        <string>Abandón</string>
+        <string>Abadón</string>
        </property>
       </widget>
       <widget class="QPushButton" name="botonBelfegor">
@@ -1683,6 +1698,9 @@ background-color: rgb(64, 150, 180);</string>
          <italic>false</italic>
          <bold>true</bold>
         </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
         <string notr="true">image:url(&quot;:/images/demon6.png&quot;);
@@ -1712,6 +1730,9 @@ background-color: rgb(64, 150, 180);</string>
          <bold>true</bold>
         </font>
        </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="styleSheet">
         <string notr="true">image:url(&quot;:/images/demon7.png&quot;);
  background-color: rgb(32, 30, 30);
@@ -1729,7 +1750,7 @@ background-color: rgb(64, 150, 180);</string>
          <x>350</x>
          <y>50</y>
          <width>81</width>
-         <height>31</height>
+         <height>21</height>
         </rect>
        </property>
        <property name="font">
@@ -1745,7 +1766,7 @@ background-color: rgb(64, 150, 180);</string>
        <property name="geometry">
         <rect>
          <x>630</x>
-         <y>60</y>
+         <y>50</y>
          <width>71</width>
          <height>16</height>
         </rect>
@@ -1763,7 +1784,7 @@ background-color: rgb(64, 150, 180);</string>
        <property name="geometry">
         <rect>
          <x>340</x>
-         <y>240</y>
+         <y>230</y>
          <width>71</width>
          <height>16</height>
         </rect>
@@ -1799,7 +1820,7 @@ background-color: rgb(64, 150, 180);</string>
        <property name="geometry">
         <rect>
          <x>610</x>
-         <y>240</y>
+         <y>230</y>
          <width>91</width>
          <height>20</height>
         </rect>
