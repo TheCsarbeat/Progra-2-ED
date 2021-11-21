@@ -125,8 +125,6 @@ struct Demonio{
     void generateLog(QString *,Persona * array[], int);
     QString consulta();
     double getPromedioPecados();
-    int getTotalPecados();
-    int getTotalBuenasAcciones();
 };
 
 struct Infierno{
@@ -147,9 +145,11 @@ struct Infierno{
     void crearHeapsDemonios(ListaSimpleArbolFamilias *);
     void limpiarDemonios();
     Persona* salvarHumano();
-    void matarMasPecadores(ListaDoblePersonas *,Files *, QStringList *,QString *);
+    void matarMasPecadores(ListaDoblePersonas *,Files *, QStringList *,QString *, int);
     void generarConsulta(Files *);
     int sacarResultados(QString *, QString *);
+    int getTotalPecados(int);
+    int getTotalBuenasAcciones(int);
 };
 
 #endif // STRUCT_INFIERNO_H

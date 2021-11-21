@@ -167,8 +167,8 @@ struct ArrayPaises{
     QString toStringPaises(Files * file){
         QString respuesta= "";
         for(int i = 0; i<file->index; i++) {
-            respuesta += QString::number(i+1)+" # "+arrayPaises[i]->nombre+"\tCantidad: " + QString::number(arrayPaises[i]->cantidad)+
-                    "\t\tPorcentaje: "+QString::number((double)(arrayPaises[i]->cantidad*100)/cantidadPecados)+ " %" +"\n";
+            respuesta += QString::number(i+1)+" # "+arrayPaises[i]->nombre+"\nCantidad: " + QString::number(arrayPaises[i]->cantidad)+
+                    "\nPorcentaje: "+QString::number((double)(arrayPaises[i]->cantidad*100)/cantidadPecados)+ " %" +"\n\n";
         }
         return respuesta;
     }
@@ -176,8 +176,8 @@ struct ArrayPaises{
     QString toStringPaises2(Files * file){
         QString respuesta= "";
         for(int i = 0; i<file->index; i++) {
-            respuesta += QString::number(i+1)+" # "+arrayPaises[i]->nombre+"\tCantidad: " + QString::number(arrayPaises[i]->cantidad)+
-                    "\t\tPorcentaje: "+QString::number((double)(arrayPaises[i]->cantidad*100)/cantidadBA)+ " %" +"\n";
+            respuesta += QString::number(i+1)+" # "+arrayPaises[i]->nombre+"\nCantidad: " + QString::number(arrayPaises[i]->cantidad)+
+                    "\nPorcentaje: "+QString::number((double)(arrayPaises[i]->cantidad*100)/cantidadBA)+ " %" +"\n\n";
         }
         return respuesta;
     }
@@ -252,8 +252,8 @@ struct ArrayApellidos{
     QString toStringApellidos(){
         QString respuesta= "";
         for(int i = 0; i<50; i++) {
-            respuesta += QString::number(i+1)+" # "+arrayApellidos[i]->apellido+"\tCantidad: " + QString::number(arrayApellidos[i]->cantidad)+
-                    "\t\tPorcentaje: "+QString::number((double)(arrayApellidos[i]->cantidad*100)/cantidadPecados)+ " %" +"\n";
+            respuesta += QString::number(i+1)+" # "+arrayApellidos[i]->apellido+"\nCantidad: " + QString::number(arrayApellidos[i]->cantidad)+
+                    "\nPorcentaje: "+QString::number((double)(arrayApellidos[i]->cantidad*100)/cantidadPecados)+ " %" +"\n\n";
         }
         return respuesta;
     }
@@ -261,8 +261,8 @@ struct ArrayApellidos{
     QString toStringApellidos2(){
         QString respuesta= "";
         for(int i = 0; i<50; i++) {
-            respuesta += QString::number(i+1)+" # "+arrayApellidos[i]->apellido+"\tCantidad: " + QString::number(arrayApellidos[i]->cantidad)+
-                    "\t\tPorcentaje: "+QString::number((double)(arrayApellidos[i]->cantidad*100)/cantidadBA)+ " %" +"\n";
+            respuesta += QString::number(i+1)+" # "+arrayApellidos[i]->apellido+"\nCantidad: " + QString::number(arrayApellidos[i]->cantidad)+
+                    "\nPorcentaje: "+QString::number((double)(arrayApellidos[i]->cantidad*100)/cantidadBA)+ " %" +"\n\n";
         }
         return respuesta;
     }
@@ -296,8 +296,8 @@ struct ArrayProfesiones{
     QString toStringProfesiones(){
         QString respuesta= "";
         for(int i = 0; i<80; i++) {
-            respuesta += QString::number(i+1)+" # "+arrayProfesiones[i]->nombre+"\tCantidad: " + QString::number(arrayProfesiones[i]->cantidad)+
-                    "\t\tPorcentaje: "+QString::number((double)(arrayProfesiones[i]->cantidad*100)/cantidadPecados)+ " %" +"\n";
+            respuesta += QString::number(i+1)+" # "+arrayProfesiones[i]->nombre+"\nCantidad: " + QString::number(arrayProfesiones[i]->cantidad)+
+                    "\nPorcentaje: "+QString::number((double)(arrayProfesiones[i]->cantidad*100)/cantidadPecados)+ " %" +"\n\n";
         }
         return respuesta;
     }
@@ -305,8 +305,8 @@ struct ArrayProfesiones{
     QString toStringProfesiones2(){
         QString respuesta= "";
         for(int i = 0; i<80; i++) {
-            respuesta += QString::number(i+1)+" # "+arrayProfesiones[i]->nombre+"\tCantidad: " + QString::number(arrayProfesiones[i]->cantidad)+
-                    "\t\tPorcentaje: "+QString::number((double)(arrayProfesiones[i]->cantidad*100)/cantidadBA)+ " %" +"\n";
+            respuesta += QString::number(i+1)+" # "+arrayProfesiones[i]->nombre+"\nCantidad: " + QString::number(arrayProfesiones[i]->cantidad)+
+                    "\nPorcentaje: "+QString::number((double)(arrayProfesiones[i]->cantidad*100)/cantidadBA)+ " %" +"\n\n";
         }
         return respuesta;
     }
@@ -341,8 +341,8 @@ struct ArrayCreencias{
     QString toStringCreencia(){
         QString respuesta= "";
         for(int i = 0; i<19; i++) {
-            respuesta += QString::number(i+1)+" # "+arrayCreencia[i]->nombre+"\tCantidad: " + QString::number(arrayCreencia[i]->cantidad)+
-                    "\t\tPorcentaje: "+QString::number((double)(arrayCreencia[i]->cantidad*100)/cantidadPecados)+ " %" +"\n";
+            respuesta += QString::number(i+1)+" # "+arrayCreencia[i]->nombre+"\nCantidad: " + QString::number(arrayCreencia[i]->cantidad)+
+                    "\nPorcentaje: "+QString::number((double)(arrayCreencia[i]->cantidad*100)/cantidadPecados)+ " %" +"\n\n";
         }
         return respuesta;
     }
@@ -350,8 +350,8 @@ struct ArrayCreencias{
     QString toStringCreencia2(){
         QString respuesta= "";
         for(int i = 0; i<19; i++) {
-            respuesta += QString::number(i+1)+" # "+arrayCreencia[i]->nombre+"\tCantidad: " + QString::number(arrayCreencia[i]->cantidad)+
-                    "\t\tPorcentaje: "+QString::number((double)(arrayCreencia[i]->cantidad*100)/cantidadBA)+ " %" +"\n";
+            respuesta += QString::number(i+1)+" # "+arrayCreencia[i]->nombre+"\nCantidad: " + QString::number(arrayCreencia[i]->cantidad)+
+                    "\nPorcentaje: "+QString::number((double)(arrayCreencia[i]->cantidad*100)/cantidadBA)+ " %" +"\n\n";
         }
         return respuesta;
     }
@@ -388,8 +388,8 @@ struct ArrayContinentes{
     QString toStringContinentes(){
         QString respuesta= "";
         for(int i = 0; i<5; i++) {
-            respuesta += QString::number(i+1)+" # "+arrayContinentes[i]->nombre+"\tCantidad: " + QString::number(arrayContinentes[i]->cantidad)+
-                    "\t\tPorcentaje: "+QString::number((double)(arrayContinentes[i]->cantidad*100)/cantidadPecados)+ " %" +"\n";
+            respuesta += QString::number(i+1)+" # "+arrayContinentes[i]->nombre+"\nCantidad: " + QString::number(arrayContinentes[i]->cantidad)+
+                    "\nPorcentaje: "+QString::number((double)(arrayContinentes[i]->cantidad*100)/cantidadPecados)+ " %" +"\n\n";
         }
         return respuesta;
     }
@@ -397,8 +397,8 @@ struct ArrayContinentes{
     QString toStringContinentes2(){
         QString respuesta= "";
         for(int i = 0; i<5; i++) {
-            respuesta += QString::number(i+1)+" # "+arrayContinentes[i]->nombre+"\tCantidad: " + QString::number(arrayContinentes[i]->cantidad)+
-                    "\t\tPorcentaje: "+QString::number((double)(arrayContinentes[i]->cantidad*100)/cantidadBA)+ " %" +"\n";
+            respuesta += QString::number(i+1)+" # "+arrayContinentes[i]->nombre+"\nCantidad: " + QString::number(arrayContinentes[i]->cantidad)+
+                    "\nPorcentaje: "+QString::number((double)(arrayContinentes[i]->cantidad*100)/cantidadBA)+ " %" +"\n\n";
         }
         return respuesta;
     }
@@ -444,7 +444,7 @@ struct Mundo{
 
     QStringList filesNameToSend;
     QString currentFileName;
-
+    bool hanPecado;
     Mundo(QLabel * lbBuenasAccionesMapa[],QLabel * lbPecadosMapa[], QComboBox * cbo[]){
         personas = new ListaDoblePersonas();
         treePersonas = new ArbolPersonas();
@@ -468,8 +468,7 @@ struct Mundo{
         arrayBAContinentes = new ArrayContinentes();
         arrayPecadosContinentes = new ArrayContinentes();
         arrayPecadoCreencias = new ArrayCreencias(files);
-
-
+        hanPecado = false;
     }
 
     void crearHumanos(int);

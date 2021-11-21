@@ -163,7 +163,7 @@ void Mundo::hacerHerencia(Persona * persona, int randomP, int randomBA, int posi
 
         NodoPersona * nieto = hijo->persona->hijos->primerNodo;
         while(nieto!=NULL){
-            nieto->persona->pecados[position]->cant += randomBA*0.25;
+            nieto->persona->pecados[position]->cant += randomP*0.25;
             nieto->persona->buenasAcciones[position]->cant += randomBA*0.25;
 
             nieto->persona->pecadosPersona += randomP*0.25;
