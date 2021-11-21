@@ -30,7 +30,7 @@
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="pageCrearHumano">
      <property name="styleSheet">
@@ -2649,7 +2649,7 @@ font: 14pt &quot;Open Sans&quot;;
         <x>40</x>
         <y>290</y>
         <width>791</width>
-        <height>551</height>
+        <height>601</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -3166,7 +3166,7 @@ background-color: orange;
           <x>20</x>
           <y>50</y>
           <width>751</width>
-          <height>471</height>
+          <height>531</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -3473,7 +3473,7 @@ font: 14pt &quot;Open Sans&quot;;</string>
         <x>860</x>
         <y>290</y>
         <width>791</width>
-        <height>551</height>
+        <height>601</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -3519,7 +3519,7 @@ background-color: orange;
           <x>20</x>
           <y>50</y>
           <width>761</width>
-          <height>481</height>
+          <height>531</height>
          </rect>
         </property>
         <property name="widgetResizable">
@@ -3531,7 +3531,7 @@ background-color: orange;
            <x>0</x>
            <y>0</y>
            <width>759</width>
-           <height>479</height>
+           <height>529</height>
           </rect>
          </property>
          <widget class="QLabel" name="lbStateFamily">
@@ -3540,7 +3540,7 @@ background-color: orange;
             <x>0</x>
             <y>0</y>
             <width>761</width>
-            <height>471</height>
+            <height>521</height>
            </rect>
           </property>
           <property name="text">
@@ -4103,7 +4103,7 @@ font: 12pt &quot;Open Sans&quot;;</string>
      <x>0</x>
      <y>0</y>
      <width>1900</width>
-     <height>21</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>

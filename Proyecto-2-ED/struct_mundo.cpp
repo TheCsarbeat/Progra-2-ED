@@ -402,6 +402,7 @@ void Mundo::consutlaHumanStateFamily(QString lastName, QString country,QLabel *l
             datos += "\nPorcentaje vivos: "+QString::number((double)(cantidadVivos*100)/nodoBuscado->arbol->cant) + " %" ;
         else
             datos += "\nPorcentaje vivos: 0";
+        datos+= "\nCantidad de personas en la familia: " + QString::number(nodoBuscado->arbol->cant);
         lb->setText(datos);
 
 
