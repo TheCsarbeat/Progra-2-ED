@@ -136,6 +136,7 @@ struct Persona{
         }
     }
     QString toStringsimplified();
+    QString toStringForConsultaHell();
     QString toString();
     QString toStringBuenasAcciones();
     QString toStringPecados();
@@ -209,6 +210,16 @@ struct ListaDoblePersonas{
             temp = temp->siguiente;
         }
         dato+="\n------------------------------------------------------------------\n";
+        return dato;
+    }
+
+    QString toStringIDHijosInOneLine(){
+        QString dato;
+        NodoPersona * temp = primerNodo;
+        while (temp != NULL){
+            dato += "|"+QString::number(temp->persona->id);
+            temp = temp->siguiente;
+        }
         return dato;
     }
 };

@@ -83,9 +83,15 @@ void MainWindow::on_btnBuscarPersona_clicked(){
 
 }
 void MainWindow::on_btnPecar_clicked(){
-    mainstruct->mundo->hacerPecar();
-    msg.setText("Los humanos han pecado y hecho buenas acciones");
-    msg.exec();
+    if(mainstruct->mundo->personas->largo > 0){
+        mainstruct->mundo->hacerPecar();
+        msg.setText("Los humanos han pecado y hecho buenas acciones");
+        msg.exec();
+    }else{
+        msg.setText("No hay humanos en el mundo");
+        msg.exec();
+    }
+
 }
 
 void MainWindow::on_btnGuardarDatosWorld_clicked(){
@@ -231,12 +237,17 @@ void MainWindow::on_btnEstadoFamilia_clicked(){
 
 
 void MainWindow::on_btnSalvacion_clicked(){
+    if(mainstruct->mundo->infierno->condenados != 0){
+            mainstruct->mundo->salvacion();
+            files.append(mainstruct->mundo->currentFileName);
+            //sendEmail(mainstruct->mundo->currentFileName, "Salvación","Se ha presionado el botón de salvación estas son las personas salvadas");
+            msg.setText("Se han salvado humanos ver datos en los archivos LOG");
+            msg.exec();
+    }else{
+        msg.setText("No hay humanos en el infierno y no podemos salvar a humanos :)");
+        msg.exec();
+    }
 
-    mainstruct->mundo->salvacion();
-    files.append(mainstruct->mundo->currentFileName);
-    //sendEmail(mainstruct->mundo->currentFileName, "Salvación","Se ha presionado el botón de salvación estas son las personas salvadas");
-    msg.setText("Se han salvado humanos ver datos en los archivos LOG");
-    msg.exec();
 
 
 }
@@ -330,7 +341,17 @@ void MainWindow::on_btnGenerarConsultas_clicked()
 }
 
 void MainWindow::on_btnGuardarDatosCielo_clicked(){
-    mainstruct->mundo->guardarDatosCielo();
+
+    if(mainstruct->mundo->cielo->salvados != 0){
+        mainstruct->mundo->guardarDatosCielo();
+        msg.setText("Se ha generado el archivo de consultas");
+        msg.exec();
+    }else{
+        msg.setText("No hay humanos en el Cielo");
+        msg.exec();
+    }
+
+
 }
 
 

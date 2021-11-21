@@ -28,6 +28,22 @@ QString Persona::toStringsimplified(){
 
     return datos;
 }
+//PErsona
+QString Persona::toStringForConsultaHell(){
+    QString datos =QString::number(id)+","+name
+                     +","+apellido
+                     +","+ pais->name
+                     +","+creencia
+                     +","+profesion;
+
+    datos +=","+QString::number(pecadosPersona);
+
+    datos+=","+QString::number(buenasAccionesPersona);
+
+    datos+=",";
+
+    return datos;
+}
 
 //Persona
 QString Persona::toString(){

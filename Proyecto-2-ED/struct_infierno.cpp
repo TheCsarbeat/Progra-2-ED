@@ -68,8 +68,7 @@ void HeapFamilia::deleteAtPosition(int index){
 QString HeapFamilia::imprimir(){
     QString heap = "";
     for(int i=0;i<cant;i++){
-        heap += "\n";
-        heap += array[i]->persona->toStringsimplified();
+        heap += ","+array[i]->persona->toStringForConsultaHell()+array[i]->persona->hijos->toStringIDHijosInOneLine()+"\n";
     }
     return heap;
 }
@@ -105,8 +104,7 @@ QString ListaSimpleHeaps::imprimir(){
     int i =0;
     QString heaps;
     while(tmp!=NULL){
-        heaps +="\n--------------------------------------------------";
-        heaps += "\n\nHeap "+QString::number(i);
+        heaps += "Heap "+QString::number(i);
         heaps += tmp->heap->imprimir();
         tmp = tmp->siguiente;
         i++;
@@ -228,14 +226,15 @@ void Demonio::agregarAHeaps(Persona * list[], int size){
 }
 
 QString Demonio::consulta(){
-    QString consulta = "\n\n=================================================\n                  Demonio: "
-            +convertDemonioToString(pecado)+"\n=================================================\nPecado: "
+    QString consulta = "\n\n============================================================================================================================\n                  Demonio: "
+            +convertDemonioToString(pecado)+"\n============================================================================================================================\nPecado: "
             +convertPecadoToString(pecado)
             +"\nCantidad de humanos: "+QString::number(cantPersonas)
             +"\nPromedio de pecados de "+convertPecadoToString(pecado)+": "
             +QString::number(getPromedioPecados())+"\nMáximo de pecados: "
             +QString::number(pecadoMayor)+"\nMínimo de pecados: "
-            +QString::number(pecadoMenor);
+            +QString::number(pecadoMenor)
+            +"\n, ID, Nombre, Apellido, Pais, Creencia, Job, PECADOS , BUENAS ACCIONES, HIJOS\n";
     consulta += listaHeaps->imprimir();
     return consulta;
 }
@@ -351,7 +350,7 @@ void Infierno::generarConsulta(Files * file){
     for(int i=0;i<7;i++){
         consulta += demonios[i]->consulta();
     }
-    file->writeFile("ConsultasInfierno.txt",consulta);
+    file->writeFile("ConsultasInfierno.csv",consulta);
 }
 
 int Infierno::sacarResultados(QString * pecados, QString * buenasAcciones){

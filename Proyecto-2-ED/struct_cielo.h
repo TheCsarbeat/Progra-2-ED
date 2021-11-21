@@ -163,13 +163,17 @@ struct CieloHash{
     }
     void imprimir(){
         hashTableCielo[0]->inOrder(hashTableCielo[0]->raiz);
-        /*for(int i = 0; i<1000; i++)
-            hashTableCielo[i]->inOrder(hashTableCielo[i]->raiz);*/
     }
     QString toString(){
         QString dato = "";
+        dato += "La cantidad de personas en el cielo es: "+QString::number(salvados);
         for(int i = 0; i<1000; i++)
-            dato +=  "\n\nPosicion: "+QString::number(i)+"\n"+ *hashTableCielo[i]->toStringInOrden();
+            if(!hashTableCielo[i]->isEmpty()){
+                dato += "\n========================================================";
+                dato += "\n\tBucket position: "+QString::number(i)+"\n"
+                                                          "========================================================";
+                dato += "\n"+ *hashTableCielo[i]->toStringInOrden();
+            }
         return dato;
     }
 

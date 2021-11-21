@@ -13,7 +13,7 @@
 #include <QLabel>
 #include <QtMath>
 #include <QStringList>
-
+#include <QFileDialog>
 
 
 
