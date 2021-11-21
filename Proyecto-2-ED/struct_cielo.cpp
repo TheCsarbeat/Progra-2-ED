@@ -105,16 +105,15 @@ int CieloHash::calcularNeto(QLabel *lb, QLabel *lb2){
 
 
    neto = cantBA[7]-cantPecado[7];
-
-   datos += "La cantidad de BUENAS ACCIONES: "+QString::number(cantBA[7]);
-   for(int i = 0; i<7; i++)
+     for(int i = 0; i<7; i++)
        datos+= "\n\nBuena Acción: "+arrayNameBuenas[i]+"\nCantidad: "+QString::number(cantBA[i]);
+   datos += "\n\nTotal: "+QString::number(cantBA[7]);
 
-   datos1 += "La cantidad de PECADOS: "+QString::number(cantPecado[7]);
    for(int i = 0; i<7; i++)
        datos1+= "\n\nPecado: "+arrayNamePecado[i]+"\nCantidad: "+QString::number(cantPecado[i]);
+   datos1 += "\n\nTotal: "+QString::number(cantPecado[7]);
 
-    lb->setText(datos);
+   lb->setText(datos);
     lb2->setText(datos1);
     return neto;
 }

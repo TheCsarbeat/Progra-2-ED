@@ -68,7 +68,8 @@ void HeapFamilia::deleteAtPosition(int index){
 QString HeapFamilia::imprimir(){
     QString heap = "";
     for(int i=0;i<cant;i++){
-        heap += ","+array[i]->persona->toStringForConsultaHell()+array[i]->persona->hijos->toStringIDHijosInOneLine()+"\n";
+        if(i>0) heap +="\n";
+        heap += ","+array[i]->persona->toStringForConsultaHell()+array[i]->persona->hijos->toStringIDHijosInOneLine();
     }
     return heap;
 }
@@ -104,7 +105,7 @@ QString ListaSimpleHeaps::imprimir(){
     int i =0;
     QString heaps;
     while(tmp!=NULL){
-        heaps += "Heap "+QString::number(i);
+        heaps += "\nHeap "+QString::number(i);
         heaps += tmp->heap->imprimir();
         tmp = tmp->siguiente;
         i++;
@@ -333,7 +334,9 @@ void Infierno::generarConsulta(Files * file){
     for(int i=0;i<7;i++){
         consulta += demonios[i]->consulta();
     }
-    file->writeFile("ConsultasInfierno.csv",consulta);
+    QDateTime date = QDateTime::currentDateTime();
+    QString name = "ConsultasInfierno"+date.toString("yyyyMMdd")+"_"+date.toString("HHmmss")+".csv";
+    file->writeFile(name,consulta);
 }
 
 int Infierno::sacarResultados(QString * pecados, QString * buenasAcciones){

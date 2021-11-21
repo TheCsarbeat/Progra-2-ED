@@ -394,10 +394,6 @@ void Mundo::consutlaHumanStateFamily(QString lastName, QString country,QLabel *l
                 cantidadCielo++;
             }
         }
-        qDebug()<<nodoBuscado->arbol->cant;
-        qDebug()<<cantidadCielo;
-        qDebug()<<cantidadInfierno;
-        qDebug()<<cantidadVivos;
         if (cantidadCielo!=0)
             datos += "\nPorcentaje en el cielo: "+ QString::number((double)(cantidadCielo*100)/nodoBuscado->arbol->cant) + " %" ;
         else
