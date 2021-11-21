@@ -61,14 +61,6 @@ public:
     QLabel *label_35;
     QPushButton *pushButton;
     QWidget *pageCielo;
-    QFrame *frame_14;
-    QLabel *label_13;
-    QPushButton *btnMapaContinentesBuenasAcciones;
-    QPushButton *btnTop10Cielo;
-    QPushButton *btnTop5Cielo;
-    QPushButton *btnBAFamilias;
-    QLineEdit *txtIdBuenasAcciones;
-    QLabel *idBuenasAcciones;
     QStackedWidget *panelConsultasCieloBuenasAcciones;
     QWidget *pageMapaBuenasAcciones;
     QFrame *frame;
@@ -105,17 +97,23 @@ public:
     QLabel *label_27;
     QLabel *label_28;
     QPushButton *btnSalvacion;
+    QFrame *frame_14;
+    QLabel *label_13;
+    QPushButton *btnMapaContinentesBuenasAcciones;
+    QPushButton *btnTop10Cielo;
+    QPushButton *btnTop5Cielo;
+    QPushButton *btnBAFamilias;
+    QLineEdit *txtIdBuenasAcciones;
+    QLabel *idBuenasAcciones;
     QPushButton *btnGuardarDatosCielo;
     QWidget *pageInfierno;
-    QPushButton *btnImprimir;
-    QLineEdit *lineEdit_2;
     QFrame *frameDemonios;
     QPushButton *botonMammon;
     QLabel *codicia;
     QPushButton *botonLucifer;
     QPushButton *botonBelcebu;
     QPushButton *botonSatan;
-    QPushButton *botonAbandon;
+    QPushButton *botonAbadon;
     QPushButton *botonBelfegor;
     QPushButton *botonAsmodeo;
     QLabel *orgullo;
@@ -133,6 +131,7 @@ public:
     QLabel *idPecados;
     QLineEdit *txtPecados;
     QPushButton *btnPecadosFamilia;
+    QPushButton *btnGenerarConsultas;
     QStackedWidget *panelConsultasInfiernoPecados;
     QWidget *pageMapaInfierno;
     QFrame *frame_2;
@@ -158,6 +157,16 @@ public:
     QLabel *label_31;
     QPushButton *btnMatarTodos;
     QWidget *pageConsultas;
+    QFrame *frameConsultas;
+    QLabel *label_36;
+    QPushButton *btnApellidos;
+    QPushButton *btnProfesiones;
+    QPushButton *btnCreencias;
+    QPushButton *btnPaises;
+    QPushButton *btnContinentes;
+    QGroupBox *groupBox;
+    QRadioButton *rbPecados;
+    QRadioButton *rbBA;
     QStackedWidget *panelConsultas_2;
     QWidget *pageCondenacion;
     QLabel *label_37;
@@ -215,22 +224,12 @@ public:
     QScrollArea *scrollArea_3;
     QWidget *scrollAreaWidgetContents_7;
     QLabel *lbSalvacion;
-    QFrame *frameConsultas;
-    QLabel *label_36;
-    QPushButton *btnApellidos;
-    QPushButton *btnProfesiones;
-    QPushButton *btnCreencias;
-    QPushButton *btnPaises;
-    QPushButton *btnContinentes;
-    QGroupBox *groupBox;
-    QRadioButton *rbPecados;
-    QRadioButton *rbBA;
     QStackedWidget *panelConsultas_3;
     QWidget *pageSalvacion_2;
     QLabel *label_60;
     QScrollArea *scrollArea_22;
     QWidget *scrollAreaWidgetContents_23;
-    QLabel *lbStateFamily_2;
+    QLabel *lbStateFamily;
     QFrame *frame_20;
     QLabel *label_49;
     QLabel *idPecados_4;
@@ -242,21 +241,16 @@ public:
     QWidget *pageGanador;
     QFrame *frameInfoCielo;
     QLabel *label_50;
-    QPushButton *btnInfoCielo;
-    QPushButton *btnInfoInfierno;
-    QPushButton *btnInfoCielo_2;
-    QStackedWidget *panelGanador;
-    QWidget *pageInfoCielo;
+    QPushButton *btnGanador;
+    QLabel *lbGanador;
+    QFrame *frame_4;
+    QLabel *lbInfoInfierno;
+    QLabel *label_62;
+    QLabel *lbInfoInfierno2;
+    QFrame *frame_5;
+    QLabel *lbInfoCielo2;
     QLabel *label_61;
     QLabel *lbInfoCielo;
-    QLabel *lbInfoCielo2;
-    QWidget *pageGanador_2;
-    QLabel *label_63;
-    QLabel *lbGanador;
-    QWidget *pageInfoInfierno;
-    QLabel *label_62;
-    QLabel *lbInfoInfierno;
-    QLabel *lbInfoInfierno2;
     QFrame *sideBarFrame;
     QPushButton *botonHumanos;
     QPushButton *botonInfierno;
@@ -284,7 +278,7 @@ public:
         pageCrearHumano->setStyleSheet(QString::fromUtf8("background-color:white;"));
         frame_12 = new QFrame(pageCrearHumano);
         frame_12->setObjectName(QString::fromUtf8("frame_12"));
-        frame_12->setGeometry(QRect(60, 30, 541, 241));
+        frame_12->setGeometry(QRect(60, 30, 551, 241));
         frame_12->setStyleSheet(QString::fromUtf8("background-color:rgb(250,250,250);"));
         frame_12->setFrameShape(QFrame::StyledPanel);
         frame_12->setFrameShadow(QFrame::Raised);
@@ -297,7 +291,7 @@ public:
         label_5->setFont(font);
         label_7 = new QLabel(frame_12);
         label_7->setObjectName(QString::fromUtf8("label_7"));
-        label_7->setGeometry(QRect(0, 0, 541, 31));
+        label_7->setGeometry(QRect(0, 0, 551, 31));
         QFont font1;
         font1.setFamilies({QString::fromUtf8("Doppio One")});
         font1.setPointSize(16);
@@ -355,7 +349,7 @@ public:
         label_11->setStyleSheet(QString::fromUtf8("image:url(\":/images/human.png\");"));
         btnBuscarPersona = new QPushButton(frame_13);
         btnBuscarPersona->setObjectName(QString::fromUtf8("btnBuscarPersona"));
-        btnBuscarPersona->setGeometry(QRect(10, 150, 351, 61));
+        btnBuscarPersona->setGeometry(QRect(20, 150, 341, 61));
         btnBuscarPersona->setStyleSheet(QString::fromUtf8("color: white;\n"
 "padding: 10px;\n"
 "border:0px;\n"
@@ -400,13 +394,13 @@ public:
         scrollArea->setWidget(scrollAreaWidgetContents_4);
         frame_16 = new QFrame(pageCrearHumano);
         frame_16->setObjectName(QString::fromUtf8("frame_16"));
-        frame_16->setGeometry(QRect(70, 300, 541, 181));
+        frame_16->setGeometry(QRect(60, 300, 551, 181));
         frame_16->setStyleSheet(QString::fromUtf8("background-color:rgb(250,250,250);"));
         frame_16->setFrameShape(QFrame::StyledPanel);
         frame_16->setFrameShadow(QFrame::Raised);
         label_23 = new QLabel(frame_16);
         label_23->setObjectName(QString::fromUtf8("label_23"));
-        label_23->setGeometry(QRect(0, 0, 541, 31));
+        label_23->setGeometry(QRect(0, 0, 551, 31));
         label_23->setFont(font1);
         label_23->setStyleSheet(QString::fromUtf8("color: white;\n"
 "background-color:rgb(60, 185, 75);\n"
@@ -417,7 +411,7 @@ public:
         label_24->setStyleSheet(QString::fromUtf8("image:url(\":/images/floppy-disk.png\");"));
         btnGuardarDatosWorld = new QPushButton(frame_16);
         btnGuardarDatosWorld->setObjectName(QString::fromUtf8("btnGuardarDatosWorld"));
-        btnGuardarDatosWorld->setGeometry(QRect(20, 100, 351, 61));
+        btnGuardarDatosWorld->setGeometry(QRect(20, 100, 331, 61));
         btnGuardarDatosWorld->setStyleSheet(QString::fromUtf8("color: white;\n"
 "padding: 10px;\n"
 "border:0px;\n"
@@ -442,7 +436,7 @@ public:
         label_35->setStyleSheet(QString::fromUtf8("image:url(\":/images/email.png\");"));
         pushButton = new QPushButton(frame_19);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(10, 90, 351, 61));
+        pushButton->setGeometry(QRect(20, 90, 341, 61));
         pushButton->setStyleSheet(QString::fromUtf8("color: white;\n"
 "padding: 10px;\n"
 "border:0px;\n"
@@ -451,69 +445,9 @@ public:
         mainPanel->addWidget(pageCrearHumano);
         pageCielo = new QWidget();
         pageCielo->setObjectName(QString::fromUtf8("pageCielo"));
-        frame_14 = new QFrame(pageCielo);
-        frame_14->setObjectName(QString::fromUtf8("frame_14"));
-        frame_14->setGeometry(QRect(30, 0, 791, 291));
-        frame_14->setStyleSheet(QString::fromUtf8("background-color:rgb(250,250,250);"));
-        frame_14->setFrameShape(QFrame::StyledPanel);
-        frame_14->setFrameShadow(QFrame::Raised);
-        label_13 = new QLabel(frame_14);
-        label_13->setObjectName(QString::fromUtf8("label_13"));
-        label_13->setGeometry(QRect(0, 0, 1161, 31));
-        label_13->setFont(font1);
-        label_13->setStyleSheet(QString::fromUtf8("color: white;\n"
-"background-color:rgb(64, 150, 180);\n"
-""));
-        btnMapaContinentesBuenasAcciones = new QPushButton(frame_14);
-        btnMapaContinentesBuenasAcciones->setObjectName(QString::fromUtf8("btnMapaContinentesBuenasAcciones"));
-        btnMapaContinentesBuenasAcciones->setGeometry(QRect(440, 190, 281, 51));
-        btnMapaContinentesBuenasAcciones->setStyleSheet(QString::fromUtf8("image-position:left;\n"
-"color: white;\n"
-"padding: 10px;\n"
-"border:0px;\n"
-"font: 12pt \"Open Sans\";\n"
-"background-color: rgb(64, 150, 180);"));
-        btnTop10Cielo = new QPushButton(frame_14);
-        btnTop10Cielo->setObjectName(QString::fromUtf8("btnTop10Cielo"));
-        btnTop10Cielo->setGeometry(QRect(440, 50, 281, 51));
-        btnTop10Cielo->setStyleSheet(QString::fromUtf8("image-position:left;\n"
-"color: white;\n"
-"padding: 10px;\n"
-"border:0px;\n"
-"font: 12pt \"Open Sans\";\n"
-"background-color: rgb(64, 150, 180);"));
-        btnTop5Cielo = new QPushButton(frame_14);
-        btnTop5Cielo->setObjectName(QString::fromUtf8("btnTop5Cielo"));
-        btnTop5Cielo->setGeometry(QRect(440, 120, 281, 51));
-        btnTop5Cielo->setStyleSheet(QString::fromUtf8("image-position:left;\n"
-"color: white;\n"
-"padding: 10px;\n"
-"border:0px;\n"
-"font: 12pt \"Open Sans\";\n"
-"background-color: rgb(64, 150, 180);"));
-        btnBAFamilias = new QPushButton(frame_14);
-        btnBAFamilias->setObjectName(QString::fromUtf8("btnBAFamilias"));
-        btnBAFamilias->setGeometry(QRect(70, 190, 281, 51));
-        btnBAFamilias->setStyleSheet(QString::fromUtf8("image-position:left;\n"
-"color: white;\n"
-"padding: 10px;\n"
-"border:0px;\n"
-"font: 12pt \"Open Sans\";\n"
-"background-color: rgb(64, 150, 180);"));
-        txtIdBuenasAcciones = new QLineEdit(frame_14);
-        txtIdBuenasAcciones->setObjectName(QString::fromUtf8("txtIdBuenasAcciones"));
-        txtIdBuenasAcciones->setGeometry(QRect(90, 130, 241, 24));
-        txtIdBuenasAcciones->setStyleSheet(QString::fromUtf8("border-width: 1px;\n"
-"border-style: solid;\n"
-"border-color: rgb(64, 150, 180);"));
-        idBuenasAcciones = new QLabel(frame_14);
-        idBuenasAcciones->setObjectName(QString::fromUtf8("idBuenasAcciones"));
-        idBuenasAcciones->setGeometry(QRect(140, 70, 141, 31));
-        idBuenasAcciones->setStyleSheet(QString::fromUtf8("text-align: center ;\n"
-"font: 14pt \"Open Sans\";"));
         panelConsultasCieloBuenasAcciones = new QStackedWidget(pageCielo);
         panelConsultasCieloBuenasAcciones->setObjectName(QString::fromUtf8("panelConsultasCieloBuenasAcciones"));
-        panelConsultasCieloBuenasAcciones->setGeometry(QRect(30, 320, 791, 551));
+        panelConsultasCieloBuenasAcciones->setGeometry(QRect(30, 380, 791, 551));
         panelConsultasCieloBuenasAcciones->setStyleSheet(QString::fromUtf8("background-color:rgb(250,250,250);"));
         pageMapaBuenasAcciones = new QWidget();
         pageMapaBuenasAcciones->setObjectName(QString::fromUtf8("pageMapaBuenasAcciones"));
@@ -609,21 +543,21 @@ public:
         label_26->setAlignment(Qt::AlignCenter);
         scrollAreaFamiliasBA = new QScrollArea(pageConsulta);
         scrollAreaFamiliasBA->setObjectName(QString::fromUtf8("scrollAreaFamiliasBA"));
-        scrollAreaFamiliasBA->setGeometry(QRect(20, 50, 751, 491));
+        scrollAreaFamiliasBA->setGeometry(QRect(20, 50, 751, 501));
         scrollAreaFamiliasBA->setWidgetResizable(true);
         scrollAreaWidgetContents_5 = new QWidget();
         scrollAreaWidgetContents_5->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_5"));
-        scrollAreaWidgetContents_5->setGeometry(QRect(0, 0, 749, 489));
+        scrollAreaWidgetContents_5->setGeometry(QRect(0, 0, 749, 499));
         lbFamiliaBA = new QLabel(scrollAreaWidgetContents_5);
         lbFamiliaBA->setObjectName(QString::fromUtf8("lbFamiliaBA"));
-        lbFamiliaBA->setGeometry(QRect(0, 10, 751, 461));
+        lbFamiliaBA->setGeometry(QRect(0, 10, 751, 471));
         lbFamiliaBA->setStyleSheet(QString::fromUtf8("text-align: center ;\n"
 "font: 12pt \"Open Sans\";"));
         scrollAreaFamiliasBA->setWidget(scrollAreaWidgetContents_5);
         panelConsultasCieloBuenasAcciones->addWidget(pageConsulta);
         frameAngeles = new QFrame(pageCielo);
         frameAngeles->setObjectName(QString::fromUtf8("frameAngeles"));
-        frameAngeles->setGeometry(QRect(860, 320, 761, 551));
+        frameAngeles->setGeometry(QRect(860, 380, 761, 551));
         frameAngeles->setFrameShape(QFrame::StyledPanel);
         frameAngeles->setFrameShadow(QFrame::Raised);
         botonNuriel = new QPushButton(frameAngeles);
@@ -751,20 +685,80 @@ public:
         label_27->setAlignment(Qt::AlignCenter);
         label_28 = new QLabel(pageCielo);
         label_28->setObjectName(QString::fromUtf8("label_28"));
-        label_28->setGeometry(QRect(1269, 10, 341, 291));
+        label_28->setGeometry(QRect(1090, 9, 300, 271));
         label_28->setStyleSheet(QString::fromUtf8("image:url(\":/images/heaven.png\");"));
         btnSalvacion = new QPushButton(pageCielo);
         btnSalvacion->setObjectName(QString::fromUtf8("btnSalvacion"));
-        btnSalvacion->setGeometry(QRect(900, 160, 341, 51));
+        btnSalvacion->setGeometry(QRect(1090, 300, 300, 51));
         btnSalvacion->setStyleSheet(QString::fromUtf8("image-position:left;\n"
 "color: white;\n"
 "padding: 10px;\n"
 "border:0px;\n"
 "font: 12pt \"Open Sans\";\n"
 "background-color: rgb(64, 150, 180);"));
-        btnGuardarDatosCielo = new QPushButton(pageCielo);
+        frame_14 = new QFrame(pageCielo);
+        frame_14->setObjectName(QString::fromUtf8("frame_14"));
+        frame_14->setGeometry(QRect(30, 20, 791, 341));
+        frame_14->setStyleSheet(QString::fromUtf8("background-color:rgb(250,250,250);"));
+        frame_14->setFrameShape(QFrame::StyledPanel);
+        frame_14->setFrameShadow(QFrame::Raised);
+        label_13 = new QLabel(frame_14);
+        label_13->setObjectName(QString::fromUtf8("label_13"));
+        label_13->setGeometry(QRect(0, 0, 1161, 31));
+        label_13->setFont(font1);
+        label_13->setStyleSheet(QString::fromUtf8("color: white;\n"
+"background-color:rgb(64, 150, 180);\n"
+""));
+        btnMapaContinentesBuenasAcciones = new QPushButton(frame_14);
+        btnMapaContinentesBuenasAcciones->setObjectName(QString::fromUtf8("btnMapaContinentesBuenasAcciones"));
+        btnMapaContinentesBuenasAcciones->setGeometry(QRect(440, 190, 331, 51));
+        btnMapaContinentesBuenasAcciones->setStyleSheet(QString::fromUtf8("image-position:left;\n"
+"color: white;\n"
+"padding: 10px;\n"
+"border:0px;\n"
+"font: 12pt \"Open Sans\";\n"
+"background-color: rgb(64, 150, 180);"));
+        btnTop10Cielo = new QPushButton(frame_14);
+        btnTop10Cielo->setObjectName(QString::fromUtf8("btnTop10Cielo"));
+        btnTop10Cielo->setGeometry(QRect(440, 50, 331, 51));
+        btnTop10Cielo->setStyleSheet(QString::fromUtf8("image-position:left;\n"
+"color: white;\n"
+"padding: 10px;\n"
+"border:0px;\n"
+"font: 12pt \"Open Sans\";\n"
+"background-color: rgb(64, 150, 180);"));
+        btnTop5Cielo = new QPushButton(frame_14);
+        btnTop5Cielo->setObjectName(QString::fromUtf8("btnTop5Cielo"));
+        btnTop5Cielo->setGeometry(QRect(440, 120, 331, 51));
+        btnTop5Cielo->setStyleSheet(QString::fromUtf8("image-position:left;\n"
+"color: white;\n"
+"padding: 10px;\n"
+"border:0px;\n"
+"font: 12pt \"Open Sans\";\n"
+"background-color: rgb(64, 150, 180);"));
+        btnBAFamilias = new QPushButton(frame_14);
+        btnBAFamilias->setObjectName(QString::fromUtf8("btnBAFamilias"));
+        btnBAFamilias->setGeometry(QRect(70, 190, 281, 51));
+        btnBAFamilias->setStyleSheet(QString::fromUtf8("image-position:left;\n"
+"color: white;\n"
+"padding: 10px;\n"
+"border:0px;\n"
+"font: 12pt \"Open Sans\";\n"
+"background-color: rgb(64, 150, 180);"));
+        txtIdBuenasAcciones = new QLineEdit(frame_14);
+        txtIdBuenasAcciones->setObjectName(QString::fromUtf8("txtIdBuenasAcciones"));
+        txtIdBuenasAcciones->setGeometry(QRect(90, 130, 241, 24));
+        txtIdBuenasAcciones->setStyleSheet(QString::fromUtf8("border-width: 1px;\n"
+"border-style: solid;\n"
+"border-color: rgb(64, 150, 180);"));
+        idBuenasAcciones = new QLabel(frame_14);
+        idBuenasAcciones->setObjectName(QString::fromUtf8("idBuenasAcciones"));
+        idBuenasAcciones->setGeometry(QRect(140, 70, 141, 31));
+        idBuenasAcciones->setStyleSheet(QString::fromUtf8("text-align: center ;\n"
+"font: 14pt \"Open Sans\";"));
+        btnGuardarDatosCielo = new QPushButton(frame_14);
         btnGuardarDatosCielo->setObjectName(QString::fromUtf8("btnGuardarDatosCielo"));
-        btnGuardarDatosCielo->setGeometry(QRect(900, 70, 341, 51));
+        btnGuardarDatosCielo->setGeometry(QRect(440, 270, 331, 51));
         btnGuardarDatosCielo->setStyleSheet(QString::fromUtf8("image-position:left;\n"
 "color: white;\n"
 "padding: 10px;\n"
@@ -774,21 +768,16 @@ public:
         mainPanel->addWidget(pageCielo);
         pageInfierno = new QWidget();
         pageInfierno->setObjectName(QString::fromUtf8("pageInfierno"));
-        btnImprimir = new QPushButton(pageInfierno);
-        btnImprimir->setObjectName(QString::fromUtf8("btnImprimir"));
-        btnImprimir->setGeometry(QRect(670, 900, 75, 31));
-        lineEdit_2 = new QLineEdit(pageInfierno);
-        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
-        lineEdit_2->setGeometry(QRect(770, 900, 113, 20));
         frameDemonios = new QFrame(pageInfierno);
         frameDemonios->setObjectName(QString::fromUtf8("frameDemonios"));
-        frameDemonios->setGeometry(QRect(850, 320, 761, 551));
+        frameDemonios->setGeometry(QRect(850, 340, 761, 571));
         frameDemonios->setFrameShape(QFrame::StyledPanel);
         frameDemonios->setFrameShadow(QFrame::Raised);
         botonMammon = new QPushButton(frameDemonios);
         botonMammon->setObjectName(QString::fromUtf8("botonMammon"));
         botonMammon->setGeometry(QRect(40, 80, 120, 120));
         botonMammon->setFont(font2);
+        botonMammon->setCursor(QCursor(Qt::PointingHandCursor));
         botonMammon->setStyleSheet(QString::fromUtf8("image:url(\":/images/demon.png\");\n"
 " background-color: rgb(32, 30, 30);\n"
 " border-radius:15px;\n"
@@ -796,7 +785,7 @@ public:
 " text-align: top ;"));
         codicia = new QLabel(frameDemonios);
         codicia->setObjectName(QString::fromUtf8("codicia"));
-        codicia->setGeometry(QRect(70, 60, 71, 16));
+        codicia->setGeometry(QRect(70, 50, 71, 16));
         QFont font3;
         font3.setPointSize(12);
         codicia->setFont(font3);
@@ -804,6 +793,7 @@ public:
         botonLucifer->setObjectName(QString::fromUtf8("botonLucifer"));
         botonLucifer->setGeometry(QRect(320, 80, 120, 120));
         botonLucifer->setFont(font2);
+        botonLucifer->setCursor(QCursor(Qt::PointingHandCursor));
         botonLucifer->setStyleSheet(QString::fromUtf8("image:url(\":/images/demon1.png\");\n"
 " background-color: rgb(32, 30, 30);\n"
 " border-radius:15px;\n"
@@ -813,6 +803,7 @@ public:
         botonBelcebu->setObjectName(QString::fromUtf8("botonBelcebu"));
         botonBelcebu->setGeometry(QRect(600, 80, 120, 120));
         botonBelcebu->setFont(font2);
+        botonBelcebu->setCursor(QCursor(Qt::PointingHandCursor));
         botonBelcebu->setStyleSheet(QString::fromUtf8("image:url(\":/images/demon2.png\");\n"
 " background-color: rgb(32, 30, 30);\n"
 " border-radius:15px;\n"
@@ -822,16 +813,18 @@ public:
         botonSatan->setObjectName(QString::fromUtf8("botonSatan"));
         botonSatan->setGeometry(QRect(40, 260, 120, 120));
         botonSatan->setFont(font2);
+        botonSatan->setCursor(QCursor(Qt::PointingHandCursor));
         botonSatan->setStyleSheet(QString::fromUtf8("image:url(\":/images/demon3.png\");\n"
 " background-color: rgb(32, 30, 30);\n"
 " border-radius:15px;\n"
 " color: rgb(198, 46, 48);\n"
 " text-align: top ;"));
-        botonAbandon = new QPushButton(frameDemonios);
-        botonAbandon->setObjectName(QString::fromUtf8("botonAbandon"));
-        botonAbandon->setGeometry(QRect(320, 260, 120, 120));
-        botonAbandon->setFont(font2);
-        botonAbandon->setStyleSheet(QString::fromUtf8("image:url(\":/images/demon4.png\");\n"
+        botonAbadon = new QPushButton(frameDemonios);
+        botonAbadon->setObjectName(QString::fromUtf8("botonAbadon"));
+        botonAbadon->setGeometry(QRect(320, 260, 120, 120));
+        botonAbadon->setFont(font2);
+        botonAbadon->setCursor(QCursor(Qt::PointingHandCursor));
+        botonAbadon->setStyleSheet(QString::fromUtf8("image:url(\":/images/demon4.png\");\n"
 " background-color: rgb(32, 30, 30);\n"
 " border-radius:15px;\n"
 " color: rgb(198, 46, 48);\n"
@@ -845,6 +838,7 @@ public:
         font4.setBold(true);
         font4.setItalic(false);
         botonBelfegor->setFont(font4);
+        botonBelfegor->setCursor(QCursor(Qt::PointingHandCursor));
         botonBelfegor->setStyleSheet(QString::fromUtf8("image:url(\":/images/demon6.png\");\n"
 " background-color: rgb(32, 30, 30);\n"
 " border-radius:15px;\n"
@@ -852,8 +846,9 @@ public:
 " text-align: top ;"));
         botonAsmodeo = new QPushButton(frameDemonios);
         botonAsmodeo->setObjectName(QString::fromUtf8("botonAsmodeo"));
-        botonAsmodeo->setGeometry(QRect(320, 420, 120, 120));
+        botonAsmodeo->setGeometry(QRect(320, 430, 120, 120));
         botonAsmodeo->setFont(font2);
+        botonAsmodeo->setCursor(QCursor(Qt::PointingHandCursor));
         botonAsmodeo->setStyleSheet(QString::fromUtf8("image:url(\":/images/demon7.png\");\n"
 " background-color: rgb(32, 30, 30);\n"
 " border-radius:15px;\n"
@@ -861,15 +856,15 @@ public:
 " text-align: top ;"));
         orgullo = new QLabel(frameDemonios);
         orgullo->setObjectName(QString::fromUtf8("orgullo"));
-        orgullo->setGeometry(QRect(350, 50, 81, 31));
+        orgullo->setGeometry(QRect(350, 50, 81, 21));
         orgullo->setFont(font3);
         envidia = new QLabel(frameDemonios);
         envidia->setObjectName(QString::fromUtf8("envidia"));
-        envidia->setGeometry(QRect(630, 60, 71, 16));
+        envidia->setGeometry(QRect(630, 50, 71, 16));
         envidia->setFont(font3);
         pereza = new QLabel(frameDemonios);
         pereza->setObjectName(QString::fromUtf8("pereza"));
-        pereza->setGeometry(QRect(340, 240, 71, 16));
+        pereza->setGeometry(QRect(340, 230, 71, 16));
         pereza->setFont(font3);
         ira = new QLabel(frameDemonios);
         ira->setObjectName(QString::fromUtf8("ira"));
@@ -877,11 +872,11 @@ public:
         ira->setFont(font3);
         glotoneria = new QLabel(frameDemonios);
         glotoneria->setObjectName(QString::fromUtf8("glotoneria"));
-        glotoneria->setGeometry(QRect(610, 240, 91, 20));
+        glotoneria->setGeometry(QRect(610, 230, 91, 20));
         glotoneria->setFont(font3);
         lujuria = new QLabel(frameDemonios);
         lujuria->setObjectName(QString::fromUtf8("lujuria"));
-        lujuria->setGeometry(QRect(350, 395, 71, 21));
+        lujuria->setGeometry(QRect(350, 400, 71, 21));
         lujuria->setFont(font3);
         label_30 = new QLabel(frameDemonios);
         label_30->setObjectName(QString::fromUtf8("label_30"));
@@ -894,7 +889,7 @@ public:
         label_30->setAlignment(Qt::AlignCenter);
         frame_17 = new QFrame(pageInfierno);
         frame_17->setObjectName(QString::fromUtf8("frame_17"));
-        frame_17->setGeometry(QRect(10, 0, 791, 241));
+        frame_17->setGeometry(QRect(10, 0, 801, 311));
         frame_17->setStyleSheet(QString::fromUtf8("background-color:rgb(250,250,250);"));
         frame_17->setFrameShape(QFrame::StyledPanel);
         frame_17->setFrameShadow(QFrame::Raised);
@@ -934,16 +929,26 @@ public:
 "background-color: rgb(198, 46, 48);"));
         idPecados = new QLabel(frame_17);
         idPecados->setObjectName(QString::fromUtf8("idPecados"));
-        idPecados->setGeometry(QRect(90, 50, 131, 31));
+        idPecados->setGeometry(QRect(120, 50, 161, 31));
         idPecados->setStyleSheet(QString::fromUtf8("font: 12pt \"Open Sans\";\n"
 ""));
+        idPecados->setAlignment(Qt::AlignCenter);
         txtPecados = new QLineEdit(frame_17);
         txtPecados->setObjectName(QString::fromUtf8("txtPecados"));
-        txtPecados->setGeometry(QRect(60, 90, 181, 24));
+        txtPecados->setGeometry(QRect(110, 110, 181, 24));
         btnPecadosFamilia = new QPushButton(frame_17);
         btnPecadosFamilia->setObjectName(QString::fromUtf8("btnPecadosFamilia"));
-        btnPecadosFamilia->setGeometry(QRect(40, 140, 251, 51));
+        btnPecadosFamilia->setGeometry(QRect(80, 160, 251, 51));
         btnPecadosFamilia->setStyleSheet(QString::fromUtf8("image-position:left;\n"
+"color: black;\n"
+"padding: 10px;\n"
+"border:0px;\n"
+"font: 12pt \"Open Sans\";\n"
+"background-color: rgb(198, 46, 48);"));
+        btnGenerarConsultas = new QPushButton(frame_17);
+        btnGenerarConsultas->setObjectName(QString::fromUtf8("btnGenerarConsultas"));
+        btnGenerarConsultas->setGeometry(QRect(490, 250, 281, 41));
+        btnGenerarConsultas->setStyleSheet(QString::fromUtf8("image-position:left;\n"
 "color: black;\n"
 "padding: 10px;\n"
 "border:0px;\n"
@@ -951,7 +956,7 @@ public:
 "background-color: rgb(198, 46, 48);"));
         panelConsultasInfiernoPecados = new QStackedWidget(pageInfierno);
         panelConsultasInfiernoPecados->setObjectName(QString::fromUtf8("panelConsultasInfiernoPecados"));
-        panelConsultasInfiernoPecados->setGeometry(QRect(10, 320, 791, 551));
+        panelConsultasInfiernoPecados->setGeometry(QRect(20, 340, 791, 571));
         panelConsultasInfiernoPecados->setStyleSheet(QString::fromUtf8("background-color:rgb(250,250,250);"));
         pageMapaInfierno = new QWidget();
         pageMapaInfierno->setObjectName(QString::fromUtf8("pageMapaInfierno"));
@@ -1047,25 +1052,25 @@ public:
         label_29->setAlignment(Qt::AlignCenter);
         scrollArea_2 = new QScrollArea(pagePecadosFamilia);
         scrollArea_2->setObjectName(QString::fromUtf8("scrollArea_2"));
-        scrollArea_2->setGeometry(QRect(10, 50, 771, 481));
+        scrollArea_2->setGeometry(QRect(10, 50, 771, 521));
         scrollArea_2->setWidgetResizable(true);
         scrollAreaWidgetContents_6 = new QWidget();
         scrollAreaWidgetContents_6->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_6"));
-        scrollAreaWidgetContents_6->setGeometry(QRect(0, 0, 769, 479));
+        scrollAreaWidgetContents_6->setGeometry(QRect(0, 0, 769, 519));
         lbPecadosFamilias = new QLabel(scrollAreaWidgetContents_6);
         lbPecadosFamilias->setObjectName(QString::fromUtf8("lbPecadosFamilias"));
-        lbPecadosFamilias->setGeometry(QRect(0, 10, 771, 451));
+        lbPecadosFamilias->setGeometry(QRect(0, 10, 771, 501));
         lbPecadosFamilias->setStyleSheet(QString::fromUtf8("text-align: center ;\n"
 "font: 12pt \"Open Sans\";"));
         scrollArea_2->setWidget(scrollAreaWidgetContents_6);
         panelConsultasInfiernoPecados->addWidget(pagePecadosFamilia);
         label_31 = new QLabel(pageInfierno);
         label_31->setObjectName(QString::fromUtf8("label_31"));
-        label_31->setGeometry(QRect(1130, 0, 300, 230));
+        label_31->setGeometry(QRect(1080, 0, 300, 230));
         label_31->setStyleSheet(QString::fromUtf8("image:url(\":/images/hell.png\");"));
         btnMatarTodos = new QPushButton(pageInfierno);
         btnMatarTodos->setObjectName(QString::fromUtf8("btnMatarTodos"));
-        btnMatarTodos->setGeometry(QRect(1130, 240, 300, 51));
+        btnMatarTodos->setGeometry(QRect(1080, 260, 300, 51));
         btnMatarTodos->setStyleSheet(QString::fromUtf8("image-position:left;\n"
 "color: black;\n"
 "padding: 10px;\n"
@@ -1075,9 +1080,78 @@ public:
         mainPanel->addWidget(pageInfierno);
         pageConsultas = new QWidget();
         pageConsultas->setObjectName(QString::fromUtf8("pageConsultas"));
+        frameConsultas = new QFrame(pageConsultas);
+        frameConsultas->setObjectName(QString::fromUtf8("frameConsultas"));
+        frameConsultas->setGeometry(QRect(30, 20, 791, 241));
+        frameConsultas->setStyleSheet(QString::fromUtf8("background-color:rgb(250,250,250);"));
+        frameConsultas->setFrameShape(QFrame::StyledPanel);
+        frameConsultas->setFrameShadow(QFrame::Raised);
+        label_36 = new QLabel(frameConsultas);
+        label_36->setObjectName(QString::fromUtf8("label_36"));
+        label_36->setGeometry(QRect(0, 0, 911, 31));
+        label_36->setFont(font1);
+        label_36->setStyleSheet(QString::fromUtf8("color: rgb(32, 30, 30);\n"
+"background-color: orange;\n"
+"\n"
+""));
+        btnApellidos = new QPushButton(frameConsultas);
+        btnApellidos->setObjectName(QString::fromUtf8("btnApellidos"));
+        btnApellidos->setGeometry(QRect(10, 170, 281, 51));
+        btnApellidos->setStyleSheet(QString::fromUtf8("color: rgb(32, 30, 30);\n"
+"background-color: rgb(255, 205, 2);\n"
+"padding: 10px;\n"
+"border:0px;\n"
+"font: 14pt \"Open Sans\";\n"
+""));
+        btnProfesiones = new QPushButton(frameConsultas);
+        btnProfesiones->setObjectName(QString::fromUtf8("btnProfesiones"));
+        btnProfesiones->setGeometry(QRect(10, 110, 281, 51));
+        btnProfesiones->setStyleSheet(QString::fromUtf8("color: rgb(32, 30, 30);\n"
+"background-color: rgb(255, 205, 2);\n"
+"padding: 10px;\n"
+"border:0px;\n"
+"font: 14pt \"Open Sans\";\n"
+""));
+        btnCreencias = new QPushButton(frameConsultas);
+        btnCreencias->setObjectName(QString::fromUtf8("btnCreencias"));
+        btnCreencias->setGeometry(QRect(310, 170, 281, 51));
+        btnCreencias->setStyleSheet(QString::fromUtf8("color: rgb(32, 30, 30);\n"
+"background-color: rgb(255, 205, 2);\n"
+"padding: 10px;\n"
+"border:0px;\n"
+"font: 14pt \"Open Sans\";\n"
+""));
+        btnPaises = new QPushButton(frameConsultas);
+        btnPaises->setObjectName(QString::fromUtf8("btnPaises"));
+        btnPaises->setGeometry(QRect(310, 110, 281, 51));
+        btnPaises->setStyleSheet(QString::fromUtf8("color: rgb(32, 30, 30);\n"
+"background-color: rgb(255, 205, 2);\n"
+"padding: 10px;\n"
+"border:0px;\n"
+"font: 14pt \"Open Sans\";\n"
+""));
+        btnContinentes = new QPushButton(frameConsultas);
+        btnContinentes->setObjectName(QString::fromUtf8("btnContinentes"));
+        btnContinentes->setGeometry(QRect(310, 50, 281, 51));
+        btnContinentes->setStyleSheet(QString::fromUtf8("color: rgb(32, 30, 30);\n"
+"background-color: rgb(255, 205, 2);\n"
+"padding: 10px;\n"
+"border:0px;\n"
+"font: 14pt \"Open Sans\";\n"
+""));
+        groupBox = new QGroupBox(frameConsultas);
+        groupBox->setObjectName(QString::fromUtf8("groupBox"));
+        groupBox->setGeometry(QRect(20, 40, 271, 51));
+        rbPecados = new QRadioButton(groupBox);
+        rbPecados->setObjectName(QString::fromUtf8("rbPecados"));
+        rbPecados->setGeometry(QRect(10, 20, 97, 22));
+        rbPecados->setChecked(true);
+        rbBA = new QRadioButton(groupBox);
+        rbBA->setObjectName(QString::fromUtf8("rbBA"));
+        rbBA->setGeometry(QRect(120, 20, 121, 22));
         panelConsultas_2 = new QStackedWidget(pageConsultas);
         panelConsultas_2->setObjectName(QString::fromUtf8("panelConsultas_2"));
-        panelConsultas_2->setGeometry(QRect(30, 280, 791, 551));
+        panelConsultas_2->setGeometry(QRect(40, 290, 791, 601));
         panelConsultas_2->setStyleSheet(QString::fromUtf8("background-color:rgb(250,250,250);"));
         pageCondenacion = new QWidget();
         pageCondenacion->setObjectName(QString::fromUtf8("pageCondenacion"));
@@ -1249,7 +1323,7 @@ public:
         label_44->setAlignment(Qt::AlignCenter);
         lbContinentesBuenos = new QLabel(pageContinentesBuenos);
         lbContinentesBuenos->setObjectName(QString::fromUtf8("lbContinentesBuenos"));
-        lbContinentesBuenos->setGeometry(QRect(20, 50, 751, 471));
+        lbContinentesBuenos->setGeometry(QRect(20, 50, 751, 531));
         lbContinentesBuenos->setStyleSheet(QString::fromUtf8("text-align: center ;\n"
 "font: 14pt \"Open Sans\";"));
         panelConsultas_2->addWidget(pageContinentesBuenos);
@@ -1353,78 +1427,9 @@ public:
 "font: 14pt \"Open Sans\";"));
         scrollArea_3->setWidget(scrollAreaWidgetContents_7);
         panelConsultas_2->addWidget(pageSalvacion);
-        frameConsultas = new QFrame(pageConsultas);
-        frameConsultas->setObjectName(QString::fromUtf8("frameConsultas"));
-        frameConsultas->setGeometry(QRect(30, 0, 791, 241));
-        frameConsultas->setStyleSheet(QString::fromUtf8("background-color:rgb(250,250,250);"));
-        frameConsultas->setFrameShape(QFrame::StyledPanel);
-        frameConsultas->setFrameShadow(QFrame::Raised);
-        label_36 = new QLabel(frameConsultas);
-        label_36->setObjectName(QString::fromUtf8("label_36"));
-        label_36->setGeometry(QRect(0, 0, 911, 31));
-        label_36->setFont(font1);
-        label_36->setStyleSheet(QString::fromUtf8("color: rgb(32, 30, 30);\n"
-"background-color: orange;\n"
-"\n"
-""));
-        btnApellidos = new QPushButton(frameConsultas);
-        btnApellidos->setObjectName(QString::fromUtf8("btnApellidos"));
-        btnApellidos->setGeometry(QRect(10, 170, 281, 51));
-        btnApellidos->setStyleSheet(QString::fromUtf8("color: rgb(32, 30, 30);\n"
-"background-color: rgb(255, 205, 2);\n"
-"padding: 10px;\n"
-"border:0px;\n"
-"font: 14pt \"Open Sans\";\n"
-""));
-        btnProfesiones = new QPushButton(frameConsultas);
-        btnProfesiones->setObjectName(QString::fromUtf8("btnProfesiones"));
-        btnProfesiones->setGeometry(QRect(10, 110, 281, 51));
-        btnProfesiones->setStyleSheet(QString::fromUtf8("color: rgb(32, 30, 30);\n"
-"background-color: rgb(255, 205, 2);\n"
-"padding: 10px;\n"
-"border:0px;\n"
-"font: 14pt \"Open Sans\";\n"
-""));
-        btnCreencias = new QPushButton(frameConsultas);
-        btnCreencias->setObjectName(QString::fromUtf8("btnCreencias"));
-        btnCreencias->setGeometry(QRect(310, 170, 281, 51));
-        btnCreencias->setStyleSheet(QString::fromUtf8("color: rgb(32, 30, 30);\n"
-"background-color: rgb(255, 205, 2);\n"
-"padding: 10px;\n"
-"border:0px;\n"
-"font: 14pt \"Open Sans\";\n"
-""));
-        btnPaises = new QPushButton(frameConsultas);
-        btnPaises->setObjectName(QString::fromUtf8("btnPaises"));
-        btnPaises->setGeometry(QRect(310, 110, 281, 51));
-        btnPaises->setStyleSheet(QString::fromUtf8("color: rgb(32, 30, 30);\n"
-"background-color: rgb(255, 205, 2);\n"
-"padding: 10px;\n"
-"border:0px;\n"
-"font: 14pt \"Open Sans\";\n"
-""));
-        btnContinentes = new QPushButton(frameConsultas);
-        btnContinentes->setObjectName(QString::fromUtf8("btnContinentes"));
-        btnContinentes->setGeometry(QRect(310, 50, 281, 51));
-        btnContinentes->setStyleSheet(QString::fromUtf8("color: rgb(32, 30, 30);\n"
-"background-color: rgb(255, 205, 2);\n"
-"padding: 10px;\n"
-"border:0px;\n"
-"font: 14pt \"Open Sans\";\n"
-""));
-        groupBox = new QGroupBox(frameConsultas);
-        groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        groupBox->setGeometry(QRect(20, 40, 271, 51));
-        rbPecados = new QRadioButton(groupBox);
-        rbPecados->setObjectName(QString::fromUtf8("rbPecados"));
-        rbPecados->setGeometry(QRect(10, 20, 97, 22));
-        rbPecados->setChecked(true);
-        rbBA = new QRadioButton(groupBox);
-        rbBA->setObjectName(QString::fromUtf8("rbBA"));
-        rbBA->setGeometry(QRect(120, 20, 121, 22));
         panelConsultas_3 = new QStackedWidget(pageConsultas);
         panelConsultas_3->setObjectName(QString::fromUtf8("panelConsultas_3"));
-        panelConsultas_3->setGeometry(QRect(850, 280, 791, 551));
+        panelConsultas_3->setGeometry(QRect(860, 290, 791, 601));
         panelConsultas_3->setStyleSheet(QString::fromUtf8("background-color:rgb(250,250,250);"));
         pageSalvacion_2 = new QWidget();
         pageSalvacion_2->setObjectName(QString::fromUtf8("pageSalvacion_2"));
@@ -1439,37 +1444,37 @@ public:
         label_60->setAlignment(Qt::AlignCenter);
         scrollArea_22 = new QScrollArea(pageSalvacion_2);
         scrollArea_22->setObjectName(QString::fromUtf8("scrollArea_22"));
-        scrollArea_22->setGeometry(QRect(20, 50, 761, 481));
+        scrollArea_22->setGeometry(QRect(20, 50, 761, 531));
         scrollArea_22->setWidgetResizable(true);
         scrollAreaWidgetContents_23 = new QWidget();
         scrollAreaWidgetContents_23->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_23"));
-        scrollAreaWidgetContents_23->setGeometry(QRect(0, 0, 759, 479));
-        lbStateFamily_2 = new QLabel(scrollAreaWidgetContents_23);
-        lbStateFamily_2->setObjectName(QString::fromUtf8("lbStateFamily_2"));
-        lbStateFamily_2->setGeometry(QRect(0, 0, 761, 471));
+        scrollAreaWidgetContents_23->setGeometry(QRect(0, 0, 759, 529));
+        lbStateFamily = new QLabel(scrollAreaWidgetContents_23);
+        lbStateFamily->setObjectName(QString::fromUtf8("lbStateFamily"));
+        lbStateFamily->setGeometry(QRect(0, 0, 761, 521));
         scrollArea_22->setWidget(scrollAreaWidgetContents_23);
         panelConsultas_3->addWidget(pageSalvacion_2);
         frame_20 = new QFrame(pageConsultas);
         frame_20->setObjectName(QString::fromUtf8("frame_20"));
-        frame_20->setGeometry(QRect(960, 40, 561, 211));
+        frame_20->setGeometry(QRect(870, 20, 781, 241));
         frame_20->setStyleSheet(QString::fromUtf8("background-color:rgb(250,250,250);"));
         frame_20->setFrameShape(QFrame::StyledPanel);
         frame_20->setFrameShadow(QFrame::Raised);
         label_49 = new QLabel(frame_20);
         label_49->setObjectName(QString::fromUtf8("label_49"));
-        label_49->setGeometry(QRect(0, 0, 561, 31));
+        label_49->setGeometry(QRect(0, 0, 781, 31));
         label_49->setFont(font1);
         label_49->setStyleSheet(QString::fromUtf8("color: rgb(32, 30, 30);\n"
 "background-color: orange;\n"
 ""));
         idPecados_4 = new QLabel(frame_20);
         idPecados_4->setObjectName(QString::fromUtf8("idPecados_4"));
-        idPecados_4->setGeometry(QRect(50, 50, 181, 31));
+        idPecados_4->setGeometry(QRect(160, 50, 181, 31));
         idPecados_4->setStyleSheet(QString::fromUtf8("font: 12pt \"Open Sans\";\n"
 ""));
         btnEstadoFamilia = new QPushButton(frame_20);
         btnEstadoFamilia->setObjectName(QString::fromUtf8("btnEstadoFamilia"));
-        btnEstadoFamilia->setGeometry(QRect(160, 140, 251, 51));
+        btnEstadoFamilia->setGeometry(QRect(290, 150, 251, 51));
         btnEstadoFamilia->setStyleSheet(QString::fromUtf8("image-position:left;\n"
 "color: black;\n"
 "padding: 10px;\n"
@@ -1478,18 +1483,18 @@ public:
 "background-color: rgb(255, 205, 2);"));
         idPecados_5 = new QLabel(frame_20);
         idPecados_5->setObjectName(QString::fromUtf8("idPecados_5"));
-        idPecados_5->setGeometry(QRect(290, 50, 151, 31));
+        idPecados_5->setGeometry(QRect(560, 50, 151, 31));
         idPecados_5->setStyleSheet(QString::fromUtf8("font: 12pt \"Open Sans\";\n"
 ""));
         cboLastNameConsulta = new QComboBox(frame_20);
         cboLastNameConsulta->setObjectName(QString::fromUtf8("cboLastNameConsulta"));
-        cboLastNameConsulta->setGeometry(QRect(10, 90, 251, 22));
+        cboLastNameConsulta->setGeometry(QRect(100, 90, 251, 22));
         cboLastNameConsulta->setStyleSheet(QString::fromUtf8("border-width: 1px;\n"
 "border-style: solid;\n"
 ""));
         cboCountryConsulta = new QComboBox(frame_20);
         cboCountryConsulta->setObjectName(QString::fromUtf8("cboCountryConsulta"));
-        cboCountryConsulta->setGeometry(QRect(290, 90, 251, 22));
+        cboCountryConsulta->setGeometry(QRect(450, 90, 251, 22));
         cboCountryConsulta->setStyleSheet(QString::fromUtf8("border-width: 1px;\n"
 "border-style: solid;\n"
 ""));
@@ -1501,7 +1506,7 @@ public:
         pageGanador->setObjectName(QString::fromUtf8("pageGanador"));
         frameInfoCielo = new QFrame(pageGanador);
         frameInfoCielo->setObjectName(QString::fromUtf8("frameInfoCielo"));
-        frameInfoCielo->setGeometry(QRect(60, 10, 791, 191));
+        frameInfoCielo->setGeometry(QRect(420, 0, 791, 241));
         frameInfoCielo->setStyleSheet(QString::fromUtf8("background-color:rgb(250,250,250);"));
         frameInfoCielo->setFrameShape(QFrame::StyledPanel);
         frameInfoCielo->setFrameShadow(QFrame::Raised);
@@ -1513,40 +1518,58 @@ public:
 "background-color: orange;\n"
 "\n"
 ""));
-        btnInfoCielo = new QPushButton(frameInfoCielo);
-        btnInfoCielo->setObjectName(QString::fromUtf8("btnInfoCielo"));
-        btnInfoCielo->setGeometry(QRect(10, 50, 281, 51));
-        btnInfoCielo->setStyleSheet(QString::fromUtf8("color: rgb(32, 30, 30);\n"
+        btnGanador = new QPushButton(frameInfoCielo);
+        btnGanador->setObjectName(QString::fromUtf8("btnGanador"));
+        btnGanador->setGeometry(QRect(250, 170, 281, 51));
+        btnGanador->setStyleSheet(QString::fromUtf8("color: rgb(32, 30, 30);\n"
 "background-color: rgb(255, 205, 2);\n"
 "padding: 10px;\n"
 "border:0px;\n"
 "font: 14pt \"Open Sans\";\n"
 ""));
-        btnInfoInfierno = new QPushButton(frameInfoCielo);
-        btnInfoInfierno->setObjectName(QString::fromUtf8("btnInfoInfierno"));
-        btnInfoInfierno->setGeometry(QRect(500, 50, 281, 51));
-        btnInfoInfierno->setStyleSheet(QString::fromUtf8("color: rgb(32, 30, 30);\n"
-"background-color: rgb(255, 205, 2);\n"
-"padding: 10px;\n"
-"border:0px;\n"
-"font: 12pt \"Open Sans\";\n"
+        lbGanador = new QLabel(frameInfoCielo);
+        lbGanador->setObjectName(QString::fromUtf8("lbGanador"));
+        lbGanador->setGeometry(QRect(110, 40, 561, 121));
+        lbGanador->setStyleSheet(QString::fromUtf8("text-align: center ;\n"
+"font: 14pt \"Open Sans\";"));
+        lbGanador->setAlignment(Qt::AlignCenter);
+        frame_4 = new QFrame(pageGanador);
+        frame_4->setObjectName(QString::fromUtf8("frame_4"));
+        frame_4->setGeometry(QRect(20, 280, 801, 551));
+        frame_4->setStyleSheet(QString::fromUtf8("background-color:rgb(250,250,250);"));
+        frame_4->setFrameShape(QFrame::StyledPanel);
+        frame_4->setFrameShadow(QFrame::Raised);
+        lbInfoInfierno = new QLabel(frame_4);
+        lbInfoInfierno->setObjectName(QString::fromUtf8("lbInfoInfierno"));
+        lbInfoInfierno->setGeometry(QRect(30, 50, 351, 481));
+        lbInfoInfierno->setStyleSheet(QString::fromUtf8("text-align: center ;\n"
+"font: 10pt \"Open Sans\";"));
+        label_62 = new QLabel(frame_4);
+        label_62->setObjectName(QString::fromUtf8("label_62"));
+        label_62->setGeometry(QRect(0, 0, 801, 31));
+        label_62->setFont(font1);
+        label_62->setStyleSheet(QString::fromUtf8("color: rgb(32, 30, 30);\n"
+"background-color: orange;\n"
+"\n"
 ""));
-        btnInfoCielo_2 = new QPushButton(frameInfoCielo);
-        btnInfoCielo_2->setObjectName(QString::fromUtf8("btnInfoCielo_2"));
-        btnInfoCielo_2->setGeometry(QRect(250, 120, 281, 51));
-        btnInfoCielo_2->setStyleSheet(QString::fromUtf8("color: rgb(32, 30, 30);\n"
-"background-color: rgb(255, 205, 2);\n"
-"padding: 10px;\n"
-"border:0px;\n"
-"font: 14pt \"Open Sans\";\n"
-""));
-        panelGanador = new QStackedWidget(pageGanador);
-        panelGanador->setObjectName(QString::fromUtf8("panelGanador"));
-        panelGanador->setGeometry(QRect(60, 230, 791, 551));
-        panelGanador->setStyleSheet(QString::fromUtf8("background-color:rgb(250,250,250);"));
-        pageInfoCielo = new QWidget();
-        pageInfoCielo->setObjectName(QString::fromUtf8("pageInfoCielo"));
-        label_61 = new QLabel(pageInfoCielo);
+        label_62->setAlignment(Qt::AlignCenter);
+        lbInfoInfierno2 = new QLabel(frame_4);
+        lbInfoInfierno2->setObjectName(QString::fromUtf8("lbInfoInfierno2"));
+        lbInfoInfierno2->setGeometry(QRect(430, 50, 351, 481));
+        lbInfoInfierno2->setStyleSheet(QString::fromUtf8("text-align: center ;\n"
+"font: 10pt \"Open Sans\";"));
+        frame_5 = new QFrame(pageGanador);
+        frame_5->setObjectName(QString::fromUtf8("frame_5"));
+        frame_5->setGeometry(QRect(850, 280, 791, 551));
+        frame_5->setStyleSheet(QString::fromUtf8("background-color:rgb(250,250,250);"));
+        frame_5->setFrameShape(QFrame::StyledPanel);
+        frame_5->setFrameShadow(QFrame::Raised);
+        lbInfoCielo2 = new QLabel(frame_5);
+        lbInfoCielo2->setObjectName(QString::fromUtf8("lbInfoCielo2"));
+        lbInfoCielo2->setGeometry(QRect(420, 50, 351, 481));
+        lbInfoCielo2->setStyleSheet(QString::fromUtf8("text-align: center ;\n"
+"font: 10pt \"Open Sans\";"));
+        label_61 = new QLabel(frame_5);
         label_61->setObjectName(QString::fromUtf8("label_61"));
         label_61->setGeometry(QRect(0, 0, 801, 31));
         label_61->setFont(font1);
@@ -1555,46 +1578,11 @@ public:
 "\n"
 ""));
         label_61->setAlignment(Qt::AlignCenter);
-        lbInfoCielo = new QLabel(pageInfoCielo);
+        lbInfoCielo = new QLabel(frame_5);
         lbInfoCielo->setObjectName(QString::fromUtf8("lbInfoCielo"));
         lbInfoCielo->setGeometry(QRect(20, 50, 351, 481));
-        lbInfoCielo2 = new QLabel(pageInfoCielo);
-        lbInfoCielo2->setObjectName(QString::fromUtf8("lbInfoCielo2"));
-        lbInfoCielo2->setGeometry(QRect(420, 50, 351, 481));
-        panelGanador->addWidget(pageInfoCielo);
-        pageGanador_2 = new QWidget();
-        pageGanador_2->setObjectName(QString::fromUtf8("pageGanador_2"));
-        label_63 = new QLabel(pageGanador_2);
-        label_63->setObjectName(QString::fromUtf8("label_63"));
-        label_63->setGeometry(QRect(0, 0, 801, 31));
-        label_63->setFont(font1);
-        label_63->setStyleSheet(QString::fromUtf8("color: rgb(32, 30, 30);\n"
-"background-color: orange;\n"
-"\n"
-""));
-        label_63->setAlignment(Qt::AlignCenter);
-        lbGanador = new QLabel(pageGanador_2);
-        lbGanador->setObjectName(QString::fromUtf8("lbGanador"));
-        lbGanador->setGeometry(QRect(20, 50, 751, 481));
-        panelGanador->addWidget(pageGanador_2);
-        pageInfoInfierno = new QWidget();
-        pageInfoInfierno->setObjectName(QString::fromUtf8("pageInfoInfierno"));
-        label_62 = new QLabel(pageInfoInfierno);
-        label_62->setObjectName(QString::fromUtf8("label_62"));
-        label_62->setGeometry(QRect(-10, 0, 801, 31));
-        label_62->setFont(font1);
-        label_62->setStyleSheet(QString::fromUtf8("color: rgb(32, 30, 30);\n"
-"background-color: orange;\n"
-"\n"
-""));
-        label_62->setAlignment(Qt::AlignCenter);
-        lbInfoInfierno = new QLabel(pageInfoInfierno);
-        lbInfoInfierno->setObjectName(QString::fromUtf8("lbInfoInfierno"));
-        lbInfoInfierno->setGeometry(QRect(20, 50, 351, 481));
-        lbInfoInfierno2 = new QLabel(pageInfoInfierno);
-        lbInfoInfierno2->setObjectName(QString::fromUtf8("lbInfoInfierno2"));
-        lbInfoInfierno2->setGeometry(QRect(420, 50, 351, 481));
-        panelGanador->addWidget(pageInfoInfierno);
+        lbInfoCielo->setStyleSheet(QString::fromUtf8("text-align: center ;\n"
+"font: 10pt \"Open Sans\";"));
         mainPanel->addWidget(pageGanador);
         sideBarFrame = new QFrame(centralwidget);
         sideBarFrame->setObjectName(QString::fromUtf8("sideBarFrame"));
@@ -1671,12 +1659,11 @@ public:
 
         retranslateUi(MainWindow);
 
-        mainPanel->setCurrentIndex(5);
+        mainPanel->setCurrentIndex(3);
         panelConsultasCieloBuenasAcciones->setCurrentIndex(3);
         panelConsultasInfiernoPecados->setCurrentIndex(3);
-        panelConsultas_2->setCurrentIndex(10);
+        panelConsultas_2->setCurrentIndex(7);
         panelConsultas_3->setCurrentIndex(0);
-        panelGanador->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1686,16 +1673,16 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         label_5->setText(QCoreApplication::translate("MainWindow", "Cantidad:", nullptr));
-        label_7->setText(QCoreApplication::translate("MainWindow", "Creaci\303\263n de Humanos ", nullptr));
+        label_7->setText(QCoreApplication::translate("MainWindow", " Creaci\303\263n de Humanos ", nullptr));
         txtCantHumanos->setText(QCoreApplication::translate("MainWindow", "10000", nullptr));
         btnCrearHumanos->setText(QCoreApplication::translate("MainWindow", "Generar humanos", nullptr));
         label_8->setText(QString());
         label_9->setText(QCoreApplication::translate("MainWindow", "Buscar humano", nullptr));
-        label_10->setText(QCoreApplication::translate("MainWindow", "B\303\272squeda de Humanos", nullptr));
+        label_10->setText(QCoreApplication::translate("MainWindow", " B\303\272squeda de Humanos", nullptr));
         txtBuscar->setText(QString());
         label_11->setText(QString());
         btnBuscarPersona->setText(QCoreApplication::translate("MainWindow", "buscar humano", nullptr));
-        label_21->setText(QCoreApplication::translate("MainWindow", "Hacer Pecar y Buenas Acciones", nullptr));
+        label_21->setText(QCoreApplication::translate("MainWindow", " Hacer Pecar y Buenas Acciones", nullptr));
         label_22->setText(QString());
         btnPecar->setText(QCoreApplication::translate("MainWindow", "Pecados y Buenas Acciones", nullptr));
         lbHumanFound->setText(QCoreApplication::translate("MainWindow", "Lorem ipsum dolor sit amet, consectetur adipiscing elit,\n"
@@ -1704,18 +1691,12 @@ public:
 "laboris nisi ut aliquip ex ea commodo consequat.\n"
 "Duis aute irure dolor in reprehenderit in voluptate\n"
 "velit esse cillum dolore eu fugiat nulla pariatur.", nullptr));
-        label_23->setText(QCoreApplication::translate("MainWindow", "Guardar Datos WORLD", nullptr));
+        label_23->setText(QCoreApplication::translate("MainWindow", " Guardar Datos WORLD", nullptr));
         label_24->setText(QString());
         btnGuardarDatosWorld->setText(QCoreApplication::translate("MainWindow", "Guardar Datos", nullptr));
-        label_34->setText(QCoreApplication::translate("MainWindow", "Send Files", nullptr));
+        label_34->setText(QCoreApplication::translate("MainWindow", " Send Files", nullptr));
         label_35->setText(QString());
         pushButton->setText(QCoreApplication::translate("MainWindow", "Send All Files", nullptr));
-        label_13->setText(QCoreApplication::translate("MainWindow", "Consultas del Cielo", nullptr));
-        btnMapaContinentesBuenasAcciones->setText(QCoreApplication::translate("MainWindow", "Mapa de Continentes", nullptr));
-        btnTop10Cielo->setText(QCoreApplication::translate("MainWindow", "Top 10 pa\303\255ses buenas acciones", nullptr));
-        btnTop5Cielo->setText(QCoreApplication::translate("MainWindow", "Top 5 pa\303\255ses \"Buenos\"", nullptr));
-        btnBAFamilias->setText(QCoreApplication::translate("MainWindow", "Buenas acciones por familia", nullptr));
-        idBuenasAcciones->setText(QCoreApplication::translate("MainWindow", "Ingrese un ID:", nullptr));
         lbEuropaHeaven->setText(QString());
         lbAfricaHeaven->setText(QString());
         lbAustraliaHeaven->setText(QString());
@@ -1758,14 +1739,19 @@ public:
         label_27->setText(QCoreApplication::translate("MainWindow", "\303\201ngeles", nullptr));
         label_28->setText(QString());
         btnSalvacion->setText(QCoreApplication::translate("MainWindow", "Salvaci\303\263n", nullptr));
-        btnGuardarDatosCielo->setText(QCoreApplication::translate("MainWindow", "Guardar Datos", nullptr));
-        btnImprimir->setText(QCoreApplication::translate("MainWindow", "imprimir", nullptr));
+        label_13->setText(QCoreApplication::translate("MainWindow", " Consultas del Cielo", nullptr));
+        btnMapaContinentesBuenasAcciones->setText(QCoreApplication::translate("MainWindow", "Mapa de Continentes", nullptr));
+        btnTop10Cielo->setText(QCoreApplication::translate("MainWindow", "Top 10 pa\303\255ses buenas acciones", nullptr));
+        btnTop5Cielo->setText(QCoreApplication::translate("MainWindow", "Top 5 pa\303\255ses \"Buenos\"", nullptr));
+        btnBAFamilias->setText(QCoreApplication::translate("MainWindow", "Buenas acciones por familia", nullptr));
+        idBuenasAcciones->setText(QCoreApplication::translate("MainWindow", "Ingrese un ID:", nullptr));
+        btnGuardarDatosCielo->setText(QCoreApplication::translate("MainWindow", "Generar archivo consultas", nullptr));
         botonMammon->setText(QCoreApplication::translate("MainWindow", "Mamm\303\263n", nullptr));
         codicia->setText(QCoreApplication::translate("MainWindow", "Codicia", nullptr));
         botonLucifer->setText(QCoreApplication::translate("MainWindow", "Lucifer", nullptr));
         botonBelcebu->setText(QCoreApplication::translate("MainWindow", "Belceb\303\272", nullptr));
         botonSatan->setText(QCoreApplication::translate("MainWindow", "Sat\303\241n", nullptr));
-        botonAbandon->setText(QCoreApplication::translate("MainWindow", "Aband\303\263n", nullptr));
+        botonAbadon->setText(QCoreApplication::translate("MainWindow", "Abad\303\263n", nullptr));
         botonBelfegor->setText(QCoreApplication::translate("MainWindow", "Belfegor", nullptr));
         botonAsmodeo->setText(QCoreApplication::translate("MainWindow", "Asmodeo", nullptr));
         orgullo->setText(QCoreApplication::translate("MainWindow", "Orgullo", nullptr));
@@ -1781,6 +1767,7 @@ public:
         btnTop5Infierno->setText(QCoreApplication::translate("MainWindow", "Top 5 pa\303\255ses \"Malos\"", nullptr));
         idPecados->setText(QCoreApplication::translate("MainWindow", "Ingrese un ID: ", nullptr));
         btnPecadosFamilia->setText(QCoreApplication::translate("MainWindow", "Pecados de una familia", nullptr));
+        btnGenerarConsultas->setText(QCoreApplication::translate("MainWindow", "Generar archivo consultas", nullptr));
         lbEuropaHell->setText(QString());
         lbAfricaHell->setText(QString());
         lbAustraliaHell->setText(QString());
@@ -1797,6 +1784,15 @@ public:
         lbPecadosFamilias->setText(QString());
         label_31->setText(QString());
         btnMatarTodos->setText(QCoreApplication::translate("MainWindow", "Enviar demonios", nullptr));
+        label_36->setText(QCoreApplication::translate("MainWindow", "Consultas", nullptr));
+        btnApellidos->setText(QCoreApplication::translate("MainWindow", "Apellidos ", nullptr));
+        btnProfesiones->setText(QCoreApplication::translate("MainWindow", "Profesiones ", nullptr));
+        btnCreencias->setText(QCoreApplication::translate("MainWindow", "Creencias ", nullptr));
+        btnPaises->setText(QCoreApplication::translate("MainWindow", "Paises", nullptr));
+        btnContinentes->setText(QCoreApplication::translate("MainWindow", "Continentes ", nullptr));
+        groupBox->setTitle(QCoreApplication::translate("MainWindow", "Seleccion una opci\303\263n", nullptr));
+        rbPecados->setText(QCoreApplication::translate("MainWindow", "Pecados", nullptr));
+        rbBA->setText(QCoreApplication::translate("MainWindow", "Buenas Acciones", nullptr));
         label_37->setText(QCoreApplication::translate("MainWindow", "Condenaci\303\263n", nullptr));
         lbCondenacion->setText(QString());
         label_38->setText(QCoreApplication::translate("MainWindow", "Apellidos de m\303\241s a menos pecadores", nullptr));
@@ -1821,33 +1817,21 @@ public:
         lbProfesionesBuenos->setText(QString());
         label_48->setText(QCoreApplication::translate("MainWindow", "Salvaci\303\263n", nullptr));
         lbSalvacion->setText(QString());
-        label_36->setText(QCoreApplication::translate("MainWindow", "Consultas", nullptr));
-        btnApellidos->setText(QCoreApplication::translate("MainWindow", "Apellidos ", nullptr));
-        btnProfesiones->setText(QCoreApplication::translate("MainWindow", "Profesiones ", nullptr));
-        btnCreencias->setText(QCoreApplication::translate("MainWindow", "Creencias ", nullptr));
-        btnPaises->setText(QCoreApplication::translate("MainWindow", "Paises", nullptr));
-        btnContinentes->setText(QCoreApplication::translate("MainWindow", "Continentes ", nullptr));
-        groupBox->setTitle(QCoreApplication::translate("MainWindow", "Seleccion una opci\303\263n", nullptr));
-        rbPecados->setText(QCoreApplication::translate("MainWindow", "Pecados", nullptr));
-        rbBA->setText(QCoreApplication::translate("MainWindow", "Buenas Acciones", nullptr));
         label_60->setText(QCoreApplication::translate("MainWindow", "Pecados de una familia", nullptr));
-        lbStateFamily_2->setText(QString());
+        lbStateFamily->setText(QString());
         label_49->setText(QCoreApplication::translate("MainWindow", "Consultas ", nullptr));
         idPecados_4->setText(QCoreApplication::translate("MainWindow", "Ingrese un apellido", nullptr));
         btnEstadoFamilia->setText(QCoreApplication::translate("MainWindow", "Pecados de una familia", nullptr));
         idPecados_5->setText(QCoreApplication::translate("MainWindow", "Pais", nullptr));
-        label_50->setText(QCoreApplication::translate("MainWindow", "Informaci\303\263n del ganador", nullptr));
-        btnInfoCielo->setText(QCoreApplication::translate("MainWindow", "Ver informaci\303\263n del cielo", nullptr));
-        btnInfoInfierno->setText(QCoreApplication::translate("MainWindow", "Ver informaci\303\263n del infierno", nullptr));
-        btnInfoCielo_2->setText(QCoreApplication::translate("MainWindow", "Ganador", nullptr));
-        label_61->setText(QCoreApplication::translate("MainWindow", "Informaci\303\263n final del cielo", nullptr));
-        lbInfoCielo->setText(QString());
-        lbInfoCielo2->setText(QString());
-        label_63->setText(QCoreApplication::translate("MainWindow", "Informaci\303\263n del Ganador", nullptr));
-        lbGanador->setText(QString());
+        label_50->setText(QCoreApplication::translate("MainWindow", " Informaci\303\263n del ganador", nullptr));
+        btnGanador->setText(QCoreApplication::translate("MainWindow", "Ganador", nullptr));
+        lbGanador->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p><p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco</p><p>laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate</p><p>velit esse cillum dolore eu fugiat nulla pariatur.</p></body></html>", nullptr));
+        lbInfoInfierno->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p><p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco</p><p>laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate</p><p>velit esse cillum dolore eu fugiat nulla pariatur.</p></body></html>", nullptr));
         label_62->setText(QCoreApplication::translate("MainWindow", "Informaci\303\263n final del Infierno", nullptr));
-        lbInfoInfierno->setText(QString());
-        lbInfoInfierno2->setText(QString());
+        lbInfoInfierno2->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p><p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco</p><p>laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate</p><p>velit esse cillum dolore eu fugiat nulla pariatur.</p></body></html>", nullptr));
+        lbInfoCielo2->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p><p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco</p><p>laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate</p><p>velit esse cillum dolore eu fugiat nulla pariatur.</p></body></html>", nullptr));
+        label_61->setText(QCoreApplication::translate("MainWindow", "Informaci\303\263n final del cielo", nullptr));
+        lbInfoCielo->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p><p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco</p><p>laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate</p><p>velit esse cillum dolore eu fugiat nulla pariatur.</p></body></html>", nullptr));
         botonHumanos->setText(QCoreApplication::translate("MainWindow", "Crear Humanos", nullptr));
         botonInfierno->setText(QCoreApplication::translate("MainWindow", "Infierno", nullptr));
         botonGanador->setText(QCoreApplication::translate("MainWindow", "Ganador", nullptr));
