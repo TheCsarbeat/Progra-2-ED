@@ -149,13 +149,15 @@ void MainWindow::on_botonConsultas_clicked(){
 
 //---------------------------------- Cielo ----------------
 void MainWindow::on_btnMapaContinentesBuenasAcciones_clicked(){
-    mainstruct->mundo->continentsMasBuenasAcciones();
+    if(mainstruct->mundo->hanPecado)
+        mainstruct->mundo->continentsMasBuenasAcciones();
     ui->panelConsultasCieloBuenasAcciones->setCurrentIndex(0);
 }
 
 
 void MainWindow::on_btnMapaPecados_clicked(){
-    mainstruct->mundo->continentsMasPecados();
+    if(mainstruct->mundo->hanPecado)
+        mainstruct->mundo->continentsMasPecados();
     ui->panelConsultasInfiernoPecados->setCurrentIndex(0);
 }
 
@@ -222,7 +224,7 @@ void MainWindow::on_btnMatarTodos_clicked()
     if(mainstruct->mundo->hanPecado == true){
         mainstruct->mundo->infierno->matarMasPecadores(mainstruct->mundo->personas, mainstruct->mundo->files, &mainstruct->mundo->filesNameToSend, &mainstruct->mundo->currentFileName,7);
         mainstruct->mundo->personas->vivos = mainstruct->mundo->personas->largo - mainstruct->mundo->infierno->condenados - mainstruct->mundo->cielo->salvados;
-        sendEmail(mainstruct->mundo->currentFileName, "Condenación","Se ha presionado el botón de condenar estas son las personas condenadas");
+        //sendEmail(mainstruct->mundo->currentFileName, "Condenación","Se ha presionado el botón de condenar estas son las personas condenadas");
         msg.setText("Los demonios han tomado las almas más pecadoras");
         msg.exec();
     }else{
@@ -241,7 +243,7 @@ void MainWindow::on_btnSalvacion_clicked(){
     if(mainstruct->mundo->infierno->condenados != 0){
             mainstruct->mundo->salvacion();
             files.append(mainstruct->mundo->currentFileName);
-            sendEmail(mainstruct->mundo->currentFileName, "Salvación","Se ha presionado el botón de salvación estas son las personas salvadas");
+            //sendEmail(mainstruct->mundo->currentFileName, "Salvación","Se ha presionado el botón de salvación estas son las personas salvadas");
             msg.setText("Se han salvado humanos ver datos en los archivos LOG");
             msg.exec();
     }else{

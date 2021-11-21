@@ -73,6 +73,8 @@ struct ArbolAngelesCielo{
 
     void insertar(Angel *);
     NodoArbolAngelesCielo* insertar(NodoArbolAngelesCielo*, Angel*, QString*);
+    QString * toStringNivel(int nivel);
+    void toStringNivel(NodoArbolAngelesCielo *nodo , int nivel, int nivelActual, QString*);
 
     void imprimirNivel(int nivel);
     void nivelImprimir(NodoArbolAngelesCielo *nodo , int nivel, int nivelActual);
@@ -170,7 +172,7 @@ struct CieloHash{
         for(int i = 0; i<1000; i++)
             if(!hashTableCielo[i]->isEmpty()){
                 dato += "\n========================================================";
-                dato += "\n\tBucket position: "+QString::number(i)+"\n"
+                dato += "\n\tBucket position: "+QString::number(i)+"\tCantidad Nodos: "+QString::number(hashTableCielo[i]->cant)+"\n"
                                                           "========================================================";
                 dato += "\n"+ *hashTableCielo[i]->toStringInOrden();
             }

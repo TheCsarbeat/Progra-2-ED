@@ -36,7 +36,7 @@ void Mundo::crearHumanos(int dato){
     }
     //cielo->imprimir();
     //files->writeFile("worldLista.txt", personas->toString());
-    files->writeFile("familiasMundoInOrden.txt", listArbolFamilias->toString());
+    //files->writeFile("familiasMundoInOrden.txt", listArbolFamilias->toString());
     //files->writeFile("cieloInOrden.txt", cielo->toString());
     //qDebug()<<personas->primerNodo->persona->id;
 }
@@ -62,6 +62,14 @@ void Mundo::guarDatosWorld(){
 
 void Mundo::guardarDatosCielo(){
     files->writeFile("cieloInOrden.txt", cielo->toString());
+    QString dato = "";
+    for(int i = 0; i<=arbolAngeles->nivel; i++){
+        dato += "\nNivel del árbol es: "+QString::number(i);
+        dato += *arbolAngeles->toStringNivel(i);
+        dato += "\n---------------------------------------------------\n";
+    }
+    files->writeFile("datoArbol3-ario.txt", dato);
+    filesNameToSend.append("datoArbol3-ario.txt");
     filesNameToSend.append("cieloInOrden.txt");
 
 }
@@ -412,7 +420,7 @@ void Mundo::consutlaHumanStateFamily(QString lastName, QString country,QLabel *l
 
 void Mundo::salvacion(){
     //qDebug()<<"El mas cercano: "<<mainstruct->mundo->treePersonas->buscarMasCercano(ui->txtcerca->text().toInt())->persona->id;
-    QString arrayAngelNames[9] ={"Miguel", "Nuriel", "Aniel", "Rafael", "Gabriel", "Shamsiel", "Raguel", "Uriel", "Azrael"};
+    QString arrayAngelNames[9] ={"Miguel", "Nuriel", "Aniel    ", "Rafael", "Gabriel", "Shamsiel", "Raguel", "Uriel    ", "Azrael"};
     arbolAngeles->nivel ++;
     int nivel = arbolAngeles->nivel;
     int cantNodosNuevos = qPow(3, nivel);

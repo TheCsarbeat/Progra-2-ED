@@ -364,7 +364,7 @@ QString ListaSimpleArbolFamilias::toString(){
     NodoFamiliaListaSimple * temp = primerNodo;
     int cont =0;
     while (temp != NULL){
-        dato += "\n\n\nFamilia: "+QString::number(cont)+"Canitdad de Miembros: "+QString::number(temp->arbol->cant)+"\n";
+        dato += "\n\n\nFamilia: "+QString::number(cont)+"  Canitdad de Miembros: "+QString::number(temp->arbol->cant)+"\n";
         dato += *temp->arbol->toStringInOrden();
         cont++;
         temp = temp->siguiente;

@@ -35,6 +35,26 @@ NodoArbolAngelesCielo* ArbolAngelesCielo::insertar(NodoArbolAngelesCielo * nodo,
     return nodo;
 }
 
+QString * ArbolAngelesCielo::toStringNivel(int nivel){
+    QString *dato = new QString();
+    *dato = "";
+    toStringNivel(raiz, nivel, 0, dato);
+    return dato;
+}
+
+void ArbolAngelesCielo::toStringNivel(NodoArbolAngelesCielo *nodo , int nivel, int nivelActual, QString *dato){
+    if (nodo != NULL)   {
+        if( nivel == nivelActual){
+            *dato+= "\nNombre: "+nodo->angel->name+"  \t| Version: "+QString::number(nodo->angel->version)+"  \t| Generacion: "+QString::number(nodo->angel->generacion);
+            *dato+= "  \tHumano: "+QString::number(nodo->angel->persona->id)+ "  \tNombre: "+nodo->angel->persona->name;
+        }else if(nivel>nivelActual){
+            toStringNivel(nodo->izquierdo, nivel,nivelActual+1,dato);
+            toStringNivel(nodo->centro, nivel,nivelActual+1,dato);
+            toStringNivel(nodo->derecho , nivel,nivelActual+1,dato);
+        }
+   }
+}
+
 void ArbolAngelesCielo::imprimirNivel(int nivel){
     nivelImprimir(raiz, nivel, 0);
 }
@@ -208,7 +228,6 @@ void ArbolCieloALV::toStringInOrden(NodoArbolCieloALV* t, QString* dato){
     if (t == NULL)
        return;
    toStringInOrden(t->l,dato);
-   t->persona->imprimir();
    *dato += t->persona->toString()+t->persona->hijos->toStringIDHijos();
    toStringInOrden(t->r,dato);
 }
@@ -229,7 +248,6 @@ void  ArbolCieloALV::cantPecadosBA(NodoArbolCieloALV* t, int arr[],int arrBA[]){
    }
    arr[7] += t->persona->pecadosPersona;
    arrBA[7] += t->persona->buenasAccionesPersona;
-   t->persona->imprimir();
 
    cantPecadosBA(t->r, arr, arrBA);
 }
