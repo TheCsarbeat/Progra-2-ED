@@ -357,7 +357,7 @@ void MainWindow::on_btnGuardarDatosCielo_clicked(){
 void MainWindow::on_btnGanador_clicked(){
     QString datos1 = "";
     QString datos2 = "";
-    int netoInfierno = mainstruct->mundo->infierno->sacarResultados(&datos1,&datos2);
+    int netoInfierno = mainstruct->mundo->infierno->sacarResultados(&datos2,&datos1);
     ui->lbInfoInfierno->setText(datos1);
     ui->lbInfoInfierno2->setText(datos2);
     int netoCielo = mainstruct->mundo->cielo->calcularNeto(ui->lbInfoCielo, ui->lbInfoCielo2);
@@ -381,7 +381,7 @@ void MainWindow::on_botonMammon_clicked()
     if(mainstruct->mundo->hanPecado == true){
         mainstruct->mundo->infierno->matarMasPecadores(mainstruct->mundo->personas, mainstruct->mundo->files, &mainstruct->mundo->filesNameToSend, &mainstruct->mundo->currentFileName,2);
         mainstruct->mundo->personas->vivos = mainstruct->mundo->personas->largo - mainstruct->mundo->infierno->condenados - mainstruct->mundo->cielo->salvados;
-        //sendEmail(mainstruct->mundo->currentFileName, "Condenación","Se ha presionado el botón de condenar estas son las personas condenadas");
+        sendEmail(mainstruct->mundo->currentFileName, "Condenación","Se ha presionado el botón de condenar estas son las personas condenadas");
         msg.setText("Mammón ha tomado las almas más pecadoras");
         msg.exec();
     }else{
@@ -396,7 +396,7 @@ void MainWindow::on_botonLucifer_clicked()
     if(mainstruct->mundo->hanPecado == true){
         mainstruct->mundo->infierno->matarMasPecadores(mainstruct->mundo->personas, mainstruct->mundo->files, &mainstruct->mundo->filesNameToSend, &mainstruct->mundo->currentFileName,6);
         mainstruct->mundo->personas->vivos = mainstruct->mundo->personas->largo - mainstruct->mundo->infierno->condenados - mainstruct->mundo->cielo->salvados;
-        //sendEmail(mainstruct->mundo->currentFileName, "Condenación","Se ha presionado el botón de condenar estas son las personas condenadas");
+        sendEmail(mainstruct->mundo->currentFileName, "Condenación","Se ha presionado el botón de condenar estas son las personas condenadas");
         msg.setText("Lucifer ha tomado las almas más pecadoras");
         msg.exec();
     }else{
@@ -411,7 +411,7 @@ void MainWindow::on_botonBelcebu_clicked()
     if(mainstruct->mundo->hanPecado == true){
         mainstruct->mundo->infierno->matarMasPecadores(mainstruct->mundo->personas, mainstruct->mundo->files, &mainstruct->mundo->filesNameToSend, &mainstruct->mundo->currentFileName,5);
         mainstruct->mundo->personas->vivos = mainstruct->mundo->personas->largo - mainstruct->mundo->infierno->condenados - mainstruct->mundo->cielo->salvados;
-        //sendEmail(mainstruct->mundo->currentFileName, "Condenación","Se ha presionado el botón de condenar estas son las personas condenadas");
+        sendEmail(mainstruct->mundo->currentFileName, "Condenación","Se ha presionado el botón de condenar estas son las personas condenadas");
         msg.setText("Belcebú ha tomado las almas más pecadoras");
         msg.exec();
     }else{
@@ -426,7 +426,7 @@ void MainWindow::on_botonSatan_clicked()
     if(mainstruct->mundo->hanPecado == true){
         mainstruct->mundo->infierno->matarMasPecadores(mainstruct->mundo->personas, mainstruct->mundo->files, &mainstruct->mundo->filesNameToSend, &mainstruct->mundo->currentFileName,4);
         mainstruct->mundo->personas->vivos = mainstruct->mundo->personas->largo - mainstruct->mundo->infierno->condenados - mainstruct->mundo->cielo->salvados;
-        //sendEmail(mainstruct->mundo->currentFileName, "Condenación","Se ha presionado el botón de condenar estas son las personas condenadas");
+        sendEmail(mainstruct->mundo->currentFileName, "Condenación","Se ha presionado el botón de condenar estas son las personas condenadas");
         msg.setText("Satán ha tomado las almas más pecadoras");
         msg.exec();
     }else{
@@ -440,7 +440,7 @@ void MainWindow::on_botonAbadon_clicked()
     if(mainstruct->mundo->hanPecado == true){
         mainstruct->mundo->infierno->matarMasPecadores(mainstruct->mundo->personas, mainstruct->mundo->files, &mainstruct->mundo->filesNameToSend, &mainstruct->mundo->currentFileName,3);
         mainstruct->mundo->personas->vivos = mainstruct->mundo->personas->largo - mainstruct->mundo->infierno->condenados - mainstruct->mundo->cielo->salvados;
-        //sendEmail(mainstruct->mundo->currentFileName, "Condenación","Se ha presionado el botón de condenar estas son las personas condenadas");
+        sendEmail(mainstruct->mundo->currentFileName, "Condenación","Se ha presionado el botón de condenar estas son las personas condenadas");
         msg.setText("Abadón ha tomado las almas más pecadoras");
         msg.exec();
     }else{
@@ -455,7 +455,7 @@ void MainWindow::on_botonBelfegor_clicked()
     if(mainstruct->mundo->hanPecado == true){
         mainstruct->mundo->infierno->matarMasPecadores(mainstruct->mundo->personas, mainstruct->mundo->files, &mainstruct->mundo->filesNameToSend, &mainstruct->mundo->currentFileName,1);
         mainstruct->mundo->personas->vivos = mainstruct->mundo->personas->largo - mainstruct->mundo->infierno->condenados - mainstruct->mundo->cielo->salvados;
-        //sendEmail(mainstruct->mundo->currentFileName, "Condenación","Se ha presionado el botón de condenar estas son las personas condenadas");
+        sendEmail(mainstruct->mundo->currentFileName, "Condenación","Se ha presionado el botón de condenar estas son las personas condenadas");
         msg.setText("Belfegor ha tomado las almas más pecadoras");
         msg.exec();
     }else{
@@ -470,7 +470,7 @@ void MainWindow::on_botonAsmodeo_clicked()
     if(mainstruct->mundo->hanPecado == true){
         mainstruct->mundo->infierno->matarMasPecadores(mainstruct->mundo->personas, mainstruct->mundo->files, &mainstruct->mundo->filesNameToSend, &mainstruct->mundo->currentFileName,0);
         mainstruct->mundo->personas->vivos = mainstruct->mundo->personas->largo - mainstruct->mundo->infierno->condenados - mainstruct->mundo->cielo->salvados;
-        //sendEmail(mainstruct->mundo->currentFileName, "Condenación","Se ha presionado el botón de condenar estas son las personas condenadas");
+        sendEmail(mainstruct->mundo->currentFileName, "Condenación","Se ha presionado el botón de condenar estas son las personas condenadas");
         msg.setText("Asmodeo ha tomado las almas más pecadoras");
         msg.exec();
     }else{
