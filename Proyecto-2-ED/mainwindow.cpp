@@ -171,11 +171,11 @@ void MainWindow::sendEmail(QString currentEmail, QString subject, QString msg){
     connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
 
     if(!files.isEmpty() && currentEmail == "")
-        smtp->sendMail("ferkssoporte@gmail.com", "quesonconpicha@gmail.com" , subject,msg, files );
+        smtp->sendMail("ferkssoporte@gmail.com", "jbrowserpoo@gmail.com" , subject,msg, files );
     else if(currentEmail != "")
-        smtp->sendMail("ferkssoporte@gmail.com", "quesonconpicha@gmail.com" , subject,msg,QStringList(currentEmail));
+        smtp->sendMail("ferkssoporte@gmail.com", "jbrowserpoo@gmail.com" , subject,msg,QStringList(currentEmail));
     else
-        smtp->sendMail("ferkssoporte@gmail.com", "quesonconpicha@gmail.com" , subject,msg);
+        smtp->sendMail("ferkssoporte@gmail.com", "jbrowserpoo@gmail.com" , subject,msg);
 }
 
 
@@ -224,7 +224,7 @@ void MainWindow::on_btnMatarTodos_clicked()
     if(mainstruct->mundo->hanPecado == true){
         mainstruct->mundo->infierno->matarMasPecadores(mainstruct->mundo->personas, mainstruct->mundo->files, &mainstruct->mundo->filesNameToSend, &mainstruct->mundo->currentFileName,7);
         mainstruct->mundo->personas->vivos = mainstruct->mundo->personas->largo - mainstruct->mundo->infierno->condenados - mainstruct->mundo->cielo->salvados;
-        //sendEmail(mainstruct->mundo->currentFileName, "Condenación","Se ha presionado el botón de condenar estas son las personas condenadas");
+        sendEmail(mainstruct->mundo->currentFileName, "Condenación","Se ha presionado el botón de condenar estas son las personas condenadas");
         msg.setText("Los demonios han tomado las almas más pecadoras");
         msg.exec();
     }else{
@@ -243,7 +243,7 @@ void MainWindow::on_btnSalvacion_clicked(){
     if(mainstruct->mundo->infierno->condenados != 0){
             mainstruct->mundo->salvacion();
             files.append(mainstruct->mundo->currentFileName);
-            //sendEmail(mainstruct->mundo->currentFileName, "Salvación","Se ha presionado el botón de salvación estas son las personas salvadas");
+            sendEmail(mainstruct->mundo->currentFileName, "Salvación","Se ha presionado el botón de salvación estas son las personas salvadas");
             msg.setText("Se han salvado humanos ver datos en los archivos LOG");
             msg.exec();
     }else{
@@ -257,7 +257,6 @@ void MainWindow::on_btnSalvacion_clicked(){
 
 
 void MainWindow::on_pushButton_clicked(){
-    //sendEmail("", "Files from Heaven vs Hell","These are the files created in the program HEAVEN vs HELL");
     for (int i = 0;i<mainstruct->mundo->filesNameToSend.length() ;i++ ) {
         if(files.indexOf(mainstruct->mundo->filesNameToSend.at(i)) == -1){
             files.append(mainstruct->mundo->filesNameToSend.at(i));
@@ -266,7 +265,6 @@ void MainWindow::on_pushButton_clicked(){
     sendEmail("", "Files from Heaven vs Hell","These are the files created in the program HEAVEN vs HELL");
     msg.setText("Se han enviado los archivos al correo");
     msg.exec();
-
 }
 
 
